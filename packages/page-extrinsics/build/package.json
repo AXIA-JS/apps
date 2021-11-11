@@ -1,0 +1,37 @@
+{
+  "name": "@axia-js/app-extrinsics",
+  "private": true,
+  "type": "module",
+  "version": "0.1.0",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@axia-js/react-components": "0.1.0",
+    "@axia-js/react-params": "0.1.0",
+    "@axia-js/react-signer": "0.1.0",
+    "@babel/runtime": "^7.15.4"
+  },
+  "exports": {
+    ".": {
+      "require": "./index.cjs",
+      "default": "./index.js"
+    },
+    "./Decoder": {
+      "require": "./Decoder.cjs",
+      "default": "./Decoder.js"
+    },
+    "./package.json": "./package.json",
+    "./packageInfo": {
+      "require": "./packageInfo.cjs",
+      "default": "./packageInfo.js"
+    },
+    "./README.md": "./README.md",
+    "./Submission": {
+      "require": "./Submission.cjs",
+      "default": "./Submission.js"
+    },
+    "./translate": {
+      "require": "./translate.cjs",
+      "default": "./translate.js"
+    }
+  }
+}

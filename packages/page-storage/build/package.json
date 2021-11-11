@@ -1,0 +1,56 @@
+{
+  "name": "@axia-js/app-storage",
+  "private": true,
+  "type": "module",
+  "version": "0.1.0",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@axia-js/react-components": "0.1.0",
+    "@axia-js/react-params": "0.1.0",
+    "@babel/runtime": "^7.15.4"
+  },
+  "exports": {
+    ".": {
+      "require": "./index.cjs",
+      "default": "./index.js"
+    },
+    "./package.json": "./package.json",
+    "./packageInfo": {
+      "require": "./packageInfo.cjs",
+      "default": "./packageInfo.js"
+    },
+    "./Queries": {
+      "require": "./Queries.cjs",
+      "default": "./Queries.js"
+    },
+    "./Query": {
+      "require": "./Query.cjs",
+      "default": "./Query.js"
+    },
+    "./README.md": "./README.md",
+    "./Selection": {
+      "require": "./Selection/index.cjs",
+      "default": "./Selection/index.js"
+    },
+    "./Selection/Consts": {
+      "require": "./Selection/Consts.cjs",
+      "default": "./Selection/Consts.js"
+    },
+    "./Selection/Modules": {
+      "require": "./Selection/Modules.cjs",
+      "default": "./Selection/Modules.js"
+    },
+    "./Selection/Raw": {
+      "require": "./Selection/Raw.cjs",
+      "default": "./Selection/Raw.js"
+    },
+    "./translate": {
+      "require": "./translate.cjs",
+      "default": "./translate.js"
+    },
+    "./types": {
+      "require": "./types.cjs",
+      "default": "./types.js"
+    }
+  }
+}

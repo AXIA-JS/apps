@@ -1,0 +1,56 @@
+{
+  "name": "@axia-js/app-claims",
+  "private": true,
+  "type": "module",
+  "version": "0.1.0",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@axia-js/react-components": "0.1.0",
+    "@babel/runtime": "^7.15.4",
+    "secp256k1": "^3.8.0"
+  },
+  "exports": {
+    ".": {
+      "require": "./index.cjs",
+      "default": "./index.js"
+    },
+    "./Attest": {
+      "require": "./Attest.cjs",
+      "default": "./Attest.js"
+    },
+    "./Claim": {
+      "require": "./Claim.cjs",
+      "default": "./Claim.js"
+    },
+    "./package.json": "./package.json",
+    "./packageInfo": {
+      "require": "./packageInfo.cjs",
+      "default": "./packageInfo.js"
+    },
+    "./README.md": "./README.md",
+    "./Statement": {
+      "require": "./Statement.cjs",
+      "default": "./Statement.js"
+    },
+    "./translate": {
+      "require": "./translate.cjs",
+      "default": "./translate.js"
+    },
+    "./useAXIAPreclaims": {
+      "require": "./useAXIAPreclaims.cjs",
+      "default": "./useAXIAPreclaims.js"
+    },
+    "./useCounter": {
+      "require": "./useCounter.cjs",
+      "default": "./useCounter.js"
+    },
+    "./util": {
+      "require": "./util.cjs",
+      "default": "./util.js"
+    },
+    "./Warning": {
+      "require": "./Warning.cjs",
+      "default": "./Warning.js"
+    }
+  }
+}

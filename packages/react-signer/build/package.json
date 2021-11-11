@@ -1,0 +1,91 @@
+{
+  "name": "@axia-js/react-signer",
+  "private": true,
+  "type": "module",
+  "version": "0.1.0",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@axia-js/react-components": "0.1.0",
+    "@babel/runtime": "^7.15.4"
+  },
+  "exports": {
+    ".": {
+      "require": "./index.cjs",
+      "default": "./index.js"
+    },
+    "./Address": {
+      "require": "./Address.cjs",
+      "default": "./Address.js"
+    },
+    "./package.json": "./package.json",
+    "./packageInfo": {
+      "require": "./packageInfo.cjs",
+      "default": "./packageInfo.js"
+    },
+    "./Password": {
+      "require": "./Password.cjs",
+      "default": "./Password.js"
+    },
+    "./PaymentInfo": {
+      "require": "./PaymentInfo.cjs",
+      "default": "./PaymentInfo.js"
+    },
+    "./Qr": {
+      "require": "./Qr.cjs",
+      "default": "./Qr.js"
+    },
+    "./README.md": "./README.md",
+    "./signers": {
+      "require": "./signers/index.cjs",
+      "default": "./signers/index.js"
+    },
+    "./signers/AccountSigner": {
+      "require": "./signers/AccountSigner.cjs",
+      "default": "./signers/AccountSigner.js"
+    },
+    "./signers/ApiSigner": {
+      "require": "./signers/ApiSigner.cjs",
+      "default": "./signers/ApiSigner.js"
+    },
+    "./signers/LedgerSigner": {
+      "require": "./signers/LedgerSigner.cjs",
+      "default": "./signers/LedgerSigner.js"
+    },
+    "./signers/QrSigner": {
+      "require": "./signers/QrSigner.cjs",
+      "default": "./signers/QrSigner.js"
+    },
+    "./SignFields": {
+      "require": "./SignFields.cjs",
+      "default": "./SignFields.js"
+    },
+    "./Tip": {
+      "require": "./Tip.cjs",
+      "default": "./Tip.js"
+    },
+    "./Transaction": {
+      "require": "./Transaction.cjs",
+      "default": "./Transaction.js"
+    },
+    "./translate": {
+      "require": "./translate.cjs",
+      "default": "./translate.js"
+    },
+    "./TxSigned": {
+      "require": "./TxSigned.cjs",
+      "default": "./TxSigned.js"
+    },
+    "./TxUnsigned": {
+      "require": "./TxUnsigned.cjs",
+      "default": "./TxUnsigned.js"
+    },
+    "./types": {
+      "require": "./types.cjs",
+      "default": "./types.js"
+    },
+    "./util": {
+      "require": "./util.cjs",
+      "default": "./util.js"
+    }
+  }
+}

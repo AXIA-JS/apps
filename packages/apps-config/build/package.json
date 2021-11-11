@@ -1,0 +1,785 @@
+{
+  "name": "@axia-js/apps-config",
+  "version": "0.1.0",
+  "license": "Apache-2.0",
+  "type": "module",
+  "main": "index.js",
+  "sideEffects": true,
+  "repository": "github:axia-js/apps",
+  "dependencies": {
+    "@acala-network/type-definitions": "2.3.1",
+    "@axia-js/networks": "0.1.0",
+    "@babel/runtime": "^7.15.4",
+    "@bifrost-finance/type-definitions": "1.2.40",
+    "@crustio/type-definitions": "0.0.10",
+    "@darwinia/types": "1.2.3",
+    "@digitalnative/type-definitions": "1.1.26",
+    "@docknetwork/node-types": "0.4.7",
+    "@edgeware/node-types": "3.6.2-wako",
+    "@equilab/definitions": "1.3.7",
+    "@interlay/interbtc-types": "0.12.5",
+    "@kiltprotocol/type-definitions": "0.1.16",
+    "@laminar/type-definitions": "0.3.1",
+    "@parallel-finance/type-definitions": "1.1.3",
+    "@phala/typedefs": "0.2.28",
+    "@polymathnetwork/polymesh-types": "0.0.2",
+    "@snowfork/snowbridge-types": "0.2.5",
+    "@sora-substrate/type-definitions": "1.6.9",
+    "@subsocial/types": "0.6.2",
+    "@zeitgeistpm/type-defs": "0.2.10",
+    "@zeroio/type-definitions": "0.0.6",
+    "lodash": "^4.17.21",
+    "moonbeam-types-bundle": "1.2.6",
+    "pontem-types-bundle": "1.0.14",
+    "rxjs": "^7.3.0"
+  },
+  "devDependencies": {
+    "i18next": "^19.9.2"
+  },
+  "exports": {
+    ".": {
+      "require": "./index.cjs",
+      "default": "./index.js"
+    },
+    "./api": {
+      "require": "./api/index.cjs",
+      "default": "./api/index.js"
+    },
+    "./api/chain": {
+      "require": "./api/chain/index.cjs",
+      "default": "./api/chain/index.js"
+    },
+    "./api/chain/crust-maxwell": {
+      "require": "./api/chain/crust-maxwell.cjs",
+      "default": "./api/chain/crust-maxwell.js"
+    },
+    "./api/constants": {
+      "require": "./api/constants.cjs",
+      "default": "./api/constants.js"
+    },
+    "./api/params": {
+      "require": "./api/params/index.cjs",
+      "default": "./api/params/index.js"
+    },
+    "./api/params/inflation": {
+      "require": "./api/params/inflation.cjs",
+      "default": "./api/params/inflation.js"
+    },
+    "./api/params/proposalThresholds": {
+      "require": "./api/params/proposalThresholds.cjs",
+      "default": "./api/params/proposalThresholds.js"
+    },
+    "./api/params/teleport": {
+      "require": "./api/params/teleport.cjs",
+      "default": "./api/params/teleport.js"
+    },
+    "./api/spec": {
+      "require": "./api/spec/index.cjs",
+      "default": "./api/spec/index.js"
+    },
+    "./api/spec/acala": {
+      "require": "./api/spec/acala.cjs",
+      "default": "./api/spec/acala.js"
+    },
+    "./api/spec/apron": {
+      "require": "./api/spec/apron.cjs",
+      "default": "./api/spec/apron.js"
+    },
+    "./api/spec/ares-parachain": {
+      "require": "./api/spec/ares-parachain.cjs",
+      "default": "./api/spec/ares-parachain.js"
+    },
+    "./api/spec/basilisk": {
+      "require": "./api/spec/basilisk.cjs",
+      "default": "./api/spec/basilisk.js"
+    },
+    "./api/spec/beresheet": {
+      "require": "./api/spec/beresheet.cjs",
+      "default": "./api/spec/beresheet.js"
+    },
+    "./api/spec/bifrost": {
+      "require": "./api/spec/bifrost.cjs",
+      "default": "./api/spec/bifrost.js"
+    },
+    "./api/spec/bifrost-asgard": {
+      "require": "./api/spec/bifrost-asgard.cjs",
+      "default": "./api/spec/bifrost-asgard.js"
+    },
+    "./api/spec/bifrost-parachain": {
+      "require": "./api/spec/bifrost-parachain.cjs",
+      "default": "./api/spec/bifrost-parachain.js"
+    },
+    "./api/spec/bitcountry": {
+      "require": "./api/spec/bitcountry.cjs",
+      "default": "./api/spec/bitcountry.js"
+    },
+    "./api/spec/bitcountry-betanet": {
+      "require": "./api/spec/bitcountry-betanet.cjs",
+      "default": "./api/spec/bitcountry-betanet.js"
+    },
+    "./api/spec/canvas": {
+      "require": "./api/spec/canvas.cjs",
+      "default": "./api/spec/canvas.js"
+    },
+    "./api/spec/centrifuge-chain": {
+      "require": "./api/spec/centrifuge-chain.cjs",
+      "default": "./api/spec/centrifuge-chain.js"
+    },
+    "./api/spec/chainx": {
+      "require": "./api/spec/chainx.cjs",
+      "default": "./api/spec/chainx.js"
+    },
+    "./api/spec/clover": {
+      "require": "./api/spec/clover.cjs",
+      "default": "./api/spec/clover.js"
+    },
+    "./api/spec/clover-betanet": {
+      "require": "./api/spec/clover-betanet.cjs",
+      "default": "./api/spec/clover-betanet.js"
+    },
+    "./api/spec/crab": {
+      "require": "./api/spec/crab.cjs",
+      "default": "./api/spec/crab.js"
+    },
+    "./api/spec/crown-sterling": {
+      "require": "./api/spec/crown-sterling.cjs",
+      "default": "./api/spec/crown-sterling.js"
+    },
+    "./api/spec/crust": {
+      "require": "./api/spec/crust.cjs",
+      "default": "./api/spec/crust.js"
+    },
+    "./api/spec/cumulus-test-parachain": {
+      "require": "./api/spec/cumulus-test-parachain.cjs",
+      "default": "./api/spec/cumulus-test-parachain.js"
+    },
+    "./api/spec/darwinia": {
+      "require": "./api/spec/darwinia.cjs",
+      "default": "./api/spec/darwinia.js"
+    },
+    "./api/spec/datahighway": {
+      "require": "./api/spec/datahighway.cjs",
+      "default": "./api/spec/datahighway.js"
+    },
+    "./api/spec/dock-poa-mainnet": {
+      "require": "./api/spec/dock-poa-mainnet.cjs",
+      "default": "./api/spec/dock-poa-mainnet.js"
+    },
+    "./api/spec/dock-poa-testnet": {
+      "require": "./api/spec/dock-poa-testnet.cjs",
+      "default": "./api/spec/dock-poa-testnet.js"
+    },
+    "./api/spec/dotmog": {
+      "require": "./api/spec/dotmog.cjs",
+      "default": "./api/spec/dotmog.js"
+    },
+    "./api/spec/dusty": {
+      "require": "./api/spec/dusty.cjs",
+      "default": "./api/spec/dusty.js"
+    },
+    "./api/spec/eave": {
+      "require": "./api/spec/eave.cjs",
+      "default": "./api/spec/eave.js"
+    },
+    "./api/spec/edgeware": {
+      "require": "./api/spec/edgeware.cjs",
+      "default": "./api/spec/edgeware.js"
+    },
+    "./api/spec/encointer-node-notee": {
+      "require": "./api/spec/encointer-node-notee.cjs",
+      "default": "./api/spec/encointer-node-notee.js"
+    },
+    "./api/spec/encointer-node-teeproxy": {
+      "require": "./api/spec/encointer-node-teeproxy.cjs",
+      "default": "./api/spec/encointer-node-teeproxy.js"
+    },
+    "./api/spec/encointer-para": {
+      "require": "./api/spec/encointer-para.cjs",
+      "default": "./api/spec/encointer-para.js"
+    },
+    "./api/spec/equilibrium": {
+      "require": "./api/spec/equilibrium.cjs",
+      "default": "./api/spec/equilibrium.js"
+    },
+    "./api/spec/fantour": {
+      "require": "./api/spec/fantour.cjs",
+      "default": "./api/spec/fantour.js"
+    },
+    "./api/spec/galital": {
+      "require": "./api/spec/galital.cjs",
+      "default": "./api/spec/galital.js"
+    },
+    "./api/spec/galital-parachain": {
+      "require": "./api/spec/galital-parachain.cjs",
+      "default": "./api/spec/galital-parachain.js"
+    },
+    "./api/spec/galois": {
+      "require": "./api/spec/galois.cjs",
+      "default": "./api/spec/galois.js"
+    },
+    "./api/spec/gamepower": {
+      "require": "./api/spec/gamepower.cjs",
+      "default": "./api/spec/gamepower.js"
+    },
+    "./api/spec/genshiro": {
+      "require": "./api/spec/genshiro.cjs",
+      "default": "./api/spec/genshiro.js"
+    },
+    "./api/spec/hanonycash": {
+      "require": "./api/spec/hanonycash.cjs",
+      "default": "./api/spec/hanonycash.js"
+    },
+    "./api/spec/hydrate": {
+      "require": "./api/spec/hydrate.cjs",
+      "default": "./api/spec/hydrate.js"
+    },
+    "./api/spec/idavoll": {
+      "require": "./api/spec/idavoll.cjs",
+      "default": "./api/spec/idavoll.js"
+    },
+    "./api/spec/integritee": {
+      "require": "./api/spec/integritee.cjs",
+      "default": "./api/spec/integritee.js"
+    },
+    "./api/spec/interbtc": {
+      "require": "./api/spec/interbtc.cjs",
+      "default": "./api/spec/interbtc.js"
+    },
+    "./api/spec/ipse": {
+      "require": "./api/spec/ipse.cjs",
+      "default": "./api/spec/ipse.js"
+    },
+    "./api/spec/jupiter": {
+      "require": "./api/spec/jupiter.cjs",
+      "default": "./api/spec/jupiter.js"
+    },
+    "./api/spec/jupiter-betanet": {
+      "require": "./api/spec/jupiter-betanet.cjs",
+      "default": "./api/spec/jupiter-betanet.js"
+    },
+    "./api/spec/khala": {
+      "require": "./api/spec/khala.cjs",
+      "default": "./api/spec/khala.js"
+    },
+    "./api/spec/kilt": {
+      "require": "./api/spec/kilt.cjs",
+      "default": "./api/spec/kilt.js"
+    },
+    "./api/spec/konomi": {
+      "require": "./api/spec/konomi.cjs",
+      "default": "./api/spec/konomi.js"
+    },
+    "./api/spec/kpron": {
+      "require": "./api/spec/kpron.cjs",
+      "default": "./api/spec/kpron.js"
+    },
+    "./api/spec/kulupu": {
+      "require": "./api/spec/kulupu.cjs",
+      "default": "./api/spec/kulupu.js"
+    },
+    "./api/spec/kylin": {
+      "require": "./api/spec/kylin.cjs",
+      "default": "./api/spec/kylin.js"
+    },
+    "./api/spec/laminar": {
+      "require": "./api/spec/laminar.cjs",
+      "default": "./api/spec/laminar.js"
+    },
+    "./api/spec/litentry": {
+      "require": "./api/spec/litentry.cjs",
+      "default": "./api/spec/litentry.js"
+    },
+    "./api/spec/manta": {
+      "require": "./api/spec/manta.cjs",
+      "default": "./api/spec/manta.js"
+    },
+    "./api/spec/moonbeam": {
+      "require": "./api/spec/moonbeam.cjs",
+      "default": "./api/spec/moonbeam.js"
+    },
+    "./api/spec/mybank": {
+      "require": "./api/spec/mybank.cjs",
+      "default": "./api/spec/mybank.js"
+    },
+    "./api/spec/neatcoin": {
+      "require": "./api/spec/neatcoin.cjs",
+      "default": "./api/spec/neatcoin.js"
+    },
+    "./api/spec/nftmart": {
+      "require": "./api/spec/nftmart.cjs",
+      "default": "./api/spec/nftmart.js"
+    },
+    "./api/spec/nodle": {
+      "require": "./api/spec/nodle.cjs",
+      "default": "./api/spec/nodle.js"
+    },
+    "./api/spec/oak-testnet": {
+      "require": "./api/spec/oak-testnet.cjs",
+      "default": "./api/spec/oak-testnet.js"
+    },
+    "./api/spec/opportunity": {
+      "require": "./api/spec/opportunity.cjs",
+      "default": "./api/spec/opportunity.js"
+    },
+    "./api/spec/origintrail": {
+      "require": "./api/spec/origintrail.cjs",
+      "default": "./api/spec/origintrail.js"
+    },
+    "./api/spec/pangolin": {
+      "require": "./api/spec/pangolin.cjs",
+      "default": "./api/spec/pangolin.js"
+    },
+    "./api/spec/pangoro": {
+      "require": "./api/spec/pangoro.cjs",
+      "default": "./api/spec/pangoro.js"
+    },
+    "./api/spec/parallel": {
+      "require": "./api/spec/parallel.cjs",
+      "default": "./api/spec/parallel.js"
+    },
+    "./api/spec/parami": {
+      "require": "./api/spec/parami.cjs",
+      "default": "./api/spec/parami.js"
+    },
+    "./api/spec/phoenix": {
+      "require": "./api/spec/phoenix.cjs",
+      "default": "./api/spec/phoenix.js"
+    },
+    "./api/spec/plasm": {
+      "require": "./api/spec/plasm.cjs",
+      "default": "./api/spec/plasm.js"
+    },
+    "./api/spec/plasm-parachain": {
+      "require": "./api/spec/plasm-parachain.cjs",
+      "default": "./api/spec/plasm-parachain.js"
+    },
+    "./api/spec/polkadex": {
+      "require": "./api/spec/polkadex.cjs",
+      "default": "./api/spec/polkadex.js"
+    },
+    "./api/spec/polkafoundry": {
+      "require": "./api/spec/polkafoundry.cjs",
+      "default": "./api/spec/polkafoundry.js"
+    },
+    "./api/spec/polymesh": {
+      "require": "./api/spec/polymesh.cjs",
+      "default": "./api/spec/polymesh.js"
+    },
+    "./api/spec/pontem": {
+      "require": "./api/spec/pontem.cjs",
+      "default": "./api/spec/pontem.js"
+    },
+    "./api/spec/prism": {
+      "require": "./api/spec/prism.cjs",
+      "default": "./api/spec/prism.js"
+    },
+    "./api/spec/realis": {
+      "require": "./api/spec/realis.cjs",
+      "default": "./api/spec/realis.js"
+    },
+    "./api/spec/riochain": {
+      "require": "./api/spec/riochain.cjs",
+      "default": "./api/spec/riochain.js"
+    },
+    "./api/spec/robonomics": {
+      "require": "./api/spec/robonomics.cjs",
+      "default": "./api/spec/robonomics.js"
+    },
+    "./api/spec/snowbridge": {
+      "require": "./api/spec/snowbridge.cjs",
+      "default": "./api/spec/snowbridge.js"
+    },
+    "./api/spec/soraSubstrate": {
+      "require": "./api/spec/soraSubstrate.cjs",
+      "default": "./api/spec/soraSubstrate.js"
+    },
+    "./api/spec/spanner": {
+      "require": "./api/spec/spanner.cjs",
+      "default": "./api/spec/spanner.js"
+    },
+    "./api/spec/stafi": {
+      "require": "./api/spec/stafi.cjs",
+      "default": "./api/spec/stafi.js"
+    },
+    "./api/spec/standard": {
+      "require": "./api/spec/standard.cjs",
+      "default": "./api/spec/standard.js"
+    },
+    "./api/spec/subdao": {
+      "require": "./api/spec/subdao.cjs",
+      "default": "./api/spec/subdao.js"
+    },
+    "./api/spec/subgame": {
+      "require": "./api/spec/subgame.cjs",
+      "default": "./api/spec/subgame.js"
+    },
+    "./api/spec/subsocial": {
+      "require": "./api/spec/subsocial.cjs",
+      "default": "./api/spec/subsocial.js"
+    },
+    "./api/spec/subspace": {
+      "require": "./api/spec/subspace.cjs",
+      "default": "./api/spec/subspace.js"
+    },
+    "./api/spec/substrateContractsNode": {
+      "require": "./api/spec/substrateContractsNode.cjs",
+      "default": "./api/spec/substrateContractsNode.js"
+    },
+    "./api/spec/ternoa": {
+      "require": "./api/spec/ternoa.cjs",
+      "default": "./api/spec/ternoa.js"
+    },
+    "./api/spec/trustbase": {
+      "require": "./api/spec/trustbase.cjs",
+      "default": "./api/spec/trustbase.js"
+    },
+    "./api/spec/uart": {
+      "require": "./api/spec/uart.cjs",
+      "default": "./api/spec/uart.js"
+    },
+    "./api/spec/unique": {
+      "require": "./api/spec/unique.cjs",
+      "default": "./api/spec/unique.js"
+    },
+    "./api/spec/unitv": {
+      "require": "./api/spec/unitv.cjs",
+      "default": "./api/spec/unitv.js"
+    },
+    "./api/spec/vln": {
+      "require": "./api/spec/vln.cjs",
+      "default": "./api/spec/vln.js"
+    },
+    "./api/spec/vln-betanet": {
+      "require": "./api/spec/vln-betanet.cjs",
+      "default": "./api/spec/vln-betanet.js"
+    },
+    "./api/spec/vodka": {
+      "require": "./api/spec/vodka.cjs",
+      "default": "./api/spec/vodka.js"
+    },
+    "./api/spec/web3games": {
+      "require": "./api/spec/web3games.cjs",
+      "default": "./api/spec/web3games.js"
+    },
+    "./api/spec/westlake": {
+      "require": "./api/spec/westlake.cjs",
+      "default": "./api/spec/westlake.js"
+    },
+    "./api/spec/zCloak": {
+      "require": "./api/spec/zCloak.cjs",
+      "default": "./api/spec/zCloak.js"
+    },
+    "./api/spec/zeitgeist": {
+      "require": "./api/spec/zeitgeist.cjs",
+      "default": "./api/spec/zeitgeist.js"
+    },
+    "./api/spec/zenlink": {
+      "require": "./api/spec/zenlink.cjs",
+      "default": "./api/spec/zenlink.js"
+    },
+    "./api/spec/zero": {
+      "require": "./api/spec/zero.cjs",
+      "default": "./api/spec/zero.js"
+    },
+    "./api/util": {
+      "require": "./api/util.cjs",
+      "default": "./api/util.js"
+    },
+    "./ci/util": {
+      "require": "./ci/util.cjs",
+      "default": "./ci/util.js"
+    },
+    "./endpoints": {
+      "require": "./endpoints/index.cjs",
+      "default": "./endpoints/index.js"
+    },
+    "./endpoints/development": {
+      "require": "./endpoints/development.cjs",
+      "default": "./endpoints/development.js"
+    },
+    "./endpoints/production": {
+      "require": "./endpoints/production.cjs",
+      "default": "./endpoints/production.js"
+    },
+    "./endpoints/productionRelayAXIALunar": {
+      "require": "./endpoints/productionRelayAXIALunar.cjs",
+      "default": "./endpoints/productionRelayAXIALunar.js"
+    },
+    "./endpoints/productionRelayAXIA": {
+      "require": "./endpoints/productionRelayAXIA.cjs",
+      "default": "./endpoints/productionRelayAXIA.js"
+    },
+    "./endpoints/productionRelays": {
+      "require": "./endpoints/productionRelays.cjs",
+      "default": "./endpoints/productionRelays.js"
+    },
+    "./endpoints/testing": {
+      "require": "./endpoints/testing.cjs",
+      "default": "./endpoints/testing.js"
+    },
+    "./endpoints/testingRelayAlphaNet": {
+      "require": "./endpoints/testingRelayAlphaNet.cjs",
+      "default": "./endpoints/testingRelayAlphaNet.js"
+    },
+    "./endpoints/testingRelayBetaNet": {
+      "require": "./endpoints/testingRelayBetaNet.cjs",
+      "default": "./endpoints/testingRelayBetaNet.js"
+    },
+    "./endpoints/testingRelays": {
+      "require": "./endpoints/testingRelays.cjs",
+      "default": "./endpoints/testingRelays.js"
+    },
+    "./endpoints/types": {
+      "require": "./endpoints/types.cjs",
+      "default": "./endpoints/types.js"
+    },
+    "./endpoints/util": {
+      "require": "./endpoints/util.cjs",
+      "default": "./endpoints/util.js"
+    },
+    "./extensions": {
+      "require": "./extensions/index.cjs",
+      "default": "./extensions/index.js"
+    },
+    "./links": {
+      "require": "./links/index.cjs",
+      "default": "./links/index.js"
+    },
+    "./links/commonwealth": {
+      "require": "./links/commonwealth.cjs",
+      "default": "./links/commonwealth.js"
+    },
+    "./links/dotreasury": {
+      "require": "./links/dotreasury.cjs",
+      "default": "./links/dotreasury.js"
+    },
+    "./links/dotscanner": {
+      "require": "./links/dotscanner.cjs",
+      "default": "./links/dotscanner.js"
+    },
+    "./links/polkascan": {
+      "require": "./links/polkascan.cjs",
+      "default": "./links/polkascan.js"
+    },
+    "./links/polkassembly": {
+      "require": "./links/polkassembly.cjs",
+      "default": "./links/polkassembly.js"
+    },
+    "./links/polkastats": {
+      "require": "./links/polkastats.cjs",
+      "default": "./links/polkastats.js"
+    },
+    "./links/statescan": {
+      "require": "./links/statescan.cjs",
+      "default": "./links/statescan.js"
+    },
+    "./links/subid": {
+      "require": "./links/subid.cjs",
+      "default": "./links/subid.js"
+    },
+    "./links/subscan": {
+      "require": "./links/subscan.cjs",
+      "default": "./links/subscan.js"
+    },
+    "./links/types": {
+      "require": "./links/types.cjs",
+      "default": "./links/types.js"
+    },
+    "./package.json": "./package.json",
+    "./packageInfo": {
+      "require": "./packageInfo.cjs",
+      "default": "./packageInfo.js"
+    },
+    "./README.md": "./README.md",
+    "./settings": {
+      "require": "./settings/index.cjs",
+      "default": "./settings/index.js"
+    },
+    "./settings/ethereumChains": {
+      "require": "./settings/ethereumChains.cjs",
+      "default": "./settings/ethereumChains.js"
+    },
+    "./settings/languages": {
+      "require": "./settings/languages.cjs",
+      "default": "./settings/languages.js"
+    },
+    "./settings/ss58": {
+      "require": "./settings/ss58.cjs",
+      "default": "./settings/ss58.js"
+    },
+    "./settings/types": {
+      "require": "./settings/types.cjs",
+      "default": "./settings/types.js"
+    },
+    "./ui": {
+      "require": "./ui/index.cjs",
+      "default": "./ui/index.js"
+    },
+    "./ui/colors": {
+      "require": "./ui/colors.cjs",
+      "default": "./ui/colors.js"
+    },
+    "./ui/identityIcons": {
+      "require": "./ui/identityIcons/index.cjs",
+      "default": "./ui/identityIcons/index.js"
+    },
+    "./ui/logos": {
+      "require": "./ui/logos/index.cjs",
+      "default": "./ui/logos/index.js"
+    },
+    "./ui/logos/chains/aleph.svg": "./ui/logos/chains/aleph.svg",
+    "./ui/logos/chains/altair.svg": "./ui/logos/chains/altair.svg",
+    "./ui/logos/chains/axialunar-128.gif": "./ui/logos/chains/axialunar-128.gif",
+    "./ui/logos/chains/betanet-tick.svg": "./ui/logos/chains/betanet-tick.svg",
+    "./ui/logos/chains/betanet-track.svg": "./ui/logos/chains/betanet-track.svg",
+    "./ui/logos/chains/betanet-trick.svg": "./ui/logos/chains/betanet-trick.svg",
+    "./ui/logos/chains/betanet.svg": "./ui/logos/chains/betanet.svg",
+    "./ui/logos/chains/crown-sterling.png": "./ui/logos/chains/crown-sterling.png",
+    "./ui/logos/chains/dusty.png": "./ui/logos/chains/dusty.png",
+    "./ui/logos/chains/equilibrium.svg": "./ui/logos/chains/equilibrium.svg",
+    "./ui/logos/chains/galital-logo.png": "./ui/logos/chains/galital-logo.png",
+    "./ui/logos/chains/genshiro.svg": "./ui/logos/chains/genshiro.svg",
+    "./ui/logos/chains/heiko.svg": "./ui/logos/chains/heiko.svg",
+    "./ui/logos/chains/hydrate.png": "./ui/logos/chains/hydrate.png",
+    "./ui/logos/chains/interbtc.png": "./ui/logos/chains/interbtc.png",
+    "./ui/logos/chains/karura.svg": "./ui/logos/chains/karura.svg",
+    "./ui/logos/chains/kintsugi.png": "./ui/logos/chains/kintsugi.png",
+    "./ui/logos/chains/picasso.svg": "./ui/logos/chains/picasso.svg",
+    "./ui/logos/chains/shiden.png": "./ui/logos/chains/shiden.png",
+    "./ui/logos/chains/snakenet.svg": "./ui/logos/chains/snakenet.svg",
+    "./ui/logos/chains/spanner.png": "./ui/logos/chains/spanner.png",
+    "./ui/logos/chains/standard.png": "./ui/logos/chains/standard.png",
+    "./ui/logos/chains/unique.svg": "./ui/logos/chains/unique.svg",
+    "./ui/logos/chains/unorthodox.png": "./ui/logos/chains/unorthodox.png",
+    "./ui/logos/empty.svg": "./ui/logos/empty.svg",
+    "./ui/logos/extensions/axia-js.svg": "./ui/logos/extensions/axia-js.svg",
+    "./ui/logos/external/commonwealth.png": "./ui/logos/external/commonwealth.png",
+    "./ui/logos/external/dotreasury.svg": "./ui/logos/external/dotreasury.svg",
+    "./ui/logos/external/dotscanner.png": "./ui/logos/external/dotscanner.png",
+    "./ui/logos/external/polkascan.png": "./ui/logos/external/polkascan.png",
+    "./ui/logos/external/polkassembly.png": "./ui/logos/external/polkassembly.png",
+    "./ui/logos/external/polkastats.png": "./ui/logos/external/polkastats.png",
+    "./ui/logos/external/statescan.svg": "./ui/logos/external/statescan.svg",
+    "./ui/logos/external/subid.svg": "./ui/logos/external/subid.svg",
+    "./ui/logos/external/subscan.svg": "./ui/logos/external/subscan.svg",
+    "./ui/logos/nodes/acala-circle.svg": "./ui/logos/nodes/acala-circle.svg",
+    "./ui/logos/nodes/alphanet_black_bg.svg": "./ui/logos/nodes/alphanet_black_bg.svg",
+    "./ui/logos/nodes/alphanet_colour.svg": "./ui/logos/nodes/alphanet_colour.svg",
+    "./ui/logos/nodes/alphanet_white_bg.svg": "./ui/logos/nodes/alphanet_white_bg.svg",
+    "./ui/logos/nodes/apron.png": "./ui/logos/nodes/apron.png",
+    "./ui/logos/nodes/ares.svg": "./ui/logos/nodes/ares.svg",
+    "./ui/logos/nodes/axia-circle.svg": "./ui/logos/nodes/axia-circle.svg",
+    "./ui/logos/nodes/axia-dots.svg": "./ui/logos/nodes/axia-dots.svg",
+    "./ui/logos/nodes/axia-js.svg": "./ui/logos/nodes/axia-js.svg",
+    "./ui/logos/nodes/axia-white.svg": "./ui/logos/nodes/axia-white.svg",
+    "./ui/logos/nodes/basilisk.png": "./ui/logos/nodes/basilisk.png",
+    "./ui/logos/nodes/beast.svg": "./ui/logos/nodes/beast.svg",
+    "./ui/logos/nodes/bifrost.svg": "./ui/logos/nodes/bifrost.svg",
+    "./ui/logos/nodes/bitcountry.svg": "./ui/logos/nodes/bitcountry.svg",
+    "./ui/logos/nodes/calamari.png": "./ui/logos/nodes/calamari.png",
+    "./ui/logos/nodes/canvas-2.png": "./ui/logos/nodes/canvas-2.png",
+    "./ui/logos/nodes/canvas.png": "./ui/logos/nodes/canvas.png",
+    "./ui/logos/nodes/centrifuge.png": "./ui/logos/nodes/centrifuge.png",
+    "./ui/logos/nodes/chainx.svg": "./ui/logos/nodes/chainx.svg",
+    "./ui/logos/nodes/clover.svg": "./ui/logos/nodes/clover.svg",
+    "./ui/logos/nodes/crab.svg": "./ui/logos/nodes/crab.svg",
+    "./ui/logos/nodes/crown-sterling.png": "./ui/logos/nodes/crown-sterling.png",
+    "./ui/logos/nodes/crust-maxwell.svg": "./ui/logos/nodes/crust-maxwell.svg",
+    "./ui/logos/nodes/crust.svg": "./ui/logos/nodes/crust.svg",
+    "./ui/logos/nodes/darwinia.png": "./ui/logos/nodes/darwinia.png",
+    "./ui/logos/nodes/darwinia.svg": "./ui/logos/nodes/darwinia.svg",
+    "./ui/logos/nodes/datahighway.png": "./ui/logos/nodes/datahighway.png",
+    "./ui/logos/nodes/dock-mainnet.png": "./ui/logos/nodes/dock-mainnet.png",
+    "./ui/logos/nodes/dock-testnet.png": "./ui/logos/nodes/dock-testnet.png",
+    "./ui/logos/nodes/dotmog.svg": "./ui/logos/nodes/dotmog.svg",
+    "./ui/logos/nodes/eave.svg": "./ui/logos/nodes/eave.svg",
+    "./ui/logos/nodes/edgeware-circle.svg": "./ui/logos/nodes/edgeware-circle.svg",
+    "./ui/logos/nodes/edgeware.svg": "./ui/logos/nodes/edgeware.svg",
+    "./ui/logos/nodes/encointer-notee.svg": "./ui/logos/nodes/encointer-notee.svg",
+    "./ui/logos/nodes/encointer-teeproxy.svg": "./ui/logos/nodes/encointer-teeproxy.svg",
+    "./ui/logos/nodes/fantour.png": "./ui/logos/nodes/fantour.png",
+    "./ui/logos/nodes/galital-logo.png": "./ui/logos/nodes/galital-logo.png",
+    "./ui/logos/nodes/gamepower.svg": "./ui/logos/nodes/gamepower.svg",
+    "./ui/logos/nodes/geek.svg": "./ui/logos/nodes/geek.svg",
+    "./ui/logos/nodes/hanonycash.svg": "./ui/logos/nodes/hanonycash.svg",
+    "./ui/logos/nodes/heiko.svg": "./ui/logos/nodes/heiko.svg",
+    "./ui/logos/nodes/idavoll.png": "./ui/logos/nodes/idavoll.png",
+    "./ui/logos/nodes/integritee.svg": "./ui/logos/nodes/integritee.svg",
+    "./ui/logos/nodes/interbtc.png": "./ui/logos/nodes/interbtc.png",
+    "./ui/logos/nodes/ipse.png": "./ui/logos/nodes/ipse.png",
+    "./ui/logos/nodes/ipse.svg": "./ui/logos/nodes/ipse.svg",
+    "./ui/logos/nodes/jupiter.svg": "./ui/logos/nodes/jupiter.svg",
+    "./ui/logos/nodes/khala.svg": "./ui/logos/nodes/khala.svg",
+    "./ui/logos/nodes/kilt.png": "./ui/logos/nodes/kilt.png",
+    "./ui/logos/nodes/klug.png": "./ui/logos/nodes/klug.png",
+    "./ui/logos/nodes/konomi.png": "./ui/logos/nodes/konomi.png",
+    "./ui/logos/nodes/kulupu.svg": "./ui/logos/nodes/kulupu.svg",
+    "./ui/logos/nodes/kylin.png": "./ui/logos/nodes/kylin.png",
+    "./ui/logos/nodes/laminar-circle.svg": "./ui/logos/nodes/laminar-circle.svg",
+    "./ui/logos/nodes/litentry.png": "./ui/logos/nodes/litentry.png",
+    "./ui/logos/nodes/loom_network.png": "./ui/logos/nodes/loom_network.png",
+    "./ui/logos/nodes/manta.png": "./ui/logos/nodes/manta.png",
+    "./ui/logos/nodes/math.svg": "./ui/logos/nodes/math.svg",
+    "./ui/logos/nodes/moonbeam.png": "./ui/logos/nodes/moonbeam.png",
+    "./ui/logos/nodes/moonriver.svg": "./ui/logos/nodes/moonriver.svg",
+    "./ui/logos/nodes/moonrock.png": "./ui/logos/nodes/moonrock.png",
+    "./ui/logos/nodes/moonshadow.png": "./ui/logos/nodes/moonshadow.png",
+    "./ui/logos/nodes/mybank.png": "./ui/logos/nodes/mybank.png",
+    "./ui/logos/nodes/nftmart.png": "./ui/logos/nodes/nftmart.png",
+    "./ui/logos/nodes/nodle.svg": "./ui/logos/nodes/nodle.svg",
+    "./ui/logos/nodes/oak-testnet.png": "./ui/logos/nodes/oak-testnet.png",
+    "./ui/logos/nodes/opportunity.png": "./ui/logos/nodes/opportunity.png",
+    "./ui/logos/nodes/origintrail.png": "./ui/logos/nodes/origintrail.png",
+    "./ui/logos/nodes/pangolin.svg": "./ui/logos/nodes/pangolin.svg",
+    "./ui/logos/nodes/pangoro.svg": "./ui/logos/nodes/pangoro.svg",
+    "./ui/logos/nodes/parami.png": "./ui/logos/nodes/parami.png",
+    "./ui/logos/nodes/phala.svg": "./ui/logos/nodes/phala.svg",
+    "./ui/logos/nodes/phoenix.png": "./ui/logos/nodes/phoenix.png",
+    "./ui/logos/nodes/picasso.png": "./ui/logos/nodes/picasso.png",
+    "./ui/logos/nodes/plasm.png": "./ui/logos/nodes/plasm.png",
+    "./ui/logos/nodes/polkadex.svg": "./ui/logos/nodes/polkadex.svg",
+    "./ui/logos/nodes/polkafoundry.svg": "./ui/logos/nodes/polkafoundry.svg",
+    "./ui/logos/nodes/polkasmith.svg": "./ui/logos/nodes/polkasmith.svg",
+    "./ui/logos/nodes/polymesh.svg": "./ui/logos/nodes/polymesh.svg",
+    "./ui/logos/nodes/pontem.svg": "./ui/logos/nodes/pontem.svg",
+    "./ui/logos/nodes/prism.png": "./ui/logos/nodes/prism.png",
+    "./ui/logos/nodes/realis.png": "./ui/logos/nodes/realis.png",
+    "./ui/logos/nodes/riochain.svg": "./ui/logos/nodes/riochain.svg",
+    "./ui/logos/nodes/robonomics.svg": "./ui/logos/nodes/robonomics.svg",
+    "./ui/logos/nodes/sakura.svg": "./ui/logos/nodes/sakura.svg",
+    "./ui/logos/nodes/shadow.svg": "./ui/logos/nodes/shadow.svg",
+    "./ui/logos/nodes/shell.svg": "./ui/logos/nodes/shell.svg",
+    "./ui/logos/nodes/singlavender.svg": "./ui/logos/nodes/singlavender.svg",
+    "./ui/logos/nodes/sora-substrate.svg": "./ui/logos/nodes/sora-substrate.svg",
+    "./ui/logos/nodes/stafi.png": "./ui/logos/nodes/stafi.png",
+    "./ui/logos/nodes/statemine.svg": "./ui/logos/nodes/statemine.svg",
+    "./ui/logos/nodes/statemint-2.png": "./ui/logos/nodes/statemint-2.png",
+    "./ui/logos/nodes/statemint-3.png": "./ui/logos/nodes/statemint-3.png",
+    "./ui/logos/nodes/statemint.png": "./ui/logos/nodes/statemint.png",
+    "./ui/logos/nodes/subdao.png": "./ui/logos/nodes/subdao.png",
+    "./ui/logos/nodes/subgame.svg": "./ui/logos/nodes/subgame.svg",
+    "./ui/logos/nodes/subsocial.svg": "./ui/logos/nodes/subsocial.svg",
+    "./ui/logos/nodes/subspace.png": "./ui/logos/nodes/subspace.png",
+    "./ui/logos/nodes/substrate-circle.svg": "./ui/logos/nodes/substrate-circle.svg",
+    "./ui/logos/nodes/substrate-contracts-node.png": "./ui/logos/nodes/substrate-contracts-node.png",
+    "./ui/logos/nodes/substrate-hexagon.svg": "./ui/logos/nodes/substrate-hexagon.svg",
+    "./ui/logos/nodes/substrate-white.svg": "./ui/logos/nodes/substrate-white.svg",
+    "./ui/logos/nodes/ternoa.svg": "./ui/logos/nodes/ternoa.svg",
+    "./ui/logos/nodes/trustbase.png": "./ui/logos/nodes/trustbase.png",
+    "./ui/logos/nodes/uniarts.png": "./ui/logos/nodes/uniarts.png",
+    "./ui/logos/nodes/unique.svg": "./ui/logos/nodes/unique.svg",
+    "./ui/logos/nodes/unitv.png": "./ui/logos/nodes/unitv.png",
+    "./ui/logos/nodes/valiu.png": "./ui/logos/nodes/valiu.png",
+    "./ui/logos/nodes/web3games.svg": "./ui/logos/nodes/web3games.svg",
+    "./ui/logos/nodes/westlake.png": "./ui/logos/nodes/westlake.png",
+    "./ui/logos/nodes/whala.svg": "./ui/logos/nodes/whala.svg",
+    "./ui/logos/nodes/zCloak.svg": "./ui/logos/nodes/zCloak.svg",
+    "./ui/logos/nodes/zeitgeist.png": "./ui/logos/nodes/zeitgeist.png",
+    "./ui/logos/nodes/zenlink.svg": "./ui/logos/nodes/zenlink.svg",
+    "./ui/logos/nodes/zero.svg": "./ui/logos/nodes/zero.svg",
+    "./ui/util": {
+      "require": "./ui/util.cjs",
+      "default": "./ui/util.js"
+    }
+  }
+}

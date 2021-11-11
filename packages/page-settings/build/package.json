@@ -1,0 +1,86 @@
+{
+  "name": "@axia-js/app-settings",
+  "private": true,
+  "type": "module",
+  "version": "0.1.0",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@axia-js/apps-config": "0.1.0",
+    "@axia-js/react-components": "0.1.0",
+    "@axia-js/react-query": "0.1.0",
+    "@babel/runtime": "^7.15.4",
+    "query-string": "^7.0.1"
+  },
+  "exports": {
+    ".": {
+      "require": "./index.cjs",
+      "default": "./index.js"
+    },
+    "./Developer": {
+      "require": "./Developer.cjs",
+      "default": "./Developer.js"
+    },
+    "./General": {
+      "require": "./General.cjs",
+      "default": "./General.js"
+    },
+    "./I18n": {
+      "require": "./I18n/index.cjs",
+      "default": "./I18n/index.js"
+    },
+    "./I18n/StringInput": {
+      "require": "./I18n/StringInput.cjs",
+      "default": "./I18n/StringInput.js"
+    },
+    "./Metadata": {
+      "require": "./Metadata/index.cjs",
+      "default": "./Metadata/index.js"
+    },
+    "./Metadata/ChainColorIndicator": {
+      "require": "./Metadata/ChainColorIndicator.cjs",
+      "default": "./Metadata/ChainColorIndicator.js"
+    },
+    "./Metadata/Extensions": {
+      "require": "./Metadata/Extensions.cjs",
+      "default": "./Metadata/Extensions.js"
+    },
+    "./Metadata/iconOption": {
+      "require": "./Metadata/iconOption.cjs",
+      "default": "./Metadata/iconOption.js"
+    },
+    "./Metadata/NetworkSpecs": {
+      "require": "./Metadata/NetworkSpecs.cjs",
+      "default": "./Metadata/NetworkSpecs.js"
+    },
+    "./package.json": "./package.json",
+    "./packageInfo": {
+      "require": "./packageInfo.cjs",
+      "default": "./packageInfo.js"
+    },
+    "./README.md": "./README.md",
+    "./translate": {
+      "require": "./translate.cjs",
+      "default": "./translate.js"
+    },
+    "./types": {
+      "require": "./types.cjs",
+      "default": "./types.js"
+    },
+    "./useChainInfo": {
+      "require": "./useChainInfo.cjs",
+      "default": "./useChainInfo.js"
+    },
+    "./useCounter": {
+      "require": "./useCounter.cjs",
+      "default": "./useCounter.js"
+    },
+    "./useExtensions": {
+      "require": "./useExtensions.cjs",
+      "default": "./useExtensions.js"
+    },
+    "./util": {
+      "require": "./util.cjs",
+      "default": "./util.js"
+    }
+  }
+}
