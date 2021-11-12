@@ -18,7 +18,7 @@
     "@axia-js/keyring": "0.1.0",
     "@axia-js/networks": "0.1.0",
     "@axia-js/phishing": "0.1.0",
-    "@axia-js/types": "1.1.2",
+    "@axia-js/types": "0.1.0",
     "@axia-js/types-known": "0.1.0",
     "@axia-js/types-support": "0.1.0",
     "@axia-js/util": "0.1.0",
