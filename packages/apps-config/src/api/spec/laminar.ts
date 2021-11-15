@@ -3,6 +3,6 @@
 
 import type { OverrideBundleDefinition } from '@axia-js/types/types';
 
-import { typesBundleForAXIA } from '@laminar/type-definitions';
+import { typesBundleForPolkadot } from '@laminar/type-definitions';
 
-export default typesBundleForAXIA.spec.laminar as unknown as OverrideBundleDefinition;
+export default typesBundleForPolkadot.spec.laminar as unknown as OverrideBundleDefinition;

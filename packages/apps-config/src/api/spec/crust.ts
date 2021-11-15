@@ -3,6 +3,6 @@
 
 import type { OverrideBundleDefinition } from '@axia-js/types/types';
 
-import { typesBundleForAXIA } from '@crustio/type-definitions';
+import { typesBundleForPolkadot } from '@crustio/type-definitions';
 
-export default typesBundleForAXIA.spec.crust as unknown as OverrideBundleDefinition;
+export default typesBundleForPolkadot.spec.crust as unknown as OverrideBundleDefinition;

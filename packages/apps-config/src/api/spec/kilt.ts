@@ -3,6 +3,6 @@
 
 import type { OverrideBundleDefinition } from '@axia-js/types/types';
 
-import { typeBundleForAXIA } from '@kiltprotocol/type-definitions';
+import { typeBundleForPolkadot } from '@kiltprotocol/type-definitions';
 
-export default typeBundleForAXIA as unknown as OverrideBundleDefinition;
+export default typeBundleForPolkadot as unknown as OverrideBundleDefinition;

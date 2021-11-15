@@ -1,6 +1,6 @@
 // Copyright 2017-2021 @axia-js/apps-config authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import { typesBundleForAXIA } from '@parallel-finance/type-definitions';
+import { typesBundleForPolkadot } from '@parallel-finance/type-definitions';
 
-export default typesBundleForAXIA.spec.parallel;
+export default typesBundleForPolkadot.spec.parallel;
