@@ -35,8 +35,8 @@ export function useBlockTime (blocks: number | BN = BN_ONE, apiOverride?: ApiPro
           a.consts.timestamp?.minimumPeriod.gte(THRESHOLD)
             // Default minimum period config
             ? a.consts.timestamp.minimumPeriod.mul(BN_TWO)
-            : a.query.parachainSystem
-              // default guess for a parachain
+            : a.query.allychainSystem
+              // default guess for a allychain
               ? DEFAULT_TIME.mul(BN_TWO)
               // default guess for others
               : DEFAULT_TIME

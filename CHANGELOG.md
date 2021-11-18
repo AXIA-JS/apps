@@ -39,7 +39,7 @@ Contributed:
 - Update Moonbeam types (Thanks to https://github.com/joelamouche)
 - Update WILT paraId & types (Thanks to https://github.com/weichweich)
 - Update Genshiro paraId (Thanks to https://github.com/alex-nax)
-- Add Lavendar parachain (Thanks to https://github.com/phamsonha)
+- Add Lavendar allychain (Thanks to https://github.com/phamsonha)
 - Add Genshiro standalone (Thanks to https://github.com/alex-nax)
 - Add Crown Sterling chain (Thanks to https://github.com/crownsterlingllc)
 - Add external types for Zero (Thanks to https://github.com/2075)
@@ -85,7 +85,7 @@ Changes:
 - Discard invalid minimumPeriod values (block times)
 - Cater for metadata v14 & latest API
 - Hide/disable non-available network endpoints
-- Adjust detection for parachain module locations
+- Adjust detection for allychain module locations
 - Ensure unreachable endpoints are sorted & checked
 - Extract teleport weight constants on a per-genesis basis
 - Only allow gilt bids via pure proxy
@@ -101,7 +101,7 @@ Contributed:
 
 - Integrate Substrate connect (Thanks to https://github.com/wirednkod)
 - Bump Substrate connect dependencies (Thanks to https://github.com/raoulmillais)
-- Robonomics AXIALunar parachain (Thanks to https://github.com/ensrationis)
+- Robonomics AXIALunar allychain (Thanks to https://github.com/ensrationis)
 - Typo fix (Thanks to https://github.com/gangelop)
 - Update Robomonics logo (Thanks to https://github.com/vol4tim)
 - Bump Acala types (Thanks to https://github.com/xlc)
@@ -121,11 +121,11 @@ Contributed:
 - Elara providers for Karura, Moonriver & Bifrost (Thanks to https://github.com/zzcwoshizz)
 - Update Sora providers (Thanks to https://github.com/stefashkaa)
 - Add Basilik AXIALunar details (Thanks to https://github.com/lumir-mrkva)
-- Add Zeitgeist parachain for AXIALunar (Thanks to https://github.com/c410-f3r)
+- Add Zeitgeist allychain for AXIALunar (Thanks to https://github.com/c410-f3r)
 - Update Pangolin & Crab types (Thanks to https://github.com/WoeOm)
 - Add Fantour network config (Thanks to https://github.com/noodleslove)
-- Add Loom AXIALunar parachain (Thanks to https://github.com/NightingaleAsh & https://github.com/enlight)
-- Integritee parachain config (Thanks to https://github.com/brenzi)
+- Add Loom AXIALunar allychain (Thanks to https://github.com/NightingaleAsh & https://github.com/enlight)
+- Integritee allychain config (Thanks to https://github.com/brenzi)
 - Update Unique types (Thanks to https://github.com/gregzaitsev)
 - Add zCloak network (Thanks to https://github.com/Lohsea)
 - Update Dotscanner URLs (Thanks to https://github.com/Deekor)
@@ -168,7 +168,7 @@ Contributed:
 - Update Darwinia Redirect endpoint (Thanks to https://github.com/sxlwar)
 - Additional Sora endpoint (Thanks to https://github.com/pgolovkin)
 - OnFinality endpoints for Khala, Moonriver, Shiden (Thanks to https://github.com/454076513)
-- Add Pinknode endpoints for relays & parachains (Thanks to https://github.com/Capeguy)
+- Add Pinknode endpoints for relays & allychains (Thanks to https://github.com/Capeguy)
 - Additional Karura endpoints (Thanks to https://github.com/xlc)
 - Polkawallet endpoint for Karura (Thanks to https://github.com/qwer951123)
 - Update Phala types (Thanks to https://github.com/limichange)
@@ -191,7 +191,7 @@ Changes:
 - Interleave crowdloans even with no bids
 - Filter auctions with `isWinner` flag
 - Filter crowdloan active raises on `isWinner`
-- Randomize parachain API endpoint usage
+- Randomize allychain API endpoint usage
 - Split CI checks for types & availability
 - Add support for `state_queryStorage` results on RPC execution pages
 - Remove support for Substrate 2.0 payouts
@@ -228,7 +228,7 @@ Changes:
 - Update network entries with no DNS
 - Update theme config with name-checked records
 - Check endpoint ordering on CI
-- Adjust parachain hooks using mounted references
+- Adjust allychain hooks using mounted references
 - Remove Flaming Fir network (RPCs inoperational)
 
 
@@ -279,23 +279,23 @@ Contributed:
 
 - Update WarmUp script with isReady checks (Thanks to https://github.com/wirednkod)
 - Update validator graphs to take theme into account (Thanks to https://github.com/gngchrs)
-- Add Darwinia Crab AXIALunar parachain (Thanks to https://github.com/WoeOm)
-- Add Encointer AXIALunar parachain (Thanks to https://github.com/brenzi)
-- Add IntegiTEE AXIALunar parachain (Thanks to https://github.com/brenzi)
-- Add Genshiro AXIALunar parachain (Thanks to https://github.com/alex-nax)
-- Add Karura AXIALunar parachain (Thanks to https://github.com/ntduan)
-- Add Shiden AXIALunar parachain (thanks to https://github.com/akru)
+- Add Darwinia Crab AXIALunar allychain (Thanks to https://github.com/WoeOm)
+- Add Encointer AXIALunar allychain (Thanks to https://github.com/brenzi)
+- Add IntegiTEE AXIALunar allychain (Thanks to https://github.com/brenzi)
+- Add Genshiro AXIALunar allychain (Thanks to https://github.com/alex-nax)
+- Add Karura AXIALunar allychain (Thanks to https://github.com/ntduan)
+- Add Shiden AXIALunar allychain (thanks to https://github.com/akru)
 - Adjust Bifrost branding (Thanks to https://github.com/awesomepan)
 - Adjust Crust Shadow branding (Thanks to https://github.com/zikunfan)
 - Adjust Equilibrium definitions (Thanks to https://github.com/alex-nax & https://github.com/pr0fedt)
-- Add Kylin as BetaNet parachain (Thanks to https://github.com/samelamin)
-- Add Moonshadow as AlphaNet parachain (Thanks to https://github.com/crystalin & https://github.com/joelamouche)
+- Add Kylin as BetaNet allychain (Thanks to https://github.com/samelamin)
+- Add Moonshadow as AlphaNet allychain (Thanks to https://github.com/crystalin & https://github.com/joelamouche)
 - Add Manta testnet (Thanks to https://github.com/Kevingislason)
 - Add Pontem testnet (Thanks to https://github.com/idimetrix)
 - Add KlugDossier testnet (Thanks to https://github.com/sbnair)
 - Add Oak testnet (Thanks to https://github.com/chrisli30 & https://github.com/imstar15)
-- Add Sakura parachain (Thanks to https://github.com/pangwa)
-- Add Shibuya AlphaNet parachain (Thanks to https://github.com/akru)
+- Add Sakura allychain (Thanks to https://github.com/pangwa)
+- Add Shibuya AlphaNet allychain (Thanks to https://github.com/akru)
 - Update Manta types (Thanks to https://github.com/stechu)
 - Update Zero.io types (Thanks to https://github.com/2075)
 - Update types for HydraDX (Thanks to https://github.com/jak-pan)
@@ -316,9 +316,9 @@ Contributed:
 Changes:
 
 - Allow for XCM asset teleport
-- Add support for AXIALunar Statemine parachain
-- Add support for AXIALunar Shell parachain
-- Add support for AlphaNet Westmint parachain
+- Add support for AXIALunar Statemine allychain
+- Add support for AXIALunar Shell allychain
+- Add support for AlphaNet Westmint allychain
 - Adjust branding details for Statemine, Statemint & Westmint
 - Adjust proposal threshold for staking slash cancel
 - Allow for color/logo definition based on specName
@@ -327,18 +327,18 @@ Changes:
 - Display current approvals on multisig modals
 - Display expanded call data on multisig modal
 - Correct validator mapping to assignment groups
-- Display currently selected parachain validators
-- Display current validator group in parachains page
+- Display currently selected allychain validators
+- Display current validator group in allychains page
 - Don't display renamed inclusion/backed events
 - Simplify validator list rendering
 - Allow for inflation adjustment based on auctions
 - Display ideal staked info on staking
 - Adjust TC fasttrack thresholds based on voting input
-- Sort AlphaNet parachain ids
+- Sort AlphaNet allychain ids
 - Adjust Tabs imports (code consistency & usage)
 - Update tests to cater for Jest 27
 - Allow for verifier signature on crowdloan
-- Adjust BetaNet parachains (& genesis) after reset
+- Adjust BetaNet allychains (& genesis) after reset
 - Add option for Ledger via WebHID
 - Add call decoder of extrinsics page
 - Use type-only BN imports (as applicable)
@@ -374,8 +374,8 @@ Contributed:
 - Update Uni Arts types (Thanks to https://github.com/tianxiemaochiyu)
 - Update Steam types (Thanks to https://github.com/johnwhitton)
 - Support for Snakenet gen-3 (Thanks to https://github.com/jak-pan)
-- Add Zeitgeist BetaNet parachain (Thanks to https://github.com/c410-f3r)
-- Add Moonrock BetaNet parachain (Thanks to https://github.com/crystalin)
+- Add Zeitgeist BetaNet allychain (Thanks to https://github.com/c410-f3r)
+- Add Moonrock BetaNet allychain (Thanks to https://github.com/crystalin)
 - Adjust Crust BetaNet paraId (Thanks to https://github.com/yuhui1208)
 - Adjust Eave BetaNet paraId (Thanks to https://github.com/johnwhitton)
 - Add GamePower testnet (Thanks to https://github.com/GamePowerDev & https://github.com/MikeHuntington)
@@ -395,21 +395,21 @@ Contributed:
 Changes:
 
 - Display specName/specVersion for current chain
-- Adjust parachains for AlphaNet & AXIALunar modules
+- Adjust allychains for AlphaNet & AXIALunar modules
 - Show call data and call hash on extinsics page
 - Fix auction first-last display (based on chain constants)
 - Allow file hash upload to `H256` types
-- Use registration nextId for parachain setup
+- Use registration nextId for allychain setup
 - Show treasury details in council proposals
 - Ensure alphabetical chain ordering
 - Show reserved amount for proxy creation
 - Sort by and display ss58 in chain settings
 - Adjust logo/color overrides to be alphabetical
-- Check for registered code for allowing parachain bidding
+- Check for registered code for allowing allychain bidding
 - Always populate paraId from owners (after registration)
-- Add Shell parachain to AlphaNet
+- Add Shell allychain to AlphaNet
 - Allow UI to work with no balances/timestamp modules (as per Shell)
-- Display parathread info via para API (in addition to parachain)
+- Display parathread info via para API (in addition to allychain)
 - Cater for electionsPhragmen -> phragmenElection modules
 - Cater for council votes on prev-generation chains
 
@@ -500,7 +500,7 @@ Contributed:
 - Update Polkafoundry config (Thanks to https://github.com/hoangnl2112)
 - Adjust Parami logo (thanks to https://github.com/hellotrongo)
 - Update Galital config (thanks to https://github.com/masterdubs)
-- Add Prism BetaNet parachain (Thanks to https://github.com/chrissoso)
+- Add Prism BetaNet allychain (Thanks to https://github.com/chrissoso)
 - Add HydraDx Snakenet Gen 2 (Thanks to https://github.com/lumir-mrkva)
 - Update Apron BetaNet paraId (thanks to https://github.com/Apron2050)
 - Update Clover logo (Thanks to https://github.com/pangwa)
@@ -512,7 +512,7 @@ Changes:
 
 - Fix Elapsed formatting (previously would only show s units)
 - Show unlocking when democracy has been undelegated
-- Disable all parachain < 1000 networks (now reserved)
+- Disable all allychain < 1000 networks (now reserved)
 - Params now deals defaults to hex-only for H160/256/512
 
 
@@ -528,20 +528,20 @@ Contributed:
 - Add Galois SessionKey type (Thanks to https://github.com/hging)
 - Update Datahighway endpoint (Thanks to https://github.com/cgroeschel)
 - Add Zeitgeist (Thanks to https://github.com/lsaether)
-- Add Subsocial BetaNet parachain (Thanks to https://github.com/siman)
-- Add Parami BetaNet parachain (Thanks to https://github.com/chenwei767)
+- Add Subsocial BetaNet allychain (Thanks to https://github.com/siman)
+- Add Parami BetaNet allychain (Thanks to https://github.com/chenwei767)
 - Update Robonomics types (Thanks to https://github.com/akru)
-- Add Galitial BetaNet parachain (Thanks to https://github.com/masterdubs)
+- Add Galitial BetaNet allychain (Thanks to https://github.com/masterdubs)
 - Update Jupiter types (Thanks to https://github.com/ii-ii-ii)
 - Update SubDAO logo (Thanks https://github.com/chenwei767)
-- Add Sunrock BetaNet parachain (Thanks to https://github.com/crystalin)
+- Add Sunrock BetaNet allychain (Thanks to https://github.com/crystalin)
 - Update Edgeware live endpoint (Thanks to https://github.com/ShankarWarang)
 - Add Mybank network (Thanks to https://github.com/armatrix)
-- Add Steam & Beast BetaNet parachain (Thanks to https://github.com/johnwhitton)
+- Add Steam & Beast BetaNet allychain (Thanks to https://github.com/johnwhitton)
 - Update Unit network logo (Thanks to https://github.com/paulhealy09)
 - Update Encointer types (Thanks to https://github.com/brenzi)
 - Add Apron network (Thanks to https://github.com/Apron2050)
-- Add Manta BetaNet parachain (Thanks to https://github.com/zhenfeizhang)
+- Add Manta BetaNet allychain (Thanks to https://github.com/zhenfeizhang)
 - Correct Bifrost usage (Thanks to https://github.com/awesomepan)
 - Update Uart test types (Thanks to https://github.com/tianxiemaochiyu)
 - Update Mandala paraId (Thanks to https://github.com/xlc)
@@ -550,8 +550,8 @@ Contributed:
 
 Changes:
 
-- Extend parachain support to cater for new BetaNet usages
-- Display parachain specVersion (in addition to best block)
+- Extend allychain support to cater for new BetaNet usages
+- Display allychain specVersion (in addition to best block)
 - Move batch transaction creation into hook (& apply to all uses)
 
 
@@ -587,7 +587,7 @@ Contributed:
 Changes:
 
 - Display justifications in block explorer
-- Expansion of crowdloan, auctions & parachain views
+- Expansion of crowdloan, auctions & allychain views
 - Basic functionality for asset module
 - Adjust ordering of democracy & tips buttons
 - Cater for new BetaNet chain reset/deployment
@@ -607,7 +607,7 @@ Contributed:
 
 Changes:
 
-- Display validator votes on parachains
+- Display validator votes on allychains
 - Adjust society (display split, expand member/candidate info & payouts)
 - Adjust inflation calculation for zero staked/issuance
 - Display call hash on signer modal
@@ -637,12 +637,12 @@ Changes:
 
 - Add display of blocking stashes (& removal from nomination lists)
 - Cater for BetaNet reset (genesisHash updates)
-- Add support for parachain auctions
+- Add support for allychain auctions
 - Add support for contributions in crowdloan app
 - Update crowdloan app for latest AXIA types
-- Fix upcoming retrievals for new parachain interfaces
-- Display lease period countdown for parachains
-- show parachain lifecycles (& action countdowns as applicable)
+- Fix upcoming retrievals for new allychain interfaces
+- Display lease period countdown for allychains
+- show allychain lifecycles (& action countdowns as applicable)
 - Flatten Modal layouts (explicit hint, single column data only)
 - Move theme definitions to CSS variables
 - Add correct keys for account menu (rendering warnings)
@@ -691,7 +691,7 @@ Contributed:
 Changes:
 
 - Explicit messages around extension phishing support
-- Adjust parachain validators to always show stashes
+- Adjust allychain validators to always show stashes
 - Adjust block links display on a per-contract view
 - Adjust display of disabled items on popup menus (dark-mode driven)
 - Align bounty row display with the rest of the UI
@@ -715,8 +715,8 @@ Contributed:
 
 Changes:
 
-- Display validators for all connected parachains
-- Adjust included block parachain calculation
+- Display validators for all connected allychains
+- Adjust included block allychain calculation
 - Align bounties display with UI styling
 - Rework calculation for min-available balance warning in signer
 - Adjust slashed validators display (check against known eras)
@@ -735,7 +735,7 @@ Contributed:
 - Add Trustbase networks (thanks to https://github.com/jizer)
 - Add DOTMog network (Thanks to https://github.com/darkfriend77)
 - Add Bit.Country PC1 (Thanks to https://github.com/justinphamnz)
-- Add Litentry parachain (Thanks to https://github.com/chenzongxiong)
+- Add Litentry allychain (Thanks to https://github.com/chenzongxiong)
 - Update Plasm network types (Thanks to https://github.com/akru)
 - Update Nodle network types (Thanks to https://github.com/ETeissonniere)
 - Update Sora library version (Thanks to https://github.com/stefashkaa)
@@ -749,16 +749,16 @@ Changes:
 - Add warning on none bonded to not send to validators, but rather bond
 - Adjust staking min-bonded overall calculations
 - Cleanup accounts loading display (no initial flash)
-- Add Register action for parachains (non-proposal mode)
+- Add Register action for allychains (non-proposal mode)
 - Adjust council display to cater for new Substrate version
 - Adjust bounties pages to align better with UI look and feel
-- Start of parachain auctions interface (skeleton-only)
+- Start of allychain auctions interface (skeleton-only)
 - Adjust `useFavorites` to not re-read storage on re-renders
 - Adjust `useLoading` hooks to only fire once
 - Convert all spec types to use bundles (single adjustment)
 - Consistent sorting for all RPC nodes (live & testing)
 - Update BetaNet genesis after reset
-- Split test parachains into own section on network selector
+- Split test allychains into own section on network selector
 
 
 ## 0.79.1 Feb 8, 2021
@@ -794,7 +794,7 @@ Changes:
 - Adjust mnemonic copy location on account creation (no overlaps)
 - Extend contracts to upload & deploy in one step (aligns with newest contract module)
 - Add initial support for the crowdloan module
-- Adjust best head extraction for parachains
+- Adjust best head extraction for allychains
 - Adjust extrinsic apps to clear previous errors on creation
 - Ensure calendar works with non-standard schedulers (like in BetaNet)
 - Pass registry with `Call` decoding, allowing decoding at that point in time
@@ -816,14 +816,14 @@ Contributed:
 - Added ChainX endpoints & logo (thanks to https://github.com/qinghuan-chain)
 - Add Ares BetaNet relay endpoints (Thanks to https://github.com/jiyilanzhou)
 - Adjust BetaNet types for Plasm (Thanks to https://github.com/akru)
-- Add BetaNet Ares parachain (https://github.com/jiyilanzhou)
+- Add BetaNet Ares allychain (https://github.com/jiyilanzhou)
 - Add BetaNet PolkaBTC endpoint (Thanks to https://github.com/savudani8)
-- Add BetaNet Hydrate parachain (thanks to https://github.com/lumir-mrkva)
+- Add BetaNet Hydrate allychain (thanks to https://github.com/lumir-mrkva)
 - Adjust Darwinia for new chain properties (Thanks to https://github.com/WoeOm)
 - Adjust Kilt on BetaNet (Thanks to https://github.com/wischli)
-- Add BetaNet Datahighway parachain (Thanks to https://github.com/cgroeschel)
-- Add BetaNet IntegriTEE parachain (Thanks to https://github.com/brenzi)
-- Add BetaNet Zenlink parachain (Thanks to https://github.com/Hayden0323)
+- Add BetaNet Datahighway allychain (Thanks to https://github.com/cgroeschel)
+- Add BetaNet IntegriTEE allychain (Thanks to https://github.com/brenzi)
+- Add BetaNet Zenlink allychain (Thanks to https://github.com/Hayden0323)
 - Add BetaNet & test Clover chains (Thanks to https://github.com/superpw)
 - Add slash creator action to bounties (Thanks to https://github.com/MiZiet)
 - Add award action to bounties (Thanks to https://github.com/MiZiet)
@@ -842,7 +842,7 @@ Changes:
 - Adjust badges for non-specific and development accounts (including tooltips)
 - Adjust `ChainImg` to not fallback on current selected
 - Adjust BetaNet proposal displays (align with new types)
-- Display parachain logo alongside parachain links
+- Display allychain logo alongside allychain links
 - Update BetaNet genesisHash
 - Bump Edgeware definitions
 - Bump BetaNet definitions
@@ -902,9 +902,9 @@ Contributed:
 Changes:
 
 - Update Ledger usage with hooks (Thanks to https://github.com/Tbaut for final testing)
-- Add Parachain proposal support for BetaNet
-- Add ability to propose new parachains (via modal)
-- Expand parachain information (including from-chain numbers/issuance)
+- Add Allychain proposal support for BetaNet
+- Add ability to propose new allychains (via modal)
+- Expand allychain information (including from-chain numbers/issuance)
 - Remove Web3 Foundation endpoints for AXIALunar and AXIA
 - Add small border on QR codes for dark-ode support
 - Update Polkascan & Subscan links with all available chains
@@ -935,8 +935,8 @@ Changes:
 - Update transfer recount check to cater for new Substrate
 - Fix staking comission validation (always 0-100 only)
 - Display errors of account derivation failures
-- Basic parachain registration modal (non-sudo only)
-- Additional upcoming parachain info & alignment fixes
+- Basic allychain registration modal (non-sudo only)
+- Additional upcoming allychain info & alignment fixes
 - Allow use of `closeOperational` on chains that do support it for collective proposals
 - Swap Error/Warning to consistent display with boxed triangle
 - Always build bundles with `NODE_ENV=production` set (react non-dev)
@@ -965,7 +965,7 @@ Contributed:
 
 Changes:
 
-- Update parachains app for BetaNet V1 support (basics-only)
+- Update allychains app for BetaNet V1 support (basics-only)
 - Block self-proxies from proxy setup dialog
 - Display locked amount on seconding modal
 - Use `blockWeights.maxBlock` value (as available) for max-fit calculations
@@ -1413,8 +1413,8 @@ Changes:
 
 Contributed:
 
-- Add Laminar BetaNet parachain (Thanks to https://github.com/aniiantt)
-- Add Darwinia BetaNet parachain (Thanks to https://github.com/WoeOm)
+- Add Laminar BetaNet allychain (Thanks to https://github.com/aniiantt)
+- Add Darwinia BetaNet allychain (Thanks to https://github.com/WoeOm)
 - Add Subsocial chain (Thanks to https://github.com/F3Joule)
 - Add Phala POC2 testnet (Thanks to https://github.com/krhougs)
 - Add Plasm network (Thanks to https://github.com/akru)
@@ -1454,7 +1454,7 @@ Contributed:
 - Add Nodle mainnet (Thanks to https://github.com/ETeissonniere)
 - Add Darwinia Crap canary network (Thanks to https://github.com/WoeOm)
 - Add Laminar testnet (Thanks to https://github.com/aniiantt)
-- Add Acala BetaNet parachain (Thanks to https://github.com/aniiantt)
+- Add Acala BetaNet allychain (Thanks to https://github.com/aniiantt)
 - Re-add Polkascan link for Kulupu (Thanks to https://github.com/sorpaas)
 - Update Kulupu RPC endpoint (Thanks to https://github.com/sorpaas)
 - Add Kulupu logo & adjust council config (Thanks to https://github.com/sorpaas)
@@ -1477,8 +1477,8 @@ Changes:
 - Adjust network selector with split catagories and single-click selection
 - Default conviction dropdown to no lockup
 - Remove conviction override for AXIA (upgrade has taken effect)
-- Use `proposeParachain` module to show list of proposed parachains (BetaNet)
-- Adjust parachain display to remove non filled-in default information
+- Use `proposeAllychain` module to show list of proposed allychains (BetaNet)
+- Adjust allychain display to remove non filled-in default information
 - Support for AXIA redonomination banner (countdown & completion)
 - Add link from treasury page to ongoing proposal votes
 - Adjust media breakpoints on staking overview page
@@ -1506,7 +1506,7 @@ Changes:
 
 - Adjust threshold parameters via lookup for treasury proposals
 - Optimize API queries params & options for less re-renders
-- Consistently detect hex data in file uploads (e.g. on parachain data)
+- Consistently detect hex data in file uploads (e.g. on allychain data)
 - Rework table rendering to non-memo/non-state headers
 - Adjust Sudo app with/without unchecked weight selection
 - Link from account page to extension upgrades via expanded info
@@ -1540,8 +1540,8 @@ Changes:
 
 - Add slashes tab to display unapplied, also indicate status in lists
 - Unbonding allows for full-balance unbond (& pre-fills)
-- Rework parachains app initial displays with cross-app consistency
-- Allow for transfers between parachains & to/from relay (via tokenDealer)
+- Rework allychains app initial displays with cross-app consistency
+- Allow for transfers between allychains & to/from relay (via tokenDealer)
 - Allow tipping to pre-populate and display median (& quick-tip with median)
 - Display auto-chilled nominations, allowing for re-nomination
 - Sanitize names on identity set dialog
@@ -1923,7 +1923,7 @@ Contributed:
 - Add out-of-the-box support for node template (Thanks to https://github.com/JoshOrndorff)
 - Text cleanups (Thanks to https://github.com/x5engine)
 - Text cleanups (Thanks to https://github.com/ltfschoen)
-- update Parachains to support latest AXIA (Thanks to https://github.com/kwingram25)
+- update Allychains to support latest AXIA (Thanks to https://github.com/kwingram25)
 - Rework multi address inputs (e.g. nominations & council) (Thanks to https://github.com/kwingram25)
 
 Changes:

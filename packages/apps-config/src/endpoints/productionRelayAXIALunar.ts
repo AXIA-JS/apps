@@ -29,9 +29,9 @@ export function createAXIALunar (t: TFunction): EndpointOption {
     },
     teleport: [1000],
     linked: [
-      // (1) all system parachains (none available yet)
+      // (1) all system allychains (none available yet)
       // ...
-      // (2) all common good parachains
+      // (2) all common good allychains
       {
         info: 'statemine',
         paraId: 1000,
@@ -43,7 +43,7 @@ export function createAXIALunar (t: TFunction): EndpointOption {
         },
         teleport: [-1]
       },
-      /// (3) parachains with id, see BetaNet (info here maps to the actual "named icon")
+      /// (3) allychains with id, see BetaNet (info here maps to the actual "named icon")
       //
       // NOTE: Added alphabetical based on chain name
       {
@@ -73,7 +73,7 @@ export function createAXIALunar (t: TFunction): EndpointOption {
         text: t('rpc.axialunar.bifrost', 'Bifrost', { ns: 'apps-config' }),
         providers: {
           Liebi: 'wss://bifrost-rpc.liebi.com/ws',
-          OnFinality: 'wss://bifrost-parachain.api.onfinality.io/public-ws',
+          OnFinality: 'wss://bifrost-allychain.api.onfinality.io/public-ws',
           'Patract Elara': 'wss://pub.elara.patract.io/bifrost'
         }
       },
@@ -169,7 +169,7 @@ export function createAXIALunar (t: TFunction): EndpointOption {
         paraId: 2092,
         text: t('rpc.axialunar.kintsugi', 'Kintsugi BTC', { ns: 'apps-config' }),
         providers: {
-          'Kintsugi Labs': 'wss://api-kin.interlay.io/parachain'
+          'Kintsugi Labs': 'wss://api-kin.interlay.io/allychain'
         }
       },
       {

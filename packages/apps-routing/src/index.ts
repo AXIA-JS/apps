@@ -18,7 +18,7 @@ import extrinsics from './extrinsics';
 import gilt from './gilt';
 import js from './js';
 import membership from './membership';
-import parachains from './parachains';
+import allychains from './allychains';
 import poll from './poll';
 import rpc from './rpc';
 import settings from './settings';
@@ -48,7 +48,7 @@ export default function create (t: TFunction): Routes {
     bounties(t),
     techcomm(t),
     membership(t),
-    parachains(t),
+    allychains(t),
     gilt(t),
     assets(t),
     society(t),

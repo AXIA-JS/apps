@@ -96,10 +96,10 @@ function DayItem ({ className, item: { blockNumber, date, info, type }, showAllE
                     ? createLink('staking/slashes', t<string>('via Staking/Slashed'))
                     : ['treasurySpend'].includes(type)
                       ? createLink('treasury', t<string>('via Treasury'))
-                      : ['parachainLease'].includes(type)
-                        ? createLink('parachains', t<string>('via Parachains'))
-                        : ['parachainAuction'].includes(type)
-                          ? createLink('parachains/auction', t<string>('via Parachains/Auction'))
+                      : ['allychainLease'].includes(type)
+                        ? createLink('allychains', t<string>('via Allychains'))
+                        : ['allychainAuction'].includes(type)
+                          ? createLink('allychains/auction', t<string>('via Allychains/Auction'))
                           : undefined;
       let s = '';
 
@@ -120,12 +120,12 @@ function DayItem ({ className, item: { blockNumber, date, info, type }, showAllE
           s = t<string>('Start of the next referendum voting period');
           break;
 
-        case 'parachainAuction':
-          s = t<string>('End of the current parachain auction {{id}}', { replace: { id } });
+        case 'allychainAuction':
+          s = t<string>('End of the current allychain auction {{id}}', { replace: { id } });
           break;
 
-        case 'parachainLease':
-          s = t<string>('Start of the next parachain lease period {{id}}', { replace: { id } });
+        case 'allychainLease':
+          s = t<string>('Start of the next allychain lease period {{id}}', { replace: { id } });
           break;
 
         case 'referendumDispatch':

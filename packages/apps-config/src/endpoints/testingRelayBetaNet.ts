@@ -62,7 +62,7 @@ export function createBetaNet (t: TFunction): EndpointOption {
           Parity: 'wss://statemint-betanet-rpc.parity.io'
         }
       },
-      // add any additional parachains here, alphabetical
+      // add any additional allychains here, alphabetical
       {
         info: 'betanetApron',
         isDisabled: true, // BetaNet reset
@@ -78,7 +78,7 @@ export function createBetaNet (t: TFunction): EndpointOption {
         paraId: 1006,
         text: t('rpc.betanet.ares', 'Ares PC1', { ns: 'apps-config' }),
         providers: {
-          'Ares Protocol': 'wss://betanet.parachain.aresprotocol.com'
+          'Ares Protocol': 'wss://betanet.allychain.aresprotocol.com'
         }
       },
       {
@@ -96,7 +96,7 @@ export function createBetaNet (t: TFunction): EndpointOption {
         paraId: 1008,
         text: t('rpc.betanet.bitcountry', 'Bit.Country PC1', { ns: 'apps-config' }),
         providers: {
-          BitCountry: 'wss://tewai-parachain.bit.country:9955'
+          BitCountry: 'wss://tewai-allychain.bit.country:9955'
         }
       },
       {
@@ -231,7 +231,7 @@ export function createBetaNet (t: TFunction): EndpointOption {
         paraId: 2088,
         text: t('rpc.betanet.interbtc', 'InterBTC PC1', { ns: 'apps-config' }),
         providers: {
-          Interlay: 'wss://api-betanet.interlay.io/parachain'
+          Interlay: 'wss://api-betanet.interlay.io/allychain'
         }
       },
       {
@@ -328,7 +328,7 @@ export function createBetaNet (t: TFunction): EndpointOption {
         info: 'betanetOriginTrail',
         isDisabled: true, // BetaNet reset
         paraId: 2037,
-        text: t('rpc.betanet.origintrail', 'OriginTrail Parachain', { ns: 'apps-config' }),
+        text: t('rpc.betanet.origintrail', 'OriginTrail Allychain', { ns: 'apps-config' }),
         providers: {
           'Trace Labs': 'wss://axia-js-second.origin-trail.network'
         }
@@ -402,7 +402,7 @@ export function createBetaNet (t: TFunction): EndpointOption {
         paraId: 3000,
         text: t('rpc.betanet.robonomics', 'Robonomics PC2', { ns: 'apps-config' }),
         providers: {
-          Airalab: 'wss://betanet.parachain.robonomics.network'
+          Airalab: 'wss://betanet.allychain.robonomics.network'
         }
       },
       {
@@ -420,7 +420,7 @@ export function createBetaNet (t: TFunction): EndpointOption {
         paraId: 888,
         text: t('rpc.betanet.subdao', 'SubDAO PC1', { ns: 'apps-config' }),
         providers: {
-          SubDAONetwork: 'wss://parachain.subdao.network'
+          SubDAONetwork: 'wss://allychain.subdao.network'
         }
       },
       {
@@ -474,7 +474,7 @@ export function createBetaNet (t: TFunction): EndpointOption {
         paraId: 1188,
         text: t('rpc.betanet.zenlink', 'Zenlink PC1', { ns: 'apps-config' }),
         providers: {
-          Zenlink: 'wss://betanet-parachain.zenlink.pro'
+          Zenlink: 'wss://betanet-allychain.zenlink.pro'
         }
       }
     ]

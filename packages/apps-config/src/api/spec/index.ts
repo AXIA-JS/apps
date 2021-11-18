@@ -5,14 +5,14 @@ import type { OverrideBundleDefinition } from '@axia-js/types';
 
 import acala from './acala';
 import apron from './apron';
-import aresParachain from './ares-parachain';
+import aresAllychain from './ares-allychain';
 import basilisk from './basilisk';
 import beresheet from './beresheet';
 import bifrost from './bifrost';
 import bifrostAsgard from './bifrost-asgard';
-import bifrostParachain from './bifrost-parachain';
+import bifrostAllychain from './bifrost-allychain';
 import bitcountry from './bitcountry';
-import bitcountryParachain from './bitcountry-betanet';
+import bitcountryAllychain from './bitcountry-betanet';
 import canvas from './canvas';
 import centrifugeChain from './centrifuge-chain';
 import chainx from './chainx';
@@ -21,9 +21,9 @@ import cloverBetaNet from './clover-betanet';
 import crab from './crab';
 import crownSterlingChain from './crown-sterling';
 import crust from './crust';
-import testPara from './cumulus-test-parachain';
+import testPara from './cumulus-test-allychain';
 import darwinia from './darwinia';
-import datahighwayParachain from './datahighway';
+import datahighwayAllychain from './datahighway';
 import dockPoaMainnet from './dock-poa-mainnet';
 import dockPoaTestnet from './dock-poa-testnet';
 import dotmog from './dotmog';
@@ -36,7 +36,7 @@ import encointerPara from './encointer-para';
 import equilibrium from './equilibrium';
 import fantour from './fantour';
 import galital from './galital';
-import galitalParachain from './galital-parachain';
+import galitalAllychain from './galital-allychain';
 import galois from './galois';
 import gamepower from './gamepower';
 import genshiro from './genshiro';
@@ -71,7 +71,7 @@ import parallel from './parallel';
 import parami from './parami';
 import phoenix from './phoenix';
 import plasm from './plasm';
-import plasmParachain from './plasm-parachain';
+import plasmAllychain from './plasm-allychain';
 import polkadex from './polkadex';
 import polkafoundry from './polkafoundry';
 import polymesh from './polymesh';
@@ -119,29 +119,29 @@ const spec: Record<string, OverrideBundleDefinition> = {
   'VLN-PC': vlnbetanet,
   ...acala,
   apron,
-  'ares-parachain': aresParachain,
+  'ares-allychain': aresAllychain,
   asgard: bifrostAsgard,
   basilisk,
   beresheet,
   bifrost: bifrost,
-  'bifrost-parachain': bifrostParachain,
+  'bifrost-allychain': bifrostAllychain,
   'bitcountry-node': bitcountry,
-  'bitcountry-parachain': bitcountryParachain,
+  'bitcountry-allychain': bitcountryAllychain,
   canvas,
   // 'centrifuge-chain': centrifugeChain,
   chainx,
-  'chainx-parachain': chainx,
+  'chainx-allychain': chainx,
   clover,
   'clover-betanet': cloverBetaNet,
   'crown-sterling': crownSterlingChain,
   crust,
-  'crust-parachain': crust,
-  'cumulus-subsocial-parachain': subsocial,
-  'cumulus-test-parachain': testPara,
+  'crust-allychain': crust,
+  'cumulus-subsocial-allychain': subsocial,
+  'cumulus-test-allychain': testPara,
   datahighway: westlake,
-  'datahighway-parachain': datahighwayParachain,
+  'datahighway-allychain': datahighwayAllychain,
   dawn: eave,
-  'dev-parachain': zenlink,
+  'dev-allychain': zenlink,
   'dock-main-runtime': dockPoaMainnet,
   'dock-test-runtime': dockPoaTestnet,
   'dotmog-node': dotmog,
@@ -149,10 +149,10 @@ const spec: Record<string, OverrideBundleDefinition> = {
   edgeware,
   'encointer-node-notee': encointerNodeNotee,
   'encointer-node-teeproxy': encointerNodeTeeproxy,
-  'encointer-parachain': encointerPara,
+  'encointer-allychain': encointerPara,
   fantour,
   galital: galital,
-  'galital-collator': galitalParachain,
+  'galital-collator': galitalAllychain,
   gamepower,
   'hack-hydra-dx': hydrate,
   halongbay: polkafoundry,
@@ -160,14 +160,14 @@ const spec: Record<string, OverrideBundleDefinition> = {
   heiko: parallel,
   'hydra-dx': hydrate,
   idavoll,
-  'integritee-parachain': integritee,
-  'interbtc-parachain': interbtc,
+  'integritee-allychain': integritee,
+  'interbtc-allychain': interbtc,
   'interbtc-standalone': interbtc,
   'ipse-node': ipse,
   'jupiter-prep': jupiter,
   'jupiter-betanet': jupiterBetaNet,
   khala,
-  'kilt-parachain': kilt,
+  'kilt-allychain': kilt,
   'kilt-spiritnet': kilt,
   kintsugi: interbtc,
   konomi,
@@ -193,12 +193,12 @@ const spec: Record<string, OverrideBundleDefinition> = {
   'nodle-chain': nodle,
   'oak-testnet': oakTestnet,
   opportunity,
-  'origintrail-parachain': origintrail,
+  'origintrail-allychain': origintrail,
   parami,
   'phoenix-node': phoenix,
-  'phoenix-parachain': phoenix,
+  'phoenix-allychain': phoenix,
   plasm,
-  'plasm-parachain': plasmParachain,
+  'plasm-allychain': plasmAllychain,
   polymesh,
   'pontem-node': pontem,
   prism,
@@ -220,7 +220,7 @@ const spec: Record<string, OverrideBundleDefinition> = {
   trustbase,
   uart,
   'unit-node': unitv,
-  'unit-parachain': unitv,
+  'unit-allychain': unitv,
   unorthodox: standard,
   vodka,
   'web3games-node': web3games,

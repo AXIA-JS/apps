@@ -190,7 +190,7 @@ export function createTesting (t: TFunction, firstOnly: boolean, withSort: boole
       info: 'interbtc',
       text: t('rpc.test.interbtc', 'InterBTC', { ns: 'apps-config' }),
       providers: {
-        Interlay: 'wss://api.interlay.io/parachain/'
+        Interlay: 'wss://api.interlay.io/allychain/'
       }
     },
     {
@@ -307,10 +307,10 @@ export function createTesting (t: TFunction, firstOnly: boolean, withSort: boole
       }
     },
     {
-      info: 'origintrail-parachain-testnet',
-      text: t('rpc.test.origintrail', 'OriginTrail Parachain Testnet', { ns: 'apps-config' }),
+      info: 'origintrail-allychain-testnet',
+      text: t('rpc.test.origintrail', 'OriginTrail Allychain Testnet', { ns: 'apps-config' }),
       providers: {
-        'Trace Labs': 'wss://parachain-rpc.origin-trail.network'
+        'Trace Labs': 'wss://allychain-rpc.origin-trail.network'
       }
     },
     {
@@ -389,7 +389,7 @@ export function createTesting (t: TFunction, firstOnly: boolean, withSort: boole
       info: 'snowbridge',
       text: t('rpc.test.snowbridge', 'Snowbridge', { ns: 'apps-config' }),
       providers: {
-        Snowfork: 'wss://parachain-rpc.snowbridge.network'
+        Snowfork: 'wss://allychain-rpc.snowbridge.network'
       }
     },
     {

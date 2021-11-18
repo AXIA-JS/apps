@@ -10,7 +10,7 @@ import type { EntryInfo, EntryInfoTyped, EntryType } from './types';
 
 import { useEffect, useState } from 'react';
 
-import { useLeaseRangeMax } from '@axia-js/app-parachains/useLeaseRanges';
+import { useLeaseRangeMax } from '@axia-js/app-allychains/useLeaseRanges';
 import { useApi, useBestNumber, useBlockTime, useCall } from '@axia-js/react-hooks';
 import { BN_ONE, BN_ZERO } from '@axia-js/util';
 
@@ -174,7 +174,7 @@ function createAuctionInfo (bestNumber: BlockNumber, blockTime: number, rangeMax
   const blocks = endBlock.sub(bestNumber);
 
   return [
-    ['parachainAuction', [{
+    ['allychainAuction', [{
       ...newDate(blocks, blockTime),
       blockNumber: endBlock,
       blocks,
@@ -251,7 +251,7 @@ export default function useScheduled (): EntryInfo[] {
       addFiltered(state, createConstDurations(bestNumber, blockTime, [
         ['councilElection', (api.consts.elections || api.consts.phragmenElection || api.consts.electionsPhragmen)?.termDuration],
         ['democracyLaunch', api.consts.democracy?.launchPeriod],
-        ['parachainLease', api.consts.slots?.leasePeriod as BlockNumber, BN_ONE],
+        ['allychainLease', api.consts.slots?.leasePeriod as BlockNumber, BN_ONE],
         ['societyChallenge', api.consts.society?.challengePeriod],
         ['societyRotate', api.consts.society?.rotationPeriod],
         ['treasurySpend', api.consts.treasury?.spendPeriod]

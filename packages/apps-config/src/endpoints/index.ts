@@ -19,7 +19,7 @@ export function createWsEndpoints (t: TFunction, firstOnly = false, withSort = t
       isDisabled: false,
       isHeader: true,
       isSpaced: true,
-      text: t('rpc.header.axia.relay', 'AXIA & parachains', { ns: 'apps-config' }),
+      text: t('rpc.header.axia.relay', 'AXIA & allychains', { ns: 'apps-config' }),
       textBy: '',
       value: ''
     },
@@ -27,7 +27,7 @@ export function createWsEndpoints (t: TFunction, firstOnly = false, withSort = t
     {
       isDisabled: true,
       isHeader: true,
-      text: t('rpc.header.axialunar.relay', 'AXIALunar & parachains', { ns: 'apps-config' }),
+      text: t('rpc.header.axialunar.relay', 'AXIALunar & allychains', { ns: 'apps-config' }),
       textBy: '',
       value: ''
     },
@@ -36,7 +36,7 @@ export function createWsEndpoints (t: TFunction, firstOnly = false, withSort = t
       isDisabled: true,
       isHeader: true,
       isSpaced: true,
-      text: t('rpc.header.alphanet.relay', 'Test AlphaNet & parachains', { ns: 'apps-config' }),
+      text: t('rpc.header.alphanet.relay', 'Test AlphaNet & allychains', { ns: 'apps-config' }),
       textBy: '',
       value: ''
     },
@@ -44,7 +44,7 @@ export function createWsEndpoints (t: TFunction, firstOnly = false, withSort = t
     {
       isDisabled: true,
       isHeader: true,
-      text: t('rpc.header.betanet.relay', 'Test BetaNet & parachains', { ns: 'apps-config' }),
+      text: t('rpc.header.betanet.relay', 'Test BetaNet & allychains', { ns: 'apps-config' }),
       textBy: '',
       value: ''
     },

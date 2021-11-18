@@ -94,6 +94,16 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@axia-js/app-allychains@workspace:packages/page-allychains":
+  version: 0.0.0-use.local
+  resolution: "@axia-js/app-allychains@workspace:packages/page-allychains"
+  dependencies:
+    "@axia-js/react-components": 0.1.0
+    "@axia-js/react-query": 0.1.0
+    "@babel/runtime": ^7.15.4
+  languageName: unknown
+  linkType: soft
+
 "@axia-js/app-assets@workspace:packages/page-assets":
   version: 0.0.0-use.local
   resolution: "@axia-js/app-assets@workspace:packages/page-assets"
@@ -202,16 +212,6 @@ __metadata:
 "@axia-js/app-membership@workspace:packages/page-membership":
   version: 0.0.0-use.local
   resolution: "@axia-js/app-membership@workspace:packages/page-membership"
-  dependencies:
-    "@axia-js/react-components": 0.1.0
-    "@axia-js/react-query": 0.1.0
-    "@babel/runtime": ^7.15.4
-  languageName: unknown
-  linkType: soft
-
-"@axia-js/app-parachains@workspace:packages/page-parachains":
-  version: 0.0.0-use.local
-  resolution: "@axia-js/app-parachains@workspace:packages/page-parachains"
   dependencies:
     "@axia-js/react-components": 0.1.0
     "@axia-js/react-query": 0.1.0

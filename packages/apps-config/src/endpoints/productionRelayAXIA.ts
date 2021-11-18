@@ -28,11 +28,11 @@ export function createAXIA (t: TFunction): EndpointOption {
       // Pinknode: 'wss://rpc.pinknode.io/axia/explorer' // https://github.com/axia-js/apps/issues/5721
     },
     linked: [
-      // (1) system parachains (none available yet)
+      // (1) system allychains (none available yet)
       // ...
       // (2) common good, leave as second group (none available yet)
       // ...
-      /// (3) parachains with id, see BetaNet (info here maps to the actual "named icon")
+      /// (3) allychains with id, see BetaNet (info here maps to the actual "named icon")
       //
       // NOTE: Added alphabetical based on chain name
     ]

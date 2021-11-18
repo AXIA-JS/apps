@@ -52,7 +52,7 @@ i18next
       'app-extrinsics',
       'app-generic-asset',
       'app-js',
-      'app-parachains',
+      'app-allychains',
       'app-poll',
       'app-rpc',
       'app-settings',

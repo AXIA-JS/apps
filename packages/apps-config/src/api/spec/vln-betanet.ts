@@ -50,7 +50,7 @@ const definitions: OverrideBundleDefinition = {
         ChainId: {
           _enum: {
             RelayChain: null,
-            Parachain: 'ParaId'
+            Allychain: 'ParaId'
           }
         },
         NetworkAsset: {

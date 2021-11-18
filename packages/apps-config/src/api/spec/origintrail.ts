@@ -174,7 +174,7 @@ const origintrailDefinitions = {
           account: 'AccountId',
           deposit: 'Balance'
         },
-        ParachainBondConfig: {
+        AllychainBondConfig: {
           account: 'AccountId',
           deposit: 'Balance'
         },
@@ -198,6 +198,6 @@ export default origintrailDefinitions;
 
 export const typesBundle = {
   spec: {
-    'origintrail-parachain': origintrailDefinitions
+    'origintrail-allychain': origintrailDefinitions
   }
 } as OverrideBundleType;

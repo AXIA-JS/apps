@@ -31,7 +31,7 @@ export function createAlphaNet (t: TFunction): EndpointOption {
     },
     teleport: [1000],
     linked: [
-      // (1) system parachains (none available yet)
+      // (1) system allychains (none available yet)
       // ...
       // (2) common good, leave as second group
       {
@@ -44,7 +44,7 @@ export function createAlphaNet (t: TFunction): EndpointOption {
         },
         teleport: [-1]
       },
-      // (3) parachains with id, see BetaNet (info here maps to the actual "named icon")
+      // (3) allychains with id, see BetaNet (info here maps to the actual "named icon")
       //
       // NOTE: Added alphabetical based on chain name
       {
@@ -76,7 +76,7 @@ export function createAlphaNet (t: TFunction): EndpointOption {
         paraId: 2094,
         text: t('rpc.alphanet.interbtc', 'InterBTC', { ns: 'apps-config' }),
         providers: {
-          Interlay: 'wss://api-alphanet.interlay.io/parachain'
+          Interlay: 'wss://api-alphanet.interlay.io/allychain'
         }
       },
       {

@@ -40,7 +40,7 @@ function InjectKeys ({ onClose }: Props): React.ReactElement<Props> | null {
     { text: t<string>('Babe'), value: 'babe' },
     { text: t<string>('Grandpa'), value: 'gran' },
     { text: t<string>('I\'m Online'), value: 'imon' },
-    { text: t<string>('Parachains'), value: 'para' }
+    { text: t<string>('Allychains'), value: 'para' }
   ]);
 
   useEffect((): void => {

@@ -4,7 +4,7 @@
 import type { TFunction } from 'i18next';
 import type { Route } from './types';
 
-import Modal from '@axia-js/app-parachains/Teleport';
+import Modal from '@axia-js/app-allychains/Teleport';
 
 export default function create (t: TFunction): Route {
   return {
