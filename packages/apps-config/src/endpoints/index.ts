@@ -25,7 +25,7 @@ export function createWsEndpoints (t: TFunction, firstOnly = false, withSort = t
     },
     ...createAXIARelay(t, firstOnly, withSort),
     {
-      isDisabled: false,
+      isDisabled: true,
       isHeader: true,
       text: t('rpc.header.axialunar.relay', 'AXIALunar & parachains', { ns: 'apps-config' }),
       textBy: '',
@@ -33,7 +33,7 @@ export function createWsEndpoints (t: TFunction, firstOnly = false, withSort = t
     },
     ...createAXIALunarRelay(t, firstOnly, withSort),
     {
-      isDisabled: false,
+      isDisabled: true,
       isHeader: true,
       isSpaced: true,
       text: t('rpc.header.alphanet.relay', 'Test AlphaNet & parachains', { ns: 'apps-config' }),
@@ -42,7 +42,7 @@ export function createWsEndpoints (t: TFunction, firstOnly = false, withSort = t
     },
     ...createAlphaNetRelay(t, firstOnly, withSort),
     {
-      isDisabled: false,
+      isDisabled: true,
       isHeader: true,
       text: t('rpc.header.betanet.relay', 'Test BetaNet & parachains', { ns: 'apps-config' }),
       textBy: '',
