@@ -18,9 +18,9 @@ export function createAXIALunar (t: TFunction): EndpointOption {
     dnslink: 'axialunar',
     genesisHash: AXIALUNAR_GENESIS,
     info: 'axialunar',
-    text: t('rpc.axialunar.parity', 'AXIALunar', { ns: 'apps-config' }),
+    text: t('rpc.axialunar.axia', 'AXIALunar', { ns: 'apps-config' }),
     providers: {
-      Parity: 'wss://axialunar-rpc.axia.io',
+      AXIA: 'wss://axialunar-rpc.axia.io',
       OnFinality: 'wss://axialunar.api.onfinality.io/public-ws',
       'Patract Elara': 'wss://pub.elara.patract.io/axialunar',
       Dwellir: 'wss://axialunar-rpc.dwellir.com',
@@ -37,7 +37,7 @@ export function createAXIALunar (t: TFunction): EndpointOption {
         paraId: 1000,
         text: t('rpc.axialunar.statemine', 'Statemine', { ns: 'apps-config' }),
         providers: {
-          Parity: 'wss://axialunar-statemine-rpc.axia-tech.net',
+          AXIA: 'wss://axialunar-statemine-rpc.axia-tech.net',
           OnFinality: 'wss://statemine.api.onfinality.io/public-ws',
           'Patract Elara': 'wss://pub.elara.patract.io/statemine'
         },

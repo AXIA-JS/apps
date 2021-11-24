@@ -8,7 +8,7 @@ import { ThemeProvider } from 'styled-components';
 
 import AccountSidebar from '@axia-js/app-accounts/Sidebar';
 import { lightTheme } from '@axia-js/apps/themes';
-import { AXIASOLAR_GENESIS } from '@axia-js/apps-config';
+import { AXIA_GENESIS } from '@axia-js/apps-config';
 import { ApiContext } from '@axia-js/react-api';
 import { ApiProps } from '@axia-js/react-api/types';
 import { QueueProvider } from '@axia-js/react-components/Status/Context';
@@ -104,7 +104,7 @@ export abstract class Page {
             account: noop
           }
         },
-        genesisHash: new TypeRegistry().createType('Hash', AXIASOLAR_GENESIS),
+        genesisHash: new TypeRegistry().createType('Hash', AXIA_GENESIS),
         query: {
           democracy: {
             votingOf: noop

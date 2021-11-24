@@ -1,0 +1,84 @@
+{
+  "name": "@axia-js/app-treasury",
+  "private": true,
+  "type": "module",
+  "version": "0.1.0",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@axia-js/react-components": "0.1.0",
+    "@axia-js/react-query": "0.1.0",
+    "@babel/runtime": "^7.15.4"
+  },
+  "exports": {
+    ".": {
+      "require": "./index.cjs",
+      "default": "./index.js"
+    },
+    "./Overview": {
+      "require": "./Overview/index.cjs",
+      "default": "./Overview/index.js"
+    },
+    "./Overview/Council": {
+      "require": "./Overview/Council.cjs",
+      "default": "./Overview/Council.js"
+    },
+    "./Overview/Proposal": {
+      "require": "./Overview/Proposal.cjs",
+      "default": "./Overview/Proposal.js"
+    },
+    "./Overview/ProposalCreate": {
+      "require": "./Overview/ProposalCreate.cjs",
+      "default": "./Overview/ProposalCreate.js"
+    },
+    "./Overview/Proposals": {
+      "require": "./Overview/Proposals.cjs",
+      "default": "./Overview/Proposals.js"
+    },
+    "./Overview/Summary": {
+      "require": "./Overview/Summary.cjs",
+      "default": "./Overview/Summary.js"
+    },
+    "./package.json": "./package.json",
+    "./packageInfo": {
+      "require": "./packageInfo.cjs",
+      "default": "./packageInfo.js"
+    },
+    "./README.md": "./README.md",
+    "./Tips": {
+      "require": "./Tips/index.cjs",
+      "default": "./Tips/index.js"
+    },
+    "./Tips/Tip": {
+      "require": "./Tips/Tip.cjs",
+      "default": "./Tips/Tip.js"
+    },
+    "./Tips/TipCreate": {
+      "require": "./Tips/TipCreate.cjs",
+      "default": "./Tips/TipCreate.js"
+    },
+    "./Tips/TipEndorse": {
+      "require": "./Tips/TipEndorse.cjs",
+      "default": "./Tips/TipEndorse.js"
+    },
+    "./Tips/TipReason": {
+      "require": "./Tips/TipReason.cjs",
+      "default": "./Tips/TipReason.js"
+    },
+    "./Tips/Tips": {
+      "require": "./Tips/Tips.cjs",
+      "default": "./Tips/Tips.js"
+    },
+    "./translate": {
+      "require": "./translate.cjs",
+      "default": "./translate.js"
+    },
+    "./useCounter": {
+      "require": "./useCounter.cjs",
+      "default": "./useCounter.js"
+    },
+    "./useTipHashes": {
+      "require": "./useTipHashes.cjs",
+      "default": "./useTipHashes.js"
+    }
+  }
+}

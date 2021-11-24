@@ -1,0 +1,159 @@
+{
+  "name": "@axia-js/app-contracts",
+  "private": true,
+  "type": "module",
+  "version": "0.1.0",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@axia-js/api-contract": "0.1.0",
+    "@babel/runtime": "^7.15.4"
+  },
+  "exports": {
+    ".": {
+      "require": "./index.cjs",
+      "default": "./index.js"
+    },
+    "./Codes": {
+      "require": "./Codes/index.cjs",
+      "default": "./Codes/index.js"
+    },
+    "./Codes/Add": {
+      "require": "./Codes/Add.cjs",
+      "default": "./Codes/Add.js"
+    },
+    "./Codes/Code": {
+      "require": "./Codes/Code.cjs",
+      "default": "./Codes/Code.js"
+    },
+    "./Codes/Upload": {
+      "require": "./Codes/Upload.cjs",
+      "default": "./Codes/Upload.js"
+    },
+    "./Codes/ValidateCode": {
+      "require": "./Codes/ValidateCode.cjs",
+      "default": "./Codes/ValidateCode.js"
+    },
+    "./constants": {
+      "require": "./constants.cjs",
+      "default": "./constants.js"
+    },
+    "./Contracts": {
+      "require": "./Contracts/index.cjs",
+      "default": "./Contracts/index.js"
+    },
+    "./Contracts/Add": {
+      "require": "./Contracts/Add.cjs",
+      "default": "./Contracts/Add.js"
+    },
+    "./Contracts/Call": {
+      "require": "./Contracts/Call.cjs",
+      "default": "./Contracts/Call.js"
+    },
+    "./Contracts/Contract": {
+      "require": "./Contracts/Contract.cjs",
+      "default": "./Contracts/Contract.js"
+    },
+    "./Contracts/ContractsTable": {
+      "require": "./Contracts/ContractsTable.cjs",
+      "default": "./Contracts/ContractsTable.js"
+    },
+    "./Contracts/Deploy": {
+      "require": "./Contracts/Deploy.cjs",
+      "default": "./Contracts/Deploy.js"
+    },
+    "./Contracts/Outcome": {
+      "require": "./Contracts/Outcome.cjs",
+      "default": "./Contracts/Outcome.js"
+    },
+    "./Contracts/Summary": {
+      "require": "./Contracts/Summary.cjs",
+      "default": "./Contracts/Summary.js"
+    },
+    "./Contracts/types": {
+      "require": "./Contracts/types.cjs",
+      "default": "./Contracts/types.js"
+    },
+    "./Contracts/util": {
+      "require": "./Contracts/util.cjs",
+      "default": "./Contracts/util.js"
+    },
+    "./Contracts/ValidateAddr": {
+      "require": "./Contracts/ValidateAddr.cjs",
+      "default": "./Contracts/ValidateAddr.js"
+    },
+    "./package.json": "./package.json",
+    "./packageInfo": {
+      "require": "./packageInfo.cjs",
+      "default": "./packageInfo.js"
+    },
+    "./README.md": "./README.md",
+    "./RemoveABI": {
+      "require": "./RemoveABI.cjs",
+      "default": "./RemoveABI.js"
+    },
+    "./shared": {
+      "require": "./shared/index.cjs",
+      "default": "./shared/index.js"
+    },
+    "./shared/ABI": {
+      "require": "./shared/ABI.cjs",
+      "default": "./shared/ABI.js"
+    },
+    "./shared/CodeRow": {
+      "require": "./shared/CodeRow.cjs",
+      "default": "./shared/CodeRow.js"
+    },
+    "./shared/InputMegaGas": {
+      "require": "./shared/InputMegaGas.cjs",
+      "default": "./shared/InputMegaGas.js"
+    },
+    "./shared/InputName": {
+      "require": "./shared/InputName.cjs",
+      "default": "./shared/InputName.js"
+    },
+    "./shared/Message": {
+      "require": "./shared/Message.cjs",
+      "default": "./shared/Message.js"
+    },
+    "./shared/Messages": {
+      "require": "./shared/Messages.cjs",
+      "default": "./shared/Messages.js"
+    },
+    "./shared/MessageSignature": {
+      "require": "./shared/MessageSignature.cjs",
+      "default": "./shared/MessageSignature.js"
+    },
+    "./shared/Params": {
+      "require": "./shared/Params.cjs",
+      "default": "./shared/Params.js"
+    },
+    "./store": {
+      "require": "./store.cjs",
+      "default": "./store.js"
+    },
+    "./translate": {
+      "require": "./translate.cjs",
+      "default": "./translate.js"
+    },
+    "./types": {
+      "require": "./types.cjs",
+      "default": "./types.js"
+    },
+    "./useAbi": {
+      "require": "./useAbi.cjs",
+      "default": "./useAbi.js"
+    },
+    "./useCodes": {
+      "require": "./useCodes.cjs",
+      "default": "./useCodes.js"
+    },
+    "./useContracts": {
+      "require": "./useContracts.cjs",
+      "default": "./useContracts.js"
+    },
+    "./useWeight": {
+      "require": "./useWeight.cjs",
+      "default": "./useWeight.js"
+    }
+  }
+}

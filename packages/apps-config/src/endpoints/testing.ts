@@ -63,7 +63,7 @@ export function createTesting (t: TFunction, firstOnly: boolean, withSort: boole
       info: 'canvas',
       text: t('rpc.test.canvas', 'Canvas', { ns: 'apps-config' }),
       providers: {
-        Parity: 'wss://canvas-rpc.parity.io'
+        AXIA: 'wss://canvas-rpc.axia.io'
       }
     },
     {
@@ -140,7 +140,7 @@ export function createTesting (t: TFunction, firstOnly: boolean, withSort: boole
       isDisabled: true, // https://github.com/axia-js/apps/issues/5571
       text: t('rpc.test.flamingfir', 'Flaming Fir', { ns: 'apps-config' }),
       providers: {
-        Parity: 'wss://substrate-rpc.parity.io'
+        AXIA: 'wss://substrate-rpc.axia.io'
       }
     },
     {

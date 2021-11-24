@@ -1,6 +1,7 @@
 [
   "app-accounts.json",
   "app-addresses.json",
+  "app-allychains.json",
   "app-assets.json",
   "app-bounties.json",
   "app-calendar.json",
@@ -12,7 +13,6 @@
   "app-extrinsics.json",
   "app-gilt.json",
   "app-js.json",
-  "app-allychains.json",
   "app-poll.json",
   "app-rpc.json",
   "app-settings.json",

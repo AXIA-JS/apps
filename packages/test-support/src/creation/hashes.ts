@@ -3,11 +3,11 @@
 
 import type { Hash } from '@axia-js/types/interfaces';
 
-import { AXIASOLAR_GENESIS } from '@axia-js/apps-config';
+import { AXIA_GENESIS } from '@axia-js/apps-config';
 import { TypeRegistry } from '@axia-js/types/create';
 
 export function aGenesisHash (): Hash {
-  return new TypeRegistry().createType('Hash', AXIASOLAR_GENESIS);
+  return new TypeRegistry().createType('Hash', AXIA_GENESIS);
 }
 
 export function aHash (): Hash {

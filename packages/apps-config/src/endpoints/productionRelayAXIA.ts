@@ -4,7 +4,7 @@
 import type { TFunction } from 'i18next';
 import type { EndpointOption } from './types';
 
-import { AXIASOLAR_GENESIS } from '../api/constants';
+import { AXIA_GENESIS } from '../api/constants';
 
 /* eslint-disable sort-keys */
 
@@ -16,11 +16,11 @@ import { AXIASOLAR_GENESIS } from '../api/constants';
 export function createAXIA (t: TFunction): EndpointOption {
   return {
     dnslink: 'axia',
-    genesisHash: AXIASOLAR_GENESIS,
+    genesisHash: AXIA_GENESIS,
     info: 'axia',
-    text: t('rpc.axia.parity', 'AXIA', { ns: 'apps-config' }),
+    text: t('rpc.axia.axia', 'AXIA', { ns: 'apps-config' }),
     providers: {
-      Parity: 'wss://rpc.axia.io',
+      AXIA: 'wss://rpc.axia.io',
       OnFinality: 'wss://axia.api.onfinality.io/public-ws',
       'Patract Elara': 'wss://pub.elara.patract.io/axia',
       // Dwellir: 'wss://axia-rpc.dwellir.com',

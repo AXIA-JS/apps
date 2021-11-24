@@ -22,7 +22,7 @@ export function createBetaNet (t: TFunction): EndpointOption {
     info: 'betanet',
     text: t('rpc.betanet', 'BetaNet', { ns: 'apps-config' }),
     providers: {
-      Parity: 'wss://betanet-rpc.axia.io'
+      AXIA: 'wss://betanet-rpc.axia.io'
       // OnFinality: 'wss://betanet.api.onfinality.io/public-ws', // After reset, node misses host functions
       // 'Patract Elara': 'wss://pub.elara.patract.io/betanet', // After reset node is not available
       // Pinknode: 'wss://rpc.pinknode.io/betanet/explorer' // After reset, syncs to old chain
@@ -35,7 +35,7 @@ export function createBetaNet (t: TFunction): EndpointOption {
         paraId: 100,
         text: t('rpc.betanet.tick', 'Tick', { ns: 'apps-config' }),
         providers: {
-          Parity: 'wss://tick-rpc.axia.io'
+          AXIA: 'wss://tick-rpc.axia.io'
         }
       },
       {
@@ -43,7 +43,7 @@ export function createBetaNet (t: TFunction): EndpointOption {
         paraId: 110,
         text: t('rpc.betanet.trick', 'Trick', { ns: 'apps-config' }),
         providers: {
-          Parity: 'wss://trick-rpc.axia.io'
+          AXIA: 'wss://trick-rpc.axia.io'
         }
       },
       {
@@ -51,7 +51,7 @@ export function createBetaNet (t: TFunction): EndpointOption {
         paraId: 120,
         text: t('rpc.betanet.track', 'Track', { ns: 'apps-config' }),
         providers: {
-          Parity: 'wss://track-rpc.axia.io'
+          AXIA: 'wss://track-rpc.axia.io'
         }
       },
       {
@@ -59,7 +59,7 @@ export function createBetaNet (t: TFunction): EndpointOption {
         paraId: 1000,
         text: t('rpc.betanet.statemint', 'Statemint', { ns: 'apps-config' }),
         providers: {
-          Parity: 'wss://statemint-betanet-rpc.parity.io'
+          AXIA: 'wss://statemint-betanet-rpc.axia.io'
         }
       },
       // add any additional allychains here, alphabetical

@@ -11,7 +11,7 @@ import { DeriveCollectiveProposal } from '@axia-js/api-derive/types';
 import Bounties from '@axia-js/app-bounties/Bounties';
 import { BountyApi } from '@axia-js/app-bounties/hooks';
 import { lightTheme } from '@axia-js/apps/themes';
-import { AXIASOLAR_GENESIS } from '@axia-js/apps-config';
+import { AXIA_GENESIS } from '@axia-js/apps-config';
 import { ApiContext } from '@axia-js/react-api';
 import { ApiProps } from '@axia-js/react-api/types';
 import { QueueProvider } from '@axia-js/react-components/Status/Context';
@@ -27,7 +27,7 @@ import { clickElementWithTestId } from '../utils/clickElementWithTestId';
 import { clickElementWithText } from '../utils/clickElementWithText';
 
 function aGenesisHash () {
-  return new TypeRegistry().createType('Hash', AXIASOLAR_GENESIS);
+  return new TypeRegistry().createType('Hash', AXIA_GENESIS);
 }
 
 type FindOne = (match: string) => Promise<HTMLElement>;

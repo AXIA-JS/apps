@@ -1,0 +1,112 @@
+{
+  "name": "@axia-js/react-api",
+  "private": true,
+  "type": "module",
+  "version": "0.1.0",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@axia-js/api": "0.1.0",
+    "@axia-js/extension-compat-metamask": "0.1.0",
+    "@axia-js/extension-dapp": "0.1.0",
+    "@babel/runtime": "^7.15.4",
+    "@substrate/connect": "^0.3.18",
+    "fflate": "^0.7.1",
+    "rxjs": "^7.3.0"
+  },
+  "exports": {
+    ".": {
+      "require": "./index.cjs",
+      "default": "./index.js"
+    },
+    "./Api": {
+      "require": "./Api.cjs",
+      "default": "./Api.js"
+    },
+    "./ApiContext": {
+      "require": "./ApiContext.cjs",
+      "default": "./ApiContext.js"
+    },
+    "./hoc": {
+      "require": "./hoc/index.cjs",
+      "default": "./hoc/index.js"
+    },
+    "./hoc/api": {
+      "require": "./hoc/api.cjs",
+      "default": "./hoc/api.js"
+    },
+    "./hoc/call": {
+      "require": "./hoc/call.cjs",
+      "default": "./hoc/call.js"
+    },
+    "./hoc/callDiv": {
+      "require": "./hoc/callDiv.cjs",
+      "default": "./hoc/callDiv.js"
+    },
+    "./hoc/calls": {
+      "require": "./hoc/calls.cjs",
+      "default": "./hoc/calls.js"
+    },
+    "./hoc/multi": {
+      "require": "./hoc/multi.cjs",
+      "default": "./hoc/multi.js"
+    },
+    "./hoc/observable": {
+      "require": "./hoc/observable.cjs",
+      "default": "./hoc/observable.js"
+    },
+    "./hoc/onlyOn": {
+      "require": "./hoc/onlyOn.cjs",
+      "default": "./hoc/onlyOn.js"
+    },
+    "./hoc/types": {
+      "require": "./hoc/types.cjs",
+      "default": "./hoc/types.js"
+    },
+    "./package.json": "./package.json",
+    "./packageInfo": {
+      "require": "./packageInfo.cjs",
+      "default": "./packageInfo.js"
+    },
+    "./README.md": "./README.md",
+    "./transform/echo": {
+      "require": "./transform/echo.cjs",
+      "default": "./transform/echo.js"
+    },
+    "./typeRegistry": {
+      "require": "./typeRegistry.cjs",
+      "default": "./typeRegistry.js"
+    },
+    "./types": {
+      "require": "./types.cjs",
+      "default": "./types.js"
+    },
+    "./urlTypes": {
+      "require": "./urlTypes.cjs",
+      "default": "./urlTypes.js"
+    },
+    "./util": {
+      "require": "./util/index.cjs",
+      "default": "./util/index.js"
+    },
+    "./util/getEnvironment": {
+      "require": "./util/getEnvironment.cjs",
+      "default": "./util/getEnvironment.js"
+    },
+    "./util/historic": {
+      "require": "./util/historic.cjs",
+      "default": "./util/historic.js"
+    },
+    "./util/intervalObservable": {
+      "require": "./util/intervalObservable.cjs",
+      "default": "./util/intervalObservable.js"
+    },
+    "./util/isEqual": {
+      "require": "./util/isEqual.cjs",
+      "default": "./util/isEqual.js"
+    },
+    "./util/triggerChange": {
+      "require": "./util/triggerChange.cjs",
+      "default": "./util/triggerChange.js"
+    }
+  }
+}

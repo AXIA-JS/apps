@@ -6,7 +6,7 @@ const { AlwaysPullPolicy, GenericContainer, Wait } = require('testcontainers');
 const startSubstrate = async () => {
   console.log('Substrate container starting...');
 
-  const startedTestContainer = await new GenericContainer('parity/substrate')
+  const startedTestContainer = await new GenericContainer('axia/substrate')
     .withPullPolicy(new AlwaysPullPolicy())
     .withName('axia-apps-test-substrate')
     .withExposedPorts(9944)

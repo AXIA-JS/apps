@@ -1,0 +1,110 @@
+{
+  "name": "@axia-js/react-query",
+  "private": true,
+  "type": "module",
+  "version": "0.1.0",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@babel/runtime": "^7.15.4"
+  },
+  "exports": {
+    ".": {
+      "require": "./index.cjs",
+      "default": "./index.js"
+    },
+    "./Available": {
+      "require": "./Available.cjs",
+      "default": "./Available.js"
+    },
+    "./Balance": {
+      "require": "./Balance.cjs",
+      "default": "./Balance.js"
+    },
+    "./BalanceFree": {
+      "require": "./BalanceFree.cjs",
+      "default": "./BalanceFree.js"
+    },
+    "./BalanceVoting": {
+      "require": "./BalanceVoting.cjs",
+      "default": "./BalanceVoting.js"
+    },
+    "./BestFinalized": {
+      "require": "./BestFinalized.cjs",
+      "default": "./BestFinalized.js"
+    },
+    "./BestNumber": {
+      "require": "./BestNumber.cjs",
+      "default": "./BestNumber.js"
+    },
+    "./BlockAuthors": {
+      "require": "./BlockAuthors.cjs",
+      "default": "./BlockAuthors.js"
+    },
+    "./BlockToTime": {
+      "require": "./BlockToTime.cjs",
+      "default": "./BlockToTime.js"
+    },
+    "./Bonded": {
+      "require": "./Bonded.cjs",
+      "default": "./Bonded.js"
+    },
+    "./Chain": {
+      "require": "./Chain.cjs",
+      "default": "./Chain.js"
+    },
+    "./Elapsed": {
+      "require": "./Elapsed.cjs",
+      "default": "./Elapsed.js"
+    },
+    "./Events": {
+      "require": "./Events.cjs",
+      "default": "./Events.js"
+    },
+    "./FormatBalance": {
+      "require": "./FormatBalance.cjs",
+      "default": "./FormatBalance.js"
+    },
+    "./LockedVote": {
+      "require": "./LockedVote.cjs",
+      "default": "./LockedVote.js"
+    },
+    "./NodeName": {
+      "require": "./NodeName.cjs",
+      "default": "./NodeName.js"
+    },
+    "./NodeVersion": {
+      "require": "./NodeVersion.cjs",
+      "default": "./NodeVersion.js"
+    },
+    "./Nonce": {
+      "require": "./Nonce.cjs",
+      "default": "./Nonce.js"
+    },
+    "./package.json": "./package.json",
+    "./packageInfo": {
+      "require": "./packageInfo.cjs",
+      "default": "./packageInfo.js"
+    },
+    "./README.md": "./README.md",
+    "./SessionToTime": {
+      "require": "./SessionToTime.cjs",
+      "default": "./SessionToTime.js"
+    },
+    "./TimeNow": {
+      "require": "./TimeNow.cjs",
+      "default": "./TimeNow.js"
+    },
+    "./TotalIssuance": {
+      "require": "./TotalIssuance.cjs",
+      "default": "./TotalIssuance.js"
+    },
+    "./translate": {
+      "require": "./translate.cjs",
+      "default": "./translate.js"
+    },
+    "./types": {
+      "require": "./types.cjs",
+      "default": "./types.js"
+    }
+  }
+}

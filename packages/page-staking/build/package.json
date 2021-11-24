@@ -1,0 +1,333 @@
+{
+  "name": "@axia-js/app-staking",
+  "private": true,
+  "type": "module",
+  "version": "0.1.0",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@axia-js/app-explorer": "0.1.0",
+    "@axia-js/react-components": "0.1.0",
+    "@axia-js/react-query": "0.1.0",
+    "@babel/runtime": "^7.15.4"
+  },
+  "exports": {
+    ".": {
+      "require": "./index.cjs",
+      "default": "./index.js"
+    },
+    "./Actions": {
+      "require": "./Actions/index.cjs",
+      "default": "./Actions/index.js"
+    },
+    "./Actions/Account": {
+      "require": "./Actions/Account/index.cjs",
+      "default": "./Actions/Account/index.js"
+    },
+    "./Actions/Account/BondExtra": {
+      "require": "./Actions/Account/BondExtra.cjs",
+      "default": "./Actions/Account/BondExtra.js"
+    },
+    "./Actions/Account/InjectKeys": {
+      "require": "./Actions/Account/InjectKeys.cjs",
+      "default": "./Actions/Account/InjectKeys.js"
+    },
+    "./Actions/Account/InputValidateAmount": {
+      "require": "./Actions/Account/InputValidateAmount.cjs",
+      "default": "./Actions/Account/InputValidateAmount.js"
+    },
+    "./Actions/Account/InputValidationController": {
+      "require": "./Actions/Account/InputValidationController.cjs",
+      "default": "./Actions/Account/InputValidationController.js"
+    },
+    "./Actions/Account/InputValidationSessionKey": {
+      "require": "./Actions/Account/InputValidationSessionKey.cjs",
+      "default": "./Actions/Account/InputValidationSessionKey.js"
+    },
+    "./Actions/Account/InputValidationUnstakeThreshold": {
+      "require": "./Actions/Account/InputValidationUnstakeThreshold.cjs",
+      "default": "./Actions/Account/InputValidationUnstakeThreshold.js"
+    },
+    "./Actions/Account/KickNominees": {
+      "require": "./Actions/Account/KickNominees.cjs",
+      "default": "./Actions/Account/KickNominees.js"
+    },
+    "./Actions/Account/ListNominees": {
+      "require": "./Actions/Account/ListNominees.cjs",
+      "default": "./Actions/Account/ListNominees.js"
+    },
+    "./Actions/Account/Nominate": {
+      "require": "./Actions/Account/Nominate.cjs",
+      "default": "./Actions/Account/Nominate.js"
+    },
+    "./Actions/Account/SetControllerAccount": {
+      "require": "./Actions/Account/SetControllerAccount.cjs",
+      "default": "./Actions/Account/SetControllerAccount.js"
+    },
+    "./Actions/Account/SetRewardDestination": {
+      "require": "./Actions/Account/SetRewardDestination.cjs",
+      "default": "./Actions/Account/SetRewardDestination.js"
+    },
+    "./Actions/Account/SetSessionKey": {
+      "require": "./Actions/Account/SetSessionKey.cjs",
+      "default": "./Actions/Account/SetSessionKey.js"
+    },
+    "./Actions/Account/Unbond": {
+      "require": "./Actions/Account/Unbond.cjs",
+      "default": "./Actions/Account/Unbond.js"
+    },
+    "./Actions/Account/Validate": {
+      "require": "./Actions/Account/Validate.cjs",
+      "default": "./Actions/Account/Validate.js"
+    },
+    "./Actions/Account/WarnBond": {
+      "require": "./Actions/Account/WarnBond.cjs",
+      "default": "./Actions/Account/WarnBond.js"
+    },
+    "./Actions/destOptions": {
+      "require": "./Actions/destOptions.cjs",
+      "default": "./Actions/destOptions.js"
+    },
+    "./Actions/NewNominator": {
+      "require": "./Actions/NewNominator.cjs",
+      "default": "./Actions/NewNominator.js"
+    },
+    "./Actions/NewStash": {
+      "require": "./Actions/NewStash.cjs",
+      "default": "./Actions/NewStash.js"
+    },
+    "./Actions/NewValidator": {
+      "require": "./Actions/NewValidator.cjs",
+      "default": "./Actions/NewValidator.js"
+    },
+    "./Actions/partials/Bond": {
+      "require": "./Actions/partials/Bond.cjs",
+      "default": "./Actions/partials/Bond.js"
+    },
+    "./Actions/partials/Nominate": {
+      "require": "./Actions/partials/Nominate.cjs",
+      "default": "./Actions/partials/Nominate.js"
+    },
+    "./Actions/partials/SenderInfo": {
+      "require": "./Actions/partials/SenderInfo.cjs",
+      "default": "./Actions/partials/SenderInfo.js"
+    },
+    "./Actions/partials/SessionKey": {
+      "require": "./Actions/partials/SessionKey.cjs",
+      "default": "./Actions/partials/SessionKey.js"
+    },
+    "./Actions/partials/types": {
+      "require": "./Actions/partials/types.cjs",
+      "default": "./Actions/partials/types.js"
+    },
+    "./Actions/partials/Validate": {
+      "require": "./Actions/partials/Validate.cjs",
+      "default": "./Actions/partials/Validate.js"
+    },
+    "./Actions/types": {
+      "require": "./Actions/types.cjs",
+      "default": "./Actions/types.js"
+    },
+    "./Actions/useInactives": {
+      "require": "./Actions/useInactives.cjs",
+      "default": "./Actions/useInactives.js"
+    },
+    "./Actions/useUnbondDuration": {
+      "require": "./Actions/useUnbondDuration.cjs",
+      "default": "./Actions/useUnbondDuration.js"
+    },
+    "./ActionsBanner": {
+      "require": "./ActionsBanner.cjs",
+      "default": "./ActionsBanner.js"
+    },
+    "./constants": {
+      "require": "./constants.cjs",
+      "default": "./constants.js"
+    },
+    "./ElectionBanner": {
+      "require": "./ElectionBanner.cjs",
+      "default": "./ElectionBanner.js"
+    },
+    "./Filtering": {
+      "require": "./Filtering.cjs",
+      "default": "./Filtering.js"
+    },
+    "./Legend": {
+      "require": "./Legend.cjs",
+      "default": "./Legend.js"
+    },
+    "./MaxBadge": {
+      "require": "./MaxBadge.cjs",
+      "default": "./MaxBadge.js"
+    },
+    "./Overview": {
+      "require": "./Overview/index.cjs",
+      "default": "./Overview/index.js"
+    },
+    "./Overview/Address": {
+      "require": "./Overview/Address/index.cjs",
+      "default": "./Overview/Address/index.js"
+    },
+    "./Overview/Address/Favorite": {
+      "require": "./Overview/Address/Favorite.cjs",
+      "default": "./Overview/Address/Favorite.js"
+    },
+    "./Overview/Address/NominatedBy": {
+      "require": "./Overview/Address/NominatedBy.cjs",
+      "default": "./Overview/Address/NominatedBy.js"
+    },
+    "./Overview/Address/StakeOther": {
+      "require": "./Overview/Address/StakeOther.cjs",
+      "default": "./Overview/Address/StakeOther.js"
+    },
+    "./Overview/Address/Status": {
+      "require": "./Overview/Address/Status.cjs",
+      "default": "./Overview/Address/Status.js"
+    },
+    "./Overview/Address/types": {
+      "require": "./Overview/Address/types.cjs",
+      "default": "./Overview/Address/types.js"
+    },
+    "./Overview/CurrentList": {
+      "require": "./Overview/CurrentList.cjs",
+      "default": "./Overview/CurrentList.js"
+    },
+    "./Overview/Summary": {
+      "require": "./Overview/Summary.cjs",
+      "default": "./Overview/Summary.js"
+    },
+    "./Overview/types": {
+      "require": "./Overview/types.cjs",
+      "default": "./Overview/types.js"
+    },
+    "./package.json": "./package.json",
+    "./packageInfo": {
+      "require": "./packageInfo.cjs",
+      "default": "./packageInfo.js"
+    },
+    "./Payouts": {
+      "require": "./Payouts/index.cjs",
+      "default": "./Payouts/index.js"
+    },
+    "./Payouts/PayButton": {
+      "require": "./Payouts/PayButton.cjs",
+      "default": "./Payouts/PayButton.js"
+    },
+    "./Payouts/Stash": {
+      "require": "./Payouts/Stash.cjs",
+      "default": "./Payouts/Stash.js"
+    },
+    "./Payouts/types": {
+      "require": "./Payouts/types.cjs",
+      "default": "./Payouts/types.js"
+    },
+    "./Payouts/useEraBlocks": {
+      "require": "./Payouts/useEraBlocks.cjs",
+      "default": "./Payouts/useEraBlocks.js"
+    },
+    "./Payouts/util": {
+      "require": "./Payouts/util.cjs",
+      "default": "./Payouts/util.js"
+    },
+    "./Payouts/Validator": {
+      "require": "./Payouts/Validator.cjs",
+      "default": "./Payouts/Validator.js"
+    },
+    "./Query": {
+      "require": "./Query/index.cjs",
+      "default": "./Query/index.js"
+    },
+    "./Query/ChartPoints": {
+      "require": "./Query/ChartPoints.cjs",
+      "default": "./Query/ChartPoints.js"
+    },
+    "./Query/ChartPrefs": {
+      "require": "./Query/ChartPrefs.cjs",
+      "default": "./Query/ChartPrefs.js"
+    },
+    "./Query/ChartRewards": {
+      "require": "./Query/ChartRewards.cjs",
+      "default": "./Query/ChartRewards.js"
+    },
+    "./Query/ChartStake": {
+      "require": "./Query/ChartStake.cjs",
+      "default": "./Query/ChartStake.js"
+    },
+    "./Query/types": {
+      "require": "./Query/types.cjs",
+      "default": "./Query/types.js"
+    },
+    "./Query/useBlockCounts": {
+      "require": "./Query/useBlockCounts.cjs",
+      "default": "./Query/useBlockCounts.js"
+    },
+    "./Query/util": {
+      "require": "./Query/util.cjs",
+      "default": "./Query/util.js"
+    },
+    "./Query/Validator": {
+      "require": "./Query/Validator.cjs",
+      "default": "./Query/Validator.js"
+    },
+    "./README.md": "./README.md",
+    "./Slashes": {
+      "require": "./Slashes/index.cjs",
+      "default": "./Slashes/index.js"
+    },
+    "./Slashes/Era": {
+      "require": "./Slashes/Era.cjs",
+      "default": "./Slashes/Era.js"
+    },
+    "./Slashes/Row": {
+      "require": "./Slashes/Row.cjs",
+      "default": "./Slashes/Row.js"
+    },
+    "./Slashes/Summary": {
+      "require": "./Slashes/Summary.cjs",
+      "default": "./Slashes/Summary.js"
+    },
+    "./Slashes/types": {
+      "require": "./Slashes/types.cjs",
+      "default": "./Slashes/types.js"
+    },
+    "./Targets": {
+      "require": "./Targets/index.cjs",
+      "default": "./Targets/index.js"
+    },
+    "./Targets/Nominate": {
+      "require": "./Targets/Nominate.cjs",
+      "default": "./Targets/Nominate.js"
+    },
+    "./Targets/Summary": {
+      "require": "./Targets/Summary.cjs",
+      "default": "./Targets/Summary.js"
+    },
+    "./Targets/useOwnNominators": {
+      "require": "./Targets/useOwnNominators.cjs",
+      "default": "./Targets/useOwnNominators.js"
+    },
+    "./Targets/Validator": {
+      "require": "./Targets/Validator.cjs",
+      "default": "./Targets/Validator.js"
+    },
+    "./translate": {
+      "require": "./translate.cjs",
+      "default": "./translate.js"
+    },
+    "./types": {
+      "require": "./types.cjs",
+      "default": "./types.js"
+    },
+    "./useIdentities": {
+      "require": "./useIdentities.cjs",
+      "default": "./useIdentities.js"
+    },
+    "./useNominations": {
+      "require": "./useNominations.cjs",
+      "default": "./useNominations.js"
+    },
+    "./useSortedTargets": {
+      "require": "./useSortedTargets.cjs",
+      "default": "./useSortedTargets.js"
+    }
+  }
+}

@@ -7,7 +7,7 @@
 export const identityNodes: Record<string, string> = [
   ['centrifuge chain', 'axia'],
   ['joystream-node', 'beachball'],
-  ['parity-axia', 'axia']
+  ['axia-axia', 'axia']
 ].reduce((icons, [node, icon]): Record<string, string> => ({
   ...icons,
   [node.toLowerCase().replace(/-/g, ' ')]: icon

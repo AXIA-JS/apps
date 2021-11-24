@@ -22,7 +22,7 @@ export function createAlphaNet (t: TFunction): EndpointOption {
     info: 'alphanet',
     text: t('rpc.alphanet', 'AlphaNet', { ns: 'apps-config' }),
     providers: {
-      Parity: 'wss://alphanet-rpc.axia.io',
+      AXIA: 'wss://alphanet-rpc.axia.io',
       'Patract Elara': 'wss://pub.elara.patract.io/alphanet',
       OnFinality: 'wss://alphanet.api.onfinality.io/public-ws',
       Pinknode: 'wss://rpc.pinknode.io/alphanet/explorer',
@@ -39,7 +39,7 @@ export function createAlphaNet (t: TFunction): EndpointOption {
         paraId: 1000,
         text: t('rpc.alphanet.shell', 'Westmint', { ns: 'apps-config' }),
         providers: {
-          Parity: 'wss://westmint-rpc.axia.io',
+          AXIA: 'wss://westmint-rpc.axia.io',
           'Patract Elara': 'wss://pub.elara.patract.io/westmint'
         },
         teleport: [-1]

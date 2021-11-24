@@ -353,7 +353,7 @@ export const nodeLogos = Object.entries({
   Pangoro: nodePangoro,
   'Parallel Heiko': nodeHeiko,
   Parami: nodeParami,
-  'parity-axia': nodeAXIA,
+  'axia-axia': nodeAXIA,
   'Patract Node': nodeJupiter,
   'Phala Collator': nodePhala,
   'phala-substrate-node': nodePhala,

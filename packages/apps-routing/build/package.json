@@ -1,0 +1,134 @@
+{
+  "name": "@axia-js/apps-routing",
+  "private": true,
+  "type": "module",
+  "version": "0.1.0",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@babel/runtime": "^7.15.4"
+  },
+  "exports": {
+    ".": {
+      "require": "./index.cjs",
+      "default": "./index.js"
+    },
+    "./accounts": {
+      "require": "./accounts.cjs",
+      "default": "./accounts.js"
+    },
+    "./addresses": {
+      "require": "./addresses.cjs",
+      "default": "./addresses.js"
+    },
+    "./allychains": {
+      "require": "./allychains.cjs",
+      "default": "./allychains.js"
+    },
+    "./assets": {
+      "require": "./assets.cjs",
+      "default": "./assets.js"
+    },
+    "./bounties": {
+      "require": "./bounties.cjs",
+      "default": "./bounties.js"
+    },
+    "./calendar": {
+      "require": "./calendar.cjs",
+      "default": "./calendar.js"
+    },
+    "./claims": {
+      "require": "./claims.cjs",
+      "default": "./claims.js"
+    },
+    "./contracts": {
+      "require": "./contracts.cjs",
+      "default": "./contracts.js"
+    },
+    "./council": {
+      "require": "./council.cjs",
+      "default": "./council.js"
+    },
+    "./democracy": {
+      "require": "./democracy.cjs",
+      "default": "./democracy.js"
+    },
+    "./explorer": {
+      "require": "./explorer.cjs",
+      "default": "./explorer.js"
+    },
+    "./extrinsics": {
+      "require": "./extrinsics.cjs",
+      "default": "./extrinsics.js"
+    },
+    "./gilt": {
+      "require": "./gilt.cjs",
+      "default": "./gilt.js"
+    },
+    "./js": {
+      "require": "./js.cjs",
+      "default": "./js.js"
+    },
+    "./membership": {
+      "require": "./membership.cjs",
+      "default": "./membership.js"
+    },
+    "./package.json": "./package.json",
+    "./packageInfo": {
+      "require": "./packageInfo.cjs",
+      "default": "./packageInfo.js"
+    },
+    "./poll": {
+      "require": "./poll.cjs",
+      "default": "./poll.js"
+    },
+    "./README.md": "./README.md",
+    "./rpc": {
+      "require": "./rpc.cjs",
+      "default": "./rpc.js"
+    },
+    "./settings": {
+      "require": "./settings.cjs",
+      "default": "./settings.js"
+    },
+    "./signing": {
+      "require": "./signing.cjs",
+      "default": "./signing.js"
+    },
+    "./society": {
+      "require": "./society.cjs",
+      "default": "./society.js"
+    },
+    "./staking": {
+      "require": "./staking.cjs",
+      "default": "./staking.js"
+    },
+    "./storage": {
+      "require": "./storage.cjs",
+      "default": "./storage.js"
+    },
+    "./sudo": {
+      "require": "./sudo.cjs",
+      "default": "./sudo.js"
+    },
+    "./techcomm": {
+      "require": "./techcomm.cjs",
+      "default": "./techcomm.js"
+    },
+    "./teleport": {
+      "require": "./teleport.cjs",
+      "default": "./teleport.js"
+    },
+    "./transfer": {
+      "require": "./transfer.cjs",
+      "default": "./transfer.js"
+    },
+    "./treasury": {
+      "require": "./treasury.cjs",
+      "default": "./treasury.js"
+    },
+    "./types": {
+      "require": "./types.cjs",
+      "default": "./types.js"
+    }
+  }
+}

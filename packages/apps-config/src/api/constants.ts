@@ -18,8 +18,8 @@ export const KULUPU_GENESIS = getGenesis('kulupu');
 
 export const AXIALUNAR_GENESIS = getGenesis('axialunar');
 
-export const AXIASOLAR_GENESIS = getGenesis('axia');
-export const AXIASOLAR_DENOM_BLOCK = new BN(1248328);
+export const AXIA_GENESIS = getGenesis('axia');
+export const AXIA_DENOM_BLOCK = new BN(1248328);
 
 export const BETANET_GENESIS = '0x5fce687da39305dfe682b117f0820b319348e8bb37eb16cf34acbf6a202de9d9';
 

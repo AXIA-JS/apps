@@ -1,0 +1,115 @@
+{
+  "name": "@axia-js/app-explorer",
+  "private": true,
+  "type": "module",
+  "version": "0.1.0",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@axia-js/react-components": "0.1.0",
+    "@babel/runtime": "^7.15.4"
+  },
+  "exports": {
+    ".": {
+      "require": "./index.cjs",
+      "default": "./index.js"
+    },
+    "./BestHash": {
+      "require": "./BestHash.cjs",
+      "default": "./BestHash.js"
+    },
+    "./BlockHeader": {
+      "require": "./BlockHeader.cjs",
+      "default": "./BlockHeader.js"
+    },
+    "./BlockHeaders": {
+      "require": "./BlockHeaders.cjs",
+      "default": "./BlockHeaders.js"
+    },
+    "./BlockInfo": {
+      "require": "./BlockInfo/index.cjs",
+      "default": "./BlockInfo/index.js"
+    },
+    "./BlockInfo/ByHash": {
+      "require": "./BlockInfo/ByHash.cjs",
+      "default": "./BlockInfo/ByHash.js"
+    },
+    "./BlockInfo/ByNumber": {
+      "require": "./BlockInfo/ByNumber.cjs",
+      "default": "./BlockInfo/ByNumber.js"
+    },
+    "./BlockInfo/Extrinsic": {
+      "require": "./BlockInfo/Extrinsic.cjs",
+      "default": "./BlockInfo/Extrinsic.js"
+    },
+    "./BlockInfo/Extrinsics": {
+      "require": "./BlockInfo/Extrinsics.cjs",
+      "default": "./BlockInfo/Extrinsics.js"
+    },
+    "./BlockInfo/Justifications": {
+      "require": "./BlockInfo/Justifications.cjs",
+      "default": "./BlockInfo/Justifications.js"
+    },
+    "./BlockInfo/Logs": {
+      "require": "./BlockInfo/Logs.cjs",
+      "default": "./BlockInfo/Logs.js"
+    },
+    "./BlockInfo/Summary": {
+      "require": "./BlockInfo/Summary.cjs",
+      "default": "./BlockInfo/Summary.js"
+    },
+    "./Event": {
+      "require": "./Event.cjs",
+      "default": "./Event.js"
+    },
+    "./Events": {
+      "require": "./Events.cjs",
+      "default": "./Events.js"
+    },
+    "./Forks": {
+      "require": "./Forks.cjs",
+      "default": "./Forks.js"
+    },
+    "./Main": {
+      "require": "./Main.cjs",
+      "default": "./Main.js"
+    },
+    "./NodeInfo": {
+      "require": "./NodeInfo/index.cjs",
+      "default": "./NodeInfo/index.js"
+    },
+    "./NodeInfo/Peers": {
+      "require": "./NodeInfo/Peers.cjs",
+      "default": "./NodeInfo/Peers.js"
+    },
+    "./NodeInfo/Summary": {
+      "require": "./NodeInfo/Summary.cjs",
+      "default": "./NodeInfo/Summary.js"
+    },
+    "./NodeInfo/types": {
+      "require": "./NodeInfo/types.cjs",
+      "default": "./NodeInfo/types.js"
+    },
+    "./package.json": "./package.json",
+    "./packageInfo": {
+      "require": "./packageInfo.cjs",
+      "default": "./packageInfo.js"
+    },
+    "./Query": {
+      "require": "./Query.cjs",
+      "default": "./Query.js"
+    },
+    "./README.md": "./README.md",
+    "./Summary": {
+      "require": "./Summary.cjs",
+      "default": "./Summary.js"
+    },
+    "./SummarySession": {
+      "require": "./SummarySession.cjs",
+      "default": "./SummarySession.js"
+    },
+    "./translate": {
+      "require": "./translate.cjs",
+      "default": "./translate.js"
+    }
+  }
+}

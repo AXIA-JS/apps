@@ -3,7 +3,7 @@
 
 import type { ApiPromise } from '@axia-js/api';
 
-import { KULUPU_GENESIS, AXIALUNAR_GENESIS, AXIASOLAR_GENESIS } from '../constants';
+import { KULUPU_GENESIS, AXIALUNAR_GENESIS, AXIA_GENESIS } from '../constants';
 
 // normal fast-track proposals
 const FAST_TRACK: Record<string, number> = {
@@ -18,20 +18,20 @@ const FAST_TRACK_NO_DELAY: Record<string, number> = {
 const PROPOSE: Record<string, number> = {
   [KULUPU_GENESIS]: 1,
   [AXIALUNAR_GENESIS]: 1 / 2,
-  [AXIASOLAR_GENESIS]: 3 / 5,
+  [AXIA_GENESIS]: 3 / 5,
   default: 1 / 2
 };
 
 const SLASH: Record<string, number> = {
   [AXIALUNAR_GENESIS]: 1 / 2,
-  [AXIASOLAR_GENESIS]: 3 / 4,
+  [AXIA_GENESIS]: 3 / 4,
   default: 1 / 2
 };
 
 const TREASURY: Record<string, number> = {
   [KULUPU_GENESIS]: 1 / 2,
   [AXIALUNAR_GENESIS]: 3 / 5,
-  [AXIASOLAR_GENESIS]: 3 / 5,
+  [AXIA_GENESIS]: 3 / 5,
   default: 3 / 5
 };
 
