@@ -34,7 +34,7 @@ function createExternals (t: TFunction): ItemRoute[] {
       text: t<string>('nav.github', 'GitHub', { ns: 'apps-routing' })
     },
     {
-      href: 'https://wiki.axia.network',
+      href: 'https://wiki.axiacoin.network',
       icon: 'book',
       name: 'wiki',
       text: t<string>('nav.wiki', 'Wiki', { ns: 'apps-routing' })
