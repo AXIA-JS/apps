@@ -14,12 +14,9 @@ export const identityNodes: Record<string, string> = [
 }), {});
 
 export const identitySpec: Record<string, string> = [
-  ['axialunar', 'axia'],
   ['axia', 'axia'],
-  ['betanet', 'axia'],
   ['statemine', 'axia'],
   ['statemint', 'axia'],
-  ['alphanet', 'axia'],
   ['westmint', 'axia']
 ].reduce((icons, [spec, icon]): Record<string, string> => ({
   ...icons,

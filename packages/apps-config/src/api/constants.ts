@@ -14,6 +14,9 @@ function getGenesis (name: string): string {
   return network.genesisHash[0];
 }
 
+
+
+
 export const KULUPU_GENESIS = getGenesis('kulupu');
 
 export const AXIALUNAR_GENESIS = getGenesis('axialunar');

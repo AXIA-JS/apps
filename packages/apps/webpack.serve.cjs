@@ -18,7 +18,7 @@ module.exports = merge(
     },
     plugins: [
       new HtmlWebpackPlugin({
-        PAGE_TITLE: 'AXIA/Substrate Portal',
+        PAGE_TITLE: 'AXIA Blockchain Portal',
         inject: true,
         template: path.join(__dirname, 'public/index.html')
       }),

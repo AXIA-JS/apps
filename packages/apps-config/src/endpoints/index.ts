@@ -6,9 +6,7 @@ import type { LinkOption } from './types';
 
 import { createCustom, createDev, createOwn } from './development';
 import { createProduction } from './production';
-import { createAXIALunarRelay, createAXIARelay } from './productionRelays';
 import { createTesting } from './testing';
-import { createBetaNetRelay, createAlphaNetRelay } from './testingRelays';
 
 export { CUSTOM_ENDPOINT_KEY } from './development';
 
@@ -19,41 +17,7 @@ export function createWsEndpoints (t: TFunction, firstOnly = false, withSort = t
       isDisabled: false,
       isHeader: true,
       isSpaced: true,
-      text: t('rpc.header.axia.relay', 'AXIA & allychains', { ns: 'apps-config' }),
-      textBy: '',
-      value: ''
-    },
-    ...createAXIARelay(t, firstOnly, withSort),
-    {
-      isDisabled: true,
-      isHeader: true,
-      text: t('rpc.header.axialunar.relay', 'AXIALunar & allychains', { ns: 'apps-config' }),
-      textBy: '',
-      value: ''
-    },
-    ...createAXIALunarRelay(t, firstOnly, withSort),
-    {
-      isDisabled: true,
-      isHeader: true,
-      isSpaced: true,
-      text: t('rpc.header.alphanet.relay', 'Test AlphaNet & allychains', { ns: 'apps-config' }),
-      textBy: '',
-      value: ''
-    },
-    ...createAlphaNetRelay(t, firstOnly, withSort),
-    {
-      isDisabled: true,
-      isHeader: true,
-      text: t('rpc.header.betanet.relay', 'Test BetaNet & allychains', { ns: 'apps-config' }),
-      textBy: '',
-      value: ''
-    },
-    ...createBetaNetRelay(t, firstOnly, withSort),
-    {
-      isDisabled: false,
-      isHeader: true,
-      isSpaced: true,
-      text: t('rpc.header.live', 'Live networks', { ns: 'apps-config' }),
+      text: t('rpc.header.axia.relay', 'MainNet', { ns: 'apps-config' }),
       textBy: '',
       value: ''
     },
@@ -61,7 +25,7 @@ export function createWsEndpoints (t: TFunction, firstOnly = false, withSort = t
     {
       isDisabled: false,
       isHeader: true,
-      text: t('rpc.header.test', 'Test networks', { ns: 'apps-config' }),
+      text: t('rpc.header.test', 'Test Networks', { ns: 'apps-config' }),
       textBy: '',
       value: ''
     },
@@ -71,7 +35,7 @@ export function createWsEndpoints (t: TFunction, firstOnly = false, withSort = t
       isDisabled: false,
       isHeader: true,
       isSpaced: true,
-      text: t('rpc.header.dev', 'Development', { ns: 'apps-config' }),
+      text: t('rpc.header.dev', 'Plug & Play', { ns: 'apps-config' }),
       textBy: '',
       value: ''
     },

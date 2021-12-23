@@ -25,10 +25,6 @@ export function createLanguages (t: TFunction): Option[] {
       value: 'es'
     },
     {
-      text: 'Français',
-      value: 'fr'
-    },
-    {
       text: 'Bahasa Indonesia',
       value: 'id'
     },
@@ -39,10 +35,6 @@ export function createLanguages (t: TFunction): Option[] {
     {
       text: '日本語',
       value: 'ja'
-    },
-    {
-      text: '한국어',
-      value: 'ko'
     },
     {
       text: 'Português',
