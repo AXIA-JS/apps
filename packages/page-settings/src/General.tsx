@@ -5,6 +5,7 @@ import type { Option } from '@axia-js/apps-config/settings/types';
 import type { SettingsStruct } from '@axia-js/ui-settings/types';
 
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
+import styled from 'styled-components';
 
 import { createLanguages, createSs58 } from '@axia-js/apps-config';
 import { allNetworks } from '@axia-js/networks';
@@ -186,4 +187,25 @@ function General ({ className = '' }: Props): React.ReactElement<Props> {
   );
 }
 
-export default React.memo(General);
+export default React.memo(styled(General)`
+  .ui.selection.dropdown{
+    background: #FFFFFF !important;
+    border: 2px solid #B1B5C4 !important;
+    box-sizing: border-box;
+    border-radius: 12px !important;
+  }
+  .ui--Button:not(.isDisabled):not(.isIcon):not(.isBasic) .ui--Icon, .ui--Button.withoutLink:not(.isDisabled) .ui--Icon{
+    background:transparent;
+    color: #178FE1 !important;
+  }
+  // .ui-Icon:hover{
+  //   background:red !important;
+  // }
+  .WnYpr.hasLabel{
+    color:#178FE1 !important;
+    font-weight:500;
+  }
+  button.ui--Button{
+    color: #178FE1;
+  }
+`);

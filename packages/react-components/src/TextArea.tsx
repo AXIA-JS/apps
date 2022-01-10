@@ -55,10 +55,15 @@ export default React.memo(styled(TextArea)`
   .TextAreaWithDropdown {
     display: flex;
     textarea {
-      border-radius: 0.25rem 0 0 0.25rem;
-      border: 1px solid #DDE1EB;
-      border-right: none;
-      background: var(--bg-input);
+      // border-radius: 0.25rem 0 0 0.25rem;
+      // border: 1px solid #DDE1EB;
+      background: #FFFFFF;
+      border: 1px solid #B1B5C4;
+      box-sizing: border-box;
+      border-radius: 12px;
+      margin-right:8px;
+      // border-right: none;
+      // background: var(--bg-input);
       box-sizing: border-box;
       color: var(--color-text);
       display: block;
@@ -66,6 +71,7 @@ export default React.memo(styled(TextArea)`
       padding: 1.75rem 3rem 0.75rem 1.5rem;
       resize: none;
       width: 100%;
+      line-height:1;
 
       &:read-only {
         background: var(--bg-inverse);
@@ -84,15 +90,19 @@ export default React.memo(styled(TextArea)`
     }
 
     & > .ui.buttons > .ui.button.floating.selection.dropdown {
-      border: 1px solid #DDE1EB;
-      border-left: none;
-      border-top-left-radius: 0;
-      border-bottom-left-radius: 0;
+      // border: 1px solid #DDE1EB;
+      // border-left: none;
+      // border-top-left-radius: 0;
+      // border-bottom-left-radius: 0;
+      background: #FFFFFF;
+      border: 1px solid #B1B5C4;
+      box-sizing: border-box;
+      border-radius: 12px;
       display: flex;
       align-items: center;
       justify-content: center;
       & > .dropdown.icon {
-        top: 2rem;
+        top: 1.7rem;
       }
     }
   }

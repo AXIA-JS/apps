@@ -370,6 +370,8 @@ export default React.memo(styled(Playground)`
       min-width: calc(100% - 40px);
       padding-top: 50px;
       width: auto;
+      text-align:center;
+      
     }
 
     .codeflask__lines {
@@ -377,6 +379,10 @@ export default React.memo(styled(Playground)`
       line-height: 18px;
       padding-top: 50px;
       z-index: 100;
+      width: 60px !important;
+      height: 100%;
+      text-align: center !important;
+      color: #999;
     }
 
     &::after {

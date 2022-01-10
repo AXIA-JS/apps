@@ -44,15 +44,29 @@ function Month ({ className, hasNextMonth, lastDay, now, scheduled, setDay, setN
   return (
     <div className={className}>
       <h1>
-        <div>{monthRef.current[dateMonth.getMonth()]} {dateMonth.getFullYear()}</div>
         <Button.Group>
           <Button
-            icon='chevron-left'
+            className='CustomItems'
+            icon='arrow-left'
             isDisabled={isNowYear && (isOlderMonth || isNowMonth)}
             onClick={setPrevMonth}
           />
-          <Button
+          {/* <Button
             icon='chevron-right'
+            isDisabled={!hasNextMonth}
+            onClick={setNextMonth}
+          /> */}
+        </Button.Group>
+        <div className='CustomMonthYear'>{monthRef.current[dateMonth.getMonth()]} {dateMonth.getFullYear()}</div>
+        <Button.Group>
+          {/* <Button
+            icon='chevron-left'
+            isDisabled={isNowYear && (isOlderMonth || isNowMonth)}
+            onClick={setPrevMonth}
+          /> */}
+          <Button
+            className='CustomItems'
+            icon='arrow-right'
             isDisabled={!hasNextMonth}
             onClick={setNextMonth}
           />
@@ -85,6 +99,24 @@ function Month ({ className, hasNextMonth, lastDay, now, scheduled, setDay, setN
 export default React.memo(styled(Month)`
   flex: 0;
   max-width: max-content;
+
+  .CustomItems{
+   background:#B1B5C4 !important;
+   border-radius:40px;
+   color:#fff;
+  }
+
+  .ui--Button:not(.isDisabled):not(.isIcon):not(.isBasic) .ui--Icon, .ui--Button.withoutLink:not(.isDisabled) .ui--Icon{
+    background:#B1B5C4 !important;
+    border-radius:40px;
+    color:#fff;
+  }
+
+  .CustomMonthYear{
+    text-transform: capitalize;
+    font-weight: 600;
+    margin-top: -12px;
+  }
 
   .calendar {
     padding: 1rem 1.5rem;

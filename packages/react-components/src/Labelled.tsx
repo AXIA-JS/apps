@@ -54,6 +54,7 @@ export default React.memo(styled(Labelled)`
       position: absolute;
       top: 0.9rem;
       right: 0.5rem;
+      margin-right:12px;
     }
 
     .withEllipsis {

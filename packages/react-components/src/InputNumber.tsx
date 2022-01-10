@@ -331,4 +331,5 @@ export default React.memo(styled(InputNumber)`
     bottom: 1.1rem;
     right: 6.5rem;
   }
+ 
 `);

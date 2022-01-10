@@ -72,7 +72,7 @@ function CardSummary ({ children, className = '', help, label, progress }: Props
               {isTimed && !children && (
                 <BlockToTime value={progress.total} />
               )}
-              <div className={isTimed ? 'isSecondary' : 'isPrimary'}>
+              <div className={isTimed ? 'isSecondary customBg' : 'isPrimary'}>
                 {!left || isUndefined(progress.total)
                   ? '-'
                   : !isTimed || progress.isPercent || !progress.value
@@ -100,7 +100,7 @@ function CardSummary ({ children, className = '', help, label, progress }: Props
 
 export default React.memo(styled(CardSummary)`
   align-items: center;
-  background: transparent !important;
+  background: transparent;
   border: none !important;
   box-shadow: none !important;
   color: var(--color-summary);
@@ -109,6 +109,30 @@ export default React.memo(styled(CardSummary)`
   flex-flow: row wrap;
   justify-content: flex-end;
   padding: 0 1.5rem;
+
+  &.CustomBg {
+    background: #fff !important;
+    border-radius:12px;
+  }
+
+  &.CustomEcho {
+    background: #E9F6FF;
+    border: 2px solid #9CCDED !important;
+    border-radius: 12px !important;
+  }
+
+  &.CustomBlockforks{
+    background: #fff !important;
+    border-radius:12px !important;
+    padding:10px  !important;
+    width: 82px;
+    height: 78px;
+    justify-content: space-evenly;
+  }
+
+  .hlyaRM.ui--Labelled.isSmall > label{
+    margin-bottom:8px;
+  }
 
   .ui--FormatBalance .balance-postfix {
     opacity: 1;
@@ -119,11 +143,12 @@ export default React.memo(styled(CardSummary)`
   }
 
   > .ui--Labelled {
-    font-size: 1.75rem;
-    font-weight: var(--font-weight-light);
+    font-size: 1rem;
+    font-weight: 400;
     position: relative;
     line-height: 1;
-    text-align: right;
+    text-align: left;
+    color:#353945;
 
     > * {
       margin: 0.25rem 0;

@@ -188,7 +188,7 @@ function DayItem ({ className, item: { blockNumber, date, info, type }, showAllE
       {date && (
         <Button
           className={showAllEvents ? 'exportCal exportCal-allEvents' : 'exportCal'}
-          icon='calendar-plus'
+          icon='file-download'
           onClick={_exportCal}
         />
       )}

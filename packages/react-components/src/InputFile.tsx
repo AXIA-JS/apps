@@ -138,6 +138,7 @@ export default React.memo(styled(InputFile)`
   background: var(--bg-input);
   border: 1px solid var(--border-input);
   border-radius: 0.28571429rem;
+ 
   font-size: 1rem;
   margin: 0.25rem 0;
   padding: 0.67857143em 1em;
@@ -150,5 +151,16 @@ export default React.memo(styled(InputFile)`
 
   &:hover {
     cursor: pointer;
+  }
+  input{
+    border: 1px solid #B1B5C4;
+    box-sizing: border-box;
+    border-radius: 12px;
+  }
+  &.CustomInput{
+    background: #FFFFFF;
+    border: 2px solid #B1B5C4;
+    box-sizing: border-box;
+    border-radius: 12px;
   }
 `);
