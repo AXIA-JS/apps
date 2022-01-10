@@ -34,7 +34,7 @@ function GroupDisplay ({ affinities, apiUrl, children, className = '', index, is
         className={`groupHeader${isSpaced ? ' isSpaced' : ''}`}
         onClick={_setGroup}
       >
-        <Icon icon={isSelected ? 'caret-up' : 'caret-down'} />
+        <Icon icon={isSelected ? 'chevron-up' : 'chevron-down'} />
         {header}
       </div>
       {isSelected && (

@@ -169,7 +169,9 @@ function Developer ({ className = '', onStatusChange }: Props): React.ReactEleme
       <div className='ui--row'>
         <div className='full'>
           <InputFile
+            className='CustomInput'
             clearContent={typesHasNoEntries && isTypesValid}
+            // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
             help={t<string>('Save the type definitions for your custom structures as key-value pairs in a valid JSON file. The key should be the name of your custom structure and the value an object containing your type definitions.')}
             isError={!isTypesValid}
             label={t<string>('Additional types as a JSON file (or edit below)')}
@@ -218,8 +220,9 @@ function Developer ({ className = '', onStatusChange }: Props): React.ReactEleme
 export default React.memo(styled(Developer)`
   .editor {
     height: 21rem;
-    margin-left: 2rem;
+    margin-left: 2.2rem;
     position: relative;
+    margin-top:15px;
   }
 
   .help {

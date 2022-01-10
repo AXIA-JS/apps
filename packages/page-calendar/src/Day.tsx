@@ -55,23 +55,25 @@ function Day ({ className, date, hasNextDay, now, scheduled, setNextDay, setPrev
 
   return (
     <div className={className}>
-      <h1>
+      <h1 >
         <div>
           <Button
-            className='all-events-button'
-            icon={'list'}
+            className='all-events-button '
+            icon={'clipboard-list'}
             onClick={_setView}
           />
-          {date.getDate()} {monthRef.current[date.getMonth()]} {date.getFullYear()} {isToday && <DayTime />}
+          <span className='CustomMonthYear'>{date.getDate()} {monthRef.current[date.getMonth()]} {date.getFullYear()} {isToday && <DayTime />}</span>
         </div>
         <Button.Group>
           <Button
-            icon='chevron-left'
+           className='CustomItems'
+            icon='arrow-left'
             isDisabled={isToday}
             onClick={setPrevDay}
           />
           <Button
-            icon='chevron-right'
+           className=''
+            icon='arrow-right'
             isDisabled={!hasNextDay}
             onClick={setNextDay}
           />
@@ -96,6 +98,10 @@ function Day ({ className, date, hasNextDay, now, scheduled, setNextDay, setPrev
 export default React.memo(styled(Day)`
   flex: 1;
 
+  h1{
+    align-items:center
+  }
+
   .dayHeader {
     align-items: center;
     display: flex;
@@ -106,5 +112,17 @@ export default React.memo(styled(Day)`
 
   .hoursContainer {
     z-index: 1;
+  }
+  
+  .CustomItems{
+    background:#B1B5C4 !important;
+    border-radius:40px;
+    color:#fff;
+   }
+ 
+   .CustomMonthYear{
+    text-transform: capitalize;
+    font-weight: 600;
+    // margin-top: -12px;
   }
 `);

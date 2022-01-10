@@ -131,6 +131,13 @@ const Dropdown = React.memo(styled(BaseDropdown)`
   .ui--Dropdown-item {
     position: relative;
     white-space: nowrap;
+    
+    // &.CustomDropdown .ui.selection.dropdown{
+    //   background: red !important;
+    //   border: 2px solid #B1B5C4 !important;
+    //   // box-sizing: border-box;
+    //   border-radius: 12px;
+    // }
 
     .ui--Dropdown-icon,
     .ui--Dropdown-name {

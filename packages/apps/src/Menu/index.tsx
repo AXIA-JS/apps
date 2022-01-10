@@ -29,9 +29,9 @@ function createExternals (t: TFunction): ItemRoute[] {
   return [
     {
       href: 'https://github.com/axia-js/apps',
-      icon: 'code-branch',
-      name: 'github',
-      text: t<string>('nav.github', 'GitHub', { ns: 'apps-routing' })
+      icon: 'github',
+      name: 'gitHub',
+      text: t<string>('nav.gitHub', 'GitHub', { ns: 'apps-routing' })
     },
     {
       href: 'https://wiki.axiacoin.network',
@@ -105,6 +105,7 @@ function Menu ({ className = '' }: Props): React.ReactElement<Props> {
   });
 
   const hasSudo = useMemo(
+
     () => !!sudoKey && allAccounts.some((a) => sudoKey.eq(a)),
     [allAccounts, sudoKey]
   );
@@ -166,10 +167,10 @@ export default React.memo(styled(Menu)`
     align-items: center;
     display: flex;
     justify-content: space-between;
-    padding: 0 1.5rem;
-    width: 100%;
+  
+    width: 85%;
     max-width: var(--width-full);
-    margin: 0 auto;
+    margin: auto;
   }
 
   &.isLoading {
@@ -201,7 +202,6 @@ export default React.memo(styled(Menu)`
     padding: 1rem 1.5rem;
     margin: 0 1rem -1px;
     z-index: 1;
-
     .ui--Icon {
       margin-right: 0.5rem;
     }

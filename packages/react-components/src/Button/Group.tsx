@@ -21,6 +21,7 @@ export default React.memo(styled(ButtonGroup)`
   &.isCentered {
     margin-bottom: 0.5rem;
     text-align: center;
+    // background:red;
   }
 
   &+.ui--Table {
