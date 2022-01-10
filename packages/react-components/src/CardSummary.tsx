@@ -83,7 +83,7 @@ function CardSummary ({ children, className = '', help, label, progress }: Props
                     }`
                     : (
                       <BlockToTime
-                        className='timer'
+                        className='timer '
                         value={progress.total.sub(progress.value)}
                       />
                     )

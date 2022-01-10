@@ -198,14 +198,19 @@ export default React.memo(styled(General)`
     background:transparent;
     color: #178FE1 !important;
   }
-  // .ui-Icon:hover{
-  //   background:red !important;
-  // }
+  
   .WnYpr.hasLabel{
     color:#178FE1 !important;
     font-weight:500;
   }
   button.ui--Button{
     color: #178FE1;
+  }
+  button.ui--Button:hover{
+    color: #fff !important;
+    background:#178FE1 !important;
+  }
+  button.ui--Button.ui--Icon{
+    color: red;
   }
 `);

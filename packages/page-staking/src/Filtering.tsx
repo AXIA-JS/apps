@@ -3,6 +3,7 @@
 
 import queryString from 'query-string';
 import React, { useCallback, useEffect } from 'react';
+import styled from 'styled-components';
 
 import { Input, Toggle } from '@axia-js/react-components';
 import { useApi } from '@axia-js/react-hooks';
@@ -39,14 +40,16 @@ function Filtering ({ children, className, nameFilter, setNameFilter, setWithIde
   );
 
   return (
-    <div className={className}>
-      <Input
-        autoFocus
-        isFull
-        label={t<string>('filter by name, address or index')}
-        onChange={_setNameFilter}
-        value={nameFilter}
-      />
+    <div className='filtering'>
+      <div className='CustomDisplay'>
+        <Input
+          autoFocus
+          isFull
+          label={t<string>('filter by name, address or index')}
+          onChange={_setNameFilter}
+          value={nameFilter}
+        />
+      </div>
       <div className='staking--optionsBar'>
         {children}
         {api.query.identity && (
@@ -62,4 +65,14 @@ function Filtering ({ children, className, nameFilter, setNameFilter, setWithIde
   );
 }
 
-export default React.memo(Filtering);
+export default React.memo(styled(Filtering)`
+  .filtering{
+    display:flex !important;
+  }
+  .CustomDisplay{
+    width:50%;
+  }
+  .staking--optionsBar{
+    width:50%;
+  }
+`);

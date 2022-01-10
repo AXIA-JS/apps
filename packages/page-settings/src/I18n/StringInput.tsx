@@ -41,4 +41,8 @@ export default React.memo(styled(StringInput)`
       margin-left: 1rem;
     }
   }
+  .ui.input > input{
+    border:2px solid red;
+    border-radius:12px;
+  }
 `);

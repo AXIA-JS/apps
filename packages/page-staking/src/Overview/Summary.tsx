@@ -27,14 +27,14 @@ function Summary ({ className = '', isVisible, stakingOverview, targets: { count
   return (
     <SummaryBox className={`${className}${!isVisible ? ' staking--hidden' : ''}`}>
       <section>
-        <CardSummary label={t<string>('validators')}>
+        <CardSummary className='CustomBg' label={t<string>('validators')}>
           {stakingOverview
             ? <>{formatNumber(stakingOverview.validators.length)}&nbsp;/&nbsp;{formatNumber(stakingOverview.validatorCount)}</>
             : <Spinner noLabel />
           }
         </CardSummary>
         <CardSummary
-          className='media--900'
+          className='media--900 CustomBg'
           label={t<string>('waiting')}
         >
           {waitingIds
@@ -43,7 +43,7 @@ function Summary ({ className = '', isVisible, stakingOverview, targets: { count
           }
         </CardSummary>
         <CardSummary
-          className='media--1000'
+          className='media--1000 CustomBg'
           label={
             counterForNominators
               ? t<string>('active / nominators')
@@ -66,7 +66,7 @@ function Summary ({ className = '', isVisible, stakingOverview, targets: { count
       <section>
         {(idealStake > 0) && Number.isFinite(idealStake) && (
           <CardSummary
-            className='media--1400'
+            className='media--1400 CustomBg'
             label={t<string>('ideal staked')}
           >
             <>{(idealStake * 100).toFixed(1)}%</>
@@ -74,7 +74,7 @@ function Summary ({ className = '', isVisible, stakingOverview, targets: { count
         )}
         {(stakedFraction > 0) && (
           <CardSummary
-            className='media--1300'
+            className='media--1300 CustomBg'
             label={t<string>('staked')}
           >
             <>{(stakedFraction * 100).toFixed(1)}%</>
@@ -82,7 +82,7 @@ function Summary ({ className = '', isVisible, stakingOverview, targets: { count
         )}
         {(inflation > 0) && Number.isFinite(inflation) && (
           <CardSummary
-            className='media--1200'
+            className='media--1200 CustomBg'
             label={t<string>('inflation')}
           >
             <>{inflation.toFixed(1)}%</>
@@ -90,7 +90,7 @@ function Summary ({ className = '', isVisible, stakingOverview, targets: { count
         )}
       </section>
       <section>
-        <SummarySession />
+        <SummarySession className='CustomEcho' />
       </section>
     </SummaryBox>
   );
