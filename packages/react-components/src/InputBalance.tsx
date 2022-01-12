@@ -105,11 +105,11 @@ export default React.memo(styled(InputBalance)`
 
   .ui.action.input.ui--Input > .buttons {
     align-items: stretch;
-
+    // border
     .ui--SiDropdown.ui.button.compact.floating.selection.dropdown {
       &.disabled {
         border-style: solid;
-        opacity: 1 !important;
+        opacity: 1 !important;        
       }
 
       > div.text:first-child {

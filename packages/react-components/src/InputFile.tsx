@@ -102,7 +102,7 @@ function InputFile ({ accept, className = '', clearContent, help, isDisabled, is
       {({ getInputProps, getRootProps }): JSX.Element => (
         <div {...getRootProps({ className: `ui--InputFile${isError ? ' error' : ''} ${className}` })}>
           <input {...getInputProps()} />
-          <em className='label'>
+          <p className='label'>
             {
               !file || clearContent
                 ? placeholder || t<string>('click to select or drag and drop the file here')
@@ -113,7 +113,7 @@ function InputFile ({ accept, className = '', clearContent, help, isDisabled, is
                   }
                 })
             }
-          </em>
+          </p>
         </div>
       )}
     </Dropzone>
@@ -145,8 +145,10 @@ export default React.memo(styled(InputFile)`
   width: 100% !important;
 
   &.error {
-    background: var(--bg-input-error);
+    background: #fff;
     border-color: #e0b4b4;
+    border:2px solid red;
+    border-radius:12px;
   }
 
   &:hover {

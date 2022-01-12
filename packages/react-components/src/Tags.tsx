@@ -89,6 +89,29 @@ export default React.memo(styled(Tags)`
     margin-bottom: 0.5rem;
   }
 
+  &.CustomH5{
+    margin-left:20px;
+    margin-bottom:0px !important;
+  }
+
+  &.CustomH5 h5{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;    
+    color: #353945;
+    text-transform: capitalize !important;
+
+  }
+
+  &.CustomH5 label{
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    color: #777E91;
+    text-transform: capitalize !important;
+
+  }
+
   label {
     display: inline-block;
   }

@@ -59,7 +59,7 @@ function signerIconName (status: QueueTxStatus): IconName {
 
     case 'queued':
     // case 'retracted':
-      return 'random';
+      return 'location-arrow';
 
     default:
       return 'spinner';

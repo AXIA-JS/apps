@@ -80,4 +80,14 @@ export default React.memo(styled(Transaction)`
       opacity: 0.6;
     }
   }
-`);
+  .ui.disabled.dropdown, .ui.dropdown .menu>.disabled.item{
+    border: 2px dashed #B1B5C4 !important;
+    box-sizing: border-box;
+    border-radius: 12px !important;
+  }
+  .ui.disabled.input, .ui.input:not(.disabled) input[disabled]{
+    border: 2px dashed #B1B5C4 !important;
+    box-sizing: border-box;
+    border-radius: 12px !important;
+  }
+  `);

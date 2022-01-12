@@ -297,7 +297,7 @@ const ExportedComponent = withMulti(
     .ui.disabled.search {
       pointer-events: all;
     }
-
+    
     .ui.search.selection.dropdown {
       > .text > .ui--KeyPair {
         .ui--IdentityIcon {
@@ -329,6 +329,7 @@ const ExportedComponent = withMulti(
     &.hideAddress .ui.search.selection.dropdown > .text > .ui--KeyPair .address {
       flex: 0;
       max-width: 0;
+      
     }
   `,
   withObservable(keyring.keyringOption.optionsSubject, {

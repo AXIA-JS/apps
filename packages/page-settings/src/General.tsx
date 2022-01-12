@@ -210,7 +210,7 @@ export default React.memo(styled(General)`
     color: #fff !important;
     background:#178FE1 !important;
   }
-  button.ui--Button.ui--Icon{
-    color: red;
-  }
+  // button.ui--Button.ui--Icon{
+  //   color: red;
+  // }
 `);

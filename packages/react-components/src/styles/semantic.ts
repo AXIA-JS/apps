@@ -107,8 +107,11 @@ export default (_theme: ThemeDef): string => `
     }
 
     &.error input {
-      background-color: var(--bg-input-error);
+      background-color: #fff;
       border-color: #e0b4b4;
+      border:2px solid red !important;
+      border-radius:12px !important;
+      text-transform:capitalize;
     }
 
     > input {

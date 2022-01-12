@@ -158,10 +158,7 @@ function Validator ({ allSlashes, canSelect, filterName, info, isNominated, isSe
 }
 
 export default React.memo(styled(Validator)`
-  .badge together{
-    padding:20px;
-  }
-  tr{
-    height:60px !important;
+  .Customheight td{
+    height:70px !important;
   }
 `);

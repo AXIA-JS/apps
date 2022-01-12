@@ -116,6 +116,8 @@ export default React.memo(styled(Labelled)`
           &:not(.floating) {
             padding-left: 1.45rem;
             padding-top: 1.75rem;
+            border:2px solid #B1B5C4;
+            border-radius:12px;
           }
 
           &.floating {
@@ -132,6 +134,7 @@ export default React.memo(styled(Labelled)`
           &.search:not(.multiple) > input.search {
             padding-left: 1.45rem;
             padding-top: 1.75rem;
+            
           }
 
           > .delete.icon,
@@ -146,6 +149,11 @@ export default React.memo(styled(Labelled)`
         .ui--output {
           padding-left: 1.45rem;
           padding-top: 1.75rem;
+          border:2px dashed #B1B5C4;
+          border-radius:12px;
+          border-right-color: #B1B5C4 !important ;
+          border-radius: 12px !important;
+          margin-right: 4px;
         }
 
         .ui--Messages {

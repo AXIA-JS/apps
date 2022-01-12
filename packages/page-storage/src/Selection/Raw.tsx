@@ -4,6 +4,7 @@
 import type { ComponentProps as Props } from '../types';
 
 import React, { useCallback, useState } from 'react';
+import styled from 'styled-components';
 
 import { Button, Input } from '@axia-js/react-components';
 import { compactAddLength, u8aToU8a } from '@axia-js/util';
@@ -54,4 +55,6 @@ function Raw ({ onAdd }: Props): React.ReactElement<Props> {
   );
 }
 
-export default React.memo(Raw);
+export default React.memo(styled(Raw)`
+ 
+`);

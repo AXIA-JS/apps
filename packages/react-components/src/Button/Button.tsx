@@ -58,7 +58,7 @@ const ICON_PADDING = 0.5;
 export default React.memo(styled(Button)`
   background: transparent;
   border: none;
-  color: inherit;
+  color: #178FE1;
   cursor: pointer;
   line-height: 1;
   margin: 0;
@@ -149,6 +149,9 @@ export default React.memo(styled(Button)`
   }
 
   &.isDisabled {
-    color: #bcbbba;
+    color: #fff;
+    background: #007CBD;
+    opacity: 0.5;
+    border-radius: 12px;
   }
 `);

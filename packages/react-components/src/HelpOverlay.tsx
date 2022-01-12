@@ -26,7 +26,7 @@ function HelpOverlay ({ className = '', md }: Props): React.ReactElement<Props> 
         />
       </div>
       <div className={`help-slideout ${isVisible ? 'open' : 'closed'}`}>
-        <div className='help-button '>
+        <div className='help-button HelpBtnIcon'>
           <Icon
             icon='times'
             onClick={toggleVisible}
@@ -49,6 +49,18 @@ export default React.memo(styled(HelpOverlay)`
     cursor: pointer;
     font-size: 2rem;
     padding: 0.35rem 8rem 0 0;
+
+  }
+
+  .HelpBtnIcon{
+    color: #777E91;
+    background: white;
+    width: 50px;
+    font-size: 15px;
+    padding: 15px 20px;
+    border-radius: 50%;
+    margin-left: 91%;
+    margin-top: 5px;
 
   }
 
@@ -77,7 +89,7 @@ export default React.memo(styled(HelpOverlay)`
     }
 
     .help-content {
-      padding: 1rem 1.5rem 5rem;
+      padding: 1rem 2em 5rem;
       // color:#000;
     }
     &.open {
@@ -98,8 +110,10 @@ export default React.memo(styled(HelpOverlay)`
   }
   .closeIcon {
     cursor: pointer;
-    position: absolute;
-    right: 0em;
-    top: 0.75rem;
+    // position: absolute;
+    // right: 0em;
+    // top: 0.75rem;
+    // background: red;
+    // color: #fff;
   }
 `);

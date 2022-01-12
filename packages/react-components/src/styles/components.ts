@@ -18,8 +18,12 @@ export default (_theme: ThemeDef): string => `
     word-break: break-all;
 
     &.error {
-      background: var(--bg-input-error);
+      background: #fff;
       border-color: #e0b4b4;
+      border:2px solid red;
+      border-radius:12px;
+      border-right-color:red !important;
+      
     }
 
     &.monospace {
@@ -101,6 +105,10 @@ export default (_theme: ThemeDef): string => `
     .ui--SiDropdown {
       width: 6rem;
       text-align: center;
+      border:2px solid #B1B5C3 !important;
+      color: #666 !important;
+      cursor: default !important;
+      border-radius:12px !important;
     }
   }
 

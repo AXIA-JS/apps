@@ -84,7 +84,7 @@ export default React.memo(styled(TextArea)`
       }
 
       &.ui-textArea-withError {
-        background: var(--bg-input-error);
+        background: #fff;
         color: var(--color-error);
       }
     }

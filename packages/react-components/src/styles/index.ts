@@ -204,8 +204,8 @@ export default createGlobalStyle<Props & ThemeProps>(({ theme, uiHighlight }: Pr
     &:not(.isDisabled):not(.isIcon):not(.isBasic),
     &.withoutLink:not(.isDisabled) {
       .ui--Icon {
-        background: ${getHighlight(uiHighlight)};
-        color: ${getContrast(uiHighlight)};
+        background: #178FE1;
+        color: #fff;
       }
     }
 
@@ -329,10 +329,10 @@ export default createGlobalStyle<Props & ThemeProps>(({ theme, uiHighlight }: Pr
     .ui--Toggle.isChecked {
       &:not(.isRadio) {
         .ui--Toggle-Slider {
-          background: ${getHighlight(uiHighlight)} !important;
+          background: #35B994 !important;
 
           &:before {
-            border-color: ${getHighlight(uiHighlight)} !important;
+            border-color: #35B994 !important;
           }
         }
       }

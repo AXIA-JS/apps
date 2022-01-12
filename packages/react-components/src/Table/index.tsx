@@ -93,6 +93,7 @@ export default React.memo(styled(Table)`
         text-transform: capitalize !important;
         color:#000;
         text-align:center;
+        border-bottom: 1px solid var(--border-table);
       }
 
       td,
@@ -261,7 +262,7 @@ export default React.memo(styled(Table)`
       }
 
       &.mini {
-        padding: 0 !important;
+        padding: 1rem 0px !important;
         width: fit-content;
         white-space: normal;
 
