@@ -305,6 +305,7 @@ export default React.memo(styled(Playground)`
     p:last-child {
       margin-bottom: 0;
     }
+    border-radius:12px;
   }
 
   .js--Selection {
@@ -334,6 +335,7 @@ export default React.memo(styled(Playground)`
   .js--Editor,
   .js--Output {
     min-width: 200px;
+    height: 550px;
 
     .action-button {
       margin: 0;
@@ -351,6 +353,7 @@ export default React.memo(styled(Playground)`
     position: relative;
     resize: horizontal;
     width: 60%;
+    margin-right: 32px;
 
     textarea {
       outline: 0;

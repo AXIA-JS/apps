@@ -47,7 +47,7 @@ function Consts ({ onAdd }: Props): React.ReactElement<Props> {
       </div>
       <div className='storage--actionrow-buttons'>
         <Button
-          icon='plus'
+          icon='plus-square'
           onClick={_onAdd}
         />
       </div>

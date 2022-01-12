@@ -80,7 +80,7 @@ export default React.memo(styled(Grouping)`
     overflow: hidden;
     padding: 0;
     position: absolute;
-    top: 3.1rem;
+    top: 2.9rem;
     z-index: 250;
 
     > li {

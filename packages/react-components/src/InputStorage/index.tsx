@@ -80,8 +80,5 @@ function InputStorage ({ className = '', defaultValue, help, label, onChange, wi
 }
 
 export default React.memo(styled(InputStorage)`
-.ui.selection.dropdown, .ui.input > input, .ui.selection.dropdown > input{
-  border: 2px solid #B1B5C4;
-  border-radius:12px 0px 0px 12px !important;
-}
+
 `);

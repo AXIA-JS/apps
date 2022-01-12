@@ -71,7 +71,7 @@ export default React.memo(styled(Button)`
     padding: 0.7em;
 
     .ui--Icon {
-      padding: 0.6rem;
+      padding: 1.58rem;
       margin: -0.6rem;
     }
   }
@@ -101,9 +101,11 @@ export default React.memo(styled(Button)`
   }
 
   &.isDisabled, &.isReadOnly {
-    background: none;
-    box-shadow: none;
     cursor: not-allowed;
+    color: #ffffff;
+    background: #007CBD;
+    opacity: 0.5;
+    border-radius: 12px;
   }
 
   &.isBusy {

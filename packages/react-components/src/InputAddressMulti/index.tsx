@@ -115,7 +115,7 @@ export default React.memo(styled(InputAddressMulti)`
 
   .ui.selection.dropdown, .ui.input > input, .ui.selection.dropdown > input{
     background: #FFFFFF;
-    border: 1px solid #B1B5C4;
+    border: 2px solid #B1B5C4;
     box-sizing: border-box;
     border-radius: 12px;
     width:98%;
