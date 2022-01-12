@@ -204,7 +204,7 @@ export default React.memo(styled(General)`
     font-weight:500;
   }
   button.ui--Button{
-    color: #178FE1;
+    color: #fff;
   }
   button.ui--Button:hover{
     color: #fff !important;

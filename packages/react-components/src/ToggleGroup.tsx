@@ -67,8 +67,8 @@ function ToggleGroup ({ className = '', onChange, options, value }: Props): Reac
 
 export default React.memo(styled(ToggleGroup)`
   display: inline-block;
-  margin-right: 1.5rem;
-
+  margin-right: 36%;
+ 
   .ui--Button {
     margin: 0;
 
