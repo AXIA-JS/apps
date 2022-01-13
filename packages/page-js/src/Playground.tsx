@@ -271,6 +271,7 @@ function Playground ({ basePath, className = '' }: Props): React.ReactElement<Pr
           <Button
             className='action-button'
             icon='eraser'
+            size='4x'
             onClick={_clearConsole}
           />
         </Output>
@@ -310,6 +311,20 @@ export default React.memo(styled(Playground)`
 
   .js--Selection {
     margin-bottom: 1rem;
+  }
+  .ui.selection.active.dropdown {
+    border-top:    2px solid #B1B5C4 !important;
+    border-right:  2px solid #B1B5C4 !important;   
+    border-left:   2px solid #B1B5C4 !important;
+    border-bottom: 2px solid #B1B5C4 !important;
+   
+    }
+  .ui.selection.active.dropdown .menu {
+    border-bottom:  2px solid #B1B5C4;
+    border-right:2px solid #B1B5C4;   
+    border-left: 2px solid #B1B5C4;
+    border-top:  2px solid #B1B5C4;
+    
   }
 
   .js--Content {

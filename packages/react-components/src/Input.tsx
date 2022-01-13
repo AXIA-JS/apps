@@ -214,8 +214,8 @@ function Input ({ autoFocus = false, children, className, defaultValue, help, ic
 }
 
 export default React.memo(styled(Input)`
-input{
-  border:2px solid yellow;
+.ui.input>input {
+  border:2px solid #B1B5C4;
   border-radius: 12px;
 }
 
