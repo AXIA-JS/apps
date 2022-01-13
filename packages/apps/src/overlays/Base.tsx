@@ -113,5 +113,7 @@ export default React.memo(styled(BaseOverlay)`
     position: absolute;
     right: 0em;
     top: 0.75rem;
+    background: transparent;
+    box-shadow: none !important;
   }
 `);

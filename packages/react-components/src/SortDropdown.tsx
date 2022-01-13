@@ -25,7 +25,7 @@ function SortDropdown ({ className = '', defaultValue, label, onChange, onClick,
         onChange={onChange}
         options={options}
       />
-      <button onClick={onClick}>
+      {/* <button onClick={onClick}>
         <Icon
           className={`arrow up${sortDirection === 'ascending' ? ' isActive' : ''}`}
           color='gray'
@@ -36,7 +36,7 @@ function SortDropdown ({ className = '', defaultValue, label, onChange, onClick,
           color='gray'
           icon='sort-down'
         />
-      </button>
+      </button> */}
     </div>
   );
 }

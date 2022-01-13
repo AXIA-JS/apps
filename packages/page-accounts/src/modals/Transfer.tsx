@@ -253,30 +253,11 @@ export default React.memo(styled(Transfer)`
     margin-top: 0.375rem;
   }
 
-  .CustomDropdown .ui.search.dropdown{
-    border: 2px dashed #B1B5C4 !important;
-    box-sizing: border-box;
-    border-radius: 12px !important;
-  }
-  .CustomDropdown2 .ui.dropdown.disabled{
-    border: 2px solid #B1B5C4;
-    box-sizing: border-box;
-    border-radius: 12px !important;
-  }
   .ui.action.input>.button, .ui.action.input>.buttons>.button{
     border:2px solid #B1B5C4 !important;
     border-radius: 12px !important;
   }
-  .CustomDropdown3 .ui.action.input:not([class*="left action"])>input{
-    border:2px dashed #B1B5C4 !important;
-    border-radius: 12px !important;
-    margin-right: 5px !important;
-  }
-  .CustomDropdown4 .ui.action.input:not([class*="left action"])>input{
-    border:2px solid #B1B5C4 !important;
-    border-radius: 12px !important;
-    margin-right: 5px !important;
-  }
+
   .BvuJb > label, .BvuJb > div{
     color: #353945 !important;
   }

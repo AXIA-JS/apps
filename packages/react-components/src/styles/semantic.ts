@@ -43,6 +43,7 @@ export default (_theme: ThemeDef): string => `
       background: transparent;
       border-style: dashed;
       opacity: 1;
+      border:2px dashed #B1B5C3 !important;
 
       .dropdown.icon {
         opacity: 0;
@@ -91,7 +92,8 @@ export default (_theme: ThemeDef): string => `
 
       input {
         background: transparent;
-        border-style: dashed;
+        border-style: dashed ;
+        border:2px dashed #B1B5C3 !important;
       }
 
       .ui.primary.buttons .ui.button {
@@ -112,6 +114,7 @@ export default (_theme: ThemeDef): string => `
       border:2px solid red !important;
       border-radius:12px !important;
       text-transform:capitalize;
+      border-right-color:red !important;
     }
 
     > input {

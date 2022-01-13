@@ -446,10 +446,4 @@ export default React.memo(styled(TxSigned)`
   .ui--Checks {
     margin-top: 0.75rem;
   }
-  .CustomDropdown .ui.dropdown.disabled{
-    border: 2px dashed #B1B5C4 !important;
-    box-sizing: border-box;
-    border-radius: 12px !important;
-  }
-
 `);

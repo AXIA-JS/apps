@@ -136,7 +136,7 @@ export default React.memo(styled(PreImage)`
 
   .disabledLook input {
     background: transparent;
-    border-style: dashed;
+    border-style: dashed !important;
     &:focus{
       background: transparent;
       border-color: #d9d8d7;

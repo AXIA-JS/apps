@@ -59,7 +59,7 @@ function Match ({ address, className = '', count, offset, onCreateToggle, onRemo
           icon='plus-square'
           label={t<string>('Save')}
           onClick={_onCreate}
-          className='CustomSaveBtn'
+          className='CloseBtn'
         />
         <Button
           icon='times'
@@ -109,14 +109,8 @@ export default React.memo(styled(Match)`
     opacity: 0.45;
     padding: 0 1rem;
   }
-  .CustomSaveBtn{
+  .CloseBtn{
     color:#178FE1 !important;
   }
-  .CloseBtn .ui--Icon{
-    color: #777E91 !important;
-  }
-  .ui--Button:hover:not(.isDisabled):not(.isReadOnly), .ui--Button.isSelected{
-    color:#fff !important;
-    font-weight:700;
-  }
+  
 `);

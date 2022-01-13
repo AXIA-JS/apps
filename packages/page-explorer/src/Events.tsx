@@ -66,6 +66,6 @@ export default React.memo(styled(Events)`
     
   }
   .ui--Expander{
-    padding:10rem;
+    // padding:10rem;
   }
 `);

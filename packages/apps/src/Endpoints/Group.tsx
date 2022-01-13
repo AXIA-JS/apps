@@ -76,6 +76,7 @@ export default React.memo(styled(GroupDisplay)`
 
     .ui--Icon {
       margin-right: 0.5rem;
+      font-size:9px;
     }
   }
 

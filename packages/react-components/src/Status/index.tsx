@@ -297,7 +297,10 @@ export default React.memo(styled(Status)`
     &.sent,
     &.success {
       & > .wrapper > .container {
-        background: green;
+        // background: green;
+        background: #35B994;
+        box-shadow: 0px 4px 20px rgba(41, 55, 65, 0.1);
+        border-radius: 8px;
       }
     }
 

@@ -62,7 +62,7 @@ export default React.memo(styled(Sidebar)(({ offset = 0, position }: Props) => `
   }
   .CloseBtn{
     padding:0.8rem 1rem;
-    background: #F4F5F6;
+    background: #fff;
     
   }
     .ui--Button.isBasic:not(.isDisabled):not(.isIcon):not(.isSelected):not(.isReadOnly){

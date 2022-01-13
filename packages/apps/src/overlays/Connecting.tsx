@@ -2,6 +2,7 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import React from 'react';
+import styled from 'styled-components';
 
 import { useApi } from '@axia-js/react-hooks';
 import { settings } from '@axia-js/ui-settings';
@@ -72,4 +73,9 @@ function Connecting ({ className }: Props): React.ReactElement<Props> | null {
   return null;
 }
 
-export default React.memo(Connecting);
+export default React.memo(styled(Connecting)`
+  .ui--Button.isBasic:not(.isDisabled):not(.isIcon):not(.isSelected) .ui--Icon{
+    color:#777E91;
+    
+  }
+`);

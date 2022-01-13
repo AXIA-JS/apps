@@ -226,7 +226,7 @@ export default createGlobalStyle<Props & ThemeProps>(({ theme, uiHighlight }: Pr
     &:hover:not(.isDisabled):not(.isReadOnly),
     &.isSelected {
       background: ${getHighlight(uiHighlight)};
-      color: ${getContrast(uiHighlight)};
+      color: ${getContrast(uiHighlight)} !important;
       text-shadow: none;
 
       &:not(.isIcon),
@@ -493,7 +493,7 @@ export default createGlobalStyle<Props & ThemeProps>(({ theme, uiHighlight }: Pr
   h1, h2, h3, h4, h5 {
     color: var(--color-summary);
     font: var(--font-sans);
-    font-weight: var(--font-weight-light);
+    font-weight: 500;
     margin-bottom: 0.25rem;
   }
 

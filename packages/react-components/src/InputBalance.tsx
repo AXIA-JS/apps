@@ -122,4 +122,8 @@ export default React.memo(styled(InputBalance)`
       }
     }
   }
+
+  &.CustomInput .ui.action.input:not([class*="left action"])>input{
+    border:2px solid #B1B5C4;
+  }
 `);

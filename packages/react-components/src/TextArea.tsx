@@ -58,7 +58,7 @@ export default React.memo(styled(TextArea)`
       // border-radius: 0.25rem 0 0 0.25rem;
       // border: 1px solid #DDE1EB;
       background: #FFFFFF;
-      border: 1px solid #B1B5C4;
+      border: 2px solid #B1B5C4;
       box-sizing: border-box;
       border-radius: 12px;
       margin-right:8px;
@@ -95,7 +95,7 @@ export default React.memo(styled(TextArea)`
       // border-top-left-radius: 0;
       // border-bottom-left-radius: 0;
       background: #FFFFFF;
-      border: 1px solid #B1B5C4;
+      border: 2px solid #B1B5C4;
       box-sizing: border-box;
       border-radius: 12px;
       display: flex;

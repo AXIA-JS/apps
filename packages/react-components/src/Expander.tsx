@@ -176,7 +176,7 @@ export default React.memo(styled(Expander)`
       margin-left: 0.75rem;
       vertical-align: middle;
       font-size:10px;
-      background:#fff;
+      // background:#fff;
       // padding:10px;
     }
 

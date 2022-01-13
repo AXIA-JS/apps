@@ -91,12 +91,12 @@ function InputExtrinsic ({ className = '', defaultValue, help, isDisabled, label
 export default React.memo(styled(InputExtrinsic)`
   .CustomSmall .ui.selection.dropdown{
     border: 2px solid #B1B5C4;
-    border-radius: 12px 0px 0px 12px;
+    border-radius: 12px 0px 0px 12px !important;
     border-right-style: inset !important;
   }
   .CustomLarge .ui.selection.dropdown{
     border: 2px solid #B1B5C4;
-    border-radius: 0px 12px 12px 0px;
+    border-radius: 0px 12px 12px 0px !important;
     border-left-style: 0 !important;
   }
 `);

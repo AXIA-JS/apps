@@ -82,7 +82,7 @@ function Tags ({ children, className = '', isEditable, isEditing, onChange, onSa
 export default React.memo(styled(Tags)`
   h5 {
     font-style: normal;
-    font-weight: var(--font-weight-bold);
+    font-weight: 700;
     font-size: 0.714rem;
     line-height: 1rem;
     text-transform: uppercase;
