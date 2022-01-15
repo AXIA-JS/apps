@@ -397,6 +397,7 @@ export default createGlobalStyle<Props & ThemeProps>(({ theme, uiHighlight }: Pr
       padding: 0.75rem 1rem;
       position: relative;
       z-index: 5;
+      
 
       &:before {
         border-radius: 0.25rem;

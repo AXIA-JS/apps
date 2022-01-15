@@ -190,7 +190,7 @@ function General ({ className = '' }: Props): React.ReactElement<Props> {
 export default React.memo(styled(General)`
   .ui.selection.dropdown{
     background: #FFFFFF !important;
-    border: 2px solid #B1B5C4 !important;
+    border: 2px solid #B1B5C4;
     box-sizing: border-box;
     border-radius: 12px !important;
   }

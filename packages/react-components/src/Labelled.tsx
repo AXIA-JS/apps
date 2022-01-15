@@ -47,7 +47,7 @@ function Labelled ({ className = '', children, help, isFull, isHidden, isOuter, 
 
 export default React.memo(styled(Labelled)`
 .ui.selection.dropdown {
-  border: 2px solid #B1B5C4 !important;
+  border: 2px solid #B1B5C4 ;
   border-radius: 12px;
   }
   .ui.selection.active.dropdown {

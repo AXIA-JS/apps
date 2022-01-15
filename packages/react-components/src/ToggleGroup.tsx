@@ -73,12 +73,17 @@ box-sizing: border-box;
 border-radius: 16px;
 padding: 5px;
 height: 60px;
-
+.isBasic{
+  background: none; 
+}
+.ui--Button.isBasic:not(.isDisabled):not(.isIcon):not(.isSelected):not(.isReadOnly) {
+  box-shadow: none;
+}
   .ui--Button {
-    margin: 0;
     height: 48px;
-    margin: 0px 5px;
+    margin: 0px 0px;
     border-radius: 12px;
+    box-shadow: none;
 
     // &:not(:first-child) {
     //   border-bottom-left-radius: 0;

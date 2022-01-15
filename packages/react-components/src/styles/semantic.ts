@@ -41,7 +41,7 @@ export default (_theme: ThemeDef): string => `
   .ui.dropdown {
     &.disabled {
       background: transparent;
-      border-style: dashed;
+      border-style: dashed !important;
       opacity: 1;
 
       .dropdown.icon {
@@ -109,6 +109,8 @@ export default (_theme: ThemeDef): string => `
     &.error input {
       background-color: var(--bg-input-error);
       border-color: #e0b4b4;
+      border: 2px solid #F12F2F;
+      border-radius: 12px;
     }
 
     > input {

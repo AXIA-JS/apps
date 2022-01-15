@@ -29,13 +29,13 @@ function createExternals (t: TFunction): ItemRoute[] {
   return [
     {
       href: 'https://github.com/axia-js/apps',
-      icon: 'github-square',
+      icon: 'github',
       name: 'gitHub',
       text: t<string>('nav.gitHub', 'GitHub', { ns: 'apps-routing' })
     },
     {
       href: 'https://wiki.axiacoin.network',
-      icon: 'github-square',
+      icon: 'book',
       name: 'wiki',
       text: t<string>('nav.wiki', 'Wiki', { ns: 'apps-routing' })
     }
