@@ -112,7 +112,7 @@ export default React.memo(styled(Content)`
     max-width: var(--width-full);
     margin-right: auto;
     margin-left: auto;
-    width: 88%;
+    width: 100%;
     padding: 0 1.5rem;
     text-transform: capitalize;
   }

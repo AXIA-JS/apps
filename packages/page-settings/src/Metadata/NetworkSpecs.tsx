@@ -294,4 +294,9 @@ export default React.memo(styled(NetworkSpecs)`
   .isrnfR tr:not(.filter) th{
     border-bottom: 1px solid #E6E8EC !important;
   }
+  .ui.input.disabled:not(.retain-appearance) input {
+  border-style: none !important;
+  border: none !important;
+  
+  }
 `);
