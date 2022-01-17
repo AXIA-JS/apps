@@ -144,7 +144,7 @@ function Modules ({ onAdd }: Props): React.ReactElement<Props> {
     <section className='storage--actionrow'>
       <div className='storage--actionrow-value'>
         <InputStorage
-        
+          className='sudha'
           defaultValue={api.query.timestamp?.now || api.query.system.events}
           help={meta?.docs.join(' ')}
           label={t<string>('selected state query')}
