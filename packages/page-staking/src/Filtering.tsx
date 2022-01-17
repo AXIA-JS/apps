@@ -3,7 +3,7 @@
 
 import queryString from 'query-string';
 import React, { useCallback, useEffect } from 'react';
-
+import styled from 'styled-components';
 import { Input, Toggle } from '@axia-js/react-components';
 import { useApi } from '@axia-js/react-hooks';
 import { isString } from '@axia-js/util';
@@ -39,7 +39,7 @@ function Filtering ({ children, className, nameFilter, setNameFilter, setWithIde
   );
 
   return (
-    <div className={className}>
+    <div className={`filter-toggle-position ${className}`}>
       <Input
         autoFocus
         isFull
@@ -62,4 +62,12 @@ function Filtering ({ children, className, nameFilter, setNameFilter, setWithIde
   );
 }
 
-export default React.memo(Filtering);
+export default React.memo(styled(Filtering)`
+
+  .filter-toggle-position{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+`);
