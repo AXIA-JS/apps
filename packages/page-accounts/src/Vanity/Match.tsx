@@ -113,7 +113,7 @@ export default React.memo(styled(Match)`
     color:#178FE1 !important;
   }
   .CloseBtn .ui--Icon{
-    color: #777E91 !important;
+    color: #777E91;
   }
   .ui--Button:hover:not(.isDisabled):not(.isReadOnly), .ui--Button.isSelected{
     color:#fff !important;

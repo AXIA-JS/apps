@@ -55,15 +55,12 @@ export default React.memo(styled(TextArea)`
   .TextAreaWithDropdown {
     display: flex;
     textarea {
-      // border-radius: 0.25rem 0 0 0.25rem;
-      // border: 1px solid #DDE1EB;
+
       background: #FFFFFF;
       border: 2px solid #B1B5C4;
       box-sizing: border-box;
       border-radius: 12px;
       margin-right:8px;
-      // border-right: none;
-      // background: var(--bg-input);
       box-sizing: border-box;
       color: var(--color-text);
       display: block;
@@ -72,6 +69,7 @@ export default React.memo(styled(TextArea)`
       resize: none;
       width: 100%;
       line-height:1;
+      margin-top: 12px;
 
       &:read-only {
         background: var(--bg-inverse);

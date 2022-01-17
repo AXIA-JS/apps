@@ -113,7 +113,7 @@ export default React.memo(styled(CardSummary)`
   border: 2px solid #9CCDED;
   border-radius: 12px;
   padding: 5px 5px;
-  width: 280px;
+  // width: 280px;
 
   &.CustomBg {
     background: #fff !important;

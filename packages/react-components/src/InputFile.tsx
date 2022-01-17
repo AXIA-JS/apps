@@ -146,8 +146,8 @@ export default React.memo(styled(InputFile)`
 
   &.error {
     background: #fff;
-    border-color: #e0b4b4;
-    border:2px solid red !important;
+    // border-color: #e0b4b4;
+    border:2px solid #B1B5C4;
     border-radius:12px;
   }
 

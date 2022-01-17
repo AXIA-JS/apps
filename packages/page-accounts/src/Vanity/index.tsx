@@ -288,7 +288,7 @@ export default React.memo(styled(VanityApp)`
     border-radius: 12px;
   }
   .CustomWidth{
-    width:90%;
+    // width:90%;
     margin:auto;
   }
   .ui--Button{

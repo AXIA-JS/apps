@@ -67,7 +67,7 @@ function Overview ({ className = '', onStatusChange }: Props): React.ReactElemen
         </section>
         <Button.Group>
           <Button
-            icon='plus'
+            icon='plus-square'
             label={t<string>('Add contact')}
             onClick={toggleCreate}
             className='customAdd'

@@ -446,6 +446,7 @@ export default React.memo(styled(Create)`
   && .TextAreaWithDropdown {
     textarea {
       width: 80%;
+      
     }
     .ui.buttons {
       width: 20%;
