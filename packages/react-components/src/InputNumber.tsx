@@ -316,13 +316,11 @@ export default React.memo(styled(InputNumber)`
   &.isDisabled {
     .ui--SiDropdown {
       background: transparent;
-      // border-color: var(--border-input) !important;
-      // border-style: dashed;
-      border:2px solid #B1B5C3 !important;
+      border-color: var(--border-input) !important;
+      border-style: dashed;
       color: #666 !important;
       cursor: default !important;
-      border-radius:12px !important;
-      
+
       .dropdown.icon {
         display: none;
       }

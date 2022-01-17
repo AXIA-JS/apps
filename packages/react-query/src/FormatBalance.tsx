@@ -109,6 +109,7 @@ export default React.memo(styled(FormatBalance)`
   display: inline-block;
   vertical-align: baseline;
   white-space: nowrap;
+  padding-top: 0.4rem;
 
   * {
     vertical-align: baseline !important;

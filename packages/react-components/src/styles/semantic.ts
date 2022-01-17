@@ -41,7 +41,7 @@ export default (_theme: ThemeDef): string => `
   .ui.dropdown {
     &.disabled {
       background: transparent;
-      border-style: dashed;
+      border-style: dashed !important;
       opacity: 1;
       border:2px dashed #B1B5C3 !important;
 

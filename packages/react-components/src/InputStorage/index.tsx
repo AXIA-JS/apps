@@ -7,6 +7,7 @@ import type { QueryableStorageEntry } from '@axia-js/api/types';
 import type { DropdownOptions } from '../util/types';
 
 import React, { useCallback, useState } from 'react';
+import styled from 'styled-components';
 
 import { useApi } from '@axia-js/react-hooks';
 
@@ -78,4 +79,6 @@ function InputStorage ({ className = '', defaultValue, help, label, onChange, wi
   );
 }
 
-export default React.memo(InputStorage);
+export default React.memo(styled(InputStorage)`
+
+`);

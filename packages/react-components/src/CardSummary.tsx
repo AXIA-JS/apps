@@ -83,7 +83,7 @@ function CardSummary ({ children, className = '', help, label, progress }: Props
                     }`
                     : (
                       <BlockToTime
-                        className='timer '
+                        className='timer'
                         value={progress.total.sub(progress.value)}
                       />
                     )
@@ -101,14 +101,19 @@ function CardSummary ({ children, className = '', help, label, progress }: Props
 export default React.memo(styled(CardSummary)`
   align-items: center;
   background: transparent;
-  border: none !important;
+  border: none;
   box-shadow: none !important;
   color: var(--color-summary);
   display: flex;
   flex: 0 1 auto;
   flex-flow: row wrap;
-  justify-content: flex-end;
+  justify-content: space-between;
   padding: 0 1.5rem;
+  background: #E9F6FF;
+  border: 2px solid #9CCDED;
+  border-radius: 12px;
+  padding: 5px 5px;
+  width: 280px;
 
   &.CustomBg {
     background: #fff !important;

@@ -44,9 +44,10 @@ function Raw ({ onAdd }: Props): React.ReactElement<Props> {
           onEnter={_onAdd}
         />
       </div>
-      <div className='storage--actionrow-buttons'>
+      <div className=''>
         <Button
-          icon='plus'
+          className='storage--actionrow-btn'
+          icon='plus-square'
           isDisabled={!isValid}
           onClick={_onAdd}
         />
@@ -56,5 +57,14 @@ function Raw ({ onAdd }: Props): React.ReactElement<Props> {
 }
 
 export default React.memo(styled(Raw)`
- 
+
+  .isDisabled {
+    color: #ffffff;
+    background: #007CBD;
+    opacity: 0.5;
+    border-radius: 12px;
+    height: 56px;
+    width: 56px;
+}
+  
 `);

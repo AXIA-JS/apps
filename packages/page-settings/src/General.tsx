@@ -190,17 +190,19 @@ function General ({ className = '' }: Props): React.ReactElement<Props> {
 export default React.memo(styled(General)`
   .ui.selection.dropdown{
     background: #FFFFFF !important;
-    border: 2px solid #B1B5C4 !important;
+    border: 2px solid #B1B5C4;
     box-sizing: border-box;
     border-radius: 12px !important;
   }
   .ui--Button:not(.isDisabled):not(.isIcon):not(.isBasic) .ui--Icon, .ui--Button.withoutLink:not(.isDisabled) .ui--Icon{
-    background:transparent;
-    color: #178FE1 !important;
+    background:#178FE1 !important;
+    color:#fff !important;
   }
-  
+  .ui-Icon:hover{
+    background:red !important;
+  }
   .WnYpr.hasLabel{
-    color:#178FE1 !important;
+    color:##178FE1 !important;
     font-weight:500;
   }
   button.ui--Button{
@@ -210,7 +212,4 @@ export default React.memo(styled(General)`
     color: #fff !important;
     background:#178FE1 !important;
   }
-  // button.ui--Button.ui--Icon{
-  //   color: red;
-  // }
 `);

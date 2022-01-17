@@ -218,14 +218,13 @@ function VanityApp ({ className = '', onStatusChange }: Props): React.ReactEleme
       </div>
       <Button.Group className='customBtnBg'>
         <Button
-        
           icon={
             isRunning
               ? 'stop'
               : 'play-circle'
           }
           isDisabled={!isMatchValid}
-          
+          className='customBtnBg'
           label={
             isRunning
               ? t<string>('Stop generation')
@@ -278,30 +277,30 @@ export default React.memo(styled(VanityApp)`
   }
   .inputCustom input{
     background: #FFFFFF;
-    border: 2px solid #B1B5C4;
+    border: 1px solid #B1B5C4;
     box-sizing: border-box;
     border-radius: 12px;
   }
  .ui--Dropdown .selection {
     background: #FFFFFF;
-    border: 2px solid #B1B5C4;
+    border: 1px solid #B1B5C4;
     box-sizing: border-box;
     border-radius: 12px;
   }
-  // .CustomWidth{
-  //   width:90%;
-  //   margin:auto;
-  // }
+  .CustomWidth{
+    width:90%;
+    margin:auto;
+  }
   .ui--Button{
-    background: #178FE1 !important;
+    background: #178FE1;
     border-radius: 12px;
     color:#fff;
     
   }
-  // .ui--Button:not(.isDisabled):not(.isIcon):not(.isBasic) .ui--Icon, .ui--Button.withoutLink:not(.isDisabled) .ui--Icon{
-  //   background:#178FE1;
-  //   color: #fff!important;
-  // }
+  .ui--Button:not(.isDisabled):not(.isIcon):not(.isBasic) .ui--Icon, .ui--Button.withoutLink:not(.isDisabled) .ui--Icon{
+    background:#178FE1;
+    color:#fff;
+  }
   .CustomArticleWidth{
     width:45rem;
   }

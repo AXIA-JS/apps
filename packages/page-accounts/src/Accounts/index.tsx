@@ -300,15 +300,20 @@ export default React.memo(styled(Overview)`
     flex-direction: row;
     align-items: center;
   }
-
+  // .customfilter{
+  //   width:80.5rem !important;
+  // }
   .customsort input{
-    border: 2px solid #B1B5C4 !important;
+    border: 1px solid #B1B5C4;
     box-sizing: border-box;
     border-radius: 12px;
-    background:transparent !important;
+    background:transparent;
   }
   .customsort .ui--Dropdown{
-    background:transparent !important;
+    // border: 1px solid #B1B5C4;
+    // box-sizing: border-box;
+    // border-radius: 12px;
+    background:transparent;
   }
   
 `);

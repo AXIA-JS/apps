@@ -6,13 +6,13 @@ import type { ThemeDef } from '../types';
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 export default (_theme: ThemeDef): string => `
   .ui--output {
+    height: 100%;
     background: var(--bg-input);
-    border-radius: 4px;
-    border: 1px dashed #eee;
+    border-radius: 12px;
+    border: 2px solid #B1B5C4;
     box-sizing: border-box;
     line-height: 1rem;
     max-height: 25rem;
-    overflow-y: auto;
     padding: 0.75rem 1rem;
     position: relative;
     word-break: break-all;

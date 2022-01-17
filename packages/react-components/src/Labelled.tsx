@@ -46,13 +46,31 @@ function Labelled ({ className = '', children, help, isFull, isHidden, isOuter, 
 }
 
 export default React.memo(styled(Labelled)`
+.ui.selection.dropdown {
+  border: 2px solid #B1B5C4 ;
+  border-radius: 12px;
+  }
+  .ui.selection.active.dropdown {
+    border-top:    2px solid #178FE1 !important;
+    border-right:  2px solid #178FE1 !important;   
+    border-left:   2px solid #178FE1 !important;
+    border-bottom: 2px solid #B1B5C4 !important;
+    border-radius: 12px;
+    }
+  .ui.selection.active.dropdown .menu {
+    border-bottom:  2px solid #178FE1;
+    border-right:2px solid #178FE1;   
+    border-left: 2px solid #178FE1;
+    border-top:  2px solid #B1B5C4;
+    
+  }
   &.ui--Labelled {
     display: block;
     position: relative;
 
     .ui--CopyButton {
       position: absolute;
-      top: 0.9rem;
+      top: 0.6rem;
       right: 0.5rem;
       margin-right:12px;
     }
@@ -89,6 +107,7 @@ export default React.memo(styled(Labelled)`
         > label {
           left: 3.55rem;
           text-align: left;
+          padding-top: 0.5rem;
         }
       }
 
@@ -115,9 +134,7 @@ export default React.memo(styled(Labelled)`
         .ui.selection.dropdown {
           &:not(.floating) {
             padding-left: 1.45rem;
-            padding-top: 1.75rem;
-            // border:2px solid #B1B5C4;
-            border-radius:12px;
+            padding-top: 2.75rem;
           }
 
           &.floating {
@@ -134,7 +151,6 @@ export default React.memo(styled(Labelled)`
           &.search:not(.multiple) > input.search {
             padding-left: 1.45rem;
             padding-top: 1.75rem;
-            
           }
 
           > .delete.icon,
@@ -148,12 +164,7 @@ export default React.memo(styled(Labelled)`
         .ui.input > input,
         .ui--output {
           padding-left: 1.45rem;
-          padding-top: 1.75rem;
-          border:2px solid #B1B5C4;ss
-          border-radius:12px;
-          border-right-color: #B1B5C4;
-          border-radius: 12px !important;
-          margin-right: 4px;
+          padding-top: 2.5rem;
         }
 
         .ui--Messages {

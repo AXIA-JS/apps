@@ -121,7 +121,10 @@ export default React.memo(styled(InputAddressMulti)`
     width:98%;
     margin:auto;
   }
-  
+  label {
+    margin-bottom: 10px;
+    margin-top: 20px;
+  }
   .ui--InputAddressMulti-Input {
     .ui.input {
       margin-bottom: 0.25rem;

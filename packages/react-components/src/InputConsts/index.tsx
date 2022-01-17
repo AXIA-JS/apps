@@ -6,7 +6,7 @@ import type { DropdownOptions } from '../util/types';
 import type { ConstValue, ConstValueBase } from './types';
 
 import React, { useCallback, useState } from 'react';
-
+import styled from 'styled-components';
 import { ApiPromise } from '@axia-js/api';
 import { useApi } from '@axia-js/react-hooks';
 
@@ -98,4 +98,8 @@ function InputConsts ({ className = '', defaultValue, help, label, onChange, wit
   );
 }
 
-export default React.memo(InputConsts);
+export default React.memo(styled(InputConsts)`
+
+
+
+`);

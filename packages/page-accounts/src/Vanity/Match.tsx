@@ -112,5 +112,11 @@ export default React.memo(styled(Match)`
   .CloseBtn{
     color:#178FE1 !important;
   }
-  
+  .CloseBtn .ui--Icon{
+    color: #777E91 !important;
+  }
+  .ui--Button:hover:not(.isDisabled):not(.isReadOnly), .ui--Button.isSelected{
+    color:#fff !important;
+    font-weight:700;
+  }
 `);

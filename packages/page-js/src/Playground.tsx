@@ -271,6 +271,7 @@ function Playground ({ basePath, className = '' }: Props): React.ReactElement<Pr
           <Button
             className='action-button'
             icon='eraser'
+            size='4x'
             onClick={_clearConsole}
           />
         </Output>
@@ -305,10 +306,25 @@ export default React.memo(styled(Playground)`
     p:last-child {
       margin-bottom: 0;
     }
+    border-radius:12px;
   }
 
   .js--Selection {
     margin-bottom: 1rem;
+  }
+  .ui.selection.active.dropdown {
+    border-top:    2px solid #B1B5C4 !important;
+    border-right:  2px solid #B1B5C4 !important;   
+    border-left:   2px solid #B1B5C4 !important;
+    border-bottom: 2px solid #B1B5C4 !important;
+   
+    }
+  .ui.selection.active.dropdown .menu {
+    border-bottom:  2px solid #B1B5C4;
+    border-right:2px solid #B1B5C4;   
+    border-left: 2px solid #B1B5C4;
+    border-top:  2px solid #B1B5C4;
+    
   }
 
   .js--Content {
@@ -334,6 +350,7 @@ export default React.memo(styled(Playground)`
   .js--Editor,
   .js--Output {
     min-width: 200px;
+    height: 550px;
 
     .action-button {
       margin: 0;
@@ -351,6 +368,7 @@ export default React.memo(styled(Playground)`
     position: relative;
     resize: horizontal;
     width: 60%;
+    margin-right: 32px;
 
     textarea {
       outline: 0;
@@ -370,8 +388,6 @@ export default React.memo(styled(Playground)`
       min-width: calc(100% - 40px);
       padding-top: 50px;
       width: auto;
-      text-align:center;
-      
     }
 
     .codeflask__lines {
@@ -379,10 +395,6 @@ export default React.memo(styled(Playground)`
       line-height: 18px;
       padding-top: 50px;
       z-index: 100;
-      width: 60px !important;
-      height: 100%;
-      text-align: center !important;
-      color: #999;
     }
 
     &::after {
