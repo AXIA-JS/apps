@@ -66,10 +66,13 @@ function Filtering ({ children, className, nameFilter, setNameFilter, setWithIde
 
 export default React.memo(styled(Filtering)`
   .filtering{
-    display:flex !important;
+    display: flex!important;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
   }
   .CustomDisplay{
-    width:50%;
+    width:50% !important;
   }
   .staking--optionsBar{
     width:50%;

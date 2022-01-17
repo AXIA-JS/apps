@@ -428,4 +428,16 @@ export default React.memo(styled(Targets)`
   .ui--Table {
     overflow-x: auto;
   }
+  .filtering{
+    display: flex!important;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .CustomDisplay{
+    width:50% !important;
+  }
+  .staking--optionsBar{
+    width:50%;
+  }
 `);
