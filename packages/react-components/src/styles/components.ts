@@ -108,7 +108,7 @@ export default (_theme: ThemeDef): string => `
       border:2px solid #B1B5C3 !important;
       color: #666 !important;
       cursor: default !important;
-      border-radius:12px !important;
+      border-radius: 0px 12px 12px 0px !important;
     }
   }
 
