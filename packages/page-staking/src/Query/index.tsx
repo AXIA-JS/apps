@@ -57,5 +57,9 @@ export default React.memo(styled(Query)`
   margin-right: 12px;
   border: 2px solid #B1B5C4;
 }
+.isDisabled, .isReadOnly {
+  height: 56px;
+  width: 56px;
+}
 
 `);

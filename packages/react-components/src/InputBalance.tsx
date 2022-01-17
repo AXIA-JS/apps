@@ -123,7 +123,11 @@ export default React.memo(styled(InputBalance)`
     }
   }
 
-  &.CustomInput .ui.action.input:not([class*="left action"])>input{
-    border:2px solid #B1B5C4;
+    .ui.action.input:not([class*="left action"])>input{
+      border-bottom-right-radius: 12px !important;
+      border-right-color: #B1B5C4 ;
+      margin-right: 5px !important;
+      border-top-right-radius:12px !important;
+    }
   }
 `);

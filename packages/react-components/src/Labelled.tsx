@@ -50,20 +50,20 @@ export default React.memo(styled(Labelled)`
   border: 2px solid #B1B5C4 ;
   border-radius: 12px;
   }
-  .ui.selection.active.dropdown {
-    border-top:    2px solid #178FE1 !important;
-    border-right:  2px solid #178FE1 !important;   
-    border-left:   2px solid #178FE1 !important;
-    border-bottom: 2px solid #B1B5C4 !important;
-    border-radius: 12px;
-    }
-  .ui.selection.active.dropdown .menu {
-    border-bottom:  2px solid #178FE1;
-    border-right:2px solid #178FE1;   
-    border-left: 2px solid #178FE1;
-    border-top:  2px solid #B1B5C4;
+  // .ui.selection.active.dropdown {
+  //   border-top:    2px solid #178FE1 !important;
+  //   border-right:  2px solid #178FE1 !important;   
+  //   border-left:   2px solid #178FE1 !important;
+  //   border-bottom: 2px solid #B1B5C4 !important;
+  //   border-radius: 12px;
+  //   }
+  // .ui.selection.active.dropdown .menu {
+  //   border-bottom:  2px solid #178FE1;
+  //   border-right:2px solid #178FE1;   
+  //   border-left: 2px solid #178FE1;
+  //   border-top:  2px solid #B1B5C4;
     
-  }
+  // }
   &.ui--Labelled {
     display: block;
     position: relative;
@@ -107,7 +107,8 @@ export default React.memo(styled(Labelled)`
         > label {
           left: 3.55rem;
           text-align: left;
-          padding-top: 0.5rem;
+          // padding-top: 0.5rem;
+          // padding-bottom:0.5rem;
         }
       }
 

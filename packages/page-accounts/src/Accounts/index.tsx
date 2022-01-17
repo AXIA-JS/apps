@@ -239,7 +239,7 @@ function Overview ({ className = '', onStatusChange }: Props): React.ReactElemen
         </section>
         <Button.Group>
           <Button
-            icon='plus'
+            icon='plus-square'
             isDisabled={isIpfs}
             label={t<string>('Add account')}
             onClick={_openCreateModal}

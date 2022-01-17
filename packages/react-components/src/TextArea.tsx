@@ -69,7 +69,7 @@ export default React.memo(styled(TextArea)`
       resize: none;
       width: 100%;
       line-height:1;
-      margin-top: 12px;
+      // margin-top: 12px;
 
       &:read-only {
         background: var(--bg-inverse);

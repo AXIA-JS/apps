@@ -180,6 +180,17 @@ function CurrentList ({ favorites, hasQueries, isIntentions, paraValidators = DE
 }
 
 export default React.memo(styled(CurrentList)`
- 
+.filtering{
+  display: flex!important;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.CustomDisplay{
+  width:50% !important;
+}
+.staking--optionsBar{
+  width:50%;
+}
 
 `);

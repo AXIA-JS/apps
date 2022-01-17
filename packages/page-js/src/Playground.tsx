@@ -312,21 +312,7 @@ export default React.memo(styled(Playground)`
   .js--Selection {
     margin-bottom: 1rem;
   }
-  .ui.selection.active.dropdown {
-    border-top:    2px solid #B1B5C4 !important;
-    border-right:  2px solid #B1B5C4 !important;   
-    border-left:   2px solid #B1B5C4 !important;
-    border-bottom: 2px solid #B1B5C4 !important;
-   
-    }
-  .ui.selection.active.dropdown .menu {
-    border-bottom:  2px solid #B1B5C4;
-    border-right:2px solid #B1B5C4;   
-    border-left: 2px solid #B1B5C4;
-    border-top:  2px solid #B1B5C4;
-    
-  }
-
+ 
   .js--Content {
     align-content: stretch;
     align-items: stretch;
@@ -423,6 +409,7 @@ export default React.memo(styled(Playground)`
     right: 0;
     top: -0.25rem;
     z-index: 202;
+    width:50% !important;
 
     article p:first-child {
       padding-top: 1rem;
@@ -431,5 +418,17 @@ export default React.memo(styled(Playground)`
     .ui--Button-Group {
       margin-bottom: 0;
     }
+    .ui--Button:not(.isDisabled):not(.isIcon):not(.isBasic) .ui--Icon, .kctQhl .ui--Button.withoutLink:not(.isDisabled) .ui--Icon{
+      color:#178FE1;
+      background:transparent;
+    }
+    .ui--Button:hover:not(.isDisabled):not(.isReadOnly):not(.isIcon) .ui--Icon, .ui--Button.isSelected:not(.isIcon) .ui--Icon, .ui--Button:hover:not(.isDisabled):not(.isReadOnly).withoutLink .ui--Icon, .ui--Button.isSelected.withoutLink .ui--Icon{
+      color:#fff;
+    }
+  }
+
+  .ui--Button:not(.isDisabled):not(.isIcon):not(.isBasic) .ui--Icon, .ui--Button.withoutLink:not(.isDisabled) .ui--Icon{
+    background:#178FE1;
+    color:#fff;
   }
 `);

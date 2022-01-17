@@ -23,6 +23,9 @@ export default (_theme: ThemeDef): string => `
       border:2px solid red;
       border-radius:12px;
       border-right-color:red !important;
+      border-bottom-right-radius: 12px !important;
+      margin-right: 5px !important;
+        
       
     }
 

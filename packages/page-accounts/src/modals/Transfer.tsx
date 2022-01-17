@@ -204,9 +204,7 @@ function Transfer ({ className = '', onClose, recipientId: propRecipientId, send
             {!isProtected && !noReference && (
               <MarkWarning content={t<string>('There is an existing reference count on the sender account. As such the account cannot be reaped from the state.')} />
             )}
-            {/* {noFees && (
-              <MarkWarning content={t<string>('The transaction, after application of the transfer fees, will drop the available balance below the existential deposit. As such the transfer will fail. The account needs more free funds to cover the transaction fees.')} />
-            )} */}
+            
           </Modal.Columns>
         </div>
       </Modal.Content>
@@ -260,5 +258,11 @@ export default React.memo(styled(Transfer)`
 
   .BvuJb > label, .BvuJb > div{
     color: #353945 !important;
+  }
+  .ui.action.input:not([class*="left action"])>input{
+    border-bottom-right-radius: 12px !important;
+    border-right-color: #B1B5C4  !important;
+    margin-right: 5px !important;
+    border-top-right-radius:12px !important;
   }
 `);
