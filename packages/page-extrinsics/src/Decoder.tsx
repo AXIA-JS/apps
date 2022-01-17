@@ -137,5 +137,5 @@ export default React.memo(styled(Decoder)`
 .ui.input>input {
   border: 2px solid #F12F2F;
   border-radius: 12px;
-
+}
 `);

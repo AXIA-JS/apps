@@ -89,7 +89,7 @@ export default React.memo(styled(HelpOverlay)`
     }
 
     .help-content {
-      padding: 1rem 2em 5rem;
+      padding: 0rem 2em 5rem;
       // color:#000;
     }
     &.open {

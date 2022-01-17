@@ -123,8 +123,8 @@ export default React.memo(styled(TxButton)`
     border-radius: 12px;
     color:#fff;
   }
-  .ui--Icon{
-    color:#fff !important;
-  }
+  // .ui--Icon{
+  //   color:#fff !important;
+  // }
  
 `);

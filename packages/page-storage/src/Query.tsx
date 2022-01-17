@@ -217,18 +217,18 @@ export default React.memo(styled(Query)`
     display: flex;
     align-items : center !important;
   }
-  .drpdwn-border{
-    background :red !important;
+  // .drpdwn-border{
+  //   background :red !important;
 
-  }
+  // }
 
   // .storage--actionrow-buttons {
   //   margin-top: -0.5rem; /* offset parent spacing for buttons */
   // }
-  .ui--DropdownLinked.ui--row .small .ui.selection.dropdown{
-    border:2px solid red;
-    border:12px;
-    border-top-right-radius:0px;
-    border-bottom-right-radius:0px;
-  }
+  // .ui--DropdownLinked.ui--row .small .ui.selection.dropdown{
+  //   border:2px solid red;
+  //   border:12px;
+  //   border-top-right-radius:0px;
+  //   border-bottom-right-radius:0px;
+  // }
 `);

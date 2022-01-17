@@ -44,6 +44,10 @@ export default React.memo(styled(StorageApp)`
 
     .ui--Button {
       margin: 0.25rem;
+
+      .ui--Icon{
+        font-size:20px;
+      }
     }
 
     &.head {

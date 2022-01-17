@@ -331,5 +331,9 @@ export default React.memo(styled(Endpoints)`
     border-radius: 12px;
     color:#fff;
     margin-right:150px;
+
+    .ui--Icon{
+      color:#fff !important;
+    }
   }
 `);

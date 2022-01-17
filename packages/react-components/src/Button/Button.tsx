@@ -72,7 +72,7 @@ export default React.memo(styled(Button)`
 
     .ui--Icon {
       // padding: 1rem;
-      margin: -0.6rem;
+      // margin: -0.6rem;
     }
   }
 
@@ -138,10 +138,11 @@ export default React.memo(styled(Button)`
   .ui--Icon {
     border-radius: 28%;
     box-sizing: content-box;
-    height: 1rem;
+    // height: 1rem;
     margin: -${ICON_PADDING}rem 0;
     padding: ${ICON_PADDING}rem;
-    width: 1rem;
+    // width: 1rem;
+    
   }
 
   &.isBusy {

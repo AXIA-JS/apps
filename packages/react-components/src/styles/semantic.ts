@@ -111,7 +111,7 @@ export default (_theme: ThemeDef): string => `
     &.error input {
       background-color: #fff;
       // border-color: #e0b4b4;
-      // border:2px solid red ;
+      border:2px solid red ;
       border-radius:12px;
       text-transform:capitalize;
       // border-right-color:red;
