@@ -59,6 +59,7 @@ export default React.memo(styled(Sidebar)(({ offset = 0, position }: Props) => `
     position: absolute;
     right: 0.5rem;
     top: 0.5rem;
+    left:1.5rem;
   }
   .CloseBtn{
     padding:0.8rem 1rem;

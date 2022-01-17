@@ -93,6 +93,7 @@ export default React.memo(styled(BaseOverlay)`
     max-width: 50rem;
     padding: 1em 3rem 1rem 0.5rem;
     position: relative;
+    align-items:center;
 
     .contentIcon {
       flex: 0;

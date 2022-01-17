@@ -442,7 +442,10 @@ export default React.memo(styled(TxSigned)`
     width: 100%;
     text-align: right;
   }
-
+  .CustomBtn{
+    background:#178FE1 !important;
+    color:#fff;
+  }
   .ui--Checks {
     margin-top: 0.75rem;
   }

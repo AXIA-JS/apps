@@ -71,7 +71,7 @@ export default React.memo(styled(Button)`
     padding: 0.7em;
 
     .ui--Icon {
-      padding: 1.58rem;
+      // padding: 1rem;
       margin: -0.6rem;
     }
   }
