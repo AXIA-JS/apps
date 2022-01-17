@@ -215,10 +215,10 @@ export default React.memo(styled(DayItem)`
     position: absolute;
     right: 1.5rem;
 
-    .ui--Icon {
-      width: 0.7rem;
-      height: 0.7rem;
-    }
+    // .ui--Icon {
+    //   width: 0.7rem;
+    //   height: 0.7rem;
+    // }
   }
 
   .exportCal-allEvents {

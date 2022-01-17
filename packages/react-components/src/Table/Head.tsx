@@ -78,6 +78,8 @@ export default React.memo(styled(Head)`
     h1 {
       display: table-cell;
       vertical-align: middle;
+      padding-top:10px;
+      padding-bottom:10px;
      
 
       .ui--Icon {

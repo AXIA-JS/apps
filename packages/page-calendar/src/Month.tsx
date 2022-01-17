@@ -44,7 +44,7 @@ function Month ({ className, hasNextMonth, lastDay, now, scheduled, setDay, setN
   return (
     <div className={className}>
       <h1>
-        <Button.Group>
+        <Button.Group className='CustomAlign2'>
           <Button
             className=''
             icon='arrow-left'
@@ -96,6 +96,10 @@ export default React.memo(styled(Month)`
 
   .CustomAlign{
     text-align:right;
+  }
+  
+  .CustomAlign2{
+    text-align:left;
   }
   
   .ui--Button:not(.isDisabled):not(.isIcon):not(.isBasic) .ui--Icon, .ui--Button.withoutLink:not(.isDisabled) .ui--Icon{
