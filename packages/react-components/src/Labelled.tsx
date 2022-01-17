@@ -70,7 +70,7 @@ export default React.memo(styled(Labelled)`
 
     .ui--CopyButton {
       position: absolute;
-      top: 0.9rem;
+      top: 0.6rem;
       right: 0.5rem;
       margin-right:12px;
     }
