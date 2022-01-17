@@ -19,7 +19,7 @@ function HelpOverlay ({ className = '', md }: Props): React.ReactElement<Props> 
 
   return (
     <div className={`ui--HelpOverlay ${className}`}>
-      <div className='help-button'>
+      {/* <div className='help-button'>
         <Icon
           icon='question-circle'
           onClick={toggleVisible}
@@ -38,7 +38,7 @@ function HelpOverlay ({ className = '', md }: Props): React.ReactElement<Props> 
           escapeHtml={false}
           source={md}
         />
-      </div>
+      </div> */}
     </div>
   );
 }
