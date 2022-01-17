@@ -130,6 +130,12 @@ padding: 0 1.5rem;
   justify-content: space-evenly;
 }
 
+&.CustomTechComm{
+  background: #fff !important;
+  border-radius:12px;
+  padding:15px 10px;
+}
+
 .hlyaRM.ui--Labelled.isSmall > label{
   margin-bottom:8px;
 }
