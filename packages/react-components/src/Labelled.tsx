@@ -134,7 +134,7 @@ export default React.memo(styled(Labelled)`
         .ui.selection.dropdown {
           &:not(.floating) {
             padding-left: 1.45rem;
-            padding-top: 2.75rem;
+            padding-top: 2rem;
           }
 
           &.floating {

@@ -195,12 +195,14 @@ export default React.memo(styled(General)`
     border-radius: 12px !important;
   }
   .ui--Dropdown-item {
+
     position: relative;
-    white-space: nowrap;   
+      white-space: nowrap;
     background: none !important;
     border: none !important;
     border-radius: 12px;
-  }
+    
+    }
   .ui--Button:not(.isDisabled):not(.isIcon):not(.isBasic) .ui--Icon, .ui--Button.withoutLink:not(.isDisabled) .ui--Icon{
     background:#178FE1 !important;
     color:#fff !important;

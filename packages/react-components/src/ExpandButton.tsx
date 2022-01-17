@@ -30,8 +30,8 @@ export default React.memo(styled(ExpandButton)`
   justify-content: center;
   width: 1.7rem;
   height: 1.7rem;
-  border: 1px solid var(--border-table);
-  border-radius: 4px;
+  // border: 1px solid var(--border-table);
+  // border-radius: 4px;
   cursor: pointer;
   font-size:10px;
 `);

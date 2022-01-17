@@ -204,8 +204,9 @@ export default createGlobalStyle<Props & ThemeProps>(({ theme, uiHighlight }: Pr
     &:not(.isDisabled):not(.isIcon):not(.isBasic),
     &.withoutLink:not(.isDisabled) {
       .ui--Icon {
-        background: #178FE1;
-        color: #fff;
+        // background: #178FE1;
+        color:#178FE1;
+        font-weight:800;
       }
     }
 

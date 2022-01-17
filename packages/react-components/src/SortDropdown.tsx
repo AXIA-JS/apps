@@ -61,10 +61,11 @@ export default React.memo(styled(SortDropdown)`
       min-width: 7.857rem;
       z-index: 110;
 
-      border-width: 1px 0 1px 1px;
+      // border-width: 1px 0 1px 1px;
       border-style: solid;
-      border-color: var(--border-input);
-      border-radius: 4px 0 0 4px;
+      // border-color: var(--border-input);
+      // border-radius: 4px 0 0 4px;
+      background: transparent;
 
       &.active {
         position: absolute;

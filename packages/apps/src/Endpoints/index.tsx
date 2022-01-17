@@ -330,6 +330,6 @@ export default React.memo(styled(Endpoints)`
     background: #178FE1;
     border-radius: 12px;
     color:#fff;
-    margin-right:165px;
+    margin-right:150px;
   }
 `);

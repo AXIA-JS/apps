@@ -58,9 +58,9 @@ export default (_theme: ThemeDef): string => `
 
   .ui--DropdownLinked.ui--row {
     .small .ui.selection.dropdown {
-      border-right: none;
-      border-bottom-right-radius: 0;
-      border-top-right-radius: 0;
+      // border-right: none;
+      // border-bottom-right-radius: 0;
+      // border-top-right-radius: 0;
       min-width: 5rem;
     }
 
