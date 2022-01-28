@@ -28,8 +28,9 @@ function Checkbox ({ className = '', isDisabled, label, onChange, value }: Props
       onClick={_onClick}
     >
       <Icon
-        color={value ? 'normal' : 'none'}
-        icon='check-square'
+        className={value && 'active'}
+        color={value ? 'normal' : 'transparent'}
+        icon='check'
       />
       {label && <label>{label}</label>}
     </div>
@@ -63,7 +64,13 @@ export default React.memo(styled(Checkbox)`
   }
 
   .ui--Icon {
-    color:#178FE1;
-    font-size:21px;
+    border: 1px solid var(--color-checkbox);
+    border-radius: 0.125rem;
   }
+
+  .active {
+    background: var(--color-checkbox);
+    color: #fff;
+  }
+  
 `);
