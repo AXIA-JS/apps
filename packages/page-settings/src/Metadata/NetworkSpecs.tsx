@@ -41,7 +41,7 @@ const initialState = {
   genesisHash: '',
   prefix: 0,
   title: '',
-  unit: 'UNIT'
+  unit: 'AXC'
 };
 
 function NetworkSpecs ({ chainInfo, className }: Props): React.ReactElement<Props> {
