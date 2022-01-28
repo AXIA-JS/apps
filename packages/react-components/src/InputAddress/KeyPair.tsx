@@ -53,7 +53,10 @@ export default React.memo(styled(KeyPair)`
   > .icon {
     position: absolute;
     top: -5px;
-    left: 0;
+    left: 0px;
+    font-size: 32px;
+    width: 32px;
+    height: 32px;
   }
 
   > .name {

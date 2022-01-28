@@ -12,7 +12,6 @@ export default (_theme: ThemeDef): string => `
     border: 2px solid #B1B5C4;
     box-sizing: border-box;
     line-height: 1rem;
-    max-height: 25rem;
     padding: 0.75rem 1rem;
     position: relative;
     word-break: break-all;

@@ -107,8 +107,8 @@ export default React.memo(styled(Labelled)`
         > label {
           left: 3.55rem;
           text-align: left;
-          // padding-top: 0.5rem;
-          // padding-bottom:0.5rem;
+          padding-top: 0.5rem;
+          padding-bottom:0.5rem;
         }
       }
 

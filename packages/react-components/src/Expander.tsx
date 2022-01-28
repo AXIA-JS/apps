@@ -156,7 +156,7 @@ export default React.memo(styled(Expander)`
     min-width: 13.5rem;
     overflow: hidden;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
 
     .ui--Expander-summary-header {

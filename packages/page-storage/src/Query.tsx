@@ -191,7 +191,7 @@ export default React.memo(styled(Query)`
 
   label {
     text-transform: none !important;
-    margin: -8px 4px;
+    
   }
 
   .ui.disabled.dropdown.selection {

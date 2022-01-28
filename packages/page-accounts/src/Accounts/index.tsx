@@ -252,7 +252,7 @@ function Overview ({ className = '', onStatusChange }: Props): React.ReactElemen
           />
           <Button
             icon='qrcode'
-            label={t<string>('Add via Qr')}
+            label={t<string>('Add via QR')}
             onClick={toggleQr}
           />
           {isLedgerEnabled && (

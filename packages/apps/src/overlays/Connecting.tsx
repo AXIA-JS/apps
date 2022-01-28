@@ -27,7 +27,7 @@ function Connecting ({ className }: Props): React.ReactElement<Props> | null {
     return (
       <BaseOverlay
         className={className}
-        icon='globe'
+        icon='atlas'
         type='error'
       >
         <div>{apiError}</div>
@@ -37,7 +37,7 @@ function Connecting ({ className }: Props): React.ReactElement<Props> | null {
     return (
       <BaseOverlay
         className={className}
-        icon='globe'
+        icon='atlas'
         type='info'
       >
         <div>{t<string>('Waiting to make a connection to the remote endpoint and finishing API initialization.')}</div>
@@ -57,7 +57,7 @@ function Connecting ({ className }: Props): React.ReactElement<Props> | null {
     return (
       <BaseOverlay
         className={className}
-        icon='globe'
+        icon='atlas'
         type='error'
       >
         <div>{t<string>('You are not connected to a node. Ensure that your node is running and that the Websocket endpoint is reachable.')}</div>

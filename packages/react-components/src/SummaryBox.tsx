@@ -25,7 +25,7 @@ export default React.memo(styled(SummaryBox)`
   flex-wrap: no-wrap;
   justify-content: space-between;
   margin: auto;
-  width:92rem;
+  width: 100%;
 
   > section {
     display: flex;

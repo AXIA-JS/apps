@@ -80,14 +80,14 @@ function Summary ({ className = '', isVisible, stakingOverview, targets: { count
             <>{(stakedFraction * 100).toFixed(1)}%</>
           </CardSummary>
         )}
-        {(inflation > 0) && Number.isFinite(inflation) && (
+        {/* {(inflation > 0) && Number.isFinite(inflation) && (
           <CardSummary
             className='media--1200 CustomBg'
             label={t<string>('inflation')}
           >
             <>{inflation.toFixed(1)}%</>
           </CardSummary>
-        )}
+        )} */}
       </section>
       <section>
         <SummarySession className='CustomEcho' />
