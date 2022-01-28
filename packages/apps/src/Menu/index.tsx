@@ -138,7 +138,7 @@ function Menu ({ className = '' }: Props): React.ReactElement<Props> {
             ))}
           </ul>
         </div>
-        <div className='menuSection media--1200'>
+        {/* <div className='menuSection media--1200'>
           <ul className='menuItems'>
             {externalRef.current.map((route): React.ReactNode => (
               <Item
@@ -149,7 +149,7 @@ function Menu ({ className = '' }: Props): React.ReactElement<Props> {
               />
             ))}
           </ul>
-        </div>
+        </div> */}
         <NodeInfo className='media--1400' />
       </div>
     </div>

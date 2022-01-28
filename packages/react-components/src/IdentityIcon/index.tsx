@@ -8,9 +8,10 @@ import React, { useCallback, useContext } from 'react';
 import styled from 'styled-components';
 
 import { getSystemIcon } from '@axia-js/apps-config';
+import { Icon } from '@axia-js/react-components';
 import { ThemeProps } from '@axia-js/react-components/types';
 import { useApi } from '@axia-js/react-hooks';
-import BaseIdentityIcon from '@axia-js/react-identicon';
+// import BaseIdentityIcon from '@axia-js/react-identicon';
 import { settings } from '@axia-js/ui-settings';
 
 import StatusContext from '../Status/Context';
@@ -52,16 +53,32 @@ function IdentityIcon ({ className = '', prefix, size = 24, theme, value }: Prop
     [queueAction, t]
   );
 
+  const colorGen = (): string => {
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+
+    for (let i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+
+    return color;
+  };
+
+
   return (
-    <BaseIdentityIcon
+    <div
       Custom={Custom}
       className={className}
-      onCopy={_onCopy}
+      // onCopy={_onCopy}
       prefix={prefix}
       size={size}
+      style={{ color: colorGen() }}
       theme={isEthereum ? 'ethereum' : thisTheme as 'substrate'}
       value={isCodec(value) ? value.toString() : value}
-    />
+    ><Icon
+        icon='address-card'
+      />
+    </div>
   );
 }
 

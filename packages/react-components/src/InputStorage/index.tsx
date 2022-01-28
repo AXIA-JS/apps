@@ -30,7 +30,13 @@ interface Props {
 function InputStorage ({ className = '', defaultValue, help, label, onChange, withLabel }: Props): React.ReactElement<Props> {
   const { api } = useApi();
   const [optionsMethod, setOptionsMethod] = useState<DropdownOptions>(() => keyOptions(api, defaultValue.creator.section));
-  const [optionsSection] = useState<DropdownOptions>(() => sectionOptions(api));
+  const [optionsSection] = useState<DropdownOptions>(() => {
+    const options = sectionOptions(api).filter((option) => {
+      if (option.text && !option.text.toString().includes('para')) return option;
+    });
+
+    return options;
+  });
   const [value, setValue] = useState<QueryableStorageEntry<'promise'>>(() => defaultValue);
 
   const _onKeyChange = useCallback(

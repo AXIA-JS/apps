@@ -175,7 +175,7 @@ function NetworkSpecs ({ chainInfo, className }: Props): React.ReactElement<Prop
 
           <Input
             className='full'
-            help={t<string>('Unit decides the name of 1 unit token, e.g. "DOT" for AXIA')}
+            help={t<string>('Unit decides the name of 1 unit token, e.g. "AXC" for AXIA')}
             isDisabled
             label={t<string>('Unit')}
             value={networkSpecs.unit}
