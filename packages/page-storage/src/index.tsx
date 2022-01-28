@@ -39,7 +39,7 @@ function StorageApp ({ basePath, className = '' }: Props): React.ReactElement<Pr
 
 export default React.memo(styled(StorageApp)`
   .storage--actionrow {
-    align-items: center;
+    align-items: baseline;
     display: flex;
 
     .ui--Button {

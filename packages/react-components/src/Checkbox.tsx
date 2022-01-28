@@ -28,7 +28,7 @@ function Checkbox ({ className = '', isDisabled, label, onChange, value }: Props
       onClick={_onClick}
     >
       <Icon
-        color={value ? 'normal' : 'transparent'}
+        color={value ? 'normal' : 'none'}
         icon='check-square'
       />
       {label && <label>{label}</label>}

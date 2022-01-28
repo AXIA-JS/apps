@@ -125,7 +125,8 @@ export default React.memo(styled(InputBalance)`
 
     .ui.action.input:not([class*="left action"])>input{
       border-bottom-right-radius: 12px !important;
-      border-right-color: #B1B5C4 ;
+      border-right-color: #B1B5C4 !important;
+      border-color: #B1B5C4 !important;
       margin-right: 5px !important;
       border-top-right-radius:12px !important;
     }

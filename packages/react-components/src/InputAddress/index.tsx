@@ -305,8 +305,7 @@ const ExportedComponent = withMulti(
           top: -1.05rem;
 
           > div,
-          img,
-          svg {
+          img{
             height: 32px !important;
             width: 32px !important;
           }

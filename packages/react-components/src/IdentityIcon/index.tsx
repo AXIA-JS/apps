@@ -66,19 +66,19 @@ function IdentityIcon ({ className = '', prefix, size = 24, theme, value }: Prop
 
 
   return (
-    <div
-      Custom={Custom}
-      className={className}
+    <span
+      // Custom={Custom}
+      className= {`${className} ui--IdentityIcon`}
       // onCopy={_onCopy}
-      prefix={prefix}
-      size={size}
-      style={{ color: colorGen() }}
-      theme={isEthereum ? 'ethereum' : thisTheme as 'substrate'}
-      value={isCodec(value) ? value.toString() : value}
+      // prefix={prefix}
+      // size={size}
+      style={{ background: colorGen(), color: '#fff', padding: '0.5rem', borderRadius: '1rem', fontSize: '0.9rem' }}
+      // theme={isEthereum ? 'ethereum' : thisTheme as 'substrate'}
+      // value={isCodec(value) ? value.toString() : value}
     ><Icon
         icon='address-card'
       />
-    </div>
+    </span>
   );
 }
 
