@@ -68,7 +68,7 @@ export default React.memo(styled(Button)`
   text-align: center;
 
   &:not(.hasLabel) {
-    padding: 0.7em;
+    padding: 0.25em 0.25em;
 
     .ui--Icon {
       // padding: 1rem;

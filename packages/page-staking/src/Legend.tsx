@@ -31,7 +31,7 @@ function Legend ({ className, isRelay }: Props): React.ReactElement<Props> {
             color='purple'
             icon='vector-square'
           />
-          {t('Para validator')}
+          {t('CoreChain validator')}
         </span>
       )}
       <span>
