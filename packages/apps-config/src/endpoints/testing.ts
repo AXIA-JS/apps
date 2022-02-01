@@ -24,14 +24,6 @@ export function createTesting (t: TFunction, firstOnly: boolean, withSort: boole
         ZFullTes: 'wss://wss.test.axiacoin.network',
         ZArchTes: 'wss://archive.test.axiacoin.network'
       }
-    },
-
-    {
-      info: 'pontem',
-      text: t('rpc.test.pontem', 'Dummy Pontem', { ns: 'apps-config' }),
-      providers: {
-        NoWhere: 'wss://example.com'
-      }
     }
   
     ], firstOnly, withSort);
