@@ -64,6 +64,20 @@ function IdentityIcon ({ className = '', prefix, size = 24, theme, value }: Prop
     return color;
   };
 
+  const copy = (val: string): void => {
+    const selBox = document.createElement('textarea');
+    selBox.style.position = 'fixed';
+    selBox.style.left = '0';
+    selBox.style.top = '0';
+    selBox.style.opacity = '0';
+    selBox.value = val;
+    document.body.appendChild(selBox);
+    selBox.focus();
+    selBox.select();
+    document.execCommand('copy');
+    document.body.removeChild(selBox);
+    _onCopy();
+  };
 
   return (
     <span
@@ -72,7 +86,8 @@ function IdentityIcon ({ className = '', prefix, size = 24, theme, value }: Prop
       // onCopy={_onCopy}
       // prefix={prefix}
       // size={size}
-      style={{ background: colorGen(), color: '#fff', padding: '0.5rem', borderRadius: '1rem', fontSize: '0.9rem' }}
+      onClick={() => { copy(isCodec(value) ? value.toString() : value) }}
+      style={{ background: colorGen(), color: '#fff', padding: '0.5rem', borderRadius: '1rem', fontSize: '0.9rem', cursor: "copy" }}
       // theme={isEthereum ? 'ethereum' : thisTheme as 'substrate'}
       // value={isCodec(value) ? value.toString() : value}
     ><Icon
