@@ -35,12 +35,12 @@ function General ({ className = '' }: Props): React.ReactElement<Props> {
     return { ...values, uiTheme: values.uiTheme === 'dark' ? 'dark' : 'light' };
   });
 
-  const iconOptions = useMemo(
-    () => settings.availableIcons
+  const iconOptions = useMemo(() => {
+      const tempIconOptions = settings.availableIcons
       .map((o): Option => createIdenticon(o, ['default']))
-      .concat(createIdenticon({ info: 'robohash', text: 'RoboHash', value: 'robohash' })),
-    []
-  );
+      .concat(createIdenticon({ info: 'robohash', text: 'RoboHash', value: 'robohash' }))
+      return tempIconOptions.filter(({ value })=> ["axia", "default"].includes(value));
+    },[]);
 
   const prefixOptions = useMemo(
     (): (Option | React.ReactNode)[] => {
