@@ -53,7 +53,7 @@ function AllychainsApp ({ basePath, className }: Props): React.ReactElement<Prop
     },
     {
       name: 'parathreads',
-      text: t<string>('Parathreads')
+      text: t<string>('Allythreads')
     },
     api.query.proposeAllychain && {
       name: 'proposals',
