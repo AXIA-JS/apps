@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import type BN from 'bn.js';
-import type { ParaId } from '@axia-js/types/interfaces';
+import type { AllyId } from '@axia-js/types/interfaces';
 import type { OwnedId } from '../types';
 
 import React from 'react';
@@ -21,7 +21,7 @@ interface Props {
 }
 
 const transformId = {
-  transform: (nextId: ParaId) =>
+  transform: (nextId: AllyId) =>
     nextId.isZero()
       ? LOWEST_PUBLIC_ID
       : nextId
@@ -32,19 +32,19 @@ function Actions ({ className, ownedIds }: Props): React.ReactElement<Props> {
   const { api } = useApi();
   const [isRegisterOpen, toggleRegisterOpen] = useToggle();
   const [isReserveOpen, toggleReserveOpen] = useToggle();
-  const nextParaId = useCall<ParaId | BN>(api.query.registrar.nextFreeParaId, [], transformId);
+  const nextAllyId = useCall<AllyId | BN>(api.query.registrar.nextFreeAllyId, [], transformId);
 
   return (
     <Button.Group className={className}>
       <Button
         icon='plus'
         isDisabled={!api.tx.registrar.reserve}
-        label={t<string>('ParaId')}
+        label={t<string>('AllyId')}
         onClick={toggleReserveOpen}
       />
       {isReserveOpen && (
         <RegisterId
-          nextParaId={nextParaId}
+          nextAllyId={nextAllyId}
           onClose={toggleReserveOpen}
         />
       )}
@@ -56,7 +56,7 @@ function Actions ({ className, ownedIds }: Props): React.ReactElement<Props> {
       />
       {isRegisterOpen && (
         <RegisterThread
-          nextParaId={nextParaId}
+          nextAllyId={nextAllyId}
           onClose={toggleRegisterOpen}
           ownedIds={ownedIds}
         />

@@ -33,7 +33,7 @@ function expandLinked (input: LinkOption[]): LinkOption[] {
   }, []);
 }
 
-function expandEndpoint (t: TFunction, { dnslink, genesisHash, homepage, info, isChild, isDisabled, isUnreachable, linked, paraId, providers, teleport, text }: EndpointOption, firstOnly: boolean, withSort: boolean): LinkOption[] {
+function expandEndpoint (t: TFunction, { dnslink, genesisHash, homepage, info, isChild, isDisabled, isUnreachable, linked, allyId, providers, teleport, text }: EndpointOption, firstOnly: boolean, withSort: boolean): LinkOption[] {
   const base = {
     genesisHash,
     homepage,
@@ -41,7 +41,7 @@ function expandEndpoint (t: TFunction, { dnslink, genesisHash, homepage, info, i
     isChild,
     isDisabled,
     isUnreachable,
-    paraId,
+    allyId,
     teleport,
     text
   };
@@ -65,7 +65,7 @@ function expandEndpoint (t: TFunction, { dnslink, genesisHash, homepage, info, i
     const options: LinkOption[] = [];
 
     (withSort ? linked.sort(sortLinks) : linked)
-      .filter(({ paraId }) => paraId)
+      .filter(({ allyId }) => allyId)
       .forEach((o) =>
         options.push(...expandEndpoint(t, o, firstOnly, withSort))
       );

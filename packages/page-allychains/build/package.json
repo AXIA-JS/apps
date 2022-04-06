@@ -119,29 +119,29 @@
       "require": "./packageInfo.cjs",
       "default": "./packageInfo.js"
     },
-    "./Parathreads": {
-      "require": "./Parathreads/index.cjs",
-      "default": "./Parathreads/index.js"
+    "./Allythreads": {
+      "require": "./Allythreads/index.cjs",
+      "default": "./Allythreads/index.js"
     },
-    "./Parathreads/Actions": {
-      "require": "./Parathreads/Actions.cjs",
-      "default": "./Parathreads/Actions.js"
+    "./Allythreads/Actions": {
+      "require": "./Allythreads/Actions.cjs",
+      "default": "./Allythreads/Actions.js"
     },
-    "./Parathreads/constants": {
-      "require": "./Parathreads/constants.cjs",
-      "default": "./Parathreads/constants.js"
+    "./Allythreads/constants": {
+      "require": "./Allythreads/constants.cjs",
+      "default": "./Allythreads/constants.js"
     },
-    "./Parathreads/Parathread": {
-      "require": "./Parathreads/Parathread.cjs",
-      "default": "./Parathreads/Parathread.js"
+    "./Allythreads/Allythread": {
+      "require": "./Allythreads/Allythread.cjs",
+      "default": "./Allythreads/Allythread.js"
     },
-    "./Parathreads/RegisterId": {
-      "require": "./Parathreads/RegisterId.cjs",
-      "default": "./Parathreads/RegisterId.js"
+    "./Allythreads/RegisterId": {
+      "require": "./Allythreads/RegisterId.cjs",
+      "default": "./Allythreads/RegisterId.js"
     },
-    "./Parathreads/RegisterThread": {
-      "require": "./Parathreads/RegisterThread.cjs",
-      "default": "./Parathreads/RegisterThread.js"
+    "./Allythreads/RegisterThread": {
+      "require": "./Allythreads/RegisterThread.cjs",
+      "default": "./Allythreads/RegisterThread.js"
     },
     "./Proposals": {
       "require": "./Proposals/index.cjs",

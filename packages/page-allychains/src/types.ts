@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import type BN from 'bn.js';
-import type { AccountId, AuctionIndex, BalanceOf, BlockNumber, FundInfo, HrmpChannel, HrmpChannelId, LeasePeriodOf, AllychainProposal, ParaId, ParaInfo, SessionIndex } from '@axia-js/types/interfaces';
+import type { AccountId, AuctionIndex, BalanceOf, BlockNumber, FundInfo, HrmpChannel, HrmpChannelId, LeasePeriodOf, AllychainProposal, AllyId, ParaInfo, SessionIndex } from '@axia-js/types/interfaces';
 
 export type ChannelMap = Record<string, [HrmpChannelId, HrmpChannel][]>;
 
@@ -18,7 +18,7 @@ export interface LeaseInfo {
 }
 
 export interface QueuedAction {
-  paraIds: ParaId[];
+  allyIds: AllyId[];
   sessionIndex: BN;
 }
 
@@ -29,14 +29,14 @@ export interface AuctionInfo {
 }
 
 export interface ProposalExt {
-  id: ParaId;
+  id: AllyId;
   isApproved: boolean;
   isScheduled: boolean;
   proposal?: AllychainProposal;
 }
 
 export interface ScheduledProposals {
-  scheduledIds: ParaId[];
+  scheduledIds: AllyId[];
   sessionIndex: SessionIndex;
 }
 
@@ -63,14 +63,14 @@ export interface LeasePeriod {
 }
 
 export interface Proposals {
-  approvedIds: ParaId[];
-  proposalIds: ParaId[];
+  approvedIds: AllyId[];
+  proposalIds: AllyId[];
   scheduled: ScheduledProposals[];
 }
 
 export interface OwnedIdPartial {
   manager: string;
-  paraId: ParaId;
+  allyId: AllyId;
   paraInfo: ParaInfo;
 }
 
@@ -80,7 +80,7 @@ export interface OwnedId extends OwnedIdPartial {
 
 export interface OwnerInfo {
   accountId: string | null;
-  paraId: number;
+  allyId: number;
 }
 
 export interface WinnerData {
@@ -89,7 +89,7 @@ export interface WinnerData {
   isCrowdloan: boolean;
   key: string;
   lastSlot: BN;
-  paraId: ParaId;
+  allyId: AllyId;
   value: BN;
 }
 

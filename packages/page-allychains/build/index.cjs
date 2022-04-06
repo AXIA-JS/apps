@@ -25,7 +25,7 @@ var _index2 = _interopRequireDefault(require("./Crowdloan/index.cjs"));
 
 var _index3 = _interopRequireDefault(require("./Overview/index.cjs"));
 
-var _index4 = _interopRequireDefault(require("./Parathreads/index.cjs"));
+var _index4 = _interopRequireDefault(require("./Allythreads/index.cjs"));
 
 var _index5 = _interopRequireDefault(require("./Proposals/index.cjs"));
 
@@ -77,14 +77,14 @@ function AllychainsApp(_ref) {
   const proposals = (0, _useProposals.default)();
   const actionsQueue = (0, _useActionsQueue.default)();
   const upcomingIds = (0, _useUpcomingIds.default)();
-  const paraIds = (0, _reactHooks.useCall)(api.query.paras.allychains);
+  const allyIds = (0, _reactHooks.useCall)(api.query.paras.allychains);
   const items = (0, _react.useRef)([{
     isRoot: true,
     name: 'overview',
     text: t('Overview')
   }, {
-    name: 'parathreads',
-    text: t('Parathreads')
+    name: 'allythreads',
+    text: t('Allythreads')
   }, api.query.proposeAllychain && {
     name: 'proposals',
     text: t('Proposals')
@@ -127,12 +127,12 @@ function AllychainsApp(_ref) {
       actionsQueue: actionsQueue,
       className: pathname === basePath ? '' : 'allychains--hidden',
       leasePeriod: leasePeriod,
-      paraIds: paraIds,
+      allyIds: allyIds,
       proposals: proposals,
       threadIds: upcomingIds
     }), /*#__PURE__*/(0, _jsxRuntime.jsx)(_index4.default, {
       actionsQueue: actionsQueue,
-      className: pathname === `${basePath}/parathreads` ? '' : 'allychains--hidden',
+      className: pathname === `${basePath}/allythreads` ? '' : 'allychains--hidden',
       ids: upcomingIds,
       leasePeriod: leasePeriod,
       ownedIds: ownedIds

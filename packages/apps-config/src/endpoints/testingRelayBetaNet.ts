@@ -32,7 +32,7 @@ export function createBetaNet (t: TFunction): EndpointOption {
       // these are the base chains
       {
         info: 'betanetTick',
-        paraId: 100,
+        allyId: 100,
         text: t('rpc.betanet.tick', 'Tick', { ns: 'apps-config' }),
         providers: {
           AXIA: 'wss://tick-rpc.axia.io'
@@ -40,7 +40,7 @@ export function createBetaNet (t: TFunction): EndpointOption {
       },
       {
         info: 'betanetTrick',
-        paraId: 110,
+        allyId: 110,
         text: t('rpc.betanet.trick', 'Trick', { ns: 'apps-config' }),
         providers: {
           AXIA: 'wss://trick-rpc.axia.io'
@@ -48,7 +48,7 @@ export function createBetaNet (t: TFunction): EndpointOption {
       },
       {
         info: 'betanetTrack',
-        paraId: 120,
+        allyId: 120,
         text: t('rpc.betanet.track', 'Track', { ns: 'apps-config' }),
         providers: {
           AXIA: 'wss://track-rpc.axia.io'
@@ -56,7 +56,7 @@ export function createBetaNet (t: TFunction): EndpointOption {
       },
       {
         info: 'betanetStatemint',
-        paraId: 1000,
+        allyId: 1000,
         text: t('rpc.betanet.statemint', 'Statemint', { ns: 'apps-config' }),
         providers: {
           AXIA: 'wss://statemint-betanet-rpc.axia.io'
@@ -66,7 +66,7 @@ export function createBetaNet (t: TFunction): EndpointOption {
       {
         info: 'betanetApron',
         isDisabled: true, // BetaNet reset
-        paraId: 2048,
+        allyId: 2048,
         text: t('rpc.betanet.apron', 'Apron PC1', { ns: 'apps-config' }),
         providers: {
           'Apron Network': 'wss://betanet.apron.network'
@@ -75,7 +75,7 @@ export function createBetaNet (t: TFunction): EndpointOption {
       {
         info: 'betanetAres',
         isDisabled: true, // BetaNet reset
-        paraId: 1006,
+        allyId: 1006,
         text: t('rpc.betanet.ares', 'Ares PC1', { ns: 'apps-config' }),
         providers: {
           'Ares Protocol': 'wss://betanet.allychain.aresprotocol.com'
@@ -84,7 +84,7 @@ export function createBetaNet (t: TFunction): EndpointOption {
       {
         info: 'betanetBifrost',
         isDisabled: true, // BetaNet reset
-        paraId: 1024,
+        allyId: 1024,
         text: t('rpc.betanet.bifrost', 'Bifrost PC1', { ns: 'apps-config' }),
         providers: {
           Bifrost: 'wss://betanet-1.testnet.liebi.com'
@@ -93,7 +93,7 @@ export function createBetaNet (t: TFunction): EndpointOption {
       {
         info: 'betanetBitCountry',
         isDisabled: true, // BetaNet reset
-        paraId: 1008,
+        allyId: 1008,
         text: t('rpc.betanet.bitcountry', 'Bit.Country PC1', { ns: 'apps-config' }),
         providers: {
           BitCountry: 'wss://tewai-allychain.bit.country:9955'
@@ -102,7 +102,7 @@ export function createBetaNet (t: TFunction): EndpointOption {
       {
         info: 'betanetClover',
         isDisabled: true, // BetaNet reset
-        paraId: 229,
+        allyId: 229,
         text: t('rpc.betanet.clover', 'Clover PC1', { ns: 'apps-config' }),
         providers: {
           Clover: 'wss://api-betanet.clover.finance'
@@ -111,7 +111,7 @@ export function createBetaNet (t: TFunction): EndpointOption {
       {
         info: 'betanetCrab',
         isDisabled: true, // BetaNet reset
-        paraId: 9,
+        allyId: 9,
         text: t('rpc.betanet.crab', 'Darwinia Crab PC2', { ns: 'apps-config' }),
         providers: {
           Darwinia: 'wss://crab-pc2-rpc.darwinia.network'
@@ -120,7 +120,7 @@ export function createBetaNet (t: TFunction): EndpointOption {
       {
         info: 'betanetCrust',
         isDisabled: true, // BetaNet reset
-        paraId: 2001,
+        allyId: 2001,
         text: t('rpc.betanet.crust', 'Crust PC1', { ns: 'apps-config' }),
         providers: {
           Crust: 'wss://api-betanet.crust.network'
@@ -129,7 +129,7 @@ export function createBetaNet (t: TFunction): EndpointOption {
       {
         info: 'betanetChainX',
         isDisabled: true, // BetaNet reset
-        paraId: 1059,
+        allyId: 1059,
         text: t('rpc.betanet.chainx', 'ChainX PC1', { ns: 'apps-config' }),
         providers: {
           ChainX: 'wss://sherpax.chainx.org'
@@ -138,7 +138,7 @@ export function createBetaNet (t: TFunction): EndpointOption {
       {
         info: 'betanetDarwinia',
         isDisabled: true, // BetaNet reset
-        paraId: 18,
+        allyId: 18,
         text: t('rpc.betanet.darwinia', 'Darwinia PC2', { ns: 'apps-config' }),
         providers: {
           Darwinia: 'wss://pc2-rpc.darwinia.network'
@@ -147,7 +147,7 @@ export function createBetaNet (t: TFunction): EndpointOption {
       {
         info: 'betanetDataHighway',
         isDisabled: true, // BetaNet reset
-        paraId: 2,
+        allyId: 2,
         text: t('rpc.betanet.datahighway', 'DataHighway', { ns: 'apps-config' }),
         providers: {
           DataHighway: 'wss://spreehafen.datahighway.com'
@@ -156,7 +156,7 @@ export function createBetaNet (t: TFunction): EndpointOption {
       {
         info: 'betanetEave',
         isDisabled: true, // BetaNet reset
-        paraId: 2003,
+        allyId: 2003,
         text: t('rpc.betanet.eave', 'Steam PC', { ns: 'apps-config' }),
         providers: {
           EAVE: 'wss://steamcollator.eave.network'
@@ -165,7 +165,7 @@ export function createBetaNet (t: TFunction): EndpointOption {
       {
         info: 'betanetEncointer',
         isDisabled: true, // BetaNet reset
-        paraId: 1862,
+        allyId: 1862,
         text: t('rpc.betanet.encointer', 'Encointer PC1', { ns: 'apps-config' }),
         providers: {
           Encointer: 'wss://betanet.encointer.org'
@@ -174,7 +174,7 @@ export function createBetaNet (t: TFunction): EndpointOption {
       {
         info: 'betanetGalital',
         isDisabled: true, // BetaNet reset
-        paraId: 1230,
+        allyId: 1230,
         text: t('rpc.betanet.galital', 'Galital PC1', { ns: 'apps-config' }),
         providers: {
           StarkleyTech: 'wss://galital-rpc.starkleytech.com'
@@ -183,7 +183,7 @@ export function createBetaNet (t: TFunction): EndpointOption {
       {
         info: 'betanetGenshiro',
         isDisabled: true, // BetaNet reset
-        paraId: 2021,
+        allyId: 2021,
         text: t('rpc.betanet.genshiro', 'Genshiro', { ns: 'apps-config' }),
         providers: {
           Equilibrium: 'wss://gens-betanet.equilibrium.io'
@@ -192,7 +192,7 @@ export function createBetaNet (t: TFunction): EndpointOption {
       {
         info: 'betanetHalongbay',
         isDisabled: true, // BetaNet reset
-        paraId: 2018,
+        allyId: 2018,
         text: t('rpc.betanet.halongbay', 'Halongbay', { ns: 'apps-config' }),
         providers: {
           Halongbay: 'wss://halongbay.polkafoundry.com'
@@ -201,7 +201,7 @@ export function createBetaNet (t: TFunction): EndpointOption {
       {
         info: 'betanetHydrate',
         isDisabled: true, // BetaNet reset
-        paraId: 82406,
+        allyId: 82406,
         text: t('rpc.betanet.hydrate', 'Hydrate', { ns: 'apps-config' }),
         providers: {
           HydraDX: 'wss://hydrate-rpc.hydradx.io:9944'
@@ -210,7 +210,7 @@ export function createBetaNet (t: TFunction): EndpointOption {
       {
         info: 'betanetIdavoll',
         isDisabled: true, // BetaNet reset
-        paraId: 7766,
+        allyId: 7766,
         text: t('rpc.betanet.idavoll', 'Idavoll', { ns: 'apps-config' }),
         providers: {
           Idavoll: 'wss://betanet.idavoll.network'
@@ -219,7 +219,7 @@ export function createBetaNet (t: TFunction): EndpointOption {
       {
         info: 'betanetIntegritee',
         isDisabled: true, // BetaNet reset
-        paraId: 1983,
+        allyId: 1983,
         text: t('rpc.betanet.integritee', 'Integritee PC1', { ns: 'apps-config' }),
         providers: {
           SCS: 'wss://betanet.integritee.network'
@@ -228,7 +228,7 @@ export function createBetaNet (t: TFunction): EndpointOption {
       {
         info: 'betanetInterBTC',
         isDisabled: true, // BetaNet reset
-        paraId: 2088,
+        allyId: 2088,
         text: t('rpc.betanet.interbtc', 'InterBTC PC1', { ns: 'apps-config' }),
         providers: {
           Interlay: 'wss://api-betanet.interlay.io/allychain'
@@ -237,7 +237,7 @@ export function createBetaNet (t: TFunction): EndpointOption {
       {
         info: 'betanetKilt',
         isDisabled: true, // BetaNet reset
-        paraId: 12623,
+        allyId: 12623,
         text: t('rpc.betanet.kilt', 'KILT PC1', { ns: 'apps-config' }),
         providers: {
           'KILT Protocol': 'wss://para.betanet-v1.kilt.io'
@@ -246,7 +246,7 @@ export function createBetaNet (t: TFunction): EndpointOption {
       {
         info: 'betanetKonomi',
         isDisabled: true, // BetaNet reset
-        paraId: 18403,
+        allyId: 18403,
         text: t('rpc.betanet.konomi', 'Komomi Network', { ns: 'apps-config' }),
         providers: {
           'Konomi Network': 'wss://betanet.konomi.tech'
@@ -255,7 +255,7 @@ export function createBetaNet (t: TFunction): EndpointOption {
       {
         info: 'betanetKylin',
         isDisabled: true, // BetaNet reset
-        paraId: 2013,
+        allyId: 2013,
         text: t('rpc.kylin-node.co.uk', 'Kylin Network', { ns: 'apps-config' }),
         providers: {
           'Kylin Network': 'wss://rpc.kylin-node.co.uk'
@@ -264,7 +264,7 @@ export function createBetaNet (t: TFunction): EndpointOption {
       {
         info: 'betanetSingLavender',
         isDisabled: true, // BetaNet reset
-        paraId: 2104,
+        allyId: 2104,
         text: t('rpc.betanet.singlavender', 'Lavender by SingNetwork', { ns: 'apps-config' }),
         providers: {
           SingNetwork: 'wss://rpc-lavender.singnetwork.io'
@@ -273,7 +273,7 @@ export function createBetaNet (t: TFunction): EndpointOption {
       {
         info: 'betanetLitentry',
         isDisabled: true, // BetaNet reset
-        paraId: 1984,
+        allyId: 1984,
         text: t('rpc.rocco.litentry', 'Litentry Rostock', { ns: 'apps-config' }),
         providers: {
           Litentry: 'wss://betanetv1.litentry.io'
@@ -282,7 +282,7 @@ export function createBetaNet (t: TFunction): EndpointOption {
       {
         info: 'betanetLoomNetwork',
         isDisabled: true, // BetaNet reset
-        paraId: 2043,
+        allyId: 2043,
         text: t('rpc.betanet.loomnetwork', 'Loom Network', { ns: 'apps-config' }),
         providers: {
           LoomNetwork: 'wss://betanet.dappchains.com'
@@ -291,7 +291,7 @@ export function createBetaNet (t: TFunction): EndpointOption {
       {
         info: 'betanetAcala',
         isDisabled: true, // BetaNet reset
-        paraId: 1000,
+        allyId: 1000,
         text: t('rpc.betanet.acala', 'Mandala PC2', { ns: 'apps-config' }),
         providers: {
           Acala: 'wss://betanet-1.acala.laminar.one'
@@ -300,7 +300,7 @@ export function createBetaNet (t: TFunction): EndpointOption {
       {
         info: 'betanetMathChain',
         isDisabled: true, // BetaNet reset
-        paraId: 40,
+        allyId: 40,
         text: t('rpc.betanet.mathchain', 'MathChain PC1', { ns: 'apps-config' }),
         providers: {
           MathWallet: 'wss://testpara.maiziqianbao.net/ws'
@@ -309,7 +309,7 @@ export function createBetaNet (t: TFunction): EndpointOption {
       {
         info: 'betanetManta',
         isDisabled: true, // BetaNet reset
-        paraId: 2021,
+        allyId: 2021,
         text: t('rpc.betanet.manta', 'Manta PC1', { ns: 'apps-config' }),
         providers: {
           Manta: 'wss://betanet.manta.network'
@@ -318,7 +318,7 @@ export function createBetaNet (t: TFunction): EndpointOption {
       {
         info: 'betanetMoonrock',
         isDisabled: true, // BetaNet reset
-        paraId: 1286,
+        allyId: 1286,
         text: t('rpc.betanet.moonrock', 'Moonrock', { ns: 'apps-config' }),
         providers: {
           Moonrock: 'wss://wss-moonrock.gcp.purestake.run'
@@ -327,7 +327,7 @@ export function createBetaNet (t: TFunction): EndpointOption {
       {
         info: 'betanetOriginTrail',
         isDisabled: true, // BetaNet reset
-        paraId: 2037,
+        allyId: 2037,
         text: t('rpc.betanet.origintrail', 'OriginTrail Allychain', { ns: 'apps-config' }),
         providers: {
           'Trace Labs': 'wss://axia-js-second.origin-trail.network'
@@ -336,7 +336,7 @@ export function createBetaNet (t: TFunction): EndpointOption {
       {
         info: 'betanetParami',
         isDisabled: true, // BetaNet reset
-        paraId: 18888,
+        allyId: 18888,
         text: t('rpc.betanet.parami', 'Parami PC2', { ns: 'apps-config' }),
         providers: {
           Parami: 'wss://betanet.parami.io'
@@ -345,7 +345,7 @@ export function createBetaNet (t: TFunction): EndpointOption {
       {
         info: 'betanetJupiter',
         isDisabled: true, // BetaNet reset
-        paraId: 1010,
+        allyId: 1010,
         text: t('rpc.betanet.jupiter', 'Patract Jupiter PC1', { ns: 'apps-config' }),
         providers: {
           jupiter: 'wss://ws.betanet.jupiter.patract.cn'
@@ -354,7 +354,7 @@ export function createBetaNet (t: TFunction): EndpointOption {
       {
         info: 'betanetPhala',
         isDisabled: true, // BetaNet reset
-        paraId: 1030,
+        allyId: 1030,
         text: t('rpc.betanet.phala', 'Phala PC1', { ns: 'apps-config' }),
         providers: {
           Phala: 'wss://betanetv1.phala.network/ws'
@@ -363,7 +363,7 @@ export function createBetaNet (t: TFunction): EndpointOption {
       {
         info: 'betanetPhoenix',
         isDisabled: true, // BetaNet reset
-        paraId: 6806,
+        allyId: 6806,
         text: t('rpc.betanet.phoenix', 'PHOENIX PC1', { ns: 'apps-config' }),
         providers: {
           'PHOENIX Protocol': 'wss://phoenix-ws.coinid.pro'
@@ -372,7 +372,7 @@ export function createBetaNet (t: TFunction): EndpointOption {
       {
         info: 'betanetPlasm',
         isDisabled: true, // BetaNet reset
-        paraId: 5000,
+        allyId: 5000,
         text: t('rpc.betanet.plasm', 'Plasm PC2', { ns: 'apps-config' }),
         providers: {
           PlasmNetwork: 'wss://rpc.betanet.plasmnet.io'
@@ -381,7 +381,7 @@ export function createBetaNet (t: TFunction): EndpointOption {
       {
         info: 'betanetPolkaFoundry',
         isDisabled: true, // BetaNet reset
-        paraId: 1111,
+        allyId: 1111,
         text: t('rpc.betanet.polkafoundry', 'PolkaFoundry PC1', { ns: 'apps-config' }),
         providers: {
           PolkaFoundry: 'wss://betanet.polkafoundry.com'
@@ -390,7 +390,7 @@ export function createBetaNet (t: TFunction): EndpointOption {
       {
         info: 'betanetPrism',
         isDisabled: true, // BetaNet reset
-        paraId: 2002,
+        allyId: 2002,
         text: t('rpc.betanet.prism', 'Prism PC1', { ns: 'apps-config' }),
         providers: {
           Prism: 'wss://betanet.psm.link'
@@ -399,7 +399,7 @@ export function createBetaNet (t: TFunction): EndpointOption {
       {
         info: 'betanetRobonomics',
         isDisabled: true, // BetaNet reset
-        paraId: 3000,
+        allyId: 3000,
         text: t('rpc.betanet.robonomics', 'Robonomics PC2', { ns: 'apps-config' }),
         providers: {
           Airalab: 'wss://betanet.allychain.robonomics.network'
@@ -408,7 +408,7 @@ export function createBetaNet (t: TFunction): EndpointOption {
       {
         info: 'betanetStandard',
         isDisabled: true,
-        paraId: 2003,
+        allyId: 2003,
         text: t('rpc.betanet.standard', 'Standard', { ns: 'apps-config' }),
         providers: {
           'Standard Protocol': 'wss://rpc.betanet.standard.tech'
@@ -417,7 +417,7 @@ export function createBetaNet (t: TFunction): EndpointOption {
       {
         info: 'betanetSubDAO',
         isDisabled: true, // BetaNet reset
-        paraId: 888,
+        allyId: 888,
         text: t('rpc.betanet.subdao', 'SubDAO PC1', { ns: 'apps-config' }),
         providers: {
           SubDAONetwork: 'wss://allychain.subdao.network'
@@ -426,7 +426,7 @@ export function createBetaNet (t: TFunction): EndpointOption {
       {
         info: 'betanetSubsocial',
         isDisabled: true, // BetaNet reset
-        paraId: 28,
+        allyId: 28,
         text: t('rpc.betanet.subsocial', 'Subsocial PC1', { ns: 'apps-config' }),
         providers: {
           DappForce: 'wss://roc.subsocial.network'
@@ -435,7 +435,7 @@ export function createBetaNet (t: TFunction): EndpointOption {
       {
         info: 'betanetTrustBase',
         isDisabled: true, // BetaNet reset
-        paraId: 6633,
+        allyId: 6633,
         text: t('rpc.betanet.trustbase', 'TrustBase PC1', { ns: 'apps-config' }),
         providers: {
           TrustBase: 'wss://betanet.trustednodes.net'
@@ -444,7 +444,7 @@ export function createBetaNet (t: TFunction): EndpointOption {
       {
         info: 'betanetUnitv',
         isDisabled: true, // BetaNet reset
-        paraId: 3,
+        allyId: 3,
         text: t('rpc.betanet.unitv', 'Unit Network', { ns: 'apps-config' }),
         providers: {
           'Unit Network': 'wss://unitp.io'
@@ -453,7 +453,7 @@ export function createBetaNet (t: TFunction): EndpointOption {
       {
         info: 'betanetVln',
         isDisabled: true, // BetaNet reset
-        paraId: 2007,
+        allyId: 2007,
         text: t('rpc.betanet.vln', 'Valibre Network PC', { ns: 'apps-config' }),
         providers: {
           Valibre: 'wss://testnet.valibre.dev'
@@ -462,7 +462,7 @@ export function createBetaNet (t: TFunction): EndpointOption {
       {
         info: 'betanetZeitgeist',
         isDisabled: true, // See https://github.com/axia-js/apps/issues/5842
-        paraId: 2050,
+        allyId: 2050,
         text: t('rpc.betanet.zeitgeist', 'Zeitgeist PC', { ns: 'apps-config' }),
         providers: {
           Zeitgeist: 'wss://roc.zeitgeist.pm'
@@ -471,7 +471,7 @@ export function createBetaNet (t: TFunction): EndpointOption {
       {
         info: 'betanetZenlink',
         isDisabled: true, // BetaNet reset
-        paraId: 1188,
+        allyId: 1188,
         text: t('rpc.betanet.zenlink', 'Zenlink PC1', { ns: 'apps-config' }),
         providers: {
           Zenlink: 'wss://betanet-allychain.zenlink.pro'

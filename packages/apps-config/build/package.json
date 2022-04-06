@@ -29,7 +29,7 @@
     "@zeitgeistpm/type-defs": "0.2.10",
     "@zeroio/type-definitions": "0.0.6",
     "lodash": "^4.17.21",
-    "moonbeam-types-bundle": "1.2.6",
+    "axtend-types-bundle": "0.1.0",
     "pontem-types-bundle": "1.0.14",
     "rxjs": "^7.3.0"
   },
@@ -293,9 +293,9 @@
       "require": "./api/spec/manta.cjs",
       "default": "./api/spec/manta.js"
     },
-    "./api/spec/moonbeam": {
-      "require": "./api/spec/moonbeam.cjs",
-      "default": "./api/spec/moonbeam.js"
+    "./api/spec/axtend": {
+      "require": "./api/spec/axtend.cjs",
+      "default": "./api/spec/axtend.js"
     },
     "./api/spec/mybank": {
       "require": "./api/spec/mybank.cjs",
@@ -720,7 +720,7 @@
     "./ui/logos/nodes/loom_network.png": "./ui/logos/nodes/loom_network.png",
     "./ui/logos/nodes/manta.png": "./ui/logos/nodes/manta.png",
     "./ui/logos/nodes/math.svg": "./ui/logos/nodes/math.svg",
-    "./ui/logos/nodes/moonbeam.png": "./ui/logos/nodes/moonbeam.png",
+    "./ui/logos/nodes/axtend.png": "./ui/logos/nodes/axtend.png",
     "./ui/logos/nodes/moonriver.svg": "./ui/logos/nodes/moonriver.svg",
     "./ui/logos/nodes/moonrock.png": "./ui/logos/nodes/moonrock.png",
     "./ui/logos/nodes/moonshadow.png": "./ui/logos/nodes/moonshadow.png",

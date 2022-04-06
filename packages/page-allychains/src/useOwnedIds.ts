@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import type { Option, StorageKey } from '@axia-js/types';
-import type { Hash, ParaId, ParaInfo } from '@axia-js/types/interfaces';
+import type { Hash, AllyId, ParaInfo } from '@axia-js/types/interfaces';
 import type { OwnedId, OwnedIdPartial } from './types';
 
 import { useMemo } from 'react';
@@ -11,17 +11,17 @@ import { useAccounts, useApi, useCall, useEventTrigger, useMapEntries } from '@a
 
 interface CodeHash {
   hash: Hash | null;
-  paraId: ParaId;
+  allyId: AllyId;
 }
 
 interface Owned {
-  ids: ParaId[];
+  ids: AllyId[];
   owned: OwnedIdPartial[];
 }
 
-function extractIds (entries: [StorageKey<[ParaId]>, Option<ParaInfo>][]): Owned {
+function extractIds (entries: [StorageKey<[AllyId]>, Option<ParaInfo>][]): Owned {
   const owned = entries
-    .map(([{ args: [paraId] }, optInfo]): OwnedIdPartial | null => {
+    .map(([{ args: [allyId] }, optInfo]): OwnedIdPartial | null => {
       if (optInfo.isNone) {
         return null;
       }
@@ -30,23 +30,23 @@ function extractIds (entries: [StorageKey<[ParaId]>, Option<ParaInfo>][]): Owned
 
       return {
         manager: paraInfo.manager.toString(),
-        paraId,
+        allyId,
         paraInfo
       };
     })
     .filter((id): id is OwnedIdPartial => !!id);
 
   return {
-    ids: owned.map(({ paraId }) => paraId),
+    ids: owned.map(({ allyId }) => allyId),
     owned
   };
 }
 
 const hashesOption = {
-  transform: ([[paraIds], optHashes]: [[ParaId[]], Option<Hash>[]]) =>
-    paraIds.map((paraId, index): CodeHash => ({
+  transform: ([[allyIds], optHashes]: [[AllyId[]], Option<Hash>[]]) =>
+    allyIds.map((allyId, index): CodeHash => ({
       hash: optHashes[index].unwrapOr(null),
-      paraId
+      allyId
     })),
   withParamsTransform: true
 };
@@ -64,7 +64,7 @@ export default function useOwnedIds (): OwnedId[] {
         .filter((id) => allAccounts.some((a) => a === id.manager))
         .map((data): OwnedId => ({
           ...data,
-          hasCode: hashes.some(({ hash, paraId }) => !!hash && paraId.eq(data.paraId))
+          hasCode: hashes.some(({ hash, allyId }) => !!hash && allyId.eq(data.allyId))
         }))
       : [],
     [allAccounts, hashes, unfiltered]

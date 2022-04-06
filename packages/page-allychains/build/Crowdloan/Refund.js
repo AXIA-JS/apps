@@ -10,7 +10,7 @@ import { Fragment as _Fragment } from "react/jsx-runtime";
 
 function Refund({
   className,
-  paraId
+  allyId
 }) {
   const {
     t
@@ -50,7 +50,7 @@ function Refund({
           icon: "credit-card",
           label: t('Refund'),
           onStart: toggleOpen,
-          params: [paraId],
+          params: [allyId],
           tx: api.tx.crowdloan.refund
         })
       })]

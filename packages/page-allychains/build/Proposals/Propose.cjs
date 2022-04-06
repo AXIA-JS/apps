@@ -63,7 +63,7 @@ function Propose(_ref2) {
   } = (0, _reactHooks.useApi)();
   const [accountId, setAccountId] = (0, _react.useState)(null);
   const [name, setName] = (0, _react.useState)('');
-  const [paraId, setParaId] = (0, _react.useState)();
+  const [allyId, setAllyId] = (0, _react.useState)();
   const [balance, setBalance] = (0, _react.useState)(() => _util.BN_THOUSAND.mul(_util.BN_TEN.pow(new _bn.default(api.registry.chainDecimals[0]))));
   const [validators, setValidators] = (0, _react.useState)(['']);
   const [{
@@ -114,7 +114,7 @@ function Propose(_ref2) {
         }), /*#__PURE__*/(0, _jsxRuntime.jsx)(_reactComponents.InputNumber, {
           isZeroable: false,
           label: t('requested id'),
-          onChange: setParaId
+          onChange: setAllyId
         }), /*#__PURE__*/(0, _jsxRuntime.jsx)(_reactComponents.InputBalance, {
           defaultValue: balance,
           label: t('initial balance'),
@@ -162,9 +162,9 @@ function Propose(_ref2) {
       children: /*#__PURE__*/(0, _jsxRuntime.jsx)(_reactComponents.TxButton, {
         accountId: accountId,
         icon: "plus",
-        isDisabled: !isWasmValid || !genesisState || !isNameValid || !validators.length || !(paraId !== null && paraId !== void 0 && paraId.gt(_util.BN_ZERO)),
+        isDisabled: !isWasmValid || !genesisState || !isNameValid || !validators.length || !(allyId !== null && allyId !== void 0 && allyId.gt(_util.BN_ZERO)),
         onStart: onClose,
-        params: [paraId, name, wasm, genesisState, validators, balance],
+        params: [allyId, name, wasm, genesisState, validators, balance],
         tx: (_api$tx$proposeAllych = api.tx.proposeAllychain) === null || _api$tx$proposeAllych === void 0 ? void 0 : _api$tx$proposeAllych.proposeAllychain
       })
     })]

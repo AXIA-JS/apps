@@ -18,11 +18,11 @@ function extractRelayEndpoints(genesisHash) {
   }) => genesisHash === genesisHashRelay);
 }
 
-function extractParaEndpoints(allEndpoints, paraId) {
-  const numId = bnToBn(paraId).toNumber();
+function extractParaEndpoints(allEndpoints, allyId) {
+  const numId = bnToBn(allyId).toNumber();
   return allEndpoints.filter(({
-    paraId
-  }) => paraId === numId);
+    allyId
+  }) => allyId === numId);
 }
 
 export function useRelayEndpoints() {
@@ -31,9 +31,9 @@ export function useRelayEndpoints() {
   } = useApi();
   return useMemo(() => extractRelayEndpoints(api.genesisHash.toHex()), [api]);
 }
-export function useParaEndpoints(paraId) {
+export function useParaEndpoints(allyId) {
   const endpoints = useRelayEndpoints();
-  return useMemo(() => extractParaEndpoints(endpoints, paraId), [endpoints, paraId]);
+  return useMemo(() => extractParaEndpoints(endpoints, allyId), [endpoints, allyId]);
 }
 export function useIsParasLinked(ids) {
   const endpoints = useRelayEndpoints();

@@ -49,7 +49,7 @@ function Propose ({ className, onClose }: Props): React.ReactElement<Props> {
   const { api } = useApi();
   const [accountId, setAccountId] = useState<string | null>(null);
   const [name, setName] = useState('');
-  const [paraId, setParaId] = useState<BN | undefined>();
+  const [allyId, setAllyId] = useState<BN | undefined>();
   const [balance, setBalance] = useState(() => BN_THOUSAND.mul(BN_TEN.pow(new BN(api.registry.chainDecimals[0]))));
   const [validators, setValidators] = useState<string[]>(['']);
   const [{ isWasmValid, wasm }, setWasm] = useState<CodeState>({ isWasmValid: false, wasm: null });
@@ -110,7 +110,7 @@ function Propose ({ className, onClose }: Props): React.ReactElement<Props> {
           <InputNumber
             isZeroable={false}
             label={t<string>('requested id')}
-            onChange={setParaId}
+            onChange={setAllyId}
           />
           <InputBalance
             defaultValue={balance}
@@ -168,9 +168,9 @@ function Propose ({ className, onClose }: Props): React.ReactElement<Props> {
         <TxButton
           accountId={accountId}
           icon='plus'
-          isDisabled={!isWasmValid || !genesisState || !isNameValid || !validators.length || !paraId?.gt(BN_ZERO)}
+          isDisabled={!isWasmValid || !genesisState || !isNameValid || !validators.length || !allyId?.gt(BN_ZERO)}
           onStart={onClose}
-          params={[paraId, name, wasm, genesisState, validators, balance]}
+          params={[allyId, name, wasm, genesisState, validators, balance]}
           tx={api.tx.proposeAllychain?.proposeAllychain}
         />
       </Modal.Actions>

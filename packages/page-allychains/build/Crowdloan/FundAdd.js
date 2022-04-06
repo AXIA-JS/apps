@@ -12,7 +12,7 @@ import { Fragment as _Fragment } from "react/jsx-runtime";
 import { jsxs as _jsxs } from "react/jsx-runtime";
 const EMPTY_OWNER = {
   accountId: null,
-  paraId: 0
+  allyId: 0
 };
 
 function FundAdd({
@@ -31,7 +31,7 @@ function FundAdd({
   const ranges = useLeaseRanges();
   const [{
     accountId,
-    paraId
+    allyId
   }, setOwnerInfo] = useState(EMPTY_OWNER);
   const [cap, setCap] = useState();
   const [endBlock, setEndBlock] = useState();
@@ -101,10 +101,10 @@ function FundAdd({
         children: /*#__PURE__*/_jsx(TxButton, {
           accountId: accountId,
           icon: "plus",
-          isDisabled: !paraId || !(cap !== null && cap !== void 0 && cap.gt(BN_ZERO)) || isEndError || isFirstError || isLastError,
+          isDisabled: !allyId || !(cap !== null && cap !== void 0 && cap.gt(BN_ZERO)) || isEndError || isFirstError || isLastError,
           label: t('Add'),
           onStart: toggleOpen,
-          params: [paraId, cap, firstSlot, lastSlot, endBlock, null],
+          params: [allyId, cap, firstSlot, lastSlot, endBlock, null],
           tx: api.tx.crowdloan.create
         })
       })]

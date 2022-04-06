@@ -40,7 +40,7 @@ function Summary(_ref) {
         children: (0, _util.formatNumber)(allychainCount)
       }), (0, _util.isNumber)(upcomingCount) && /*#__PURE__*/(0, _jsxRuntime.jsx)(_reactComponents.CardSummary, {
         className: "media--1000",
-        label: t('parathreads'),
+        label: t('allythreads'),
         children: (0, _util.formatNumber)(upcomingCount)
       }), (0, _util.isNumber)(proposalCount) && /*#__PURE__*/(0, _jsxRuntime.jsx)(_reactComponents.CardSummary, {
         className: "media--1000",

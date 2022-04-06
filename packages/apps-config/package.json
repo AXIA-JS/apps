@@ -28,8 +28,8 @@
     "@subsocial/types": "0.6.2",
     "@zeitgeistpm/type-defs": "0.2.10",
     "@zeroio/type-definitions": "0.0.6",
+    "axtend-types-bundle": "0.1.0",
     "lodash": "^4.17.21",
-    "moonbeam-types-bundle": "1.2.6",
     "pontem-types-bundle": "1.0.14",
     "rxjs": "^7.3.0"
   },

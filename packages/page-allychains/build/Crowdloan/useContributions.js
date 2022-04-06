@@ -17,7 +17,7 @@ const NO_CONTRIB = {
   myAccountsHex: [],
   myContributions: {}
 };
-export default function useContributions(paraId) {
+export default function useContributions(allyId) {
   const {
     api
   } = useApi();
@@ -25,8 +25,8 @@ export default function useContributions(paraId) {
     allAccountsHex
   } = useAccounts();
   const [state, setState] = useState(() => NO_CONTRIB);
-  const derive = useCall(api.derive.crowdloan.contributions, [paraId]);
-  const myContributions = useCall(api.derive.crowdloan.ownContributions, [paraId, state.myAccountsHex]);
+  const derive = useCall(api.derive.crowdloan.contributions, [allyId]);
+  const myContributions = useCall(api.derive.crowdloan.ownContributions, [allyId, state.myAccountsHex]);
   useEffect(() => {
     derive && setState(prev => {
       let myAccountsHex = derive.contributorsHex.filter(h => allAccountsHex.includes(h));

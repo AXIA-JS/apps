@@ -38,7 +38,7 @@ function createAXIALunar(t) {
     // (2) all common good allychains
     {
       info: 'statemine',
-      paraId: 1000,
+      allyId: 1000,
       text: t('rpc.axialunar.statemine', 'Statemine', {
         ns: 'apps-config'
       }),
@@ -54,7 +54,7 @@ function createAXIALunar(t) {
     {
       info: 'altair',
       homepage: 'https://centrifuge.io/altair',
-      paraId: 2088,
+      allyId: 2088,
       text: t('rpc.axialunar.altair', 'Altair', {
         ns: 'apps-config'
       }),
@@ -65,7 +65,7 @@ function createAXIALunar(t) {
     }, {
       info: 'basilisk',
       homepage: 'https://bsx.fi',
-      paraId: 2090,
+      allyId: 2090,
       text: t('rpc.axialunar.basilisk', 'Basilisk', {
         ns: 'apps-config'
       }),
@@ -76,7 +76,7 @@ function createAXIALunar(t) {
     }, {
       info: 'bifrost',
       homepage: 'https://ksm.vtoken.io/?ref=axiajs',
-      paraId: 2001,
+      allyId: 2001,
       text: t('rpc.axialunar.bifrost', 'Bifrost', {
         ns: 'apps-config'
       }),
@@ -88,7 +88,7 @@ function createAXIALunar(t) {
     }, {
       info: 'calamari',
       homepage: 'https://www.calamari.network/',
-      paraId: 2084,
+      allyId: 2084,
       text: t('rpc.calamari.systems', 'Calamari', {
         ns: 'apps-config'
       }),
@@ -101,7 +101,7 @@ function createAXIALunar(t) {
     }, {
       info: 'shadow',
       homepage: 'https://crust.network/',
-      paraId: 2012,
+      allyId: 2012,
       text: t('rpc.axialunar.shadow', 'Crust Shadow', {
         ns: 'apps-config'
       }),
@@ -112,7 +112,7 @@ function createAXIALunar(t) {
       info: 'encointer_canary',
       homepage: 'https://encointer.org/',
       isUnreachable: true,
-      paraId: 2014,
+      allyId: 2014,
       text: t('rpc.axialunar.encointer', 'Encointer Canary', {
         ns: 'apps-config'
       }),
@@ -123,7 +123,7 @@ function createAXIALunar(t) {
       info: 'genshiro',
       isUnreachable: true,
       homepage: 'https://genshiro.equilibrium.io',
-      paraId: 2089,
+      allyId: 2089,
       text: t('rpc.axialunar.genshiro', 'Genshiro', {
         ns: 'apps-config'
       }),
@@ -133,7 +133,7 @@ function createAXIALunar(t) {
     }, {
       info: 'integritee',
       homepage: 'https://integritee.network',
-      paraId: 2015,
+      allyId: 2015,
       text: t('rpc.axialunar.integritee', 'Integritee Network', {
         ns: 'apps-config'
       }),
@@ -143,7 +143,7 @@ function createAXIALunar(t) {
     }, {
       info: 'karura',
       homepage: 'https://acala.network/karura/join-karura',
-      paraId: 2000,
+      allyId: 2000,
       text: t('rpc.axialunar.karura', 'Karura', {
         ns: 'apps-config'
       }),
@@ -159,7 +159,7 @@ function createAXIALunar(t) {
     }, {
       info: 'khala',
       homepage: 'https://phala.network/',
-      paraId: 2004,
+      allyId: 2004,
       text: t('rpc.axialunar.khala', 'Khala Network', {
         ns: 'apps-config'
       }),
@@ -170,7 +170,7 @@ function createAXIALunar(t) {
     }, {
       info: 'kilt',
       homepage: 'https://www.kilt.io/',
-      paraId: 2086,
+      allyId: 2086,
       text: t('rpc.axialunar.kilt', 'KILT Spiritnet', {
         ns: 'apps-config'
       }),
@@ -183,7 +183,7 @@ function createAXIALunar(t) {
       isUnreachable: true,
       // https://github.com/axia-js/apps/issues/6101
       homepage: 'https://kintsugi.interlay.io/',
-      paraId: 2092,
+      allyId: 2092,
       text: t('rpc.axialunar.kintsugi', 'Kintsugi BTC', {
         ns: 'apps-config'
       }),
@@ -194,7 +194,7 @@ function createAXIALunar(t) {
       info: 'kpron',
       homepage: 'http://apron.network/',
       isUnreachable: true,
-      paraId: 2019,
+      allyId: 2019,
       text: t('rpc.axialunar.kpron', 'Kpron', {
         ns: 'apps-config'
       }),
@@ -206,7 +206,7 @@ function createAXIALunar(t) {
       isUnreachable: true,
       // https://github.com/axia-js/apps/issues/5888
       homepage: 'https://loomx.io/',
-      paraId: 2080,
+      allyId: 2080,
       text: t('rpc.axialunar.loomnetwork', 'Loom Network', {
         ns: 'apps-config'
       }),
@@ -216,7 +216,7 @@ function createAXIALunar(t) {
     }, {
       info: 'mars',
       homepage: 'https://www.aresprotocol.io/',
-      paraId: 2008,
+      allyId: 2008,
       text: t('rpc.axialunar.mars', 'Mars', {
         ns: 'apps-config'
       }),
@@ -225,13 +225,13 @@ function createAXIALunar(t) {
       }
     }, {
       info: 'moonriver',
-      homepage: 'https://moonbeam.foundation/moonriver-crowdloan/',
-      paraId: 2023,
+      homepage: 'https://axtend.foundation/moonriver-crowdloan/',
+      allyId: 2023,
       text: t('rpc.axialunar.moonriver', 'Moonriver', {
         ns: 'apps-config'
       }),
       providers: {
-        PureStake: 'wss://wss.moonriver.moonbeam.network',
+        PureStake: 'wss://wss.moonriver.axtend.network',
         OnFinality: 'wss://moonriver.api.onfinality.io/public-ws',
         Pinknode: 'wss://rpc.pinknode.io/moonriver/explorer',
         'Patract Elara': 'wss://pub.elara.patract.io/moonriver'
@@ -239,7 +239,7 @@ function createAXIALunar(t) {
     }, {
       info: 'heiko',
       homepage: 'https://parallel.fi',
-      paraId: 2085,
+      allyId: 2085,
       text: t('rpc.axialunar.heiko', 'Parallel Heiko', {
         ns: 'apps-config'
       }),
@@ -250,7 +250,7 @@ function createAXIALunar(t) {
     }, {
       info: 'picasso',
       homepage: 'https://picasso.composable.finance/',
-      paraId: 2087,
+      allyId: 2087,
       text: t('rpc.axialunar.picasso', 'Picasso', {
         ns: 'apps-config'
       }),
@@ -260,7 +260,7 @@ function createAXIALunar(t) {
     }, {
       info: 'polkasmith',
       homepage: 'https://polkasmith.polkafoundry.com/',
-      paraId: 2009,
+      allyId: 2009,
       text: t('rpc.axialunar.polkasmith', 'PolkaSmith by PolkaFoundry', {
         ns: 'apps-config'
       }),
@@ -270,7 +270,7 @@ function createAXIALunar(t) {
     }, {
       info: 'robonomics',
       homepage: 'http://robonomics.network/',
-      paraId: 2077,
+      allyId: 2077,
       text: t('rpc.axialunar.robonomics', 'Robonomics', {
         ns: 'apps-config'
       }),
@@ -282,7 +282,7 @@ function createAXIALunar(t) {
       isUnreachable: true,
       // no providers (yet)
       homepage: 'https://trustbase.network/',
-      paraId: 2078,
+      allyId: 2078,
       text: t('rpc.axialunar.trustbase', 'TrustBase', {
         ns: 'apps-config'
       }),
@@ -291,7 +291,7 @@ function createAXIALunar(t) {
       info: 'sakura',
       homepage: 'https://clover.finance/',
       isUnreachable: true,
-      paraId: 2016,
+      allyId: 2016,
       text: t('rpc.axialunar.sakura', 'Sakura', {
         ns: 'apps-config'
       }),
@@ -302,7 +302,7 @@ function createAXIALunar(t) {
       info: 'sherpax',
       homepage: 'https://chainx.org/',
       isUnreachable: true,
-      paraId: 2013,
+      allyId: 2013,
       text: t('rpc.axialunar.sherpax', 'SherpaX', {
         ns: 'apps-config'
       }),
@@ -312,7 +312,7 @@ function createAXIALunar(t) {
     }, {
       info: 'shiden',
       homepage: 'https://shiden.plasmnet.io/',
-      paraId: 2007,
+      allyId: 2007,
       text: t('rpc.axialunar.shiden', 'Shiden', {
         ns: 'apps-config'
       }),
@@ -324,7 +324,7 @@ function createAXIALunar(t) {
     }, {
       info: 'subgame',
       homepage: 'http://subgame.org/',
-      paraId: 2018,
+      allyId: 2018,
       text: t('rpc.axialunar.subgame', 'SubGame Gamma', {
         ns: 'apps-config'
       }),
@@ -334,7 +334,7 @@ function createAXIALunar(t) {
     }, {
       info: 'unorthodox',
       homepage: 'https://standard.tech/',
-      paraId: 2094,
+      allyId: 2094,
       text: t('rpc.axialunar.standard', 'Unorthodox', {
         ns: 'apps-config'
       }),

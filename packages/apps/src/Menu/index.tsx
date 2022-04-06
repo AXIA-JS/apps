@@ -61,6 +61,8 @@ function checkVisible ({ api, isApiConnected, isApiReady }: ApiProps, allowTelep
 }
 
 function extractGroups (routing: Routes, groupNames: Record<string, string>, apiProps: ApiProps, allowTeleport: boolean, hasAccounts: boolean, hasSudo: boolean): Group[] {
+  console.log('hasAccounts', hasAccounts);
+  console.log('hasSudo', hasSudo);
   return Object
     .values(
       routing.reduce((all: Groups, route): Groups => {
@@ -72,7 +74,7 @@ function extractGroups (routing: Routes, groupNames: Record<string, string>, api
         } else {
           all[route.group].routes.push(route);
         }
-
+        console.log('all', all);
         return all;
       }, {})
     )

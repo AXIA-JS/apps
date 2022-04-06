@@ -24,7 +24,7 @@ function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && 
 function Refund(_ref) {
   let {
     className,
-    paraId
+    allyId
   } = _ref;
   const {
     t
@@ -64,7 +64,7 @@ function Refund(_ref) {
           icon: "credit-card",
           label: t('Refund'),
           onStart: toggleOpen,
-          params: [paraId],
+          params: [allyId],
           tx: api.tx.crowdloan.refund
         })
       })]

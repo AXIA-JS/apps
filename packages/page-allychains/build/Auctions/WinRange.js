@@ -20,7 +20,7 @@ function WinRanges({
     firstSlot,
     isCrowdloan,
     lastSlot,
-    paraId,
+    allyId,
     value
   }
 }) {
@@ -38,12 +38,12 @@ function WinRanges({
     }), /*#__PURE__*/_jsx("td", {
       className: "number",
       children: /*#__PURE__*/_jsx("h1", {
-        children: formatNumber(paraId)
+        children: formatNumber(allyId)
       })
     }), /*#__PURE__*/_jsx("td", {
       className: "badge",
       children: /*#__PURE__*/_jsx(ParaLink, {
-        id: paraId
+        id: allyId
       })
     }), /*#__PURE__*/_jsx("td", {
       className: "address",

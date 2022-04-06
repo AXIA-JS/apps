@@ -12,7 +12,7 @@ import { Fragment as _Fragment } from "react/jsx-runtime";
 import { jsxs as _jsxs } from "react/jsx-runtime";
 const EMPTY_OWNER = {
   accountId: null,
-  paraId: 0
+  allyId: 0
 };
 
 function Bid({
@@ -36,7 +36,7 @@ function Bid({
   const ranges = useLeaseRanges();
   const [{
     accountId,
-    paraId
+    allyId
   }, setOwnerInfo] = useState(EMPTY_OWNER);
   const [amount, setAmount] = useState(BN_ZERO);
   const [range, setRange] = useState(0);
@@ -107,10 +107,10 @@ function Bid({
         children: /*#__PURE__*/_jsx(TxButton, {
           accountId: accountId,
           icon: "plus",
-          isDisabled: !paraId || isAmountError || !(auctionInfo !== null && auctionInfo !== void 0 && auctionInfo.leasePeriod),
+          isDisabled: !allyId || isAmountError || !(auctionInfo !== null && auctionInfo !== void 0 && auctionInfo.leasePeriod),
           label: t('Bid'),
           onStart: toggleOpen,
-          params: [paraId, auctionInfo === null || auctionInfo === void 0 ? void 0 : auctionInfo.numAuctions, auctionInfo === null || auctionInfo === void 0 ? void 0 : (_auctionInfo$leasePer = auctionInfo.leasePeriod) === null || _auctionInfo$leasePer === void 0 ? void 0 : _auctionInfo$leasePer.addn(ranges[range][0]), auctionInfo === null || auctionInfo === void 0 ? void 0 : (_auctionInfo$leasePer2 = auctionInfo.leasePeriod) === null || _auctionInfo$leasePer2 === void 0 ? void 0 : _auctionInfo$leasePer2.addn(ranges[range][1]), amount],
+          params: [allyId, auctionInfo === null || auctionInfo === void 0 ? void 0 : auctionInfo.numAuctions, auctionInfo === null || auctionInfo === void 0 ? void 0 : (_auctionInfo$leasePer = auctionInfo.leasePeriod) === null || _auctionInfo$leasePer === void 0 ? void 0 : _auctionInfo$leasePer.addn(ranges[range][0]), auctionInfo === null || auctionInfo === void 0 ? void 0 : (_auctionInfo$leasePer2 = auctionInfo.leasePeriod) === null || _auctionInfo$leasePer2 === void 0 ? void 0 : _auctionInfo$leasePer2.addn(ranges[range][1]), amount],
           tx: api.tx.auctions.bid
         })
       })]

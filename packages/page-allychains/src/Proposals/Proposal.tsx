@@ -1,7 +1,7 @@
 // Copyright 2017-2021 @axia-js/app-allychains authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import type { ParaId } from '@axia-js/types/interfaces';
+import type { AllyId } from '@axia-js/types/interfaces';
 import type { ScheduledProposals } from '../types';
 
 import React, { useCallback, useMemo } from 'react';
@@ -16,8 +16,8 @@ import { sliceHex } from '../util';
 import useProposal from './useProposal';
 
 interface Props {
-  approvedIds: ParaId[];
-  id: ParaId;
+  approvedIds: AllyId[];
+  id: AllyId;
   scheduled: ScheduledProposals[];
 }
 

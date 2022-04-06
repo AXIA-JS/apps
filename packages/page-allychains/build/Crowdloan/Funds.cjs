@@ -52,9 +52,9 @@ function extractLists(value, leasePeriod) {
     });
     allIds = value.map(_ref3 => {
       let {
-        paraId
+        allyId
       } = _ref3;
-      return paraId;
+      return allyId;
     });
   }
 

@@ -30,7 +30,7 @@ function expandEndpoint(t, {
   isDisabled,
   isUnreachable,
   linked,
-  paraId,
+  allyId,
   providers,
   teleport,
   text
@@ -42,7 +42,7 @@ function expandEndpoint(t, {
     isChild,
     isDisabled,
     isUnreachable,
-    paraId,
+    allyId,
     teleport,
     text
   };
@@ -65,8 +65,8 @@ function expandEndpoint(t, {
     const last = result[result.length - 1];
     const options = [];
     (withSort ? linked.sort(sortLinks) : linked).filter(({
-      paraId
-    }) => paraId).forEach(o => options.push(...expandEndpoint(t, o, firstOnly, withSort)));
+      allyId
+    }) => allyId).forEach(o => options.push(...expandEndpoint(t, o, firstOnly, withSort)));
     last.isRelay = true;
     last.linked = options;
   }

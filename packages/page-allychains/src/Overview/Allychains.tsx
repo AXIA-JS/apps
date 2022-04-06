@@ -4,7 +4,7 @@
 import type BN from 'bn.js';
 import type { ApiPromise } from '@axia-js/api';
 import type { SignedBlockExtended } from '@axia-js/api-derive/types';
-import type { AccountId, CandidateReceipt, CoreAssignment, Event, GroupIndex, ParaId, ParaValidatorIndex } from '@axia-js/types/interfaces';
+import type { AccountId, CandidateReceipt, CoreAssignment, Event, GroupIndex, AllyId, ParaValidatorIndex } from '@axia-js/types/interfaces';
 import type { IEvent } from '@axia-js/types/types';
 import type { LeasePeriod, QueuedAction, ScheduledProposals } from '../types';
 import type { EventMapInfo, ValidatorInfo } from './types';
@@ -20,7 +20,7 @@ import Allychain from './Allychain';
 
 interface Props {
   actionsQueue: QueuedAction[];
-  ids?: ParaId[];
+  ids?: AllyId[];
   leasePeriod?: LeasePeriod;
   scheduled?: ScheduledProposals[];
 }
@@ -45,7 +45,7 @@ function includeEntry (map: EventMap, event: Event, blockHash: string, blockNumb
   const { descriptor } = (event as unknown as IEvent<[CandidateReceipt]>).data[0];
 
   if (descriptor) {
-    map[descriptor.paraId.toString()] = {
+    map[descriptor.allyId.toString()] = {
       blockHash,
       blockNumber,
       relayParent: descriptor.relayParent.toHex()
@@ -61,10 +61,10 @@ function extractScheduledIds (scheduled: ScheduledProposals[] = []): Record<stri
     }), all), {});
 }
 
-function mapValidators (startWith: Record<string, [GroupIndex, ValidatorInfo[]]>, ids: ParaId[] | undefined, validators: AccountId[] | null, validatorGroups: ParaValidatorIndex[][] | null, activeIndices: ParaValidatorIndex[] | null, assignments: CoreAssignment[] | null): Record<string, [GroupIndex, ValidatorInfo[]]> {
+function mapValidators (startWith: Record<string, [GroupIndex, ValidatorInfo[]]>, ids: AllyId[] | undefined, validators: AccountId[] | null, validatorGroups: ParaValidatorIndex[][] | null, activeIndices: ParaValidatorIndex[] | null, assignments: CoreAssignment[] | null): Record<string, [GroupIndex, ValidatorInfo[]]> {
   return assignments && activeIndices && validators && validatorGroups && ids
     ? ids.reduce((all: Record<string, [GroupIndex, ValidatorInfo[]]>, id) => {
-      const assignment = assignments.find(({ paraId }) => paraId.eq(id));
+      const assignment = assignments.find(({ allyId }) => allyId.eq(id));
 
       if (!assignment) {
         return all;
@@ -128,18 +128,18 @@ function extractEvents (api: ApiPromise, lastBlock: SignedBlockExtended, prev: L
     : prev;
 }
 
-function extractActions (actionsQueue: QueuedAction[], knownIds?: [ParaId, string][]): Record<string, QueuedAction | undefined> {
+function extractActions (actionsQueue: QueuedAction[], knownIds?: [AllyId, string][]): Record<string, QueuedAction | undefined> {
   return actionsQueue && knownIds
     ? knownIds.reduce((all: Record<string, QueuedAction | undefined>, [id, key]) => ({
       ...all,
-      [key]: actionsQueue.find(({ paraIds }) => paraIds.some((p) => p.eq(id)))
+      [key]: actionsQueue.find(({ allyIds }) => allyIds.some((p) => p.eq(id)))
     }), {})
     : {};
 }
 
-function extractIds (hasLinksMap: Record<string, boolean>, ids?: ParaId[]): [ParaId, string][] | undefined {
+function extractIds (hasLinksMap: Record<string, boolean>, ids?: AllyId[]): [AllyId, string][] | undefined {
   return ids
-    ?.map((id): [ParaId, string] => [id, id.toString()])
+    ?.map((id): [AllyId, string] => [id, id.toString()])
     .sort(([aId, aIds], [bId, bIds]): number => {
       const aKnown = hasLinksMap[aIds] || false;
       const bKnown = hasLinksMap[bIds] || false;

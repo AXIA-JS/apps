@@ -2,29 +2,29 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import type { Option, StorageKey } from '@axia-js/types';
-import type { ParaId, ParaLifecycle } from '@axia-js/types/interfaces';
+import type { AllyId, ParaLifecycle } from '@axia-js/types/interfaces';
 
 import { useApi, useEventTrigger, useMapEntries } from '@axia-js/react-hooks';
 
-function extractIds (entries: [StorageKey<[ParaId]>, Option<ParaLifecycle>][]): ParaId[] {
+function extractIds (entries: [StorageKey<[AllyId]>, Option<ParaLifecycle>][]): AllyId[] {
   return entries
-    .map(([{ args: [paraId] }, optValue]): ParaId | null => {
+    .map(([{ args: [allyId] }, optValue]): AllyId | null => {
       const value = optValue.unwrap();
 
       return value && (
-        value.isParathread ||
+        value.isAllythread ||
         value.isUpgradingToAllychain ||
-        value.isOutgoingParathread ||
+        value.isOutgoingAllythread ||
         value.isOnboarding
       )
-        ? paraId
+        ? allyId
         : null;
     })
-    .filter((paraId): paraId is ParaId => !!paraId)
+    .filter((allyId): allyId is AllyId => !!allyId)
     .sort((a, b) => a.cmp(b));
 }
 
-export default function useUpomingIds (): ParaId[] | undefined {
+export default function useUpomingIds (): AllyId[] | undefined {
   const { api } = useApi();
   const trigger = useEventTrigger([api.events.session.NewSession, api.events.registrar.Registered]);
 

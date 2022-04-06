@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import type { DeriveContributions, DeriveOwnContributions } from '@axia-js/api-derive/types';
-import type { Balance, ParaId } from '@axia-js/types/interfaces';
+import type { Balance, AllyId } from '@axia-js/types/interfaces';
 
 import { useEffect, useState } from 'react';
 
@@ -25,12 +25,12 @@ const NO_CONTRIB: Result = {
   myContributions: {}
 };
 
-export default function useContributions (paraId: ParaId): Result {
+export default function useContributions (allyId: AllyId): Result {
   const { api } = useApi();
   const { allAccountsHex } = useAccounts();
   const [state, setState] = useState<Result>(() => NO_CONTRIB);
-  const derive = useCall<DeriveContributions>(api.derive.crowdloan.contributions, [paraId]);
-  const myContributions = useCall<DeriveOwnContributions>(api.derive.crowdloan.ownContributions, [paraId, state.myAccountsHex]);
+  const derive = useCall<DeriveContributions>(api.derive.crowdloan.contributions, [allyId]);
+  const myContributions = useCall<DeriveOwnContributions>(api.derive.crowdloan.ownContributions, [allyId, state.myAccountsHex]);
 
   useEffect((): void => {
     derive && setState((prev): Result => {

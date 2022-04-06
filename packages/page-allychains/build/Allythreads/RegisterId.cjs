@@ -24,7 +24,7 @@ function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && 
 function RegisterId(_ref) {
   let {
     className,
-    nextParaId,
+    nextAllyId,
     onClose
   } = _ref;
   const {
@@ -36,12 +36,12 @@ function RegisterId(_ref) {
   const [accountId, setAccountId] = (0, _react.useState)(null);
   return /*#__PURE__*/(0, _jsxRuntime.jsxs)(_reactComponents.Modal, {
     className: className,
-    header: t('Reserve ParaId'),
+    header: t('Reserve AllyId'),
     onClose: onClose,
     size: "large",
     children: [/*#__PURE__*/(0, _jsxRuntime.jsxs)(_reactComponents.Modal.Content, {
       children: [/*#__PURE__*/(0, _jsxRuntime.jsx)(_reactComponents.Modal.Columns, {
-        hint: t('This account will be used to the Id reservation and for the future parathread.'),
+        hint: t('This account will be used to the Id reservation and for the future allythread.'),
         children: /*#__PURE__*/(0, _jsxRuntime.jsx)(_reactComponents.InputAddress, {
           label: t('reserve from'),
           onChange: setAccountId,
@@ -51,7 +51,7 @@ function RegisterId(_ref) {
       }), /*#__PURE__*/(0, _jsxRuntime.jsx)(_reactComponents.Modal.Columns, {
         hint: t('The Id of this allychain as known on the network (selected from nextFreeId)'),
         children: /*#__PURE__*/(0, _jsxRuntime.jsx)(_reactComponents.InputNumber, {
-          defaultValue: nextParaId,
+          defaultValue: nextAllyId,
           isDisabled: true,
           label: t('allychain id')
         })
@@ -67,7 +67,7 @@ function RegisterId(_ref) {
       children: /*#__PURE__*/(0, _jsxRuntime.jsx)(_reactComponents.TxButton, {
         accountId: accountId,
         icon: "plus",
-        isDisabled: !nextParaId,
+        isDisabled: !nextAllyId,
         onStart: onClose,
         params: [],
         tx: api.tx.registrar.reserve

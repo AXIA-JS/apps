@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import type BN from 'bn.js';
-import type { ParaId, SessionIndex } from '@axia-js/types/interfaces';
+import type { AllyId, SessionIndex } from '@axia-js/types/interfaces';
 import type { QueuedAction } from './types';
 
 import { useMemo } from 'react';
@@ -20,17 +20,17 @@ export default function useActionsQueue (): QueuedAction[] {
   const { api } = useApi();
   const currentIndex = useCall<SessionIndex>(api.query.session.currentIndex);
   const queryIndexes = useMemo(() => currentIndex && INC.map((i) => currentIndex.add(i)), [currentIndex]);
-  const nextActions = useCall<[[BN[]], ParaId[][]]>(queryIndexes && api.query.paras.actionsQueue.multi, [queryIndexes], callOpts);
+  const nextActions = useCall<[[BN[]], AllyId[][]]>(queryIndexes && api.query.paras.actionsQueue.multi, [queryIndexes], callOpts);
 
   return useMemo(
     (): QueuedAction[] =>
       nextActions
         ? nextActions[0][0]
           .map((sessionIndex, index) => ({
-            paraIds: nextActions[1][index],
+            allyIds: nextActions[1][index],
             sessionIndex
           }))
-          .filter(({ paraIds }) => paraIds.length)
+          .filter(({ allyIds }) => allyIds.length)
         : [],
     [nextActions]
   );

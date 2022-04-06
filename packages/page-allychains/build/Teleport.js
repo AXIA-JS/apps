@@ -10,11 +10,11 @@ import { useTranslation } from "./translate.js";
 import { jsx as _jsx } from "react/jsx-runtime";
 import { jsxs as _jsxs } from "react/jsx-runtime";
 import { Fragment as _Fragment } from "react/jsx-runtime";
-const INVALID_PARAID = Number.MAX_SAFE_INTEGER;
+const INVALID_ALLYID = Number.MAX_SAFE_INTEGER;
 
 function createOption({
   info,
-  paraId,
+  allyId,
   text
 }) {
   return {
@@ -27,8 +27,8 @@ function createOption({
         className: "ui--Dropdown-name",
         children: text
       })]
-    }, paraId),
-    value: paraId || -1
+    }, allyId),
+    value: allyId || -1
   };
 }
 
@@ -44,7 +44,7 @@ function Teleport({
   const [amount, setAmount] = useState(BN_ZERO);
   const [recipientId, setRecipientId] = useState(null);
   const [senderId, setSenderId] = useState(null);
-  const [recipientParaId, setParaId] = useState(INVALID_PARAID);
+  const [recipientAllyId, setAllyId] = useState(INVALID_ALLYID);
   const {
     allowTeleport,
     destinations,
@@ -57,9 +57,9 @@ function Teleport({
     var _destinations$find;
 
     return (_destinations$find = destinations.find(({
-      paraId
-    }, index) => recipientParaId === -1 ? index === 0 : recipientParaId === paraId)) === null || _destinations$find === void 0 ? void 0 : _destinations$find.value;
-  }, [destinations, recipientParaId]);
+      allyId
+    }, index) => recipientAllyId === -1 ? index === 0 : recipientAllyId === allyId)) === null || _destinations$find === void 0 ? void 0 : _destinations$find.value;
+  }, [destinations, recipientAllyId]);
   const destApi = useApiUrl(url);
   const weightFee = useWeightFee(destWeight, destApi);
   const params = useMemo(() => isParaTeleport ? [{
@@ -80,7 +80,7 @@ function Teleport({
     }
   }], destWeight] : [{
     X1: {
-      AllyChain: recipientParaId
+      AllyChain: recipientAllyId
     }
   }, {
     X1: {
@@ -94,7 +94,7 @@ function Teleport({
       amount,
       id: 'Here'
     }
-  }], destWeight], [amount, destWeight, isParaTeleport, recipientId, recipientParaId]);
+  }], destWeight], [amount, destWeight, isParaTeleport, recipientId, recipientAllyId]);
   const hasAvailable = !!amount && amount.gte(weightFee);
   return /*#__PURE__*/_jsxs(Modal, {
     header: t('Teleport assets'),
@@ -117,9 +117,9 @@ function Teleport({
         children: [/*#__PURE__*/_jsx(Dropdown, {
           defaultValue: chainOpts[0].value,
           label: t('destination chain'),
-          onChange: setParaId,
+          onChange: setAllyId,
           options: chainOpts
-        }), !isParaTeleport && oneWay.includes(recipientParaId) && /*#__PURE__*/_jsx(MarkWarning, {
+        }), !isParaTeleport && oneWay.includes(recipientAllyId) && /*#__PURE__*/_jsx(MarkWarning, {
           content: t('Currently this is a one-way transfer since the on-chain runtime functionality to send the funds from the destination chain back to this account not yet available.')
         })]
       }), /*#__PURE__*/_jsx(Modal.Columns, {
@@ -162,7 +162,7 @@ function Teleport({
       children: /*#__PURE__*/_jsx(TxButton, {
         accountId: senderId,
         icon: "share-square",
-        isDisabled: !allowTeleport || !hasAvailable || !recipientId || !amount || !destApi || !isParaTeleport && recipientParaId === INVALID_PARAID,
+        isDisabled: !allowTeleport || !hasAvailable || !recipientId || !amount || !destApi || !isParaTeleport && recipientAllyId === INVALID_ALLYID,
         label: t('Teleport'),
         onStart: onClose,
         params: params,

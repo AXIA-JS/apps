@@ -13,7 +13,7 @@ export interface EndpointOption {
   isUnreachable?: boolean;
   linked?: EndpointOption[];
   info?: string;
-  paraId?: number;
+  allyId?: number;
   providers: Record<string, string>;
   summary?: string;
   teleport?: number[];
@@ -32,7 +32,7 @@ export interface LinkOption extends Option {
   isUnreachable?: boolean;
   isSpaced?: boolean;
   linked?: LinkOption[];
-  paraId?: number;
+  allyId?: number;
   summary?: string;
   teleport?: number[];
   textBy: string;

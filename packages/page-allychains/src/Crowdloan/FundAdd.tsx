@@ -22,13 +22,13 @@ interface Props {
   ownedIds: OwnedId[];
 }
 
-const EMPTY_OWNER: OwnerInfo = { accountId: null, paraId: 0 };
+const EMPTY_OWNER: OwnerInfo = { accountId: null, allyId: 0 };
 
 function FundAdd ({ auctionInfo, bestNumber, className, leasePeriod, ownedIds }: Props): React.ReactElement<Props> {
   const { t } = useTranslation();
   const { api } = useApi();
   const ranges = useLeaseRanges();
-  const [{ accountId, paraId }, setOwnerInfo] = useState<OwnerInfo>(EMPTY_OWNER);
+  const [{ accountId, allyId }, setOwnerInfo] = useState<OwnerInfo>(EMPTY_OWNER);
   const [cap, setCap] = useState<BN | undefined>();
   const [endBlock, setEndBlock] = useState<BN | undefined>();
   const [firstSlot, setFirstSlot] = useState<BN | undefined>();
@@ -103,10 +103,10 @@ function FundAdd ({ auctionInfo, bestNumber, className, leasePeriod, ownedIds }:
             <TxButton
               accountId={accountId}
               icon='plus'
-              isDisabled={!paraId || !cap?.gt(BN_ZERO) || isEndError || isFirstError || isLastError}
+              isDisabled={!allyId || !cap?.gt(BN_ZERO) || isEndError || isFirstError || isLastError}
               label={t<string>('Add')}
               onStart={toggleOpen}
-              params={[paraId, cap, firstSlot, lastSlot, endBlock, null]}
+              params={[allyId, cap, firstSlot, lastSlot, endBlock, null]}
               tx={api.tx.crowdloan.create}
             />
           </Modal.Actions>

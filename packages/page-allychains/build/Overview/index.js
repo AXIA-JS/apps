@@ -10,7 +10,7 @@ function Overview({
   actionsQueue,
   className,
   leasePeriod,
-  paraIds,
+  allyIds,
   proposals,
   threadIds
 }) {
@@ -18,12 +18,12 @@ function Overview({
     className: className,
     children: [/*#__PURE__*/_jsx(Summary, {
       leasePeriod: leasePeriod,
-      allychainCount: paraIds === null || paraIds === void 0 ? void 0 : paraIds.length,
+      allychainCount: allyIds === null || allyIds === void 0 ? void 0 : allyIds.length,
       proposalCount: proposals === null || proposals === void 0 ? void 0 : proposals.proposalIds.length,
       upcomingCount: threadIds === null || threadIds === void 0 ? void 0 : threadIds.length
     }), /*#__PURE__*/_jsx(Allychains, {
       actionsQueue: actionsQueue,
-      ids: paraIds,
+      ids: allyIds,
       leasePeriod: leasePeriod,
       scheduled: proposals === null || proposals === void 0 ? void 0 : proposals.scheduled
     })]

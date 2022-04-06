@@ -307,12 +307,12 @@ function createTesting(t, firstOnly, withSort) {
     }
   }, {
     info: 'moonbaseAlpha',
-    text: t('rpc.test.moonbeam', 'Moonbase Alpha', {
+    text: t('rpc.test.axtend', 'Moonbase Alpha', {
       ns: 'apps-config'
     }),
     providers: {
-      'Moonbeam Network': 'wss://wss.testnet.moonbeam.network',
-      OnFinality: 'wss://moonbeam-alpha.api.onfinality.io/public-ws',
+      'Axtend Network': 'wss://wss.testnet.axtend.network',
+      OnFinality: 'wss://axtend-alpha.api.onfinality.io/public-ws',
       Pinknode: 'wss://rpc.pinknode.io/alphanet/explorer'
     }
   }, {

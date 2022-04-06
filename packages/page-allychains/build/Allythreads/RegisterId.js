@@ -9,7 +9,7 @@ import { jsxs as _jsxs } from "react/jsx-runtime";
 
 function RegisterId({
   className,
-  nextParaId,
+  nextAllyId,
   onClose
 }) {
   const {
@@ -21,12 +21,12 @@ function RegisterId({
   const [accountId, setAccountId] = useState(null);
   return /*#__PURE__*/_jsxs(Modal, {
     className: className,
-    header: t('Reserve ParaId'),
+    header: t('Reserve AllyId'),
     onClose: onClose,
     size: "large",
     children: [/*#__PURE__*/_jsxs(Modal.Content, {
       children: [/*#__PURE__*/_jsx(Modal.Columns, {
-        hint: t('This account will be used to the Id reservation and for the future parathread.'),
+        hint: t('This account will be used to the Id reservation and for the future allythread.'),
         children: /*#__PURE__*/_jsx(InputAddress, {
           label: t('reserve from'),
           onChange: setAccountId,
@@ -36,7 +36,7 @@ function RegisterId({
       }), /*#__PURE__*/_jsx(Modal.Columns, {
         hint: t('The Id of this allychain as known on the network (selected from nextFreeId)'),
         children: /*#__PURE__*/_jsx(InputNumber, {
-          defaultValue: nextParaId,
+          defaultValue: nextAllyId,
           isDisabled: true,
           label: t('allychain id')
         })
@@ -52,7 +52,7 @@ function RegisterId({
       children: /*#__PURE__*/_jsx(TxButton, {
         accountId: accountId,
         icon: "plus",
-        isDisabled: !nextParaId,
+        isDisabled: !nextAllyId,
         onStart: onClose,
         params: [],
         tx: api.tx.registrar.reserve

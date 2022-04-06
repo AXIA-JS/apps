@@ -11,7 +11,7 @@ import { useAccounts, useApi, useCall, useEventTrigger, useMapEntries } from '@a
 
 function extractIds(entries) {
   const owned = entries.map(([{
-    args: [paraId]
+    args: [allyId]
   }, optInfo]) => {
     if (optInfo.isNone) {
       return null;
@@ -20,22 +20,22 @@ function extractIds(entries) {
     const paraInfo = optInfo.unwrap();
     return {
       manager: paraInfo.manager.toString(),
-      paraId,
+      allyId,
       paraInfo
     };
   }).filter(id => !!id);
   return {
     ids: owned.map(({
-      paraId
-    }) => paraId),
+      allyId
+    }) => allyId),
     owned
   };
 }
 
 const hashesOption = {
-  transform: ([[paraIds], optHashes]) => paraIds.map((paraId, index) => ({
+  transform: ([[allyIds], optHashes]) => allyIds.map((allyId, index) => ({
     hash: optHashes[index].unwrapOr(null),
-    paraId
+    allyId
   })),
   withParamsTransform: true
 };
@@ -55,7 +55,7 @@ export default function useOwnedIds() {
   return useMemo(() => unfiltered && hashes ? unfiltered.owned.filter(id => allAccounts.some(a => a === id.manager)).map(data => _objectSpread(_objectSpread({}, data), {}, {
     hasCode: hashes.some(({
       hash,
-      paraId
-    }) => !!hash && paraId.eq(data.paraId))
+      allyId
+    }) => !!hash && allyId.eq(data.allyId))
   })) : [], [allAccounts, hashes, unfiltered]);
 }

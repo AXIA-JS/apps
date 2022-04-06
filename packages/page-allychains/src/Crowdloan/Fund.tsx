@@ -30,12 +30,12 @@ interface LastChange {
   prevLength: number;
 }
 
-function Fund ({ bestHash, bestNumber, className = '', isOngoing, leasePeriod, value: { info: { cap, depositor, end, firstPeriod, lastPeriod, raised, verifier }, isCapped, isEnded, isWinner, paraId } }: Props): React.ReactElement<Props> {
+function Fund ({ bestHash, bestNumber, className = '', isOngoing, leasePeriod, value: { info: { cap, depositor, end, firstPeriod, lastPeriod, raised, verifier }, isCapped, isEnded, isWinner, allyId } }: Props): React.ReactElement<Props> {
   const { t } = useTranslation();
   const { api } = useApi();
   const { isAccount } = useAccounts();
-  const endpoints = useParaEndpoints(paraId);
-  const { blockHash, contributorsHex, hasLoaded, myAccounts, myAccountsHex, myContributions } = useContributions(paraId);
+  const endpoints = useParaEndpoints(allyId);
+  const { blockHash, contributorsHex, hasLoaded, myAccounts, myAccountsHex, myContributions } = useContributions(allyId);
   const [lastChange, setLastChange] = useState<LastChange>(() => ({ prevHash: '', prevLength: 0 }));
 
   const isDepositor = useMemo(
@@ -79,8 +79,8 @@ function Fund ({ bestHash, bestNumber, className = '', isOngoing, leasePeriod, v
 
   return (
     <tr className={className}>
-      <td className='number'><h1>{formatNumber(paraId)}</h1></td>
-      <td className='badge'><ParaLink id={paraId} /></td>
+      <td className='number'><h1>{formatNumber(allyId)}</h1></td>
+      <td className='badge'><ParaLink id={allyId} /></td>
       <td className='media--800'>
         {isWinner
           ? t<string>('Winner')
@@ -152,7 +152,7 @@ function Fund ({ bestHash, bestNumber, className = '', isOngoing, leasePeriod, v
       </td>
       <td className='button media--1000'>
         {canWithdraw && contributorsHex.length !== 0 && (
-          <Refund paraId={paraId} />
+          <Refund allyId={allyId} />
         )}
         {canDissolve && (
           <TxButton
@@ -165,7 +165,7 @@ function Fund ({ bestHash, bestNumber, className = '', isOngoing, leasePeriod, v
                 ? t<string>('Close')
                 : t<string>('Cancel')
             }
-            params={[paraId]}
+            params={[allyId]}
             tx={api.tx.crowdloan.dissolve}
           />
         )}
@@ -173,7 +173,7 @@ function Fund ({ bestHash, bestNumber, className = '', isOngoing, leasePeriod, v
           <Contribute
             cap={cap}
             needsSignature={verifier.isSome}
-            paraId={paraId}
+            allyId={allyId}
             raised={raised}
           />
         )}

@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import type { Option } from '@axia-js/types';
-import type { AccountId, BalanceOf, ParaId } from '@axia-js/types/interfaces';
+import type { AccountId, BalanceOf, AllyId } from '@axia-js/types/interfaces';
 import type { ITuple } from '@axia-js/types/types';
 import type { LeaseInfo, LeasePeriod, OwnedId, QueuedAction } from '../types';
 
@@ -13,20 +13,20 @@ import { useApi, useCall, useIsParasLinked } from '@axia-js/react-hooks';
 
 import { useTranslation } from '../translate';
 import Actions from './Actions';
-import Parathread from './Parathread';
+import Allythread from './Allythread';
 
 interface Props {
   actionsQueue: QueuedAction[];
   className?: string;
-  ids?: ParaId[];
+  ids?: AllyId[];
   leasePeriod?: LeasePeriod;
   ownedIds: OwnedId[];
 }
 
-type ParaMap = [ParaId, LeaseInfo[]][];
+type ParaMap = [AllyId, LeaseInfo[]][];
 
-function extractParaMap (hasLinksMap: Record<string, boolean>, paraIds: ParaId[], leases: Option<ITuple<[AccountId, BalanceOf]>>[][]): ParaMap {
-  return paraIds
+function extractParaMap (hasLinksMap: Record<string, boolean>, allyIds: AllyId[], leases: Option<ITuple<[AccountId, BalanceOf]>>[][]): ParaMap {
+  return allyIds
     .reduce((all: ParaMap, id, index): ParaMap => {
       all.push([
         id,
@@ -67,21 +67,21 @@ function extractParaMap (hasLinksMap: Record<string, boolean>, paraIds: ParaId[]
     });
 }
 
-function Parathreads ({ actionsQueue, className, ids, leasePeriod, ownedIds }: Props): React.ReactElement<Props> {
+function Allythreads ({ actionsQueue, className, ids, leasePeriod, ownedIds }: Props): React.ReactElement<Props> {
   const { t } = useTranslation();
   const { api } = useApi();
   const hasLinksMap = useIsParasLinked(ids);
   const leaseMap = useCall<ParaMap>(ids && api.query.slots.leases.multi, [ids], {
     transform: useCallback(
-      ([[paraIds], leases]: [[ParaId[]], Option<ITuple<[AccountId, BalanceOf]>>[][]]): ParaMap =>
-        extractParaMap(hasLinksMap, paraIds, leases),
+      ([[allyIds], leases]: [[AllyId[]], Option<ITuple<[AccountId, BalanceOf]>>[][]]): ParaMap =>
+        extractParaMap(hasLinksMap, allyIds, leases),
       [hasLinksMap]
     ),
     withParamsTransform: true
   });
 
   const headerRef = useRef([
-    [t('parathreads'), 'start', 2],
+    [t('allythreads'), 'start', 2],
     ['', 'media--1100'],
     [t('head'), 'start media--1500'],
     [t('lifecycle'), 'start'],
@@ -95,17 +95,17 @@ function Parathreads ({ actionsQueue, className, ids, leasePeriod, ownedIds }: P
     <div className={className}>
       <Actions ownedIds={ownedIds} />
       <Table
-        empty={leasePeriod && ids && (ids.length === 0 || leaseMap) && t<string>('There are no available parathreads')}
+        empty={leasePeriod && ids && (ids.length === 0 || leaseMap) && t<string>('There are no available allythreads')}
         header={headerRef.current}
       >
         {leasePeriod && leaseMap?.map(([id, leases]): React.ReactNode => (
-          <Parathread
+          <Allythread
             id={id}
             key={id.toString()}
             leasePeriod={leasePeriod}
             leases={leases}
-            nextAction={actionsQueue.find(({ paraIds }) =>
-              paraIds.some((p) => p.eq(id))
+            nextAction={actionsQueue.find(({ allyIds }) =>
+              allyIds.some((p) => p.eq(id))
             )}
           />
         ))}
@@ -114,4 +114,4 @@ function Parathreads ({ actionsQueue, className, ids, leasePeriod, ownedIds }: P
   );
 }
 
-export default React.memo(Parathreads);
+export default React.memo(Allythreads);

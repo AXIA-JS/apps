@@ -34,13 +34,13 @@ function extractRelayEndpoints(genesisHash) {
   });
 }
 
-function extractParaEndpoints(allEndpoints, paraId) {
-  const numId = (0, _util.bnToBn)(paraId).toNumber();
+function extractParaEndpoints(allEndpoints, allyId) {
+  const numId = (0, _util.bnToBn)(allyId).toNumber();
   return allEndpoints.filter(_ref2 => {
     let {
-      paraId
+      allyId
     } = _ref2;
-    return paraId === numId;
+    return allyId === numId;
   });
 }
 
@@ -51,9 +51,9 @@ function useRelayEndpoints() {
   return (0, _react.useMemo)(() => extractRelayEndpoints(api.genesisHash.toHex()), [api]);
 }
 
-function useParaEndpoints(paraId) {
+function useParaEndpoints(allyId) {
   const endpoints = useRelayEndpoints();
-  return (0, _react.useMemo)(() => extractParaEndpoints(endpoints, paraId), [endpoints, paraId]);
+  return (0, _react.useMemo)(() => extractParaEndpoints(endpoints, allyId), [endpoints, allyId]);
 }
 
 function useIsParasLinked(ids) {

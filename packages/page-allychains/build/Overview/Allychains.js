@@ -28,7 +28,7 @@ function includeEntry(map, event, blockHash, blockNumber) {
   } = event.data[0];
 
   if (descriptor) {
-    map[descriptor.paraId.toString()] = {
+    map[descriptor.allyId.toString()] = {
       blockHash,
       blockNumber,
       relayParent: descriptor.relayParent.toHex()
@@ -47,8 +47,8 @@ function extractScheduledIds(scheduled = []) {
 function mapValidators(startWith, ids, validators, validatorGroups, activeIndices, assignments) {
   return assignments && activeIndices && validators && validatorGroups && ids ? ids.reduce((all, id) => {
     const assignment = assignments.find(({
-      paraId
-    }) => paraId.eq(id));
+      allyId
+    }) => allyId.eq(id));
 
     if (!assignment) {
       return all;
@@ -102,8 +102,8 @@ function extractEvents(api, lastBlock, prev) {
 function extractActions(actionsQueue, knownIds) {
   return actionsQueue && knownIds ? knownIds.reduce((all, [id, key]) => _objectSpread(_objectSpread({}, all), {}, {
     [key]: actionsQueue.find(({
-      paraIds
-    }) => paraIds.some(p => p.eq(id)))
+      allyIds
+    }) => allyIds.some(p => p.eq(id)))
   }), {}) : {};
 }
 

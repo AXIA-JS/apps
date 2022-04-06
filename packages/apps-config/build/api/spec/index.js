@@ -57,7 +57,7 @@ import kylin from "./kylin.js";
 import laminar from "./laminar.js";
 import litentry from "./litentry.js";
 import manta from "./manta.js";
-import moonbeam from "./moonbeam.js";
+import axtend from "./axtend.js";
 import mybank from "./mybank.js";
 import neatcoin from "./neatcoin.js";
 import nftmart from "./nftmart.js";
@@ -177,15 +177,15 @@ const spec = _objectSpread(_objectSpread({
   'manta-node': manta,
   'mashnet-node': kilt,
   'mathchain-galois': galois,
-  moonbase: moonbeam,
-  moonbeam,
-  moonriver: moonbeam,
-  moonshadow: moonbeam,
+  moonbase: axtend,
+  axtend,
+  moonriver: axtend,
+  moonshadow: axtend,
   'mybank.network Testnet': mybank,
   neatcoin,
   nft: unique,
   nftmart,
-  'node-moonbeam': moonbeam,
+  'node-axtend': axtend,
   'node-polkadex': polkadex,
   'node-template-spartan': subspace,
   'nodle-chain': nodle,

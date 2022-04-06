@@ -18,7 +18,7 @@ interface Props {
   className?: string;
 }
 
-// TODO-MOONBEAM: update NetworkSpecsStruct in @axia-js/ui-settings/types
+// TODO-AXTEND: update NetworkSpecsStruct in @axia-js/ui-settings/types
 interface NetworkSpecsStructWithType extends NetworkSpecsStruct{
   chainType: ChainType
 }

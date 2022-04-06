@@ -30,23 +30,23 @@ const EMPTY = {
 };
 const EMPTY_U8A = new Uint8Array(32);
 
-function createAddress(paraId) {
-  return (0, _util.u8aConcat)(_constants.CROWD_PREFIX, paraId.toU8a(), EMPTY_U8A).subarray(0, 32);
+function createAddress(allyId) {
+  return (0, _util.u8aConcat)(_constants.CROWD_PREFIX, allyId.toU8a(), EMPTY_U8A).subarray(0, 32);
 }
 
-function isCrowdloadAccount(paraId, accountId) {
-  return accountId.eq(createAddress(paraId));
+function isCrowdloadAccount(allyId, accountId) {
+  return accountId.eq(createAddress(allyId));
 }
 
-function hasLease(paraId, leased) {
-  return leased.some(l => l.eq(paraId));
+function hasLease(allyId, leased) {
+  return leased.some(l => l.eq(allyId));
 } // map into a campaign
 
 
 function updateFund(bestNumber, minContribution, data, leased) {
   data.isCapped = data.info.cap.sub(data.info.raised).lt(minContribution);
   data.isEnded = bestNumber.gt(data.info.end);
-  data.isWinner = hasLease(data.paraId, leased);
+  data.isWinner = hasLease(data.allyId, leased);
   return data;
 }
 
@@ -59,10 +59,10 @@ function isFundUpdated(bestNumber, minContribution, _ref, leased, allPrev) {
       end,
       raised
     },
-    paraId
+    allyId
   } = _ref;
-  const prev = (_allPrev$funds = allPrev.funds) === null || _allPrev$funds === void 0 ? void 0 : _allPrev$funds.find(p => p.paraId.eq(paraId));
-  return !prev || !prev.isEnded && bestNumber.gt(end) || !prev.isCapped && cap.sub(raised).lt(minContribution) || !prev.isWinner && hasLease(paraId, leased);
+  const prev = (_allPrev$funds = allPrev.funds) === null || _allPrev$funds === void 0 ? void 0 : _allPrev$funds.find(p => p.allyId.eq(allyId));
+  return !prev || !prev.isEnded && bestNumber.gt(end) || !prev.isCapped && cap.sub(raised).lt(minContribution) || !prev.isWinner && hasLease(allyId, leased);
 }
 
 function sortCampaigns(a, b) {
@@ -104,29 +104,29 @@ function createResult(bestNumber, minContribution, funds, leased, prev) {
 
 const optFundMulti = {
   transform: _ref4 => {
-    let [[paraIds], optFunds] = _ref4;
-    return paraIds.map((paraId, i) => [paraId, optFunds[i].unwrapOr(null)]).filter(v => !!v[1]).map(_ref5 => {
-      let [paraId, info] = _ref5;
+    let [[allyIds], optFunds] = _ref4;
+    return allyIds.map((allyId, i) => [allyId, optFunds[i].unwrapOr(null)]).filter(v => !!v[1]).map(_ref5 => {
+      let [allyId, info] = _ref5;
       return {
-        accountId: (0, _utilCrypto.encodeAddress)(createAddress(paraId)),
+        accountId: (0, _utilCrypto.encodeAddress)(createAddress(allyId)),
         firstSlot: info.firstPeriod,
         info,
         isCrowdloan: true,
-        key: paraId.toString(),
+        key: allyId.toString(),
         lastSlot: info.lastPeriod,
-        paraId,
+        allyId,
         value: info.raised
       };
-    }).sort((a, b) => a.info.end.cmp(b.info.end) || a.info.firstPeriod.cmp(b.info.firstPeriod) || a.info.lastPeriod.cmp(b.info.lastPeriod) || a.paraId.cmp(b.paraId));
+    }).sort((a, b) => a.info.end.cmp(b.info.end) || a.info.firstPeriod.cmp(b.info.firstPeriod) || a.info.lastPeriod.cmp(b.info.lastPeriod) || a.allyId.cmp(b.allyId));
   },
   withParamsTransform: true
 };
 const optLeaseMulti = {
   transform: _ref6 => {
-    let [[paraIds], leases] = _ref6;
-    return paraIds.filter((paraId, i) => leases[i].map(o => o.unwrapOr(null)).filter(v => !!v).filter(_ref7 => {
+    let [[allyIds], leases] = _ref6;
+    return allyIds.filter((allyId, i) => leases[i].map(o => o.unwrapOr(null)).filter(v => !!v).filter(_ref7 => {
       let [accountId] = _ref7;
-      return isCrowdloadAccount(paraId, accountId);
+      return isCrowdloadAccount(allyId, accountId);
     }).length !== 0);
   },
   withParamsTransform: true
@@ -135,9 +135,9 @@ const optLeaseMulti = {
 function extractFundIds(keys) {
   return keys.map(_ref8 => {
     let {
-      args: [paraId]
+      args: [allyId]
     } = _ref8;
-    return paraId;
+    return allyId;
   });
 }
 
@@ -150,12 +150,12 @@ function useFunds() {
   const bestNumber = (0, _reactHooks.useBestNumber)();
   const mountedRef = (0, _reactHooks.useIsMountedRef)();
   const trigger = (0, _reactHooks.useEventTrigger)([(_api$events$crowdloan = api.events.crowdloan) === null || _api$events$crowdloan === void 0 ? void 0 : _api$events$crowdloan.Created]);
-  const paraIds = (0, _reactHooks.useMapKeys)((_api$query$crowdloan = api.query.crowdloan) === null || _api$query$crowdloan === void 0 ? void 0 : _api$query$crowdloan.funds, {
+  const allyIds = (0, _reactHooks.useMapKeys)((_api$query$crowdloan = api.query.crowdloan) === null || _api$query$crowdloan === void 0 ? void 0 : _api$query$crowdloan.funds, {
     at: trigger.blockHash,
     transform: extractFundIds
   });
-  const campaigns = (0, _reactHooks.useCall)((_api$query$crowdloan2 = api.query.crowdloan) === null || _api$query$crowdloan2 === void 0 ? void 0 : _api$query$crowdloan2.funds.multi, [paraIds], optFundMulti);
-  const leases = (0, _reactHooks.useCall)(api.query.slots.leases.multi, [paraIds], optLeaseMulti);
+  const campaigns = (0, _reactHooks.useCall)((_api$query$crowdloan2 = api.query.crowdloan) === null || _api$query$crowdloan2 === void 0 ? void 0 : _api$query$crowdloan2.funds.multi, [allyIds], optFundMulti);
+  const leases = (0, _reactHooks.useCall)(api.query.slots.leases.multi, [allyIds], optLeaseMulti);
   const [result, setResult] = (0, _react.useState)(EMPTY); // here we manually add the actual ending status and calculate the totals
 
   (0, _react.useEffect)(() => {

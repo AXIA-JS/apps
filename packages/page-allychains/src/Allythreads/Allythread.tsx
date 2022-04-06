@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import type { Option } from '@axia-js/types';
-import type { AccountId, HeadData, ParaGenesisArgs, ParaId, ParaInfo, ParaLifecycle } from '@axia-js/types/interfaces';
+import type { AccountId, HeadData, ParaGenesisArgs, AllyId, ParaInfo, ParaLifecycle } from '@axia-js/types/interfaces';
 import type { LeaseInfo, LeasePeriod, QueuedAction } from '../types';
 
 import React, { useMemo } from 'react';
@@ -18,7 +18,7 @@ import { useTranslation } from '../translate';
 import { sliceHex } from '../util';
 
 interface Props {
-  id: ParaId;
+  id: AllyId;
   leasePeriod: LeasePeriod;
   leases: LeaseInfo[];
   nextAction?: QueuedAction;

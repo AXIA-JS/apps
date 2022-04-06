@@ -33,7 +33,7 @@ function Summary ({ leasePeriod, allychainCount, proposalCount, upcomingCount }:
         {isNumber(upcomingCount) && (
           <CardSummary
             className='media--1000'
-            label={t<string>('parathreads')}
+            label={t<string>('allythreads')}
           >
             {formatNumber(upcomingCount)}
           </CardSummary>

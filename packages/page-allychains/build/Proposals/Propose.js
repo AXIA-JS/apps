@@ -42,7 +42,7 @@ function Propose({
   } = useApi();
   const [accountId, setAccountId] = useState(null);
   const [name, setName] = useState('');
-  const [paraId, setParaId] = useState();
+  const [allyId, setAllyId] = useState();
   const [balance, setBalance] = useState(() => BN_THOUSAND.mul(BN_TEN.pow(new BN(api.registry.chainDecimals[0]))));
   const [validators, setValidators] = useState(['']);
   const [{
@@ -93,7 +93,7 @@ function Propose({
         }), /*#__PURE__*/_jsx(InputNumber, {
           isZeroable: false,
           label: t('requested id'),
-          onChange: setParaId
+          onChange: setAllyId
         }), /*#__PURE__*/_jsx(InputBalance, {
           defaultValue: balance,
           label: t('initial balance'),
@@ -141,9 +141,9 @@ function Propose({
       children: /*#__PURE__*/_jsx(TxButton, {
         accountId: accountId,
         icon: "plus",
-        isDisabled: !isWasmValid || !genesisState || !isNameValid || !validators.length || !(paraId !== null && paraId !== void 0 && paraId.gt(BN_ZERO)),
+        isDisabled: !isWasmValid || !genesisState || !isNameValid || !validators.length || !(allyId !== null && allyId !== void 0 && allyId.gt(BN_ZERO)),
         onStart: onClose,
-        params: [paraId, name, wasm, genesisState, validators, balance],
+        params: [allyId, name, wasm, genesisState, validators, balance],
         tx: (_api$tx$proposeAllych = api.tx.proposeAllychain) === null || _api$tx$proposeAllych === void 0 ? void 0 : _api$tx$proposeAllych.proposeAllychain
       })
     })]

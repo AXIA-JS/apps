@@ -19,10 +19,10 @@ function extractRelayEndpoints (genesisHash: string): LinkOption[] {
   );
 }
 
-function extractParaEndpoints (allEndpoints: LinkOption[], paraId: BN | number): LinkOption[] {
-  const numId = bnToBn(paraId).toNumber();
+function extractParaEndpoints (allEndpoints: LinkOption[], allyId: BN | number): LinkOption[] {
+  const numId = bnToBn(allyId).toNumber();
 
-  return allEndpoints.filter(({ paraId }) => paraId === numId);
+  return allEndpoints.filter(({ allyId }) => allyId === numId);
 }
 
 export function useRelayEndpoints (): LinkOption[] {
@@ -34,12 +34,12 @@ export function useRelayEndpoints (): LinkOption[] {
   );
 }
 
-export function useParaEndpoints (paraId: BN | number): LinkOption[] {
+export function useParaEndpoints (allyId: BN | number): LinkOption[] {
   const endpoints = useRelayEndpoints();
 
   return useMemo(
-    () => extractParaEndpoints(endpoints, paraId),
-    [endpoints, paraId]
+    () => extractParaEndpoints(endpoints, allyId),
+    [endpoints, allyId]
   );
 }
 

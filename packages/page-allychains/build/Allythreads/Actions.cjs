@@ -42,16 +42,16 @@ function Actions(_ref) {
   } = (0, _reactHooks.useApi)();
   const [isRegisterOpen, toggleRegisterOpen] = (0, _reactHooks.useToggle)();
   const [isReserveOpen, toggleReserveOpen] = (0, _reactHooks.useToggle)();
-  const nextParaId = (0, _reactHooks.useCall)(api.query.registrar.nextFreeParaId, [], transformId);
+  const nextAllyId = (0, _reactHooks.useCall)(api.query.registrar.nextFreeAllyId, [], transformId);
   return /*#__PURE__*/(0, _jsxRuntime.jsxs)(_reactComponents.Button.Group, {
     className: className,
     children: [/*#__PURE__*/(0, _jsxRuntime.jsx)(_reactComponents.Button, {
       icon: "plus",
       isDisabled: !api.tx.registrar.reserve,
-      label: t('ParaId'),
+      label: t('AllyId'),
       onClick: toggleReserveOpen
     }), isReserveOpen && /*#__PURE__*/(0, _jsxRuntime.jsx)(_RegisterId.default, {
-      nextParaId: nextParaId,
+      nextAllyId: nextAllyId,
       onClose: toggleReserveOpen
     }), /*#__PURE__*/(0, _jsxRuntime.jsx)(_reactComponents.Button, {
       icon: "plus",
@@ -59,7 +59,7 @@ function Actions(_ref) {
       label: t('ParaThread'),
       onClick: toggleRegisterOpen
     }), isRegisterOpen && /*#__PURE__*/(0, _jsxRuntime.jsx)(_RegisterThread.default, {
-      nextParaId: nextParaId,
+      nextAllyId: nextAllyId,
       onClose: toggleRegisterOpen,
       ownedIds: ownedIds
     })]

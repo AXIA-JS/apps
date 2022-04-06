@@ -22,7 +22,7 @@ function Overview(_ref) {
     actionsQueue,
     className,
     leasePeriod,
-    paraIds,
+    allyIds,
     proposals,
     threadIds
   } = _ref;
@@ -30,12 +30,12 @@ function Overview(_ref) {
     className: className,
     children: [/*#__PURE__*/(0, _jsxRuntime.jsx)(_Summary.default, {
       leasePeriod: leasePeriod,
-      allychainCount: paraIds === null || paraIds === void 0 ? void 0 : paraIds.length,
+      allychainCount: allyIds === null || allyIds === void 0 ? void 0 : allyIds.length,
       proposalCount: proposals === null || proposals === void 0 ? void 0 : proposals.proposalIds.length,
       upcomingCount: threadIds === null || threadIds === void 0 ? void 0 : threadIds.length
     }), /*#__PURE__*/(0, _jsxRuntime.jsx)(_Allychains.default, {
       actionsQueue: actionsQueue,
-      ids: paraIds,
+      ids: allyIds,
       leasePeriod: leasePeriod,
       scheduled: proposals === null || proposals === void 0 ? void 0 : proposals.scheduled
     })]

@@ -43,7 +43,7 @@ export default function getInitValue (registry: Registry, def: TypeDef): unknown
     case 'Gas':
     case 'Index':
     case 'Nonce':
-    case 'ParaId':
+    case 'AllyId':
     case 'PropIndex':
     case 'ProposalIndex':
     case 'ReferendumIndex':

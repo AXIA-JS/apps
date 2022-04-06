@@ -18,6 +18,6 @@ export interface LinkOption extends Option {
   isSpaced?: boolean;
   isLightClient?: boolean;
   linked?: LinkOption[];
-  paraId?: number;
+  allyId?: number;
   textBy: string;
 }

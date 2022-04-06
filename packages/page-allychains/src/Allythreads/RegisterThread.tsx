@@ -17,16 +17,16 @@ import { LOWEST_INVALID_ID } from './constants';
 
 interface Props {
   className?: string;
-  nextParaId?: BN;
+  nextAllyId?: BN;
   onClose: () => void;
   ownedIds: OwnedId[];
 }
 
-function RegisterThread ({ className, nextParaId, onClose, ownedIds }: Props): React.ReactElement<Props> {
+function RegisterThread ({ className, nextAllyId, onClose, ownedIds }: Props): React.ReactElement<Props> {
   const { t } = useTranslation();
   const { api } = useApi();
   const [accountId, setAccountId] = useState<string | null>(null);
-  const [paraId, setParaId] = useState<BN | undefined>();
+  const [allyId, setAllyId] = useState<BN | undefined>();
   const [wasm, setWasm] = useState<Uint8Array | null>(null);
   const [genesisState, setGenesisState] = useState<Uint8Array | null>(null);
 
@@ -41,9 +41,9 @@ function RegisterThread ({ className, nextParaId, onClose, ownedIds }: Props): R
   );
 
   const _setOwner = useCallback(
-    ({ accountId, paraId }: OwnerInfo) => {
+    ({ accountId, allyId }: OwnerInfo) => {
       setAccountId(accountId);
-      setParaId(new BN(paraId));
+      setAllyId(new BN(allyId));
     },
     []
   );
@@ -55,12 +55,12 @@ function RegisterThread ({ className, nextParaId, onClose, ownedIds }: Props): R
     [api, wasm, genesisState]
   );
 
-  const isIdError = !paraId || !paraId.gt(LOWEST_INVALID_ID);
+  const isIdError = !allyId || !allyId.gt(LOWEST_INVALID_ID);
 
   return (
     <Modal
       className={className}
-      header={t<string>('Register parathread')}
+      header={t<string>('Register allythread')}
       onClose={onClose}
       size='large'
     >
@@ -86,11 +86,11 @@ function RegisterThread ({ className, nextParaId, onClose, ownedIds }: Props): R
               <Modal.Columns hint={t<string>('The id of this allychain as known on the network')}>
                 <InputNumber
                   autoFocus
-                  defaultValue={nextParaId}
+                  defaultValue={nextAllyId}
                   isError={isIdError}
                   isZeroable={false}
                   label={t<string>('allychain id')}
-                  onChange={setParaId}
+                  onChange={setAllyId}
                 />
               </Modal.Columns>
             </>
@@ -126,7 +126,7 @@ function RegisterThread ({ className, nextParaId, onClose, ownedIds }: Props): R
           icon='plus'
           isDisabled={!wasm || !genesisState || isIdError}
           onStart={onClose}
-          params={[paraId, genesisState, wasm]}
+          params={[allyId, genesisState, wasm]}
           tx={api.tx.registrar.register}
         />
       </Modal.Actions>

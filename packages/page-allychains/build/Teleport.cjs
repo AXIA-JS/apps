@@ -27,12 +27,12 @@ function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && 
 
 // Copyright 2017-2021 @axia-js/app-allychains authors & contributors
 // SPDX-License-Identifier: Apache-2.0
-const INVALID_PARAID = Number.MAX_SAFE_INTEGER;
+const INVALID_ALLYID = Number.MAX_SAFE_INTEGER;
 
 function createOption(_ref) {
   let {
     info,
-    paraId,
+    allyId,
     text
   } = _ref;
   return {
@@ -45,8 +45,8 @@ function createOption(_ref) {
         className: "ui--Dropdown-name",
         children: text
       })]
-    }, paraId),
-    value: paraId || -1
+    }, allyId),
+    value: allyId || -1
   };
 }
 
@@ -63,7 +63,7 @@ function Teleport(_ref2) {
   const [amount, setAmount] = (0, _react.useState)(_util.BN_ZERO);
   const [recipientId, setRecipientId] = (0, _react.useState)(null);
   const [senderId, setSenderId] = (0, _react.useState)(null);
-  const [recipientParaId, setParaId] = (0, _react.useState)(INVALID_PARAID);
+  const [recipientAllyId, setAllyId] = (0, _react.useState)(INVALID_ALLYID);
   const {
     allowTeleport,
     destinations,
@@ -77,11 +77,11 @@ function Teleport(_ref2) {
 
     return (_destinations$find = destinations.find((_ref3, index) => {
       let {
-        paraId
+        allyId
       } = _ref3;
-      return recipientParaId === -1 ? index === 0 : recipientParaId === paraId;
+      return recipientAllyId === -1 ? index === 0 : recipientAllyId === allyId;
     })) === null || _destinations$find === void 0 ? void 0 : _destinations$find.value;
-  }, [destinations, recipientParaId]);
+  }, [destinations, recipientAllyId]);
   const destApi = (0, _reactHooks.useApiUrl)(url);
   const weightFee = (0, _reactHooks.useWeightFee)(destWeight, destApi);
   const params = (0, _react.useMemo)(() => isParaTeleport ? [{
@@ -102,7 +102,7 @@ function Teleport(_ref2) {
     }
   }], destWeight] : [{
     X1: {
-      AllyChain: recipientParaId
+      AllyChain: recipientAllyId
     }
   }, {
     X1: {
@@ -116,7 +116,7 @@ function Teleport(_ref2) {
       amount,
       id: 'Here'
     }
-  }], destWeight], [amount, destWeight, isParaTeleport, recipientId, recipientParaId]);
+  }], destWeight], [amount, destWeight, isParaTeleport, recipientId, recipientAllyId]);
   const hasAvailable = !!amount && amount.gte(weightFee);
   return /*#__PURE__*/(0, _jsxRuntime.jsxs)(_reactComponents.Modal, {
     header: t('Teleport assets'),
@@ -139,9 +139,9 @@ function Teleport(_ref2) {
         children: [/*#__PURE__*/(0, _jsxRuntime.jsx)(_reactComponents.Dropdown, {
           defaultValue: chainOpts[0].value,
           label: t('destination chain'),
-          onChange: setParaId,
+          onChange: setAllyId,
           options: chainOpts
-        }), !isParaTeleport && oneWay.includes(recipientParaId) && /*#__PURE__*/(0, _jsxRuntime.jsx)(_reactComponents.MarkWarning, {
+        }), !isParaTeleport && oneWay.includes(recipientAllyId) && /*#__PURE__*/(0, _jsxRuntime.jsx)(_reactComponents.MarkWarning, {
           content: t('Currently this is a one-way transfer since the on-chain runtime functionality to send the funds from the destination chain back to this account not yet available.')
         })]
       }), /*#__PURE__*/(0, _jsxRuntime.jsx)(_reactComponents.Modal.Columns, {
@@ -184,7 +184,7 @@ function Teleport(_ref2) {
       children: /*#__PURE__*/(0, _jsxRuntime.jsx)(_reactComponents.TxButton, {
         accountId: senderId,
         icon: "share-square",
-        isDisabled: !allowTeleport || !hasAvailable || !recipientId || !amount || !destApi || !isParaTeleport && recipientParaId === INVALID_PARAID,
+        isDisabled: !allowTeleport || !hasAvailable || !recipientId || !amount || !destApi || !isParaTeleport && recipientAllyId === INVALID_ALLYID,
         label: t('Teleport'),
         onStart: onClose,
         params: params,

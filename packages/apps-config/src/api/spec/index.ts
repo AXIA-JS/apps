@@ -57,7 +57,7 @@ import kylin from './kylin';
 import laminar from './laminar';
 import litentry from './litentry';
 import manta from './manta';
-import moonbeam from './moonbeam';
+import axtend from './axtend';
 import mybank from './mybank';
 import neatcoin from './neatcoin';
 import nftmart from './nftmart';
@@ -179,15 +179,15 @@ const spec: Record<string, OverrideBundleDefinition> = {
   'manta-node': manta,
   'mashnet-node': kilt,
   'mathchain-galois': galois,
-  moonbase: moonbeam,
-  moonbeam,
-  moonriver: moonbeam,
-  moonshadow: moonbeam,
+  moonbase: axtend,
+  axtend,
+  moonriver: axtend,
+  moonshadow: axtend,
   'mybank.network Testnet': mybank,
   neatcoin,
   nft: unique,
   nftmart,
-  'node-moonbeam': moonbeam,
+  'node-axtend': axtend,
   'node-polkadex': polkadex,
   'node-template-spartan': subspace,
   'nodle-chain': nodle,

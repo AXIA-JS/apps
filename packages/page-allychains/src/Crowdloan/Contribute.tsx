@@ -3,7 +3,7 @@
 
 import type BN from 'bn.js';
 import type { ApiPromise } from '@axia-js/api';
-import type { Balance, BalanceOf, BlockNumber, ParaId } from '@axia-js/types/interfaces';
+import type { Balance, BalanceOf, BlockNumber, AllyId } from '@axia-js/types/interfaces';
 
 import React, { useMemo, useState } from 'react';
 
@@ -17,7 +17,7 @@ interface Props {
   cap: Balance;
   className?: string;
   needsSignature: boolean;
-  paraId: ParaId;
+  allyId: AllyId;
   raised: Balance;
 }
 
@@ -41,7 +41,7 @@ function verifySignature (api: ApiPromise, signature: string | null): boolean {
   return false;
 }
 
-function Contribute ({ cap, className, needsSignature, paraId, raised }: Props): React.ReactElement<Props> {
+function Contribute ({ cap, className, needsSignature, allyId, raised }: Props): React.ReactElement<Props> {
   const { t } = useTranslation();
   const { api } = useApi();
   const { hasAccounts } = useAccounts();
@@ -133,7 +133,7 @@ function Contribute ({ cap, className, needsSignature, paraId, raised }: Props):
               isDisabled={isAmountError || isSignatureError}
               label={t<string>('Contribute')}
               onStart={toggleOpen}
-              params={[paraId, amount, signature]}
+              params={[allyId, amount, signature]}
               tx={api.tx.crowdloan.contribute}
             />
           </Modal.Actions>

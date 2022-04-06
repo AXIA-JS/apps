@@ -1,7 +1,7 @@
 // Copyright 2017-2021 @axia-js/app-allychains authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import type { BlockNumber, Header, ParaId, RuntimeVersion } from '@axia-js/types/interfaces';
+import type { BlockNumber, Header, AllyId, RuntimeVersion } from '@axia-js/types/interfaces';
 
 import React from 'react';
 import styled from 'styled-components';
@@ -11,7 +11,7 @@ import { formatNumber } from '@axia-js/util';
 
 interface Props {
   className?: string;
-  id: ParaId;
+  id: AllyId;
 }
 
 const transformHeader = {

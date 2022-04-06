@@ -28,7 +28,7 @@ const NO_CONTRIB = {
   myContributions: {}
 };
 
-function useContributions(paraId) {
+function useContributions(allyId) {
   const {
     api
   } = (0, _reactHooks.useApi)();
@@ -36,8 +36,8 @@ function useContributions(paraId) {
     allAccountsHex
   } = (0, _reactHooks.useAccounts)();
   const [state, setState] = (0, _react.useState)(() => NO_CONTRIB);
-  const derive = (0, _reactHooks.useCall)(api.derive.crowdloan.contributions, [paraId]);
-  const myContributions = (0, _reactHooks.useCall)(api.derive.crowdloan.ownContributions, [paraId, state.myAccountsHex]);
+  const derive = (0, _reactHooks.useCall)(api.derive.crowdloan.contributions, [allyId]);
+  const myContributions = (0, _reactHooks.useCall)(api.derive.crowdloan.ownContributions, [allyId, state.myAccountsHex]);
   (0, _react.useEffect)(() => {
     derive && setState(prev => {
       let myAccountsHex = derive.contributorsHex.filter(h => allAccountsHex.includes(h));

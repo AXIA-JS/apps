@@ -36,25 +36,25 @@ function isNewOrdering(a, b) {
     let {
       firstSlot,
       lastSlot,
-      paraId
+      allyId
     } = _ref;
-    return !paraId.eq(b[index].paraId) || !firstSlot.eq(b[index].firstSlot) || !lastSlot.eq(b[index].lastSlot);
+    return !allyId.eq(b[index].allyId) || !firstSlot.eq(b[index].firstSlot) || !lastSlot.eq(b[index].lastSlot);
   });
 }
 
 function extractWinners(ranges, auctionInfo, optData) {
   return optData.isNone ? [] : optData.unwrap().reduce((winners, optEntry, index) => {
     if (optEntry.isSome) {
-      const [accountId, paraId, value] = optEntry.unwrap();
+      const [accountId, allyId, value] = optEntry.unwrap();
       const period = auctionInfo.leasePeriod || _util.BN_ZERO;
       const [first, last] = ranges[index];
       winners.push({
         accountId: accountId.toString(),
         firstSlot: period.addn(first),
         isCrowdloan: (0, _util.u8aEq)(_constants.CROWD_PREFIX, accountId.subarray(0, _constants.CROWD_PREFIX.length)),
-        key: paraId.toString(),
+        key: allyId.toString(),
         lastSlot: period.addn(last),
-        paraId,
+        allyId,
         value
       });
     }

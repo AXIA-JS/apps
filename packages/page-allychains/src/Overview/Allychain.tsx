@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import type { Option, Vec } from '@axia-js/types';
-import type { AccountId, BalanceOf, BlockNumber, CandidatePendingAvailability, GroupIndex, HeadData, HrmpChannel, HrmpChannelId, ParaId, ParaInfo, ParaLifecycle } from '@axia-js/types/interfaces';
+import type { AccountId, BalanceOf, BlockNumber, CandidatePendingAvailability, GroupIndex, HeadData, HrmpChannel, HrmpChannelId, AllyId, ParaInfo, ParaLifecycle } from '@axia-js/types/interfaces';
 import type { Codec, ITuple } from '@axia-js/types/types';
 import type { LeasePeriod, QueuedAction } from '../types';
 import type { EventMapInfo, ValidatorInfo } from './types';
@@ -26,7 +26,7 @@ interface Props {
   channelDst?: [HrmpChannelId, HrmpChannel][];
   channelSrc?: [HrmpChannelId, HrmpChannel][];
   className?: string;
-  id: ParaId;
+  id: AllyId;
   isScheduled?: boolean;
   lastBacked?: EventMapInfo;
   lastInclusion?: EventMapInfo;

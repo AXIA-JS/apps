@@ -62,7 +62,7 @@ function BlockAuthorsBase(_ref) {
       let lastHeaders = [];
       let lastBlockAuthors = [];
       let lastBlockNumber = '';
-      const isAuthorIds = (0, _util.isFunction)((_api$query$authorMapp = api.query.authorMapping) === null || _api$query$authorMapp === void 0 ? void 0 : _api$query$authorMapp.authorIds); // TODO-MOONBEAM reevaluate in a month: 07/16/21
+      const isAuthorIds = (0, _util.isFunction)((_api$query$authorMapp = api.query.authorMapping) === null || _api$query$authorMapp === void 0 ? void 0 : _api$query$authorMapp.authorIds); // TODO-AXTEND reevaluate in a month: 07/16/21
 
       const isAuthorMappingWithDeposit = (0, _util.isFunction)((_api$query$authorMapp2 = api.query.authorMapping) === null || _api$query$authorMapp2 === void 0 ? void 0 : _api$query$authorMapp2.mappingWithDeposit); // subscribe to all validators
 
@@ -78,12 +78,12 @@ function BlockAuthorsBase(_ref) {
           if (lastHeader.author) {
             thisBlockAuthor = lastHeader.author.toString();
           } else if (isAuthorMappingWithDeposit && lastHeader.digest.logs && lastHeader.digest.logs[0] && lastHeader.digest.logs[0].isConsensus && lastHeader.digest.logs[0].asConsensus[1]) {
-            // Some blockchains such as Moonbeam need to fetch the author accountId from a mapping
+            // Some blockchains such as Axtend need to fetch the author accountId from a mapping
             thisBlockAuthor = (await api.query.authorMapping.mappingWithDeposit(lastHeader.digest.logs[0].asConsensus[1])).toHuman().account;
             lastHeader.authorFromMapping = thisBlockAuthor;
           } else if (isAuthorIds && lastHeader.digest.logs && lastHeader.digest.logs[0] && lastHeader.digest.logs[0].isConsensus && lastHeader.digest.logs[0].asConsensus[1]) {
-            // TODO-MOONBEAM reevaluate in a month: 07/16/21
-            // Some blockchains such as Moonbeam need to fetch the author accountId from a mapping (function call may differ according to pallet version)
+            // TODO-AXTEND reevaluate in a month: 07/16/21
+            // Some blockchains such as Axtend need to fetch the author accountId from a mapping (function call may differ according to pallet version)
             thisBlockAuthor = (await api.query.authorMapping.authorIds(lastHeader.digest.logs[0].asConsensus[1])).toString();
             lastHeader.authorFromMapping = thisBlockAuthor;
           }

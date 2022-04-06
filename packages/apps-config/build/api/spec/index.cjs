@@ -111,7 +111,7 @@ var _litentry = _interopRequireDefault(require("./litentry.cjs"));
 
 var _manta = _interopRequireDefault(require("./manta.cjs"));
 
-var _moonbeam = _interopRequireDefault(require("./moonbeam.cjs"));
+var _axtend = _interopRequireDefault(require("./axtend.cjs"));
 
 var _mybank = _interopRequireDefault(require("./mybank.cjs"));
 
@@ -281,15 +281,15 @@ const spec = _objectSpread(_objectSpread({
   'manta-node': _manta.default,
   'mashnet-node': _kilt.default,
   'mathchain-galois': _galois.default,
-  moonbase: _moonbeam.default,
-  moonbeam: _moonbeam.default,
-  moonriver: _moonbeam.default,
-  moonshadow: _moonbeam.default,
+  moonbase: _axtend.default,
+  axtend: _axtend.default,
+  moonriver: _axtend.default,
+  moonshadow: _axtend.default,
   'mybank.network Testnet': _mybank.default,
   neatcoin: _neatcoin.default,
   nft: _unique.default,
   nftmart: _nftmart.default,
-  'node-moonbeam': _moonbeam.default,
+  'node-axtend': _axtend.default,
   'node-polkadex': _polkadex.default,
   'node-template-spartan': _subspace.default,
   'nodle-chain': _nodle.default,

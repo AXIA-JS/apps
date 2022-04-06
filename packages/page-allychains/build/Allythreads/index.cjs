@@ -17,7 +17,7 @@ var _translate = require("../translate.cjs");
 
 var _Actions = _interopRequireDefault(require("./Actions.cjs"));
 
-var _Parathread = _interopRequireDefault(require("./Parathread.cjs"));
+var _Allythread = _interopRequireDefault(require("./Allythread.cjs"));
 
 var _jsxRuntime = require("react/jsx-runtime");
 
@@ -27,8 +27,8 @@ function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && 
 
 // Copyright 2017-2021 @axia-js/app-allychains authors & contributors
 // SPDX-License-Identifier: Apache-2.0
-function extractParaMap(hasLinksMap, paraIds, leases) {
-  return paraIds.reduce((all, id, index) => {
+function extractParaMap(hasLinksMap, allyIds, leases) {
+  return allyIds.reduce((all, id, index) => {
     all.push([id, leases[index].map((optLease, period) => {
       if (optLease.isNone) {
         return null;
@@ -51,7 +51,7 @@ function extractParaMap(hasLinksMap, paraIds, leases) {
   });
 }
 
-function Parathreads(_ref3) {
+function Allythreads(_ref3) {
   let {
     actionsQueue,
     className,
@@ -68,31 +68,31 @@ function Parathreads(_ref3) {
   const hasLinksMap = (0, _reactHooks.useIsParasLinked)(ids);
   const leaseMap = (0, _reactHooks.useCall)(ids && api.query.slots.leases.multi, [ids], {
     transform: (0, _react.useCallback)(_ref4 => {
-      let [[paraIds], leases] = _ref4;
-      return extractParaMap(hasLinksMap, paraIds, leases);
+      let [[allyIds], leases] = _ref4;
+      return extractParaMap(hasLinksMap, allyIds, leases);
     }, [hasLinksMap]),
     withParamsTransform: true
   });
-  const headerRef = (0, _react.useRef)([[t('parathreads'), 'start', 2], ['', 'media--1100'], [t('head'), 'start media--1500'], [t('lifecycle'), 'start'], [], [], // [t('chain'), 'no-pad-left'],
+  const headerRef = (0, _react.useRef)([[t('allythreads'), 'start', 2], ['', 'media--1100'], [t('head'), 'start media--1500'], [t('lifecycle'), 'start'], [], [], // [t('chain'), 'no-pad-left'],
   [t('leases')], ['', 'media--900']]);
   return /*#__PURE__*/(0, _jsxRuntime.jsxs)("div", {
     className: className,
     children: [/*#__PURE__*/(0, _jsxRuntime.jsx)(_Actions.default, {
       ownedIds: ownedIds
     }), /*#__PURE__*/(0, _jsxRuntime.jsx)(_reactComponents.Table, {
-      empty: leasePeriod && ids && (ids.length === 0 || leaseMap) && t('There are no available parathreads'),
+      empty: leasePeriod && ids && (ids.length === 0 || leaseMap) && t('There are no available allythreads'),
       header: headerRef.current,
       children: leasePeriod && (leaseMap === null || leaseMap === void 0 ? void 0 : leaseMap.map(_ref5 => {
         let [id, leases] = _ref5;
-        return /*#__PURE__*/(0, _jsxRuntime.jsx)(_Parathread.default, {
+        return /*#__PURE__*/(0, _jsxRuntime.jsx)(_Allythread.default, {
           id: id,
           leasePeriod: leasePeriod,
           leases: leases,
           nextAction: actionsQueue.find(_ref6 => {
             let {
-              paraIds
+              allyIds
             } = _ref6;
-            return paraIds.some(p => p.eq(id));
+            return allyIds.some(p => p.eq(id));
           })
         }, id.toString());
       }))
@@ -100,6 +100,6 @@ function Parathreads(_ref3) {
   });
 }
 
-var _default = /*#__PURE__*/_react.default.memo(Parathreads);
+var _default = /*#__PURE__*/_react.default.memo(Allythreads);
 
 exports.default = _default;

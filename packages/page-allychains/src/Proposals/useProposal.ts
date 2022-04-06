@@ -2,14 +2,14 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import type { Option } from '@axia-js/types';
-import type { AllychainProposal, ParaId } from '@axia-js/types/interfaces';
+import type { AllychainProposal, AllyId } from '@axia-js/types/interfaces';
 import type { ProposalExt, ScheduledProposals } from '../types';
 
 import { useMemo } from 'react';
 
 import { useApi, useCall } from '@axia-js/react-hooks';
 
-export default function useProposal (id: ParaId, approvedIds: ParaId[], scheduled: ScheduledProposals[]): ProposalExt {
+export default function useProposal (id: AllyId, approvedIds: AllyId[], scheduled: ScheduledProposals[]): ProposalExt {
   const { api } = useApi();
   const opt = useCall<Option<AllychainProposal>>(api.query.proposeAllychain.proposals, [id]);
 

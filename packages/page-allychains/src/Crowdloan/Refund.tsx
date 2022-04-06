@@ -1,7 +1,7 @@
 // Copyright 2017-2021 @axia-js/app-allychains authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import type { ParaId } from '@axia-js/types/interfaces';
+import type { AllyId } from '@axia-js/types/interfaces';
 
 import React, { useState } from 'react';
 
@@ -12,10 +12,10 @@ import { useTranslation } from '../translate';
 
 interface Props {
   className?: string;
-  paraId: ParaId;
+  allyId: AllyId;
 }
 
-function Refund ({ className, paraId }: Props): React.ReactElement<Props> {
+function Refund ({ className, allyId }: Props): React.ReactElement<Props> {
   const { t } = useTranslation();
   const { api } = useApi();
   const { hasAccounts } = useAccounts();
@@ -53,7 +53,7 @@ function Refund ({ className, paraId }: Props): React.ReactElement<Props> {
               icon='credit-card'
               label={t<string>('Refund')}
               onStart={toggleOpen}
-              params={[paraId]}
+              params={[allyId]}
               tx={api.tx.crowdloan.refund}
             />
           </Modal.Actions>

@@ -12,11 +12,11 @@ var _reactHooks = require("@axia-js/react-hooks");
 function extractIds(entries) {
   return entries.map(_ref => {
     let [{
-      args: [paraId]
+      args: [allyId]
     }, optValue] = _ref;
     const value = optValue.unwrap();
-    return value && (value.isParathread || value.isUpgradingToAllychain || value.isOutgoingParathread || value.isOnboarding) ? paraId : null;
-  }).filter(paraId => !!paraId).sort((a, b) => a.cmp(b));
+    return value && (value.isAllythread || value.isUpgradingToAllychain || value.isOutgoingAllythread || value.isOnboarding) ? allyId : null;
+  }).filter(allyId => !!allyId).sort((a, b) => a.cmp(b));
 }
 
 function useUpomingIds() {

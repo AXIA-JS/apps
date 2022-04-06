@@ -26,12 +26,12 @@ function useActionsQueue() {
   const queryIndexes = (0, _react.useMemo)(() => currentIndex && INC.map(i => currentIndex.add(i)), [currentIndex]);
   const nextActions = (0, _reactHooks.useCall)(queryIndexes && api.query.paras.actionsQueue.multi, [queryIndexes], callOpts);
   return (0, _react.useMemo)(() => nextActions ? nextActions[0][0].map((sessionIndex, index) => ({
-    paraIds: nextActions[1][index],
+    allyIds: nextActions[1][index],
     sessionIndex
   })).filter(_ref => {
     let {
-      paraIds
+      allyIds
     } = _ref;
-    return paraIds.length;
+    return allyIds.length;
   }) : [], [nextActions]);
 }

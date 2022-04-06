@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import type { Option, StorageKey } from '@axia-js/types';
-import type { AccountId, BalanceOf, BlockNumber, FundInfo, ParaId } from '@axia-js/types/interfaces';
+import type { AccountId, BalanceOf, BlockNumber, FundInfo, AllyId } from '@axia-js/types/interfaces';
 import type { ITuple } from '@axia-js/types/types';
 import type { Campaign, Campaigns } from './types';
 
@@ -25,34 +25,34 @@ const EMPTY: Campaigns = {
 
 const EMPTY_U8A = new Uint8Array(32);
 
-function createAddress (paraId: ParaId): Uint8Array {
-  return u8aConcat(CROWD_PREFIX, paraId.toU8a(), EMPTY_U8A).subarray(0, 32);
+function createAddress (allyId: AllyId): Uint8Array {
+  return u8aConcat(CROWD_PREFIX, allyId.toU8a(), EMPTY_U8A).subarray(0, 32);
 }
 
-function isCrowdloadAccount (paraId: ParaId, accountId: AccountId): boolean {
-  return accountId.eq(createAddress(paraId));
+function isCrowdloadAccount (allyId: AllyId, accountId: AccountId): boolean {
+  return accountId.eq(createAddress(allyId));
 }
 
-function hasLease (paraId: ParaId, leased: ParaId[]): boolean {
-  return leased.some((l) => l.eq(paraId));
+function hasLease (allyId: AllyId, leased: AllyId[]): boolean {
+  return leased.some((l) => l.eq(allyId));
 }
 
 // map into a campaign
-function updateFund (bestNumber: BN, minContribution: BN, data: Campaign, leased: ParaId[]): Campaign {
+function updateFund (bestNumber: BN, minContribution: BN, data: Campaign, leased: AllyId[]): Campaign {
   data.isCapped = data.info.cap.sub(data.info.raised).lt(minContribution);
   data.isEnded = bestNumber.gt(data.info.end);
-  data.isWinner = hasLease(data.paraId, leased);
+  data.isWinner = hasLease(data.allyId, leased);
 
   return data;
 }
 
-function isFundUpdated (bestNumber: BlockNumber, minContribution: BN, { info: { cap, end, raised }, paraId }: Campaign, leased: ParaId[], allPrev: Campaigns): boolean {
-  const prev = allPrev.funds?.find((p) => p.paraId.eq(paraId));
+function isFundUpdated (bestNumber: BlockNumber, minContribution: BN, { info: { cap, end, raised }, allyId }: Campaign, leased: AllyId[], allPrev: Campaigns): boolean {
+  const prev = allPrev.funds?.find((p) => p.allyId.eq(allyId));
 
   return !prev ||
     (!prev.isEnded && bestNumber.gt(end)) ||
     (!prev.isCapped && cap.sub(raised).lt(minContribution)) ||
-    (!prev.isWinner && hasLease(paraId, leased));
+    (!prev.isWinner && hasLease(allyId, leased));
 }
 
 function sortCampaigns (a: Campaign, b: Campaign): number {
@@ -72,7 +72,7 @@ function sortCampaigns (a: Campaign, b: Campaign): number {
 }
 
 // compare the current campaigns against the previous, manually adding ending and calculating the new totals
-function createResult (bestNumber: BlockNumber, minContribution: BN, funds: Campaign[], leased: ParaId[], prev: Campaigns): Campaigns {
+function createResult (bestNumber: BlockNumber, minContribution: BN, funds: Campaign[], leased: AllyId[], prev: Campaigns): Campaigns {
   const [activeRaised, activeCap, totalRaised, totalCap] = funds.reduce(([ar, ac, tr, tc], { info: { cap, end, raised }, isWinner }) => [
     (bestNumber.gt(end) || isWinner) ? ar : ar.iadd(raised),
     (bestNumber.gt(end) || isWinner) ? ac : ac.iadd(cap),
@@ -112,43 +112,43 @@ function createResult (bestNumber: BlockNumber, minContribution: BN, funds: Camp
 }
 
 const optFundMulti = {
-  transform: ([[paraIds], optFunds]: [[ParaId[]], Option<FundInfo>[]]): Campaign[] =>
-    paraIds
-      .map((paraId, i): [ParaId, FundInfo | null] => [paraId, optFunds[i].unwrapOr(null)])
-      .filter((v): v is [ParaId, FundInfo] => !!v[1])
-      .map(([paraId, info]): Campaign => ({
-        accountId: encodeAddress(createAddress(paraId)),
+  transform: ([[allyIds], optFunds]: [[AllyId[]], Option<FundInfo>[]]): Campaign[] =>
+    allyIds
+      .map((allyId, i): [AllyId, FundInfo | null] => [allyId, optFunds[i].unwrapOr(null)])
+      .filter((v): v is [AllyId, FundInfo] => !!v[1])
+      .map(([allyId, info]): Campaign => ({
+        accountId: encodeAddress(createAddress(allyId)),
         firstSlot: info.firstPeriod,
         info,
         isCrowdloan: true,
-        key: paraId.toString(),
+        key: allyId.toString(),
         lastSlot: info.lastPeriod,
-        paraId,
+        allyId,
         value: info.raised
       }))
       .sort((a, b) =>
         a.info.end.cmp(b.info.end) ||
         a.info.firstPeriod.cmp(b.info.firstPeriod) ||
         a.info.lastPeriod.cmp(b.info.lastPeriod) ||
-        a.paraId.cmp(b.paraId)
+        a.allyId.cmp(b.allyId)
       ),
   withParamsTransform: true
 };
 
 const optLeaseMulti = {
-  transform: ([[paraIds], leases]: [[ParaId[]], Option<ITuple<[AccountId, BalanceOf]>>[][]]): ParaId[] =>
-    paraIds.filter((paraId, i) =>
+  transform: ([[allyIds], leases]: [[AllyId[]], Option<ITuple<[AccountId, BalanceOf]>>[][]]): AllyId[] =>
+    allyIds.filter((allyId, i) =>
       leases[i]
         .map((o) => o.unwrapOr(null))
         .filter((v): v is ITuple<[AccountId, BalanceOf]> => !!v)
-        .filter(([accountId]) => isCrowdloadAccount(paraId, accountId))
+        .filter(([accountId]) => isCrowdloadAccount(allyId, accountId))
         .length !== 0
     ),
   withParamsTransform: true
 };
 
-function extractFundIds (keys: StorageKey<[ParaId]>[]): ParaId[] {
-  return keys.map(({ args: [paraId] }) => paraId);
+function extractFundIds (keys: StorageKey<[AllyId]>[]): AllyId[] {
+  return keys.map(({ args: [allyId] }) => allyId);
 }
 
 export default function useFunds (): Campaigns {
@@ -156,9 +156,9 @@ export default function useFunds (): Campaigns {
   const bestNumber = useBestNumber();
   const mountedRef = useIsMountedRef();
   const trigger = useEventTrigger([api.events.crowdloan?.Created]);
-  const paraIds = useMapKeys(api.query.crowdloan?.funds, { at: trigger.blockHash, transform: extractFundIds });
-  const campaigns = useCall<Campaign[]>(api.query.crowdloan?.funds.multi, [paraIds], optFundMulti);
-  const leases = useCall<ParaId[]>(api.query.slots.leases.multi, [paraIds], optLeaseMulti);
+  const allyIds = useMapKeys(api.query.crowdloan?.funds, { at: trigger.blockHash, transform: extractFundIds });
+  const campaigns = useCall<Campaign[]>(api.query.crowdloan?.funds.multi, [allyIds], optFundMulti);
+  const leases = useCall<AllyId[]>(api.query.slots.leases.multi, [allyIds], optLeaseMulti);
   const [result, setResult] = useState<Campaigns>(EMPTY);
 
   // here we manually add the actual ending status and calculate the totals

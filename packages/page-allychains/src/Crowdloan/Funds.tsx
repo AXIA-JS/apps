@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import type BN from 'bn.js';
-import type { ParaId } from '@axia-js/types/interfaces';
+import type { AllyId } from '@axia-js/types/interfaces';
 import type { Campaign, LeasePeriod } from '../types';
 
 import React, { useMemo, useRef } from 'react';
@@ -20,16 +20,16 @@ interface Props {
   value: Campaign[] | null;
 }
 
-function extractLists (value: Campaign[] | null, leasePeriod?: LeasePeriod): [Campaign[] | null, Campaign[] | null, ParaId[] | null] {
+function extractLists (value: Campaign[] | null, leasePeriod?: LeasePeriod): [Campaign[] | null, Campaign[] | null, AllyId[] | null] {
   const currentPeriod = leasePeriod?.currentPeriod;
   let active: Campaign[] | null = null;
   let ended: Campaign[] | null = null;
-  let allIds: ParaId[] | null = null;
+  let allIds: AllyId[] | null = null;
 
   if (value && currentPeriod) {
     active = value.filter(({ firstSlot, isCapped, isEnded, isWinner }) => !(isCapped || isEnded || isWinner) && currentPeriod.lte(firstSlot));
     ended = value.filter(({ firstSlot, isCapped, isEnded, isWinner }) => (isCapped || isEnded || isWinner) || currentPeriod.gt(firstSlot));
-    allIds = value.map(({ paraId }) => paraId);
+    allIds = value.map(({ allyId }) => allyId);
   }
 
   return [active, ended, allIds];

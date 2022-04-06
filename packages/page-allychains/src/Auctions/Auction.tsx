@@ -1,7 +1,7 @@
 // Copyright 2017-2021 @axia-js/app-allychains authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import type { ParaId } from '@axia-js/types/interfaces';
+import type { AllyId } from '@axia-js/types/interfaces';
 import type { AuctionInfo, Campaign, Campaigns, WinnerData, Winning } from '../types';
 
 import React, { useCallback, useMemo, useRef } from 'react';
@@ -24,7 +24,7 @@ function Auction ({ auctionInfo, campaigns, className, winningData }: Props): Re
   const { t } = useTranslation();
   const { api } = useApi();
   const rangeMax = useLeaseRangeMax();
-  const newRaise = useCall<ParaId[]>(api.query.crowdloan.newRaise);
+  const newRaise = useCall<AllyId[]>(api.query.crowdloan.newRaise);
 
   const headerRef = useRef([
     [t('bids'), 'start', 3],
@@ -41,9 +41,9 @@ function Auction ({ auctionInfo, campaigns, className, winningData }: Props): Re
         const leasePeriodEnd = leasePeriodStart.add(rangeMax);
 
         return campaigns.funds
-          .filter(({ firstSlot, isWinner, lastSlot, paraId }) =>
+          .filter(({ firstSlot, isWinner, lastSlot, allyId }) =>
             !isWinner &&
-            newRaise.some((n) => n.eq(paraId)) &&
+            newRaise.some((n) => n.eq(allyId)) &&
             firstSlot.gte(leasePeriodStart) &&
             lastSlot.lte(leasePeriodEnd)
           )
@@ -62,13 +62,13 @@ function Auction ({ auctionInfo, campaigns, className, winningData }: Props): Re
       }
 
       return winners
-        .concat(...loans.filter(({ firstSlot, lastSlot, paraId, value }) =>
+        .concat(...loans.filter(({ firstSlot, lastSlot, allyId, value }) =>
           !winners.some((w) =>
             w.firstSlot.eq(firstSlot) &&
             w.lastSlot.eq(lastSlot)
           ) &&
           !loans.some((e) =>
-            !paraId.eq(e.paraId) &&
+            !allyId.eq(e.allyId) &&
             firstSlot.eq(e.firstSlot) &&
             lastSlot.eq(e.lastSlot) &&
             value.lt(e.value)

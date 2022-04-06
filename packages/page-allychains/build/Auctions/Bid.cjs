@@ -31,7 +31,7 @@ function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && 
 // SPDX-License-Identifier: Apache-2.0
 const EMPTY_OWNER = {
   accountId: null,
-  paraId: 0
+  allyId: 0
 };
 
 function Bid(_ref) {
@@ -56,7 +56,7 @@ function Bid(_ref) {
   const ranges = (0, _useLeaseRanges.useLeaseRanges)();
   const [{
     accountId,
-    paraId
+    allyId
   }, setOwnerInfo] = (0, _react.useState)(EMPTY_OWNER);
   const [amount, setAmount] = (0, _react.useState)(_util.BN_ZERO);
   const [range, setRange] = (0, _react.useState)(0);
@@ -133,10 +133,10 @@ function Bid(_ref) {
         children: /*#__PURE__*/(0, _jsxRuntime.jsx)(_reactComponents.TxButton, {
           accountId: accountId,
           icon: "plus",
-          isDisabled: !paraId || isAmountError || !(auctionInfo !== null && auctionInfo !== void 0 && auctionInfo.leasePeriod),
+          isDisabled: !allyId || isAmountError || !(auctionInfo !== null && auctionInfo !== void 0 && auctionInfo.leasePeriod),
           label: t('Bid'),
           onStart: toggleOpen,
-          params: [paraId, auctionInfo === null || auctionInfo === void 0 ? void 0 : auctionInfo.numAuctions, auctionInfo === null || auctionInfo === void 0 ? void 0 : (_auctionInfo$leasePer = auctionInfo.leasePeriod) === null || _auctionInfo$leasePer === void 0 ? void 0 : _auctionInfo$leasePer.addn(ranges[range][0]), auctionInfo === null || auctionInfo === void 0 ? void 0 : (_auctionInfo$leasePer2 = auctionInfo.leasePeriod) === null || _auctionInfo$leasePer2 === void 0 ? void 0 : _auctionInfo$leasePer2.addn(ranges[range][1]), amount],
+          params: [allyId, auctionInfo === null || auctionInfo === void 0 ? void 0 : auctionInfo.numAuctions, auctionInfo === null || auctionInfo === void 0 ? void 0 : (_auctionInfo$leasePer = auctionInfo.leasePeriod) === null || _auctionInfo$leasePer === void 0 ? void 0 : _auctionInfo$leasePer.addn(ranges[range][0]), auctionInfo === null || auctionInfo === void 0 ? void 0 : (_auctionInfo$leasePer2 = auctionInfo.leasePeriod) === null || _auctionInfo$leasePer2 === void 0 ? void 0 : _auctionInfo$leasePer2.addn(ranges[range][1]), amount],
           tx: api.tx.auctions.bid
         })
       })]

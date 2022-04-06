@@ -29,16 +29,16 @@ function InputOwner(_ref) {
     t
   } = (0, _translate.useTranslation)();
   const [accountId, setAccountId] = (0, _react.useState)(null);
-  const [paraId, setParaId] = (0, _react.useState)(0);
+  const [allyId, setAllyId] = (0, _react.useState)(0);
   (0, _react.useEffect)(() => {
-    onChange(accountId && paraId ? {
+    onChange(accountId && allyId ? {
       accountId,
-      paraId
+      allyId
     } : {
       accountId: null,
-      paraId: 0
+      allyId: 0
     });
-  }, [accountId, onChange, ownedIds, paraId]);
+  }, [accountId, onChange, ownedIds, allyId]);
   const owners = (0, _react.useMemo)(() => ownedIds.map(_ref2 => {
     let {
       manager
@@ -52,20 +52,20 @@ function InputOwner(_ref) {
     return manager === accountId;
   }).map(_ref4 => {
     let {
-      paraId
+      allyId
     } = _ref4;
     return {
-      text: paraId.toString(),
-      value: paraId.toNumber()
+      text: allyId.toString(),
+      value: allyId.toNumber()
     };
   }), [accountId, ownedIds]);
 
-  const _setParaId = (0, _react.useCallback)(id => setParaId(noCodeCheck || ownedIds.some(_ref5 => {
+  const _setAllyId = (0, _react.useCallback)(id => setAllyId(noCodeCheck || ownedIds.some(_ref5 => {
     let {
       hasCode,
-      paraId
+      allyId
     } = _ref5;
-    return paraId.eq(id) && hasCode;
+    return allyId.eq(id) && hasCode;
   }) ? id : 0), [noCodeCheck, ownedIds]);
 
   return /*#__PURE__*/(0, _jsxRuntime.jsxs)(_reactComponents.Modal.Columns, {
@@ -73,7 +73,7 @@ function InputOwner(_ref) {
       children: [/*#__PURE__*/(0, _jsxRuntime.jsx)("p", {
         children: t('This account that has been used to register the allychain. This will pay all associated fees.')
       }), /*#__PURE__*/(0, _jsxRuntime.jsx)("p", {
-        children: t('The allychain id is associated with the selected account via parathread registration.')
+        children: t('The allychain id is associated with the selected account via allythread registration.')
       })]
     }),
     children: [/*#__PURE__*/(0, _jsxRuntime.jsx)(_reactComponents.InputAddress, {
@@ -85,10 +85,10 @@ function InputOwner(_ref) {
     }), accountId && /*#__PURE__*/(0, _jsxRuntime.jsx)(_reactComponents.Dropdown, {
       defaultValue: optIds[0].value,
       label: t('allychain id'),
-      onChange: _setParaId,
+      onChange: _setAllyId,
       options: optIds
-    }, accountId), !noCodeCheck && !paraId && /*#__PURE__*/(0, _jsxRuntime.jsx)(_reactComponents.MarkError, {
-      content: t('Before using this registered paraId, you need to have a WASM validation function registered on-chain')
+    }, accountId), !noCodeCheck && !allyId && /*#__PURE__*/(0, _jsxRuntime.jsx)(_reactComponents.MarkError, {
+      content: t('Before using this registered allyId, you need to have a WASM validation function registered on-chain')
     })]
   });
 }

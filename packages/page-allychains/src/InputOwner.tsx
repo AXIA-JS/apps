@@ -18,15 +18,15 @@ interface Props {
 function InputOwner ({ noCodeCheck, onChange, ownedIds }: Props): React.ReactElement<Props> {
   const { t } = useTranslation();
   const [accountId, setAccountId] = useState<string | null>(null);
-  const [paraId, setParaId] = useState<number>(0);
+  const [allyId, setAllyId] = useState<number>(0);
 
   useEffect((): void => {
     onChange(
-      accountId && paraId
-        ? { accountId, paraId }
-        : { accountId: null, paraId: 0 }
+      accountId && allyId
+        ? { accountId, allyId }
+        : { accountId: null, allyId: 0 }
     );
-  }, [accountId, onChange, ownedIds, paraId]);
+  }, [accountId, onChange, ownedIds, allyId]);
 
   const owners = useMemo(
     () => ownedIds.map(({ manager }) => manager),
@@ -36,13 +36,13 @@ function InputOwner ({ noCodeCheck, onChange, ownedIds }: Props): React.ReactEle
   const optIds = useMemo(
     () => ownedIds
       .filter(({ manager }) => manager === accountId)
-      .map(({ paraId }) => ({ text: paraId.toString(), value: paraId.toNumber() })),
+      .map(({ allyId }) => ({ text: allyId.toString(), value: allyId.toNumber() })),
     [accountId, ownedIds]
   );
 
-  const _setParaId = useCallback(
-    (id: number) => setParaId(
-      noCodeCheck || ownedIds.some(({ hasCode, paraId }) => paraId.eq(id) && hasCode)
+  const _setAllyId = useCallback(
+    (id: number) => setAllyId(
+      noCodeCheck || ownedIds.some(({ hasCode, allyId }) => allyId.eq(id) && hasCode)
         ? id
         : 0
     ),
@@ -53,7 +53,7 @@ function InputOwner ({ noCodeCheck, onChange, ownedIds }: Props): React.ReactEle
     <Modal.Columns hint={
       <>
         <p>{t<string>('This account that has been used to register the allychain. This will pay all associated fees.')}</p>
-        <p>{t<string>('The allychain id is associated with the selected account via parathread registration.')}</p>
+        <p>{t<string>('The allychain id is associated with the selected account via allythread registration.')}</p>
       </>
     }
     >
@@ -69,12 +69,12 @@ function InputOwner ({ noCodeCheck, onChange, ownedIds }: Props): React.ReactEle
           defaultValue={optIds[0].value}
           key={accountId}
           label={t<string>('allychain id')}
-          onChange={_setParaId}
+          onChange={_setAllyId}
           options={optIds}
         />
       )}
-      {!noCodeCheck && !paraId && (
-        <MarkError content={t<string>('Before using this registered paraId, you need to have a WASM validation function registered on-chain')} />
+      {!noCodeCheck && !allyId && (
+        <MarkError content={t<string>('Before using this registered allyId, you need to have a WASM validation function registered on-chain')} />
       )}
     </Modal.Columns>
   );

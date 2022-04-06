@@ -61,7 +61,7 @@ const definitions = {
       ChainId: {
         _enum: {
           RelayChain: 'Null',
-          AllyChain: 'ParaId'
+          AllyChain: 'AllyId'
         }
       },
       ChangeBalance: {

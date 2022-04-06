@@ -44,7 +44,7 @@ function Contribute(_ref) {
     cap,
     className,
     needsSignature,
-    paraId,
+    allyId,
     raised
   } = _ref;
   const {
@@ -136,7 +136,7 @@ function Contribute(_ref) {
           isDisabled: isAmountError || isSignatureError,
           label: t('Contribute'),
           onStart: toggleOpen,
-          params: [paraId, amount, signature],
+          params: [allyId, amount, signature],
           tx: api.tx.crowdloan.contribute
         })
       })]

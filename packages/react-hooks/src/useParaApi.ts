@@ -35,9 +35,9 @@ function arrayShuffle (result: string[]): string[] {
   return result;
 }
 
-export function useParaApi (paraId: BN | number): Result {
+export function useParaApi (allyId: BN | number): Result {
   const mountedRef = useIsMountedRef();
-  const endpoints = useParaEndpoints(paraId);
+  const endpoints = useParaEndpoints(allyId);
   const [state, setState] = useState<Result>(() => ({
     api: null,
     endpoints,

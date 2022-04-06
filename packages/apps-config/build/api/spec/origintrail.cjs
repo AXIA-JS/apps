@@ -161,7 +161,7 @@ const origintrailDefinitions = {
         validation_data: 'PersistedValidationData',
         relay_chain_state: 'StorageProof',
         downward_messages: 'Vec<InboundDownwardMessage>',
-        horizontal_messages: 'BTreeMap<ParaId, Vec<InboundHrmpMessage>>'
+        horizontal_messages: 'BTreeMap<AllyId, Vec<InboundHrmpMessage>>'
       },
       RelayChainAccountId: 'AccountId32',
       RoundInfo: {

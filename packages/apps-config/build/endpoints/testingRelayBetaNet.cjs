@@ -35,7 +35,7 @@ function createBetaNet(t) {
     linked: [// these are the base chains
     {
       info: 'betanetTick',
-      paraId: 100,
+      allyId: 100,
       text: t('rpc.betanet.tick', 'Tick', {
         ns: 'apps-config'
       }),
@@ -44,7 +44,7 @@ function createBetaNet(t) {
       }
     }, {
       info: 'betanetTrick',
-      paraId: 110,
+      allyId: 110,
       text: t('rpc.betanet.trick', 'Trick', {
         ns: 'apps-config'
       }),
@@ -53,7 +53,7 @@ function createBetaNet(t) {
       }
     }, {
       info: 'betanetTrack',
-      paraId: 120,
+      allyId: 120,
       text: t('rpc.betanet.track', 'Track', {
         ns: 'apps-config'
       }),
@@ -62,7 +62,7 @@ function createBetaNet(t) {
       }
     }, {
       info: 'betanetStatemint',
-      paraId: 1000,
+      allyId: 1000,
       text: t('rpc.betanet.statemint', 'Statemint', {
         ns: 'apps-config'
       }),
@@ -74,7 +74,7 @@ function createBetaNet(t) {
       info: 'betanetApron',
       isDisabled: true,
       // BetaNet reset
-      paraId: 2048,
+      allyId: 2048,
       text: t('rpc.betanet.apron', 'Apron PC1', {
         ns: 'apps-config'
       }),
@@ -85,7 +85,7 @@ function createBetaNet(t) {
       info: 'betanetAres',
       isDisabled: true,
       // BetaNet reset
-      paraId: 1006,
+      allyId: 1006,
       text: t('rpc.betanet.ares', 'Ares PC1', {
         ns: 'apps-config'
       }),
@@ -96,7 +96,7 @@ function createBetaNet(t) {
       info: 'betanetBifrost',
       isDisabled: true,
       // BetaNet reset
-      paraId: 1024,
+      allyId: 1024,
       text: t('rpc.betanet.bifrost', 'Bifrost PC1', {
         ns: 'apps-config'
       }),
@@ -107,7 +107,7 @@ function createBetaNet(t) {
       info: 'betanetBitCountry',
       isDisabled: true,
       // BetaNet reset
-      paraId: 1008,
+      allyId: 1008,
       text: t('rpc.betanet.bitcountry', 'Bit.Country PC1', {
         ns: 'apps-config'
       }),
@@ -118,7 +118,7 @@ function createBetaNet(t) {
       info: 'betanetClover',
       isDisabled: true,
       // BetaNet reset
-      paraId: 229,
+      allyId: 229,
       text: t('rpc.betanet.clover', 'Clover PC1', {
         ns: 'apps-config'
       }),
@@ -129,7 +129,7 @@ function createBetaNet(t) {
       info: 'betanetCrab',
       isDisabled: true,
       // BetaNet reset
-      paraId: 9,
+      allyId: 9,
       text: t('rpc.betanet.crab', 'Darwinia Crab PC2', {
         ns: 'apps-config'
       }),
@@ -140,7 +140,7 @@ function createBetaNet(t) {
       info: 'betanetCrust',
       isDisabled: true,
       // BetaNet reset
-      paraId: 2001,
+      allyId: 2001,
       text: t('rpc.betanet.crust', 'Crust PC1', {
         ns: 'apps-config'
       }),
@@ -151,7 +151,7 @@ function createBetaNet(t) {
       info: 'betanetChainX',
       isDisabled: true,
       // BetaNet reset
-      paraId: 1059,
+      allyId: 1059,
       text: t('rpc.betanet.chainx', 'ChainX PC1', {
         ns: 'apps-config'
       }),
@@ -162,7 +162,7 @@ function createBetaNet(t) {
       info: 'betanetDarwinia',
       isDisabled: true,
       // BetaNet reset
-      paraId: 18,
+      allyId: 18,
       text: t('rpc.betanet.darwinia', 'Darwinia PC2', {
         ns: 'apps-config'
       }),
@@ -173,7 +173,7 @@ function createBetaNet(t) {
       info: 'betanetDataHighway',
       isDisabled: true,
       // BetaNet reset
-      paraId: 2,
+      allyId: 2,
       text: t('rpc.betanet.datahighway', 'DataHighway', {
         ns: 'apps-config'
       }),
@@ -184,7 +184,7 @@ function createBetaNet(t) {
       info: 'betanetEave',
       isDisabled: true,
       // BetaNet reset
-      paraId: 2003,
+      allyId: 2003,
       text: t('rpc.betanet.eave', 'Steam PC', {
         ns: 'apps-config'
       }),
@@ -195,7 +195,7 @@ function createBetaNet(t) {
       info: 'betanetEncointer',
       isDisabled: true,
       // BetaNet reset
-      paraId: 1862,
+      allyId: 1862,
       text: t('rpc.betanet.encointer', 'Encointer PC1', {
         ns: 'apps-config'
       }),
@@ -206,7 +206,7 @@ function createBetaNet(t) {
       info: 'betanetGalital',
       isDisabled: true,
       // BetaNet reset
-      paraId: 1230,
+      allyId: 1230,
       text: t('rpc.betanet.galital', 'Galital PC1', {
         ns: 'apps-config'
       }),
@@ -217,7 +217,7 @@ function createBetaNet(t) {
       info: 'betanetGenshiro',
       isDisabled: true,
       // BetaNet reset
-      paraId: 2021,
+      allyId: 2021,
       text: t('rpc.betanet.genshiro', 'Genshiro', {
         ns: 'apps-config'
       }),
@@ -228,7 +228,7 @@ function createBetaNet(t) {
       info: 'betanetHalongbay',
       isDisabled: true,
       // BetaNet reset
-      paraId: 2018,
+      allyId: 2018,
       text: t('rpc.betanet.halongbay', 'Halongbay', {
         ns: 'apps-config'
       }),
@@ -239,7 +239,7 @@ function createBetaNet(t) {
       info: 'betanetHydrate',
       isDisabled: true,
       // BetaNet reset
-      paraId: 82406,
+      allyId: 82406,
       text: t('rpc.betanet.hydrate', 'Hydrate', {
         ns: 'apps-config'
       }),
@@ -250,7 +250,7 @@ function createBetaNet(t) {
       info: 'betanetIdavoll',
       isDisabled: true,
       // BetaNet reset
-      paraId: 7766,
+      allyId: 7766,
       text: t('rpc.betanet.idavoll', 'Idavoll', {
         ns: 'apps-config'
       }),
@@ -261,7 +261,7 @@ function createBetaNet(t) {
       info: 'betanetIntegritee',
       isDisabled: true,
       // BetaNet reset
-      paraId: 1983,
+      allyId: 1983,
       text: t('rpc.betanet.integritee', 'Integritee PC1', {
         ns: 'apps-config'
       }),
@@ -272,7 +272,7 @@ function createBetaNet(t) {
       info: 'betanetInterBTC',
       isDisabled: true,
       // BetaNet reset
-      paraId: 2088,
+      allyId: 2088,
       text: t('rpc.betanet.interbtc', 'InterBTC PC1', {
         ns: 'apps-config'
       }),
@@ -283,7 +283,7 @@ function createBetaNet(t) {
       info: 'betanetKilt',
       isDisabled: true,
       // BetaNet reset
-      paraId: 12623,
+      allyId: 12623,
       text: t('rpc.betanet.kilt', 'KILT PC1', {
         ns: 'apps-config'
       }),
@@ -294,7 +294,7 @@ function createBetaNet(t) {
       info: 'betanetKonomi',
       isDisabled: true,
       // BetaNet reset
-      paraId: 18403,
+      allyId: 18403,
       text: t('rpc.betanet.konomi', 'Komomi Network', {
         ns: 'apps-config'
       }),
@@ -305,7 +305,7 @@ function createBetaNet(t) {
       info: 'betanetKylin',
       isDisabled: true,
       // BetaNet reset
-      paraId: 2013,
+      allyId: 2013,
       text: t('rpc.kylin-node.co.uk', 'Kylin Network', {
         ns: 'apps-config'
       }),
@@ -316,7 +316,7 @@ function createBetaNet(t) {
       info: 'betanetSingLavender',
       isDisabled: true,
       // BetaNet reset
-      paraId: 2104,
+      allyId: 2104,
       text: t('rpc.betanet.singlavender', 'Lavender by SingNetwork', {
         ns: 'apps-config'
       }),
@@ -327,7 +327,7 @@ function createBetaNet(t) {
       info: 'betanetLitentry',
       isDisabled: true,
       // BetaNet reset
-      paraId: 1984,
+      allyId: 1984,
       text: t('rpc.rocco.litentry', 'Litentry Rostock', {
         ns: 'apps-config'
       }),
@@ -338,7 +338,7 @@ function createBetaNet(t) {
       info: 'betanetLoomNetwork',
       isDisabled: true,
       // BetaNet reset
-      paraId: 2043,
+      allyId: 2043,
       text: t('rpc.betanet.loomnetwork', 'Loom Network', {
         ns: 'apps-config'
       }),
@@ -349,7 +349,7 @@ function createBetaNet(t) {
       info: 'betanetAcala',
       isDisabled: true,
       // BetaNet reset
-      paraId: 1000,
+      allyId: 1000,
       text: t('rpc.betanet.acala', 'Mandala PC2', {
         ns: 'apps-config'
       }),
@@ -360,7 +360,7 @@ function createBetaNet(t) {
       info: 'betanetMathChain',
       isDisabled: true,
       // BetaNet reset
-      paraId: 40,
+      allyId: 40,
       text: t('rpc.betanet.mathchain', 'MathChain PC1', {
         ns: 'apps-config'
       }),
@@ -371,7 +371,7 @@ function createBetaNet(t) {
       info: 'betanetManta',
       isDisabled: true,
       // BetaNet reset
-      paraId: 2021,
+      allyId: 2021,
       text: t('rpc.betanet.manta', 'Manta PC1', {
         ns: 'apps-config'
       }),
@@ -382,7 +382,7 @@ function createBetaNet(t) {
       info: 'betanetMoonrock',
       isDisabled: true,
       // BetaNet reset
-      paraId: 1286,
+      allyId: 1286,
       text: t('rpc.betanet.moonrock', 'Moonrock', {
         ns: 'apps-config'
       }),
@@ -393,7 +393,7 @@ function createBetaNet(t) {
       info: 'betanetOriginTrail',
       isDisabled: true,
       // BetaNet reset
-      paraId: 2037,
+      allyId: 2037,
       text: t('rpc.betanet.origintrail', 'OriginTrail Allychain', {
         ns: 'apps-config'
       }),
@@ -404,7 +404,7 @@ function createBetaNet(t) {
       info: 'betanetParami',
       isDisabled: true,
       // BetaNet reset
-      paraId: 18888,
+      allyId: 18888,
       text: t('rpc.betanet.parami', 'Parami PC2', {
         ns: 'apps-config'
       }),
@@ -415,7 +415,7 @@ function createBetaNet(t) {
       info: 'betanetJupiter',
       isDisabled: true,
       // BetaNet reset
-      paraId: 1010,
+      allyId: 1010,
       text: t('rpc.betanet.jupiter', 'Patract Jupiter PC1', {
         ns: 'apps-config'
       }),
@@ -426,7 +426,7 @@ function createBetaNet(t) {
       info: 'betanetPhala',
       isDisabled: true,
       // BetaNet reset
-      paraId: 1030,
+      allyId: 1030,
       text: t('rpc.betanet.phala', 'Phala PC1', {
         ns: 'apps-config'
       }),
@@ -437,7 +437,7 @@ function createBetaNet(t) {
       info: 'betanetPhoenix',
       isDisabled: true,
       // BetaNet reset
-      paraId: 6806,
+      allyId: 6806,
       text: t('rpc.betanet.phoenix', 'PHOENIX PC1', {
         ns: 'apps-config'
       }),
@@ -448,7 +448,7 @@ function createBetaNet(t) {
       info: 'betanetPlasm',
       isDisabled: true,
       // BetaNet reset
-      paraId: 5000,
+      allyId: 5000,
       text: t('rpc.betanet.plasm', 'Plasm PC2', {
         ns: 'apps-config'
       }),
@@ -459,7 +459,7 @@ function createBetaNet(t) {
       info: 'betanetPolkaFoundry',
       isDisabled: true,
       // BetaNet reset
-      paraId: 1111,
+      allyId: 1111,
       text: t('rpc.betanet.polkafoundry', 'PolkaFoundry PC1', {
         ns: 'apps-config'
       }),
@@ -470,7 +470,7 @@ function createBetaNet(t) {
       info: 'betanetPrism',
       isDisabled: true,
       // BetaNet reset
-      paraId: 2002,
+      allyId: 2002,
       text: t('rpc.betanet.prism', 'Prism PC1', {
         ns: 'apps-config'
       }),
@@ -481,7 +481,7 @@ function createBetaNet(t) {
       info: 'betanetRobonomics',
       isDisabled: true,
       // BetaNet reset
-      paraId: 3000,
+      allyId: 3000,
       text: t('rpc.betanet.robonomics', 'Robonomics PC2', {
         ns: 'apps-config'
       }),
@@ -491,7 +491,7 @@ function createBetaNet(t) {
     }, {
       info: 'betanetStandard',
       isDisabled: true,
-      paraId: 2003,
+      allyId: 2003,
       text: t('rpc.betanet.standard', 'Standard', {
         ns: 'apps-config'
       }),
@@ -502,7 +502,7 @@ function createBetaNet(t) {
       info: 'betanetSubDAO',
       isDisabled: true,
       // BetaNet reset
-      paraId: 888,
+      allyId: 888,
       text: t('rpc.betanet.subdao', 'SubDAO PC1', {
         ns: 'apps-config'
       }),
@@ -513,7 +513,7 @@ function createBetaNet(t) {
       info: 'betanetSubsocial',
       isDisabled: true,
       // BetaNet reset
-      paraId: 28,
+      allyId: 28,
       text: t('rpc.betanet.subsocial', 'Subsocial PC1', {
         ns: 'apps-config'
       }),
@@ -524,7 +524,7 @@ function createBetaNet(t) {
       info: 'betanetTrustBase',
       isDisabled: true,
       // BetaNet reset
-      paraId: 6633,
+      allyId: 6633,
       text: t('rpc.betanet.trustbase', 'TrustBase PC1', {
         ns: 'apps-config'
       }),
@@ -535,7 +535,7 @@ function createBetaNet(t) {
       info: 'betanetUnitv',
       isDisabled: true,
       // BetaNet reset
-      paraId: 3,
+      allyId: 3,
       text: t('rpc.betanet.unitv', 'Unit Network', {
         ns: 'apps-config'
       }),
@@ -546,7 +546,7 @@ function createBetaNet(t) {
       info: 'betanetVln',
       isDisabled: true,
       // BetaNet reset
-      paraId: 2007,
+      allyId: 2007,
       text: t('rpc.betanet.vln', 'Valibre Network PC', {
         ns: 'apps-config'
       }),
@@ -557,7 +557,7 @@ function createBetaNet(t) {
       info: 'betanetZeitgeist',
       isDisabled: true,
       // See https://github.com/axia-js/apps/issues/5842
-      paraId: 2050,
+      allyId: 2050,
       text: t('rpc.betanet.zeitgeist', 'Zeitgeist PC', {
         ns: 'apps-config'
       }),
@@ -568,7 +568,7 @@ function createBetaNet(t) {
       info: 'betanetZenlink',
       isDisabled: true,
       // BetaNet reset
-      paraId: 1188,
+      allyId: 1188,
       text: t('rpc.betanet.zenlink', 'Zenlink PC1', {
         ns: 'apps-config'
       }),

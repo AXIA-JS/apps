@@ -1,7 +1,7 @@
 // Copyright 2017-2021 @axia-js/app-allychains authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import type { ParaId } from '@axia-js/types/interfaces';
+import type { AllyId } from '@axia-js/types/interfaces';
 import type { LeasePeriod, Proposals, QueuedAction } from '../types';
 
 import React from 'react';
@@ -13,24 +13,24 @@ interface Props {
   actionsQueue: QueuedAction[];
   className?: string;
   leasePeriod?: LeasePeriod;
-  paraIds?: ParaId[];
+  allyIds?: AllyId[];
   proposals?: Proposals;
-  threadIds?: ParaId[];
-  upcomingIds?: ParaId[];
+  threadIds?: AllyId[];
+  upcomingIds?: AllyId[];
 }
 
-function Overview ({ actionsQueue, className, leasePeriod, paraIds, proposals, threadIds }: Props): React.ReactElement<Props> {
+function Overview ({ actionsQueue, className, leasePeriod, allyIds, proposals, threadIds }: Props): React.ReactElement<Props> {
   return (
     <div className={className}>
       <Summary
         leasePeriod={leasePeriod}
-        allychainCount={paraIds?.length}
+        allychainCount={allyIds?.length}
         proposalCount={proposals?.proposalIds.length}
         upcomingCount={threadIds?.length}
       />
       <Allychains
         actionsQueue={actionsQueue}
-        ids={paraIds}
+        ids={allyIds}
         leasePeriod={leasePeriod}
         scheduled={proposals?.scheduled}
       />

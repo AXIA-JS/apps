@@ -68,7 +68,7 @@ const definitions: OverrideBundleDefinition = {
         ChainId: {
           _enum: {
             RelayChain: 'Null',
-            AllyChain: 'ParaId'
+            AllyChain: 'AllyId'
           }
         },
         ChangeBalance: {

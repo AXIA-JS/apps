@@ -4,11 +4,11 @@ import { useApi, useEventTrigger, useMapEntries } from '@axia-js/react-hooks';
 
 function extractIds(entries) {
   return entries.map(([{
-    args: [paraId]
+    args: [allyId]
   }, optValue]) => {
     const value = optValue.unwrap();
-    return value && (value.isParathread || value.isUpgradingToAllychain || value.isOutgoingParathread || value.isOnboarding) ? paraId : null;
-  }).filter(paraId => !!paraId).sort((a, b) => a.cmp(b));
+    return value && (value.isAllythread || value.isUpgradingToAllychain || value.isOutgoingAllythread || value.isOnboarding) ? allyId : null;
+  }).filter(allyId => !!allyId).sort((a, b) => a.cmp(b));
 }
 
 export default function useUpomingIds() {

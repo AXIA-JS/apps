@@ -20,7 +20,7 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 function extractIds(entries) {
   const owned = entries.map(_ref => {
     let [{
-      args: [paraId]
+      args: [allyId]
     }, optInfo] = _ref;
 
     if (optInfo.isNone) {
@@ -30,16 +30,16 @@ function extractIds(entries) {
     const paraInfo = optInfo.unwrap();
     return {
       manager: paraInfo.manager.toString(),
-      paraId,
+      allyId,
       paraInfo
     };
   }).filter(id => !!id);
   return {
     ids: owned.map(_ref2 => {
       let {
-        paraId
+        allyId
       } = _ref2;
-      return paraId;
+      return allyId;
     }),
     owned
   };
@@ -47,10 +47,10 @@ function extractIds(entries) {
 
 const hashesOption = {
   transform: _ref3 => {
-    let [[paraIds], optHashes] = _ref3;
-    return paraIds.map((paraId, index) => ({
+    let [[allyIds], optHashes] = _ref3;
+    return allyIds.map((allyId, index) => ({
       hash: optHashes[index].unwrapOr(null),
-      paraId
+      allyId
     }));
   },
   withParamsTransform: true
@@ -73,9 +73,9 @@ function useOwnedIds() {
     hasCode: hashes.some(_ref4 => {
       let {
         hash,
-        paraId
+        allyId
       } = _ref4;
-      return !!hash && paraId.eq(data.paraId);
+      return !!hash && allyId.eq(data.allyId);
     })
   })) : [], [allAccounts, hashes, unfiltered]);
 }

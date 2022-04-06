@@ -26,7 +26,7 @@ function Summary({
         children: formatNumber(allychainCount)
       }), isNumber(upcomingCount) && /*#__PURE__*/_jsx(CardSummary, {
         className: "media--1000",
-        label: t('parathreads'),
+        label: t('allythreads'),
         children: formatNumber(upcomingCount)
       }), isNumber(proposalCount) && /*#__PURE__*/_jsx(CardSummary, {
         className: "media--1000",

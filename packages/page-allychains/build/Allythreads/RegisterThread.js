@@ -14,7 +14,7 @@ import { jsxs as _jsxs } from "react/jsx-runtime";
 
 function RegisterThread({
   className,
-  nextParaId,
+  nextAllyId,
   onClose,
   ownedIds
 }) {
@@ -25,7 +25,7 @@ function RegisterThread({
     api
   } = useApi();
   const [accountId, setAccountId] = useState(null);
-  const [paraId, setParaId] = useState();
+  const [allyId, setAllyId] = useState();
   const [wasm, setWasm] = useState(null);
   const [genesisState, setGenesisState] = useState(null);
 
@@ -35,17 +35,17 @@ function RegisterThread({
 
   const _setOwner = useCallback(({
     accountId,
-    paraId
+    allyId
   }) => {
     setAccountId(accountId);
-    setParaId(new BN(paraId));
+    setAllyId(new BN(allyId));
   }, []);
 
   const reservedDeposit = useMemo(() => api.consts.registrar.paraDeposit.add(api.consts.registrar.dataDepositPerByte.muln(wasm ? wasm.length : 0)).iadd(api.consts.registrar.dataDepositPerByte.muln(genesisState ? genesisState.length : 0)), [api, wasm, genesisState]);
-  const isIdError = !paraId || !paraId.gt(LOWEST_INVALID_ID);
+  const isIdError = !allyId || !allyId.gt(LOWEST_INVALID_ID);
   return /*#__PURE__*/_jsxs(Modal, {
     className: className,
-    header: t('Register parathread'),
+    header: t('Register allythread'),
     onClose: onClose,
     size: "large",
     children: [/*#__PURE__*/_jsxs(Modal.Content, {
@@ -66,11 +66,11 @@ function RegisterThread({
           hint: t('The id of this allychain as known on the network'),
           children: /*#__PURE__*/_jsx(InputNumber, {
             autoFocus: true,
-            defaultValue: nextParaId,
+            defaultValue: nextAllyId,
             isError: isIdError,
             isZeroable: false,
             label: t('allychain id'),
-            onChange: setParaId
+            onChange: setAllyId
           })
         })]
       }), /*#__PURE__*/_jsx(Modal.Columns, {
@@ -103,7 +103,7 @@ function RegisterThread({
         icon: "plus",
         isDisabled: !wasm || !genesisState || isIdError,
         onStart: onClose,
-        params: [paraId, genesisState, wasm],
+        params: [allyId, genesisState, wasm],
         tx: api.tx.registrar.register
       })
     })]

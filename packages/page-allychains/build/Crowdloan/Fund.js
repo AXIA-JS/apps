@@ -32,7 +32,7 @@ function Fund({
     isCapped,
     isEnded,
     isWinner,
-    paraId
+    allyId
   }
 }) {
   const {
@@ -44,7 +44,7 @@ function Fund({
   const {
     isAccount
   } = useAccounts();
-  const endpoints = useParaEndpoints(paraId);
+  const endpoints = useParaEndpoints(allyId);
   const {
     blockHash,
     contributorsHex,
@@ -52,7 +52,7 @@ function Fund({
     myAccounts,
     myAccountsHex,
     myContributions
-  } = useContributions(paraId);
+  } = useContributions(allyId);
   const [lastChange, setLastChange] = useState(() => ({
     prevHash: '',
     prevLength: 0
@@ -79,12 +79,12 @@ function Fund({
     children: [/*#__PURE__*/_jsx("td", {
       className: "number",
       children: /*#__PURE__*/_jsx("h1", {
-        children: formatNumber(paraId)
+        children: formatNumber(allyId)
       })
     }), /*#__PURE__*/_jsx("td", {
       className: "badge",
       children: /*#__PURE__*/_jsx(ParaLink, {
-        id: paraId
+        id: allyId
       })
     }), /*#__PURE__*/_jsx("td", {
       className: "media--800",
@@ -138,19 +138,19 @@ function Fund({
     }), /*#__PURE__*/_jsxs("td", {
       className: "button media--1000",
       children: [canWithdraw && contributorsHex.length !== 0 && /*#__PURE__*/_jsx(Refund, {
-        paraId: paraId
+        allyId: allyId
       }), canDissolve && /*#__PURE__*/_jsx(TxButton, {
         accountId: depositor,
         className: "media--1400",
         icon: "times",
         isDisabled: !isDepositor,
         label: isEnded ? t('Close') : t('Cancel'),
-        params: [paraId],
+        params: [allyId],
         tx: api.tx.crowdloan.dissolve
       }), isOngoing && canContribute && /*#__PURE__*/_jsx(Contribute, {
         cap: cap,
         needsSignature: verifier.isSome,
-        paraId: paraId,
+        allyId: allyId,
         raised: raised
       }), isOngoing && homepage && /*#__PURE__*/_jsxs("div", {
         children: [/*#__PURE__*/_jsx("a", {

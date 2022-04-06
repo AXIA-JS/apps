@@ -2,17 +2,17 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import type { StorageKey } from '@axia-js/types';
-import type { ParaId, SessionIndex } from '@axia-js/types/interfaces';
+import type { AllyId, SessionIndex } from '@axia-js/types/interfaces';
 import type { Proposals } from './types';
 
 import { useMemo } from 'react';
 
 import { useApi, useCallMulti, useEventTrigger, useIsMountedRef, useMapEntries, useMapKeys } from '@axia-js/react-hooks';
 
-type MultiQuery = [SessionIndex | undefined, ParaId[] | undefined];
+type MultiQuery = [SessionIndex | undefined, AllyId[] | undefined];
 
 interface Scheduled {
-  scheduledIds: ParaId[];
+  scheduledIds: AllyId[];
   sessionIndex: SessionIndex;
 }
 
@@ -20,11 +20,11 @@ const optionsMulti = {
   defaultValue: [undefined, undefined] as MultiQuery
 };
 
-function extractProposalIds (keys: StorageKey<[ParaId]>[]): ParaId[] {
+function extractProposalIds (keys: StorageKey<[AllyId]>[]): AllyId[] {
   return keys.map(({ args: [id] }) => id);
 }
 
-function extractScheduled (entries: [StorageKey<[SessionIndex]>, ParaId[]][]): Scheduled[] {
+function extractScheduled (entries: [StorageKey<[SessionIndex]>, AllyId[]][]): Scheduled[] {
   return entries.map(([{ args: [sessionIndex] }, scheduledIds]) => ({
     scheduledIds,
     sessionIndex

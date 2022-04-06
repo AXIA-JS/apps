@@ -19,14 +19,14 @@ interface Props {
   onClose: () => void;
 }
 
-const INVALID_PARAID = Number.MAX_SAFE_INTEGER;
+const INVALID_ALLYID = Number.MAX_SAFE_INTEGER;
 
-function createOption ({ info, paraId, text }: LinkOption): Option {
+function createOption ({ info, allyId, text }: LinkOption): Option {
   return {
     text: (
       <div
         className='ui--Dropdown-item'
-        key={paraId}
+        key={allyId}
       >
         <ChainImg
           className='ui--Dropdown-icon'
@@ -35,7 +35,7 @@ function createOption ({ info, paraId, text }: LinkOption): Option {
         <div className='ui--Dropdown-name'>{text}</div>
       </div>
     ),
-    value: paraId || -1
+    value: allyId || -1
   };
 }
 
@@ -45,7 +45,7 @@ function Teleport ({ onClose }: Props): React.ReactElement<Props> | null {
   const [amount, setAmount] = useState<BN | undefined>(BN_ZERO);
   const [recipientId, setRecipientId] = useState<string | null>(null);
   const [senderId, setSenderId] = useState<string | null>(null);
-  const [recipientParaId, setParaId] = useState(INVALID_PARAID);
+  const [recipientAllyId, setAllyId] = useState(INVALID_ALLYID);
   const { allowTeleport, destinations, isParaTeleport, oneWay } = useTeleport();
   const destWeight = useMemo(
     () => getTeleportWeight(api),
@@ -58,12 +58,12 @@ function Teleport ({ onClose }: Props): React.ReactElement<Props> | null {
   );
 
   const url = useMemo(
-    () => destinations.find(({ paraId }, index) =>
-      recipientParaId === -1
+    () => destinations.find(({ allyId }, index) =>
+      recipientAllyId === -1
         ? index === 0
-        : recipientParaId === paraId
+        : recipientAllyId === allyId
     )?.value as string,
-    [destinations, recipientParaId]
+    [destinations, recipientAllyId]
   );
 
   const destApi = useApiUrl(url);
@@ -78,12 +78,12 @@ function Teleport ({ onClose }: Props): React.ReactElement<Props> | null {
         destWeight
       ]
       : [
-        { X1: { AllyChain: recipientParaId } },
+        { X1: { AllyChain: recipientAllyId } },
         { X1: { AccountId32: { id: recipientId, network: 'Any' } } },
         [{ ConcreteFungible: { amount, id: 'Here' } }],
         destWeight
       ],
-    [amount, destWeight, isParaTeleport, recipientId, recipientParaId]
+    [amount, destWeight, isParaTeleport, recipientId, recipientAllyId]
   );
 
   const hasAvailable = !!amount && amount.gte(weightFee);
@@ -113,10 +113,10 @@ function Teleport ({ onClose }: Props): React.ReactElement<Props> | null {
             <Dropdown
               defaultValue={chainOpts[0].value}
               label={t<string>('destination chain')}
-              onChange={setParaId}
+              onChange={setAllyId}
               options={chainOpts}
             />
-            {!isParaTeleport && oneWay.includes(recipientParaId) && (
+            {!isParaTeleport && oneWay.includes(recipientAllyId) && (
               <MarkWarning content={t<string>('Currently this is a one-way transfer since the on-chain runtime functionality to send the funds from the destination chain back to this account not yet available.')} />
             )}
           </Modal.Columns>
@@ -171,7 +171,7 @@ function Teleport ({ onClose }: Props): React.ReactElement<Props> | null {
         <TxButton
           accountId={senderId}
           icon='share-square'
-          isDisabled={!allowTeleport || !hasAvailable || !recipientId || !amount || !destApi || (!isParaTeleport && recipientParaId === INVALID_PARAID)}
+          isDisabled={!allowTeleport || !hasAvailable || !recipientId || !amount || !destApi || (!isParaTeleport && recipientAllyId === INVALID_ALLYID)}
           label={t<string>('Teleport')}
           onStart={onClose}
           params={params}

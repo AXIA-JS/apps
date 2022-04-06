@@ -1,7 +1,7 @@
 // Copyright 2017-2021 @axia-js/app-allychains authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import type { ParaId } from '@axia-js/types/interfaces';
+import type { AllyId } from '@axia-js/types/interfaces';
 
 import React, { useRef } from 'react';
 import { Route, Switch } from 'react-router';
@@ -14,7 +14,7 @@ import { useApi, useCall } from '@axia-js/react-hooks';
 import Auctions from './Auctions';
 import Crowdloan from './Crowdloan';
 import Overview from './Overview';
-import Parathreads from './Parathreads';
+import Allythreads from './Allythreads';
 import Proposals from './Proposals';
 import { useTranslation } from './translate';
 import useActionsQueue from './useActionsQueue';
@@ -43,7 +43,7 @@ function AllychainsApp ({ basePath, className }: Props): React.ReactElement<Prop
   const proposals = useProposals();
   const actionsQueue = useActionsQueue();
   const upcomingIds = useUpcomingIds();
-  const paraIds = useCall<ParaId[]>(api.query.paras.allychains);
+  const allyIds = useCall<AllyId[]>(api.query.paras.allychains);
 
   const items = useRef([
     {
@@ -52,8 +52,8 @@ function AllychainsApp ({ basePath, className }: Props): React.ReactElement<Prop
       text: t<string>('Overview')
     },
     {
-      name: 'parathreads',
-      text: t<string>('Parathreads')
+      name: 'allythreads',
+      text: t<string>('Allythreads')
     },
     api.query.proposeAllychain && {
       name: 'proposals',
@@ -100,13 +100,13 @@ function AllychainsApp ({ basePath, className }: Props): React.ReactElement<Prop
         actionsQueue={actionsQueue}
         className={pathname === basePath ? '' : 'allychains--hidden'}
         leasePeriod={leasePeriod}
-        paraIds={paraIds}
+        allyIds={allyIds}
         proposals={proposals}
         threadIds={upcomingIds}
       />
-      <Parathreads
+      <Allythreads
         actionsQueue={actionsQueue}
-        className={pathname === `${basePath}/parathreads` ? '' : 'allychains--hidden'}
+        className={pathname === `${basePath}/allythreads` ? '' : 'allychains--hidden'}
         ids={upcomingIds}
         leasePeriod={leasePeriod}
         ownedIds={ownedIds}

@@ -22,8 +22,8 @@ function extractRelayDestinations(relayGenesis, filter) {
   return endpoints.filter(l => (l.genesisHashRelay === relayGenesis || l.genesisHash === relayGenesis) && filter(l)).reduce((result, curr) => {
     const isExisting = result.some(({
       genesisHash,
-      paraId
-    }) => paraId === curr.paraId || genesisHash && genesisHash === curr.genesisHash);
+      allyId
+    }) => allyId === curr.allyId || genesisHash && genesisHash === curr.genesisHash);
 
     if (!isExisting) {
       result.push(curr);
@@ -41,7 +41,7 @@ export function useTeleport() {
     apiUrl,
     isApiReady
   } = useApi();
-  const paraId = useCall(isApiReady && ((_api$query$allychainI = api.query.allychainInfo) === null || _api$query$allychainI === void 0 ? void 0 : _api$query$allychainI.allychainId));
+  const allyId = useCall(isApiReady && ((_api$query$allychainI = api.query.allychainInfo) === null || _api$query$allychainI === void 0 ? void 0 : _api$query$allychainI.allychainId));
   const [state, setState] = useState(() => _objectSpread({}, DEFAULT_STATE));
   useEffect(() => {
     if (isApiReady) {
@@ -52,14 +52,14 @@ export function useTeleport() {
 
       if (endpoint) {
         const destinations = extractRelayDestinations(relayGenesis, ({
-          paraId
-        }) => isNumber(paraId) && endpoint.teleport.includes(paraId));
+          allyId
+        }) => isNumber(allyId) && endpoint.teleport.includes(allyId));
         const oneWay = extractRelayDestinations(relayGenesis, ({
-          paraId,
+          allyId,
           teleport
-        }) => isNumber(paraId) && !teleport.includes(-1)).map(({
-          paraId
-        }) => paraId || -1);
+        }) => isNumber(allyId) && !teleport.includes(-1)).map(({
+          allyId
+        }) => allyId || -1);
         setState({
           allowTeleport: destinations.length !== 0,
           destinations,
@@ -70,21 +70,21 @@ export function useTeleport() {
     }
   }, [api, isApiReady]);
   useEffect(() => {
-    if (paraId) {
+    if (allyId) {
       const endpoint = endpoints.find(({
         value
       }) => value === apiUrl);
 
       if (endpoint && endpoint.genesisHashRelay) {
         const destinations = extractRelayDestinations(endpoint.genesisHashRelay, ({
-          paraId
-        }) => endpoint.teleport.includes(isNumber(paraId) ? paraId : -1));
+          allyId
+        }) => endpoint.teleport.includes(isNumber(allyId) ? allyId : -1));
         const oneWay = extractRelayDestinations(endpoint.genesisHashRelay, ({
-          paraId,
+          allyId,
           teleport
-        }) => !teleport.includes(isNumber(paraId) ? paraId : -1)).map(({
-          paraId
-        }) => paraId || -1);
+        }) => !teleport.includes(isNumber(allyId) ? allyId : -1)).map(({
+          allyId
+        }) => allyId || -1);
         setState({
           allowTeleport: destinations.length !== 0,
           destinations,
@@ -93,6 +93,6 @@ export function useTeleport() {
         });
       }
     }
-  }, [apiUrl, paraId]);
+  }, [apiUrl, allyId]);
   return state;
 }

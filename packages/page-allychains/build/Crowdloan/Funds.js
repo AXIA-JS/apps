@@ -29,8 +29,8 @@ function extractLists(value, leasePeriod) {
       isWinner
     }) => isCapped || isEnded || isWinner || currentPeriod.gt(firstSlot));
     allIds = value.map(({
-      paraId
-    }) => paraId);
+      allyId
+    }) => allyId);
   }
 
   return [active, ended, allIds];

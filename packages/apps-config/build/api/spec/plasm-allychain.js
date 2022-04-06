@@ -13,7 +13,7 @@ const definitions = {
       ChainId: {
         _enum: {
           RelayChain: null,
-          Allychain: 'ParaId'
+          Allychain: 'AllyId'
         }
       },
       XCurrencyId: {

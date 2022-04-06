@@ -53,7 +53,7 @@ function Fund(_ref) {
       isCapped,
       isEnded,
       isWinner,
-      paraId
+      allyId
     }
   } = _ref;
   const {
@@ -65,7 +65,7 @@ function Fund(_ref) {
   const {
     isAccount
   } = (0, _reactHooks.useAccounts)();
-  const endpoints = (0, _reactHooks.useParaEndpoints)(paraId);
+  const endpoints = (0, _reactHooks.useParaEndpoints)(allyId);
   const {
     blockHash,
     contributorsHex,
@@ -73,7 +73,7 @@ function Fund(_ref) {
     myAccounts,
     myAccountsHex,
     myContributions
-  } = (0, _useContributions.default)(paraId);
+  } = (0, _useContributions.default)(allyId);
   const [lastChange, setLastChange] = (0, _react.useState)(() => ({
     prevHash: '',
     prevLength: 0
@@ -100,12 +100,12 @@ function Fund(_ref) {
     children: [/*#__PURE__*/(0, _jsxRuntime.jsx)("td", {
       className: "number",
       children: /*#__PURE__*/(0, _jsxRuntime.jsx)("h1", {
-        children: (0, _util.formatNumber)(paraId)
+        children: (0, _util.formatNumber)(allyId)
       })
     }), /*#__PURE__*/(0, _jsxRuntime.jsx)("td", {
       className: "badge",
       children: /*#__PURE__*/(0, _jsxRuntime.jsx)(_reactComponents.ParaLink, {
-        id: paraId
+        id: allyId
       })
     }), /*#__PURE__*/(0, _jsxRuntime.jsx)("td", {
       className: "media--800",
@@ -159,19 +159,19 @@ function Fund(_ref) {
     }), /*#__PURE__*/(0, _jsxRuntime.jsxs)("td", {
       className: "button media--1000",
       children: [canWithdraw && contributorsHex.length !== 0 && /*#__PURE__*/(0, _jsxRuntime.jsx)(_Refund.default, {
-        paraId: paraId
+        allyId: allyId
       }), canDissolve && /*#__PURE__*/(0, _jsxRuntime.jsx)(_reactComponents.TxButton, {
         accountId: depositor,
         className: "media--1400",
         icon: "times",
         isDisabled: !isDepositor,
         label: isEnded ? t('Close') : t('Cancel'),
-        params: [paraId],
+        params: [allyId],
         tx: api.tx.crowdloan.dissolve
       }), isOngoing && canContribute && /*#__PURE__*/(0, _jsxRuntime.jsx)(_Contribute.default, {
         cap: cap,
         needsSignature: verifier.isSome,
-        paraId: paraId,
+        allyId: allyId,
         raised: raised
       }), isOngoing && homepage && /*#__PURE__*/(0, _jsxRuntime.jsxs)("div", {
         children: [/*#__PURE__*/(0, _jsxRuntime.jsx)("a", {

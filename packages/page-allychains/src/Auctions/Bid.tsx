@@ -29,7 +29,7 @@ interface Option {
   value: number;
 }
 
-const EMPTY_OWNER: OwnerInfo = { accountId: null, paraId: 0 };
+const EMPTY_OWNER: OwnerInfo = { accountId: null, allyId: 0 };
 
 function Bid ({ auctionInfo, className, lastWinners, ownedIds }: Props): React.ReactElement<Props> {
   const { t } = useTranslation();
@@ -37,7 +37,7 @@ function Bid ({ auctionInfo, className, lastWinners, ownedIds }: Props): React.R
   const { hasAccounts } = useAccounts();
   const bestNumber = useBestNumber();
   const ranges = useLeaseRanges();
-  const [{ accountId, paraId }, setOwnerInfo] = useState<OwnerInfo>(EMPTY_OWNER);
+  const [{ accountId, allyId }, setOwnerInfo] = useState<OwnerInfo>(EMPTY_OWNER);
   const [amount, setAmount] = useState<BN | undefined>(BN_ZERO);
   const [range, setRange] = useState(0);
   const [isOpen, toggleOpen] = useToggle();
@@ -125,10 +125,10 @@ function Bid ({ auctionInfo, className, lastWinners, ownedIds }: Props): React.R
             <TxButton
               accountId={accountId}
               icon='plus'
-              isDisabled={!paraId || isAmountError || !auctionInfo?.leasePeriod}
+              isDisabled={!allyId || isAmountError || !auctionInfo?.leasePeriod}
               label={t<string>('Bid')}
               onStart={toggleOpen}
-              params={[paraId, auctionInfo?.numAuctions, auctionInfo?.leasePeriod?.addn(ranges[range][0]), auctionInfo?.leasePeriod?.addn(ranges[range][1]), amount]}
+              params={[allyId, auctionInfo?.numAuctions, auctionInfo?.leasePeriod?.addn(ranges[range][0]), auctionInfo?.leasePeriod?.addn(ranges[range][1]), amount]}
               tx={api.tx.auctions.bid}
             />
           </Modal.Actions>

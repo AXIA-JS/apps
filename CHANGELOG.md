@@ -32,13 +32,13 @@ Contributed:
 - Update OriginTrail types (Thanks to https://github.com/NZT48 & https://github.com/kotlarmilos)
 - Update Acala types (Thanks to https://github.com/qwer951123)
 - Update UniArts providers (Thanks to https://github.com/sunnyCoCosun)
-- Update KILT paraId (Thanks to https://github.com/weichweich)
-- Update Charcoal paraId (Thanks to https://github.com/mikiquantum)
-- Update Basilisk paraId (Thanks to https://github.com/lumir-mrkva)
-- Update Altair paraId (Thanks to https://github.com/mikiquantum)
-- Update Moonbeam types (Thanks to https://github.com/joelamouche)
-- Update WILT paraId & types (Thanks to https://github.com/weichweich)
-- Update Genshiro paraId (Thanks to https://github.com/alex-nax)
+- Update KILT allyId (Thanks to https://github.com/weichweich)
+- Update Charcoal allyId (Thanks to https://github.com/mikiquantum)
+- Update Basilisk allyId (Thanks to https://github.com/lumir-mrkva)
+- Update Altair allyId (Thanks to https://github.com/mikiquantum)
+- Update Axtend types (Thanks to https://github.com/joelamouche)
+- Update WILT allyId & types (Thanks to https://github.com/weichweich)
+- Update Genshiro allyId (Thanks to https://github.com/alex-nax)
 - Add Lavendar allychain (Thanks to https://github.com/phamsonha)
 - Add Genshiro standalone (Thanks to https://github.com/alex-nax)
 - Add Crown Sterling chain (Thanks to https://github.com/crownsterlingllc)
@@ -131,7 +131,7 @@ Contributed:
 - Update Dotscanner URLs (Thanks to https://github.com/Deekor)
 - Dotscanner support for AXIALunar (Thanks to https://github.com/Deekor)
 - Update NFTMart logo (Thanks to https://github.com/caosbad)
-- Update Moonbeam types (Thanks to https://github.com/joelamouche)
+- Update Axtend types (Thanks to https://github.com/joelamouche)
 - Add Calamari network logo (Thanks to https://github.com/Dengjianping)
 - Update AlphaNet logos (Thanks to https://github.com/wirednkod)
 - Add Trustbase network (Thanks to https://github.com/ygsgdbd)
@@ -179,7 +179,7 @@ Contributed:
 - Update Genshiro details (Thanks to https://github.com/alex-nax & https://github.com/pr0fedt)
 - Update Zeitgeist details (Thanks to https://github.com/c410-f3r & https://github.com/lsaether)
 - Update OriginTrail details (Thanks to https://github.com/kotlarmilos & https://github.com/NZT48)
-- Add support for new Moonbeam authors (Thanks to https://github.com/joelamouche)
+- Add support for new Axtend authors (Thanks to https://github.com/joelamouche)
 - Adjust Neatcoin inflation params (Thanks to https://github.com/sorpaas)
 - Update Kilt logo (Thanks to https://github.com/rflechtner)
 - Fix language in chain specifications (Thanks to https://github.com/andresilva)
@@ -244,7 +244,7 @@ Changes:
 Contributed:
 
 - Add OnFinality providers for Statemine & Westmint (Thanks to https://github.com/xsteadybcgo)
-- Extract Moonbeam author ids (Thanks to https://github.com/joelamouche)
+- Extract Axtend author ids (Thanks to https://github.com/joelamouche)
 - Add Whala network (Thanks to https://github.com/jasl & https://github.com/limichange)
 - Add Moonriver network (Thanks to https://github.com/crystalin)
 - Add Basilisk Egg network (Thanks to https://github.com/lumir-mrkva)
@@ -253,7 +253,7 @@ Contributed:
 - Update Jupiter types (Thanks to https://github.com/zzcwoshizz)
 - Update Polkadex types (Thanks to https://github.com/Gauthamastro)
 - Update Dock types (Thanks to https://github.com/lovesh)
-- Update Moonbeam types (Thanks to https://github.com/joelamouche)
+- Update Axtend types (Thanks to https://github.com/joelamouche)
 - Update Realis types (Thanks to https://github.com/Daelon02)
 
 Changes:
@@ -299,7 +299,7 @@ Contributed:
 - Update Manta types (Thanks to https://github.com/stechu)
 - Update Zero.io types (Thanks to https://github.com/2075)
 - Update types for HydraDX (Thanks to https://github.com/jak-pan)
-- Update Moonbeam types (Thanks to https://github.com/joelamouche)
+- Update Axtend types (Thanks to https://github.com/joelamouche)
 - Update PolkaBTC types (Thanks to https://github.com/savudani8)
 - Update Acala types (thanks to https://github.com/qwer951123)
 - Update Plasm types (Thanks to https://github.com/hoonsubin)
@@ -365,7 +365,7 @@ Contributed:
 - Update types for Zeitgeist (Thanks to https://github.com/lsaether)
 - Update types for Darwinia (Thanks to https://github.com/WoeOm)
 - Update types for Galital (Thanks to https://github.com/masterdubs)
-- Update types for Moonbeam (Thanks to https://github.com/joelamouche)
+- Update types for Axtend (Thanks to https://github.com/joelamouche)
 - Update types for Dusty (Thanks to https://github.com/hoonsubin)
 - Update types for SORA (Thanks to https://github.com/stefashkaa)
 - Update types for Ternoa (Thanks to https://github.com/ETeissonniere)
@@ -376,18 +376,18 @@ Contributed:
 - Support for Snakenet gen-3 (Thanks to https://github.com/jak-pan)
 - Add Zeitgeist BetaNet allychain (Thanks to https://github.com/c410-f3r)
 - Add Moonrock BetaNet allychain (Thanks to https://github.com/crystalin)
-- Adjust Crust BetaNet paraId (Thanks to https://github.com/yuhui1208)
-- Adjust Eave BetaNet paraId (Thanks to https://github.com/johnwhitton)
+- Adjust Crust BetaNet allyId (Thanks to https://github.com/yuhui1208)
+- Adjust Eave BetaNet allyId (Thanks to https://github.com/johnwhitton)
 - Add GamePower testnet (Thanks to https://github.com/GamePowerDev & https://github.com/MikeHuntington)
 - Add Pangolin testnet (Thanks to https://github.com/sxlwar)
 - Add Geeknet testnet (Thanks to https://github.com/nasa8x)
 - Add Centrifuge BetaNet endpoint (Thanks to https://github.com/mikiquantum)
-- Add Khala AXIALunar parathread (Thanks to https://github.com/h4x3rotab)
-- Add Prism AXIALunar parathread (Thanks to https://github.com/chrissoso)
-- Add Cust Shadow AXIALunar parathread (Thanks to https://github.com/zikunfan)
-- Add Kilt AXIALunar parathread (Thanks to https://github.com/wischli)
-- Add SherpaX AXIALunar parathread (Thanks to https://github.com/icodezjb)
-- Add Bifrost AXIALunar parathread (Thanks to https://github.com/awesomepan)
+- Add Khala AXIALunar allythread (Thanks to https://github.com/h4x3rotab)
+- Add Prism AXIALunar allythread (Thanks to https://github.com/chrissoso)
+- Add Cust Shadow AXIALunar allythread (Thanks to https://github.com/zikunfan)
+- Add Kilt AXIALunar allythread (Thanks to https://github.com/wischli)
+- Add SherpaX AXIALunar allythread (Thanks to https://github.com/icodezjb)
+- Add Bifrost AXIALunar allythread (Thanks to https://github.com/awesomepan)
 - Add Patract Elara endpoint for Moonbase (Thanks to https://github.com/zzcwoshizz)
 - Add Patract Elara endpoint for Subsocial (Thanks to https://github.com/zzcwoshizz)
 - Add Polymath provider (Thanks to https://github.com/satyamakgec & https://github.com/Tamir-Polymath)
@@ -406,10 +406,10 @@ Changes:
 - Sort by and display ss58 in chain settings
 - Adjust logo/color overrides to be alphabetical
 - Check for registered code for allowing allychain bidding
-- Always populate paraId from owners (after registration)
+- Always populate allyId from owners (after registration)
 - Add Shell allychain to AlphaNet
 - Allow UI to work with no balances/timestamp modules (as per Shell)
-- Display parathread info via para API (in addition to allychain)
+- Display allythread info via para API (in addition to allychain)
 - Cater for electionsPhragmen -> phragmenElection modules
 - Cater for council votes on prev-generation chains
 
@@ -426,7 +426,7 @@ Contributed:
 - Update Manta BetaNet config (Thanks to https://github.com/zhenfeizhang & https://github.com/Dengjianping)
 - Update Darwinia types (Thanks to https://github.com/WoeOm)
 - Update IPSE config (Thanks to https://github.com/shareven)
-- Update Ares paraId on BetaNet (Thanks to https://github.com/lyxyx)
+- Update Ares allyId on BetaNet (Thanks to https://github.com/lyxyx)
 - Add Sora mainnet (Thanks to https://github.com/Nikita-Polyakov)
 - Add Konomi config for BetaNet (Thanks to https://github.com/willeslau)
 - Added Edgeware OnFinality endpoint (Thanks to https://github.com/454076513)
@@ -458,10 +458,10 @@ Changes:
 
 Contributed:
 
-- Update Phala BetaNet paraId (Thanks to https://github.com/h4x3rotab)
+- Update Phala BetaNet allyId (Thanks to https://github.com/h4x3rotab)
 - Update config for Phala Poc-4 (Thanks to https://github.com/Anonymous-Hentai)
-- Update Jupiter BetaNet paraId (Thanks to https://github.com/zzcwoshizz)
-- Update ChainX & Zenlink BetaNet paraIds (hanks to https://github.com/icodezjb)
+- Update Jupiter BetaNet allyId (Thanks to https://github.com/zzcwoshizz)
+- Update ChainX & Zenlink BetaNet allyIds (hanks to https://github.com/icodezjb)
 - Update Nftmart config (Thanks to https://github.com/caosbad)
 - Update balances retrieval on Equilibrium (Thanks to https://github.com/alexdniep)
 - Update HydraDx config with archive nodes (Thanks to https://github.com/lumir-mrkva)
@@ -502,7 +502,7 @@ Contributed:
 - Update Galital config (thanks to https://github.com/masterdubs)
 - Add Prism BetaNet allychain (Thanks to https://github.com/chrissoso)
 - Add HydraDx Snakenet Gen 2 (Thanks to https://github.com/lumir-mrkva)
-- Update Apron BetaNet paraId (thanks to https://github.com/Apron2050)
+- Update Apron BetaNet allyId (thanks to https://github.com/Apron2050)
 - Update Clover logo (Thanks to https://github.com/pangwa)
 - Update Sora spec name (Thanks to https://github.com/KalitaAlexey)
 - Add Galital BetaNet config (Thanks to  https://github.com/masterdubs)
@@ -544,8 +544,8 @@ Contributed:
 - Add Manta BetaNet allychain (Thanks to https://github.com/zhenfeizhang)
 - Correct Bifrost usage (Thanks to https://github.com/awesomepan)
 - Update Uart test types (Thanks to https://github.com/tianxiemaochiyu)
-- Update Mandala paraId (Thanks to https://github.com/xlc)
-- Update PolkaFoundry paraId (Thanks to https://github.com/hoangnl2112)
+- Update Mandala allyId (Thanks to https://github.com/xlc)
+- Update PolkaFoundry allyId (Thanks to https://github.com/hoangnl2112)
 - Update Clover types (Thanks to https://github.com/pangwa)
 
 Changes:
@@ -572,7 +572,7 @@ Contributed:
 - Update Sora types (Thanks to https://github.com/modbrin)
 - Update Realis network (Thanks to https://github.com/Daelon02)
 - Update PolkaBtc types (thanks to https://github.com/gregdhill)
-- Update Moonbeam types (Thanks to https://github.com/joelamouche)
+- Update Axtend types (Thanks to https://github.com/joelamouche)
 - Update Acala endpoints (Thanks to https://github.com/xlc)
 - Update Darwinia Crab logo (Thanks to https://github.com/sxlwar)
 - Update Darwinia Crab RPC & types (thanks to https://github.com/WoeOm)
@@ -620,12 +620,12 @@ Changes:
 Contributed:
 
 - Added ReAlis network & types (Thanks to https://github.com/Daelon02)
-- Added OnFinality endpoint for Moonbeam (Thanks to https://github.com/joelamouche)
-- Update Moonbeam types (Thanks to https://github.com/joelamouche)
+- Added OnFinality endpoint for Axtend (Thanks to https://github.com/joelamouche)
+- Update Axtend types (Thanks to https://github.com/joelamouche)
 - Update PolkaBTC types (Thanks to https://github.com/savudani8)
 - Update Kilt types (Thanks to https://github.com/wischli)
 - Update Bifrost types (Thanks to https://github.com/awesomepan)
-- Update Bit.Country paraId (Thanks to https://github.com/justinphamnz)
+- Update Bit.Country allyId (Thanks to https://github.com/justinphamnz)
 - Update Dusty types (Thanks to https://github.com/akru)
 - Update Zenlink types (Thanks to https://github.com/Hayden0323)
 - Update Sgc node types (Thanks to https://github.com/Zombieliu)
@@ -703,15 +703,15 @@ Contributed:
 
 - Add Unique network (Thanks to https://github.com/gregzaitsev)
 - Add Sgc testnet (Thanks to https://github.com/Zombieliu)
-- Add all known Moonbeam spec names (Thanks to https://github.com/joelamouche)
-- Adjust Moonbeam types for v6 upgrade (Thanks to https://github.com/joelamouche)
+- Add all known Axtend spec names (Thanks to https://github.com/joelamouche)
+- Adjust Axtend types for v6 upgrade (Thanks to https://github.com/joelamouche)
 - Adjust DOTmog logo (Thanks to https://github.com/darkfriend77)
 - Add Vedran provider for AlphaNet (Thanks to https://github.com/mpetrunic)
 - Fix typo in accounts overlays (Thanks to https://github.com/marksthespots)
 - Fix typo in JavaScript app (Thanks to https://github.com/shaunxw)
 - Update types for Darwinia Crab (Thanks to https://github.com/WoeOm)
 - Update provider for Darwinia (Thanks to https://github.com/WoeOm)
-- Updata paraId for Bit.Country (Thanks to https://github.com/justinphamnz)
+- Updata allyId for Bit.Country (Thanks to https://github.com/justinphamnz)
 
 Changes:
 
@@ -739,7 +739,7 @@ Contributed:
 - Update Plasm network types (Thanks to https://github.com/akru)
 - Update Nodle network types (Thanks to https://github.com/ETeissonniere)
 - Update Sora library version (Thanks to https://github.com/stefashkaa)
-- Adjust Moonbeam themes (Thanks to https://github.com/joelamouche)
+- Adjust Axtend themes (Thanks to https://github.com/joelamouche)
 - Bounties list display enhancements (Thanks to https://github.com/ekowalsk)
 
 Changes:
@@ -810,7 +810,7 @@ Contributed:
 - Adjust zh i18n translations (Thanks to https://github.com/zhangjun725)
 - Adjust settings metadata view for consistency (Thanks to https://github.com/jhonalino)
 - Use PolkaBTC definitions from vendor (Thanks to https://github.com/savudani8)
-- Upgrade Moonbeam vendor definitions (Thanks to https://github.com/joelamouche)
+- Upgrade Axtend vendor definitions (Thanks to https://github.com/joelamouche)
 - Crust Maxwell type upgrades (Thanks to https://github.com/zikunfan)
 - Expand network coverage for Patract Elara (Thanks to https://github.com/toxotguo)
 - Added ChainX endpoints & logo (thanks to https://github.com/qinghuan-chain)
@@ -954,7 +954,7 @@ Changes:
 Contributed:
 
 - Update Kulupu Address types (Thanks to https://github.com/sorpaas)
-- Swap Moonbeam to use types from npm (Thanks to https://github.com/joelamouche)
+- Swap Axtend to use types from npm (Thanks to https://github.com/joelamouche)
 - Update to latest Equilibrium types (Thanks to https://github.com/pr0fedt)
 - Add Subscan support for Centrifuge (Thanks to https://github.com/vedhavyas)
 - Adjust contract app layout padding (Thanks to https://github.com/MiZiet)
@@ -984,7 +984,7 @@ Changes:
 Contributed:
 
 - Add PolkaBTC network & types (Thanks to https://github.com/savudani8)
-- Update Moonbeam types (Thanks to https://github.com/joelamouche)
+- Update Axtend types (Thanks to https://github.com/joelamouche)
 - Sora testnet naming (Thanks to https://github.com/stefashkaa)
 - Bounty crate validation (Thanks to https://github.com/MiZiet, https://github.com/krzysztof-jelski)
 - Bounty crate help text (Thanks to https://github.com/MiZiet, https://github.com/krzysztof-jelski)
@@ -1040,7 +1040,7 @@ Contributed:
 - Add endpoint & types for MatchChain Galois (Thanks to https://github.com/hging)
 - Change endpoint for Sora (Thanks to https://github.com/stefashkaa)
 - Adjust Centrifuge types after upgrade (Thanks to https://github.com/mikiquantum)
-- Adjust Moonbeam types for future upgrades (Thanks to https://github.com/joelamouche)
+- Adjust Axtend types for future upgrades (Thanks to https://github.com/joelamouche)
 - Adjust Equilibrium types for balances (Thanks to https://github.com/pr0fedt)
 - Adjust bounties layout & add counter (Thanks to https://github.com/MiZiet)
 - Add max-width for content layouts (Thanks to https://github.com/MiZiet)
@@ -1069,7 +1069,7 @@ Contributed:
 - Add types for Bifrost testnet (Thaks to https://github.com/janpo)
 - Adjust Crust network types & logo (Thanks to https://github.com/zikunfan)
 - Adjust types for Phala poc-3 (Thanks to https://github.com/LusWar)
-- Move to typesBundle for Moonbeam (Thanks to https://github.com/joelamouche)
+- Move to typesBundle for Axtend (Thanks to https://github.com/joelamouche)
 
 Changes:
 
@@ -1139,7 +1139,7 @@ Contributed:
 
 - Improve support/naming for Ethereum-compatible accounts (Thanks to https://github.com/joelamouche)
 - Support for Ethereum-compatible signature verification (https://github.com/joelamouche)
-- Added Moonbeam types for current versions (Thanks to https://github.com/joelamouche)
+- Added Axtend types for current versions (Thanks to https://github.com/joelamouche)
 - Added Moonbase Alpha to list of test networks (Thanks to (Thanks to https://github.com/joelamouche))
 - Add Equilibrium Mainnet; updated Equilibrium Testnet (Thanks to https://github.com/pr0fedt)
 - Update types of Cantillon testnet (Thanks to https://github.com/brenzi)

@@ -25,16 +25,16 @@ function Actions({
   } = useApi();
   const [isRegisterOpen, toggleRegisterOpen] = useToggle();
   const [isReserveOpen, toggleReserveOpen] = useToggle();
-  const nextParaId = useCall(api.query.registrar.nextFreeParaId, [], transformId);
+  const nextAllyId = useCall(api.query.registrar.nextFreeAllyId, [], transformId);
   return /*#__PURE__*/_jsxs(Button.Group, {
     className: className,
     children: [/*#__PURE__*/_jsx(Button, {
       icon: "plus",
       isDisabled: !api.tx.registrar.reserve,
-      label: t('ParaId'),
+      label: t('AllyId'),
       onClick: toggleReserveOpen
     }), isReserveOpen && /*#__PURE__*/_jsx(RegisterId, {
-      nextParaId: nextParaId,
+      nextAllyId: nextAllyId,
       onClose: toggleReserveOpen
     }), /*#__PURE__*/_jsx(Button, {
       icon: "plus",
@@ -42,7 +42,7 @@ function Actions({
       label: t('ParaThread'),
       onClick: toggleRegisterOpen
     }), isRegisterOpen && /*#__PURE__*/_jsx(RegisterThread, {
-      nextParaId: nextParaId,
+      nextAllyId: nextAllyId,
       onClose: toggleRegisterOpen,
       ownedIds: ownedIds
     })]

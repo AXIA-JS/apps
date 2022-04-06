@@ -269,10 +269,10 @@ export function createTesting (t: TFunction, firstOnly: boolean, withSort: boole
     },
     {
       info: 'moonbaseAlpha',
-      text: t('rpc.test.moonbeam', 'Moonbase Alpha', { ns: 'apps-config' }),
+      text: t('rpc.test.axtend', 'Moonbase Alpha', { ns: 'apps-config' }),
       providers: {
-        'Moonbeam Network': 'wss://wss.testnet.moonbeam.network',
-        OnFinality: 'wss://moonbeam-alpha.api.onfinality.io/public-ws',
+        'Axtend Network': 'wss://wss.testnet.axtend.network',
+        OnFinality: 'wss://axtend-alpha.api.onfinality.io/public-ws',
         Pinknode: 'wss://rpc.pinknode.io/alphanet/explorer'
       }
     },

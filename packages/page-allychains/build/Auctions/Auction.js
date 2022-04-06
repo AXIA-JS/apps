@@ -31,8 +31,8 @@ function Auction({
         firstSlot,
         isWinner,
         lastSlot,
-        paraId
-      }) => !isWinner && newRaise.some(n => n.eq(paraId)) && firstSlot.gte(leasePeriodStart) && lastSlot.lte(leasePeriodEnd)).sort((a, b) => b.value.cmp(a.value));
+        allyId
+      }) => !isWinner && newRaise.some(n => n.eq(allyId)) && firstSlot.gte(leasePeriodStart) && lastSlot.lte(leasePeriodEnd)).sort((a, b) => b.value.cmp(a.value));
     } else {
       return undefined;
     }
@@ -45,9 +45,9 @@ function Auction({
     return winners.concat(...loans.filter(({
       firstSlot,
       lastSlot,
-      paraId,
+      allyId,
       value
-    }) => !winners.some(w => w.firstSlot.eq(firstSlot) && w.lastSlot.eq(lastSlot)) && !loans.some(e => !paraId.eq(e.paraId) && firstSlot.eq(e.firstSlot) && lastSlot.eq(e.lastSlot) && value.lt(e.value)))).map(w => loans.find(({
+    }) => !winners.some(w => w.firstSlot.eq(firstSlot) && w.lastSlot.eq(lastSlot)) && !loans.some(e => !allyId.eq(e.allyId) && firstSlot.eq(e.firstSlot) && lastSlot.eq(e.lastSlot) && value.lt(e.value)))).map(w => loans.find(({
       firstSlot,
       lastSlot,
       value

@@ -16,39 +16,39 @@ function InputOwner({
     t
   } = useTranslation();
   const [accountId, setAccountId] = useState(null);
-  const [paraId, setParaId] = useState(0);
+  const [allyId, setAllyId] = useState(0);
   useEffect(() => {
-    onChange(accountId && paraId ? {
+    onChange(accountId && allyId ? {
       accountId,
-      paraId
+      allyId
     } : {
       accountId: null,
-      paraId: 0
+      allyId: 0
     });
-  }, [accountId, onChange, ownedIds, paraId]);
+  }, [accountId, onChange, ownedIds, allyId]);
   const owners = useMemo(() => ownedIds.map(({
     manager
   }) => manager), [ownedIds]);
   const optIds = useMemo(() => ownedIds.filter(({
     manager
   }) => manager === accountId).map(({
-    paraId
+    allyId
   }) => ({
-    text: paraId.toString(),
-    value: paraId.toNumber()
+    text: allyId.toString(),
+    value: allyId.toNumber()
   })), [accountId, ownedIds]);
 
-  const _setParaId = useCallback(id => setParaId(noCodeCheck || ownedIds.some(({
+  const _setAllyId = useCallback(id => setAllyId(noCodeCheck || ownedIds.some(({
     hasCode,
-    paraId
-  }) => paraId.eq(id) && hasCode) ? id : 0), [noCodeCheck, ownedIds]);
+    allyId
+  }) => allyId.eq(id) && hasCode) ? id : 0), [noCodeCheck, ownedIds]);
 
   return /*#__PURE__*/_jsxs(Modal.Columns, {
     hint: /*#__PURE__*/_jsxs(_Fragment, {
       children: [/*#__PURE__*/_jsx("p", {
         children: t('This account that has been used to register the allychain. This will pay all associated fees.')
       }), /*#__PURE__*/_jsx("p", {
-        children: t('The allychain id is associated with the selected account via parathread registration.')
+        children: t('The allychain id is associated with the selected account via allythread registration.')
       })]
     }),
     children: [/*#__PURE__*/_jsx(InputAddress, {
@@ -60,10 +60,10 @@ function InputOwner({
     }), accountId && /*#__PURE__*/_jsx(Dropdown, {
       defaultValue: optIds[0].value,
       label: t('allychain id'),
-      onChange: _setParaId,
+      onChange: _setAllyId,
       options: optIds
-    }, accountId), !noCodeCheck && !paraId && /*#__PURE__*/_jsx(MarkError, {
-      content: t('Before using this registered paraId, you need to have a WASM validation function registered on-chain')
+    }, accountId), !noCodeCheck && !allyId && /*#__PURE__*/_jsx(MarkError, {
+      content: t('Before using this registered allyId, you need to have a WASM validation function registered on-chain')
     })]
   });
 }

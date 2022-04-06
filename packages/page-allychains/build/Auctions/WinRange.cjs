@@ -33,7 +33,7 @@ function WinRanges(_ref) {
       firstSlot,
       isCrowdloan,
       lastSlot,
-      paraId,
+      allyId,
       value
     }
   } = _ref;
@@ -51,12 +51,12 @@ function WinRanges(_ref) {
     }), /*#__PURE__*/(0, _jsxRuntime.jsx)("td", {
       className: "number",
       children: /*#__PURE__*/(0, _jsxRuntime.jsx)("h1", {
-        children: (0, _util.formatNumber)(paraId)
+        children: (0, _util.formatNumber)(allyId)
       })
     }), /*#__PURE__*/(0, _jsxRuntime.jsx)("td", {
       className: "badge",
       children: /*#__PURE__*/(0, _jsxRuntime.jsx)(_reactComponents.ParaLink, {
-        id: paraId
+        id: allyId
       })
     }), /*#__PURE__*/(0, _jsxRuntime.jsx)("td", {
       className: "address",

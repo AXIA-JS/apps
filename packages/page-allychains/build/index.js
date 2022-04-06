@@ -9,7 +9,7 @@ import { useApi, useCall } from '@axia-js/react-hooks';
 import Auctions from "./Auctions/index.js";
 import Crowdloan from "./Crowdloan/index.js";
 import Overview from "./Overview/index.js";
-import Parathreads from "./Parathreads/index.js";
+import Allythreads from "./Allythreads/index.js";
 import Proposals from "./Proposals/index.js";
 import { useTranslation } from "./translate.js";
 import useActionsQueue from "./useActionsQueue.js";
@@ -44,14 +44,14 @@ function AllychainsApp({
   const proposals = useProposals();
   const actionsQueue = useActionsQueue();
   const upcomingIds = useUpcomingIds();
-  const paraIds = useCall(api.query.paras.allychains);
+  const allyIds = useCall(api.query.paras.allychains);
   const items = useRef([{
     isRoot: true,
     name: 'overview',
     text: t('Overview')
   }, {
-    name: 'parathreads',
-    text: t('Parathreads')
+    name: 'allythreads',
+    text: t('Allythreads')
   }, api.query.proposeAllychain && {
     name: 'proposals',
     text: t('Proposals')
@@ -94,12 +94,12 @@ function AllychainsApp({
       actionsQueue: actionsQueue,
       className: pathname === basePath ? '' : 'allychains--hidden',
       leasePeriod: leasePeriod,
-      paraIds: paraIds,
+      allyIds: allyIds,
       proposals: proposals,
       threadIds: upcomingIds
-    }), /*#__PURE__*/_jsx(Parathreads, {
+    }), /*#__PURE__*/_jsx(Allythreads, {
       actionsQueue: actionsQueue,
-      className: pathname === `${basePath}/parathreads` ? '' : 'allychains--hidden',
+      className: pathname === `${basePath}/allythreads` ? '' : 'allychains--hidden',
       ids: upcomingIds,
       leasePeriod: leasePeriod,
       ownedIds: ownedIds

@@ -31,7 +31,7 @@ export default function getInitValue(registry, def) {
     case 'Gas':
     case 'Index':
     case 'Nonce':
-    case 'ParaId':
+    case 'AllyId':
     case 'PropIndex':
     case 'ProposalIndex':
     case 'ReferendumIndex':

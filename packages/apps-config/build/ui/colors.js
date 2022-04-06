@@ -128,7 +128,7 @@ const nodeKylin = '#ed007e';
 const nodeKlug = '#663399';
 const nodeLitentry = 'linear-gradient(45deg, #5cc27c 0%, #6de98f 100%)';
 const nodeManta = '#2070a6';
-const nodeMoonbeam = '#53cbc9';
+const nodeAxtend = '#53cbc9';
 const nodeMoonriver = '#0E132E';
 const nodeMybank = '#282736';
 const nodeNFTMart = '#307182';
@@ -239,12 +239,12 @@ export const chainColors = Object.entries({
   'MantaChain PC1': chainManta,
   Mars: nodeAres,
   'MathChain PC1': chainGalois,
-  'Moonbase Alpha': nodeMoonbeam,
-  'Moonbase Development Testnet': nodeMoonbeam,
-  'Moonbase Stage': nodeMoonbeam,
+  'Moonbase Alpha': nodeAxtend,
+  'Moonbase Development Testnet': nodeAxtend,
+  'Moonbase Stage': nodeAxtend,
   Moonriver: nodeMoonriver,
   Moonrock: chainMoonrock,
-  Moonshadow: nodeMoonbeam,
+  Moonshadow: nodeAxtend,
   'mybank.network Testnet': chainMybank,
   'NFTMart Staging': chainNFTMart,
   'NFTMart Testnet': chainNFTMart,

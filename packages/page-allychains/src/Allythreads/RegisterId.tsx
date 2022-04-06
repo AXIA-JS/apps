@@ -12,11 +12,11 @@ import { useTranslation } from '../translate';
 
 interface Props {
   className?: string;
-  nextParaId?: BN;
+  nextAllyId?: BN;
   onClose: () => void;
 }
 
-function RegisterId ({ className, nextParaId, onClose }: Props): React.ReactElement<Props> {
+function RegisterId ({ className, nextAllyId, onClose }: Props): React.ReactElement<Props> {
   const { t } = useTranslation();
   const { api } = useApi();
   const [accountId, setAccountId] = useState<string | null>(null);
@@ -24,12 +24,12 @@ function RegisterId ({ className, nextParaId, onClose }: Props): React.ReactElem
   return (
     <Modal
       className={className}
-      header={t<string>('Reserve ParaId')}
+      header={t<string>('Reserve AllyId')}
       onClose={onClose}
       size='large'
     >
       <Modal.Content>
-        <Modal.Columns hint={t<string>('This account will be used to the Id reservation and for the future parathread.')}>
+        <Modal.Columns hint={t<string>('This account will be used to the Id reservation and for the future allythread.')}>
           <InputAddress
             label={t<string>('reserve from')}
             onChange={setAccountId}
@@ -39,7 +39,7 @@ function RegisterId ({ className, nextParaId, onClose }: Props): React.ReactElem
         </Modal.Columns>
         <Modal.Columns hint={t<string>('The Id of this allychain as known on the network (selected from nextFreeId)')}>
           <InputNumber
-            defaultValue={nextParaId}
+            defaultValue={nextAllyId}
             isDisabled
             label={t<string>('allychain id')}
           />
@@ -56,7 +56,7 @@ function RegisterId ({ className, nextParaId, onClose }: Props): React.ReactElem
         <TxButton
           accountId={accountId}
           icon='plus'
-          isDisabled={!nextParaId}
+          isDisabled={!nextAllyId}
           onStart={onClose}
           params={[]}
           tx={api.tx.registrar.reserve}

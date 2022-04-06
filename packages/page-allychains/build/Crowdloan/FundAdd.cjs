@@ -31,7 +31,7 @@ function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && 
 // SPDX-License-Identifier: Apache-2.0
 const EMPTY_OWNER = {
   accountId: null,
-  paraId: 0
+  allyId: 0
 };
 
 function FundAdd(_ref) {
@@ -51,7 +51,7 @@ function FundAdd(_ref) {
   const ranges = (0, _useLeaseRanges.useLeaseRanges)();
   const [{
     accountId,
-    paraId
+    allyId
   }, setOwnerInfo] = (0, _react.useState)(EMPTY_OWNER);
   const [cap, setCap] = (0, _react.useState)();
   const [endBlock, setEndBlock] = (0, _react.useState)();
@@ -121,10 +121,10 @@ function FundAdd(_ref) {
         children: /*#__PURE__*/(0, _jsxRuntime.jsx)(_reactComponents.TxButton, {
           accountId: accountId,
           icon: "plus",
-          isDisabled: !paraId || !(cap !== null && cap !== void 0 && cap.gt(_util.BN_ZERO)) || isEndError || isFirstError || isLastError,
+          isDisabled: !allyId || !(cap !== null && cap !== void 0 && cap.gt(_util.BN_ZERO)) || isEndError || isFirstError || isLastError,
           label: t('Add'),
           onStart: toggleOpen,
-          params: [paraId, cap, firstSlot, lastSlot, endBlock, null],
+          params: [allyId, cap, firstSlot, lastSlot, endBlock, null],
           tx: api.tx.crowdloan.create
         })
       })]

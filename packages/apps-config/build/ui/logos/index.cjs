@@ -171,7 +171,7 @@ var _manta = _interopRequireDefault(require("./nodes/manta.png"));
 
 var _math = _interopRequireDefault(require("./nodes/math.svg"));
 
-var _moonbeam = _interopRequireDefault(require("./nodes/moonbeam.png"));
+var _axtend = _interopRequireDefault(require("./nodes/axtend.png"));
 
 var _moonriver = _interopRequireDefault(require("./nodes/moonriver.svg"));
 
@@ -348,9 +348,9 @@ const chainLogos = Object.entries({
   'Manta Testnet': _manta.default,
   Mars: _ares.default,
   'MathChain PC1': _math.default,
-  'Moonbase Alpha': _moonbeam.default,
-  'Moonbase Development Testnet': _moonbeam.default,
-  'Moonbase Stage': _moonbeam.default,
+  'Moonbase Alpha': _axtend.default,
+  'Moonbase Development Testnet': _axtend.default,
+  'Moonbase Stage': _axtend.default,
   Moonriver: _moonriver.default,
   Moonrock: _moonrock.default,
   Moonshadow: _moonshadow.default,
@@ -644,7 +644,7 @@ const namedLogos = {
   loomNetwork: _loom_network.default,
   manta: _manta.default,
   mars: _ares.default,
-  moonbaseAlpha: _moonbeam.default,
+  moonbaseAlpha: _axtend.default,
   moonriver: _moonriver.default,
   moonrock: _moonrock.default,
   moonshadow: _moonshadow.default,

@@ -31,7 +31,7 @@ export function createAlphaNet(t) {
     // (2) common good, leave as second group
     {
       info: 'westmint',
-      paraId: 1000,
+      allyId: 1000,
       text: t('rpc.alphanet.shell', 'Westmint', {
         ns: 'apps-config'
       }),
@@ -45,7 +45,7 @@ export function createAlphaNet(t) {
     // NOTE: Added alphabetical based on chain name
     {
       info: 'basilisk',
-      paraId: 2097,
+      allyId: 2097,
       text: t('rpc.alphanet.basilisk', 'Basilisk Egg', {
         ns: 'apps-config'
       }),
@@ -54,7 +54,7 @@ export function createAlphaNet(t) {
       }
     }, {
       info: 'charcoal',
-      paraId: 2086,
+      allyId: 2086,
       text: t('rpc.alphanet.charcoal', 'Charcoal', {
         ns: 'apps-config'
       }),
@@ -63,7 +63,7 @@ export function createAlphaNet(t) {
       }
     }, {
       info: 'integritee',
-      paraId: 2081,
+      allyId: 2081,
       text: t('rpc.alphanet.integritee', 'Integritee Network', {
         ns: 'apps-config'
       }),
@@ -72,7 +72,7 @@ export function createAlphaNet(t) {
       }
     }, {
       info: 'interBTC',
-      paraId: 2094,
+      allyId: 2094,
       text: t('rpc.alphanet.interbtc', 'InterBTC', {
         ns: 'apps-config'
       }),
@@ -83,16 +83,16 @@ export function createAlphaNet(t) {
       info: 'moonshadow',
       isUnreachable: true,
       // https://github.com/axia-js/apps/issues/6181
-      paraId: 2002,
+      allyId: 2002,
       text: t('rpc.alphanet.moonshadow', 'Moonshadow', {
         ns: 'apps-config'
       }),
       providers: {
-        PureStake: 'wss://wss.moonshadow.testnet.moonbeam.network'
+        PureStake: 'wss://wss.moonshadow.testnet.axtend.network'
       }
     }, {
       info: 'alphanetStandard',
-      paraId: 2094,
+      allyId: 2094,
       text: t('rpc.alphanet.standard', 'Standard ', {
         ns: 'apps-config'
       }),
@@ -103,7 +103,7 @@ export function createAlphaNet(t) {
       info: 'karura',
       isUnreachable: true,
       // https://github.com/axia-js/apps/issues/5830
-      paraId: 2005,
+      allyId: 2005,
       text: t('rpc.alphanet.wendala', 'Wendala', {
         ns: 'apps-config'
       }),
@@ -114,7 +114,7 @@ export function createAlphaNet(t) {
       info: 'whala',
       isUnreachable: true,
       // https://github.com/axia-js/apps/issues/6181
-      paraId: 2013,
+      allyId: 2013,
       text: t('rpc.alphanet.whala', 'Whala', {
         ns: 'apps-config'
       }),
@@ -124,7 +124,7 @@ export function createAlphaNet(t) {
     }, {
       info: 'kilt',
       homepage: 'https://www.kilt.io/',
-      paraId: 2085,
+      allyId: 2085,
       text: t('rpc.alphanet.kilt', 'WILT', {
         ns: 'apps-config'
       }),

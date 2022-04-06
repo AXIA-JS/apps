@@ -18,9 +18,9 @@ function arrayShuffle(result) {
   return result;
 }
 
-export function useParaApi(paraId) {
+export function useParaApi(allyId) {
   const mountedRef = useIsMountedRef();
-  const endpoints = useParaEndpoints(paraId);
+  const endpoints = useParaEndpoints(allyId);
   const [state, setState] = useState(() => ({
     api: null,
     endpoints,

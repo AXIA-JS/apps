@@ -34,7 +34,7 @@ function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && 
 function RegisterThread(_ref) {
   let {
     className,
-    nextParaId,
+    nextAllyId,
     onClose,
     ownedIds
   } = _ref;
@@ -45,7 +45,7 @@ function RegisterThread(_ref) {
     api
   } = (0, _reactHooks.useApi)();
   const [accountId, setAccountId] = (0, _react.useState)(null);
-  const [paraId, setParaId] = (0, _react.useState)();
+  const [allyId, setAllyId] = (0, _react.useState)();
   const [wasm, setWasm] = (0, _react.useState)(null);
   const [genesisState, setGenesisState] = (0, _react.useState)(null);
 
@@ -56,17 +56,17 @@ function RegisterThread(_ref) {
   const _setOwner = (0, _react.useCallback)(_ref2 => {
     let {
       accountId,
-      paraId
+      allyId
     } = _ref2;
     setAccountId(accountId);
-    setParaId(new _bn.default(paraId));
+    setAllyId(new _bn.default(allyId));
   }, []);
 
   const reservedDeposit = (0, _react.useMemo)(() => api.consts.registrar.paraDeposit.add(api.consts.registrar.dataDepositPerByte.muln(wasm ? wasm.length : 0)).iadd(api.consts.registrar.dataDepositPerByte.muln(genesisState ? genesisState.length : 0)), [api, wasm, genesisState]);
-  const isIdError = !paraId || !paraId.gt(_constants.LOWEST_INVALID_ID);
+  const isIdError = !allyId || !allyId.gt(_constants.LOWEST_INVALID_ID);
   return /*#__PURE__*/(0, _jsxRuntime.jsxs)(_reactComponents.Modal, {
     className: className,
-    header: t('Register parathread'),
+    header: t('Register allythread'),
     onClose: onClose,
     size: "large",
     children: [/*#__PURE__*/(0, _jsxRuntime.jsxs)(_reactComponents.Modal.Content, {
@@ -87,11 +87,11 @@ function RegisterThread(_ref) {
           hint: t('The id of this allychain as known on the network'),
           children: /*#__PURE__*/(0, _jsxRuntime.jsx)(_reactComponents.InputNumber, {
             autoFocus: true,
-            defaultValue: nextParaId,
+            defaultValue: nextAllyId,
             isError: isIdError,
             isZeroable: false,
             label: t('allychain id'),
-            onChange: setParaId
+            onChange: setAllyId
           })
         })]
       }), /*#__PURE__*/(0, _jsxRuntime.jsx)(_reactComponents.Modal.Columns, {
@@ -124,7 +124,7 @@ function RegisterThread(_ref) {
         icon: "plus",
         isDisabled: !wasm || !genesisState || isIdError,
         onStart: onClose,
-        params: [paraId, genesisState, wasm],
+        params: [allyId, genesisState, wasm],
         tx: api.tx.registrar.register
       })
     })]
