@@ -39,7 +39,7 @@ function Actions({
     }), /*#__PURE__*/_jsx(Button, {
       icon: "plus",
       isDisabled: api.tx.registrar.reserve ? !ownedIds.length : false,
-      label: t('ParaThread'),
+      label: t('AllyThread'),
       onClick: toggleRegisterOpen
     }), isRegisterOpen && /*#__PURE__*/_jsx(RegisterThread, {
       nextAllyId: nextAllyId,

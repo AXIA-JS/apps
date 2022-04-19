@@ -56,7 +56,7 @@ function Actions(_ref) {
     }), /*#__PURE__*/(0, _jsxRuntime.jsx)(_reactComponents.Button, {
       icon: "plus",
       isDisabled: api.tx.registrar.reserve ? !ownedIds.length : false,
-      label: t('ParaThread'),
+      label: t('AllyThread'),
       onClick: toggleRegisterOpen
     }), isRegisterOpen && /*#__PURE__*/(0, _jsxRuntime.jsx)(_RegisterThread.default, {
       nextAllyId: nextAllyId,

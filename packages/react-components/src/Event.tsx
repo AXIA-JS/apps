@@ -32,6 +32,7 @@ interface AbiEvent extends DecodedEvent {
 
 function EventDisplay ({ children, className = '', value }: Props): React.ReactElement<Props> {
   const { t } = useTranslation();
+  console.log('valuesss', value);
   const params = value.typeDef.map(({ type }) => ({ type: getTypeDef(type) }));
   const values = value.data.map((value) => ({ isValid: true, value }));
 
