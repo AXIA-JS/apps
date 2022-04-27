@@ -6,7 +6,7 @@ import styled from 'styled-components';
 
 import { CardSummary, SummaryBox } from '@axia-js/react-components';
 import { useApi } from '@axia-js/react-hooks';
-import { BestFinalized, BestNumber, BlockToTime, TimeNow, TotalIssuance } from '@axia-js/react-query';
+import { BestFinalized, BestNumber, BlockToTime, TimeNow, TotalIssuance, TotalBurn } from '@axia-js/react-query';
 import { BN_ONE, formatNumber } from '@axia-js/util';
 
 import SummarySession from './SummarySession';
@@ -45,6 +45,14 @@ function Summary ({ eventCount }: Props): React.ReactElement<Props> {
             label={t<string>('total issuance')}
           >
             <TotalIssuance />
+          </CardSummary>
+        )}
+        {api.query.balances && (
+          <CardSummary
+            className='media--800 CustomBg'
+            label={t<string>('total burn')}
+          >
+            <TotalBurn />
           </CardSummary>
         )}
       </section>
