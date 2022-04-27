@@ -50,6 +50,8 @@ function Summary ({ eventCount }: Props): React.ReactElement<Props> {
         {api.query.balances && (
           <CardSummary
             className='media--800 CustomBg'
+            help={'Burn Address CaKWz5omakTK7ovp4m3koX rHyHb7NG3Nt7GENHbviByZpKp'}
+            icon={'info-circle'}
             label={t<string>('total burn')}
           >
             <TotalBurn />

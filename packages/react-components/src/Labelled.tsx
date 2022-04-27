@@ -1,6 +1,8 @@
 // Copyright 2017-2021 @axia-js/react-components authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
+import type { IconName } from '@fortawesome/fontawesome-svg-core';
+
 import React from 'react';
 import styled from 'styled-components';
 
@@ -18,11 +20,12 @@ interface Props {
   children: React.ReactNode;
   withEllipsis?: boolean;
   withLabel?: boolean;
+  icon?: IconName;
 }
 
 const defaultLabel: React.ReactNode = <div>&nbsp;</div>;
 
-function Labelled ({ className = '', children, help, isFull, isHidden, isOuter, isSmall, label = defaultLabel, labelExtra, withEllipsis, withLabel = true }: Props): React.ReactElement<Props> | null {
+function Labelled ({ className = '', children, help, isFull, isHidden, isOuter, isSmall, label = defaultLabel, labelExtra, withEllipsis, withLabel = true, icon }: Props): React.ReactElement<Props> | null {
   if (isHidden) {
     return null;
   } else if (!withLabel) {
@@ -36,7 +39,10 @@ function Labelled ({ className = '', children, help, isFull, isHidden, isOuter, 
       <label>{withEllipsis
         ? <div className='withEllipsis'>{label}</div>
         : label
-      }{help && <LabelHelp help={help} />}</label>
+      }{help && <LabelHelp
+        help={help}
+        icon={icon}
+      />}</label>
       {labelExtra && <div className='labelExtra'>{labelExtra}</div>}
       <div className='ui--Labelled-content'>
         {children}
