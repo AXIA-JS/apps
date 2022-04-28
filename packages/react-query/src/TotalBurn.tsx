@@ -19,7 +19,7 @@ function TotalBurn({ children, className = '', label }: Props): React.ReactEleme
 
   useEffect(() => {
     const fetch = async () => {
-      const balances = await api.query.system.account.multi(['CaKWz5omakTK7ovp4m3koXrHyHb7NG3Nt7GENHbviByZpKp']);
+      const balances = await api.query.system.account.multi(['111111111111111111111111111111111HC1']);
       const freeAmount: number = JSON.parse(balances)?.data?.free;
 
       if (freeAmount > 0) setTotalBurn(freeAmount);
