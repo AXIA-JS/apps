@@ -409,7 +409,7 @@
   "does not appear to have a valid claim. Please double check that you have signed the transaction correctly on the correct ETH account.": "有効な取得権限を持っているようには見えません。正しいETHアカウントで正しく取引に署名したかどうかを二重に確認してください。",
   "email": "email",
   "endowment": "寄付金",
-  "epoch": "エポック",
+  "round": "エポック",
   "era": "エラ",
   "events": "イベント",
   "everything": "すべて",

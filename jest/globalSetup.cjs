@@ -11,7 +11,7 @@ const startSubstrate = async () => {
     .withName('axia-apps-test-substrate')
     .withExposedPorts(9944)
     .withCmd(['--dev', '--ws-port=9944', '--unsafe-ws-external'])
-    .withWaitStrategy(Wait.forLogMessage('New epoch 0 launching'))
+    .withWaitStrategy(Wait.forLogMessage('New round 0 launching'))
     .start();
 
   console.log('Done.');

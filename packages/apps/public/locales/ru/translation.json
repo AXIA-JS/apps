@@ -803,7 +803,7 @@
   "email": "email",
   "enact": "принять",
   "endowment": "фонд",
-  "epoch": "эпоха",
+  "round": "эпоха",
   "era": "эра",
   "era points": "очки за эру",
   "era {{era}}, {{count}} slashes": "эра {era}}, {{count}} слэши",
