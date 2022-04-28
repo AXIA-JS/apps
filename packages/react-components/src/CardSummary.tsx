@@ -1,6 +1,7 @@
 // Copyright 2017-2021 @axia-js/react-components authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
+import type { IconName } from '@fortawesome/fontawesome-svg-core';
 import type BN from 'bn.js';
 import type { UInt } from '@axia-js/types';
 
@@ -28,9 +29,10 @@ interface Props {
   help?: React.ReactNode;
   label: React.ReactNode;
   progress?: ProgressProps;
+  icon?: IconName;
 }
 
-function CardSummary ({ children, className = '', help, label, progress }: Props): React.ReactElement<Props> | null {
+function CardSummary ({ children, className = '', help, icon, label, progress }: Props): React.ReactElement<Props> | null {
   const value = progress && progress.value;
   const total = progress && progress.total;
   const left = progress && !isUndefined(value) && !isUndefined(total) && value.gten(0) && total.gtn(0)
@@ -63,6 +65,7 @@ function CardSummary ({ children, className = '', help, label, progress }: Props
     >
       <Labelled
         help={help}
+        icon={icon}
         isSmall
         label={label}
       >

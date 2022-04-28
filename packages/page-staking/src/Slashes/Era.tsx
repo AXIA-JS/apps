@@ -49,7 +49,7 @@ function Slashes ({ buttons, councilId, councilThreshold, slash }: Props): React
   });
 
   const headerRef = useRef<[string?, string?, number?][]>([
-    [t('era {{era}}/unapplied', { replace: { era: slash.era.toString() } }), 'start', 3],
+    [t('cycle {{era}}/unapplied', { replace: { era: slash.era.toString() } }), 'start', 3],
     [t('reporters'), 'address'],
     [t('own')],
     [t('other')],

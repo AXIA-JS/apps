@@ -26,9 +26,9 @@ function SummarySession ({ className, withEra = true, withSession = true }: Prop
   const sessionInfo = useCall<DeriveSessionProgress>(api.derive.session?.progress);
   const forcing = useCall<Forcing>(api.query.staking?.forceEra);
 
-  const eraLabel = t<string>('era');
+  const eraLabel = t<string>('cycle');
   const sessionLabel = sessionInfo?.isEpoch
-    ? t<string>('epoch')
+    ? t<string>('round')
     : t<string>('session');
   const activeEraStart = sessionInfo?.activeEraStart.unwrapOr(null);
 

@@ -110,7 +110,7 @@ function Account ({ allSlashes, className = '', info: { controllerId, destinatio
         {slashes.length !== 0 && (
           <Badge
             color='red'
-            hover={t<string>('Slashed in era {{eras}}', {
+            hover={t<string>('Slashed in cycle {{eras}}', {
               replace: {
                 eras: slashes.map(({ era }) => formatNumber(era)).join(', ')
               }

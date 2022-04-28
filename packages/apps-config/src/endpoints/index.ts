@@ -4,7 +4,7 @@
 import type { TFunction } from 'i18next';
 import type { LinkOption } from './types';
 
-import { createCustom, createDev, createOwn } from './development';
+import { createCustom, createOwn } from './development';
 import { createProduction } from './production';
 import { createTesting } from './testing';
 
@@ -25,7 +25,7 @@ export function createWsEndpoints (t: TFunction, firstOnly = false, withSort = t
     {
       isDisabled: false,
       isHeader: true,
-      text: t('rpc.header.test', 'Test Networks', { ns: 'apps-config' }),
+      text: t('rpc.header.test', 'TestNet', { ns: 'apps-config' }),
       textBy: '',
       value: ''
     },
@@ -39,7 +39,7 @@ export function createWsEndpoints (t: TFunction, firstOnly = false, withSort = t
       textBy: '',
       value: ''
     },
-    ...createDev(t),
+    // ...createDev(t),
     ...createOwn(t)
   ].filter(({ isDisabled }) => !isDisabled);
 }

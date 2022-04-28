@@ -107,7 +107,7 @@ function Validator ({ allSlashes, canSelect, filterName, info, isNominated, isSe
         {slashes.length !== 0 && (
           <Badge
             color='red'
-            hover={t<string>('Slashed in era {{eras}}', {
+            hover={t<string>('Slashed in cycle {{eras}}', {
               replace: {
                 eras: slashes.map(({ era }) => formatNumber(era)).join(', ')
               }

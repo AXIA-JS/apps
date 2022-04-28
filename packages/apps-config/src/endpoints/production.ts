@@ -19,18 +19,11 @@ export function createProduction (t: TFunction, firstOnly: boolean, withSort: bo
   return expandEndpoints(t, [
     {
       info: 'canaryNet',
-      text: t('rpc.prod.axccanarynet', 'AXC TestNet', { ns: 'apps-config' }),
+      text: t('rpc.prod.axccanarynet', 'MainNet', { ns: 'apps-config' }),
       providers: {
-        'ZFullCan': 'wss://wss.test.axiacoin.network',
-        'ZArchCan': 'wss://archive.test.axiacoin.network'
+        'Full Node': 'wss://wss.test.axiacoin.network',
+        'Archive Node': 'wss://archive.test.axiacoin.network'
         }
-    },
-    {
-      info: 'chainx',
-      text: t('rpc.prod.chainx', 'Dummy TestNet', { ns: 'apps-config' }),
-      providers: {
-        'NoWhere': 'wss://example.com'
-      }
     }
 
   ], firstOnly, withSort);

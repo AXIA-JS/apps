@@ -18,5 +18,5 @@ const bondingDuration = api.consts.staking.bondingDuration;
 const sessionsPerEra = api.consts.staking.sessionsPerEra;
 
 console.log('Staking bonding duration: ' + bondingDuration);
-console.log('Staking sessions per era: ' + sessionsPerEra);`
+console.log('Staking sessions per cycle: ' + sessionsPerEra);`
 };

@@ -41,7 +41,7 @@ function Slashing ({ className = '', isMember, members }: Props): React.ReactEle
 
   const eras = useMemo(
     () => (slashes || []).map(([era, slashes]): Option => ({
-      text: t<string>('era {{era}}, {{count}} slashes', {
+      text: t<string>('cycle {{era}}, {{count}} slashes', {
         replace: {
           count: slashes.length,
           era: era.toNumber()
@@ -94,13 +94,13 @@ function Slashing ({ className = '', isMember, members }: Props): React.ReactEle
                 withLabel
               />
             </Modal.Columns>
-            <Modal.Columns hint={t<string>('The specific eras on which there are unapplied slashes. For each era a separate proposal is to be made.')}>
+            <Modal.Columns hint={t<string>('The specific eras on which there are unapplied slashes. For each cycle a separate proposal is to be made.')}>
               {eras.length
                 ? (
                   <Dropdown
                     defaultValue={eras[0].value}
-                    help={t<string>('The unapplied slashed era to cancel.')}
-                    label={t<string>('the era to cancel for')}
+                    help={t<string>('The unapplied slashed cycle to cancel.')}
+                    label={t<string>('the cycle to cancel for')}
                     onChange={setSelectedEra}
                     options={eras}
                   />
@@ -108,7 +108,7 @@ function Slashing ({ className = '', isMember, members }: Props): React.ReactEle
                 : (
                   <Input
                     isDisabled
-                    label={t<string>('the era to cancel for')}
+                    label={t<string>('the cycle to cancel for')}
                     value={t<string>('no unapplied slashes found')}
                   />
                 )

@@ -791,7 +791,7 @@
   "email": "email",
   "enact": "decretar",
   "endowment": "doação",
-  "epoch": "epoca",
+  "round": "epoca",
   "era": "era",
   "era points": "pontos da era",
   "era {{era}}, {{count}} slashes": "era {{era}}, {{count}} punições",
