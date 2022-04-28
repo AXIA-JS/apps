@@ -44,13 +44,13 @@ function NetworkDisplay ({ apiUrl, className = '', setApiUrl, value: { icon, isC
         className={`endpointSection${isChild ? ' isChild' : ''}`}
         onClick={isUnreachable ? undefined : _selectUrl}
       >
-        <ChainImg
+        {/* <ChainImg
           className='endpointIcon'
           isInline
           logo={icon === 'local' ? 'empty' : (icon || 'empty')}
           withoutHl
         />
-        <div className='endpointValue'>{name}</div>
+        <div className='endpointValue'>{name}</div> */}
       </div>
       {isSelected && providers.map(({ name, url }): React.ReactNode => (
         <Url

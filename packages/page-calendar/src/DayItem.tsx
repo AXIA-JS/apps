@@ -147,11 +147,11 @@ function DayItem ({ className, item: { blockNumber, date, info, type }, showAllE
           break;
 
         case 'stakingEra':
-          s = t<string>('Start of a new staking era {{id}}', { replace: { id } });
+          s = t<string>('Start of a new staking cycle {{id}}', { replace: { id } });
           break;
 
         case 'stakingSlash':
-          s = t<string>('Application of slashes from era {{id}}', { replace: { id } });
+          s = t<string>('Application of slashes from cycle {{id}}', { replace: { id } });
           break;
 
         case 'treasurySpend':

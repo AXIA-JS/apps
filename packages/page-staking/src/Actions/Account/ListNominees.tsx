@@ -81,21 +81,21 @@ function ListNominees ({ nominating, stashId }: Props): React.ReactElement<Props
       {renOver && (
         <Expander
           className='stakeOver'
-          help={t<string>('These validators are active but only the top {{max}} nominators by backing stake will be receiving rewards. The nominating stash is not one of those to be rewarded in the current era.', { replace: api.consts.staking?.maxNominatorRewardedPerValidator?.toString() })}
+          help={t<string>('These validators are active but only the top {{max}} nominators by backing stake will be receiving rewards. The nominating stash is not one of those to be rewarded in the current cycle.', { replace: api.consts.staking?.maxNominatorRewardedPerValidator?.toString() })}
           renderChildren={renOver[1]}
           summary={t<string>('Oversubscribed nominations ({{count}})', { replace: { count: renOver[0] } })}
         />
       )}
       {renActive && (
         <Expander
-          help={t<string>('The validators selected by the Phragmen algorithm to nominate for this era.')}
+          help={t<string>('The validators selected by the Phragmen algorithm to nominate for this cycle.')}
           renderChildren={renActive[1]}
           summary={t<string>('Active nominations ({{count}})', { replace: { count: renActive[0] } })}
         />
       )}
       {renInactive && (
         <Expander
-          help={t<string>('The elected validator list that did not get selected by the Phragmen algorithm for this era. However they may be selected in the future.')}
+          help={t<string>('The elected validator list that did not get selected by the Phragmen algorithm for this cycle. However they may be selected in the future.')}
           renderChildren={renInactive[1]}
           summary={t<string>('Inactive nominations ({{count}})', { replace: { count: renInactive[0] } })}
         />

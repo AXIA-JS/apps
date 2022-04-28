@@ -100,7 +100,7 @@ function Slashes ({ ownStashes = [], slashes }: Props): React.ReactElement<Props
 
   const eraOpts = useMemo(
     () => rows.map(({ era }) => ({
-      text: t<string>('era {{era}}', { replace: { era: formatNumber(era) } }),
+      text: t<string>('cycle {{era}}', { replace: { era: formatNumber(era) } }),
       value: era.toString()
     })),
     [rows, t]

@@ -192,6 +192,7 @@ function Endpoints ({ className = '', offset, onClose }: Props): React.ReactElem
     [apiUrl, isSavedCustomEndpoint, storedCustomEndpoints, t]
   );
 
+
   const _setApiUrl = useCallback(
     (network: string, apiUrl: string): void => {
       setAffinities((affinities): Record<string, string> => {
