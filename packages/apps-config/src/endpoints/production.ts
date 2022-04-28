@@ -21,9 +21,9 @@ export function createProduction (t: TFunction, firstOnly: boolean, withSort: bo
       info: 'canaryNet',
       text: t('rpc.prod.axccanarynet', 'MainNet', { ns: 'apps-config' }),
       providers: {
-        'Full Node': 'wss://wss.test.axiacoin.network',
-        'Archive Node': 'wss://archive.test.axiacoin.network'
-        }
+        'Full Node': 'wss://wss.axiacoin.network',
+        'Archive Node': 'wss://archive.axiacoin.network'
+      }
     }
 
   ], firstOnly, withSort);
