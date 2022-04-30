@@ -79,13 +79,13 @@ function Summary ({ avgStaked, lowStaked, minNominated, minNominatorBond, staked
           </CardSummary>
         )}
       </section>
-      <section className='media--800'>
+      {/* <section className='media--800'>
         {totalIssuance && (stakedReturn > 0) && Number.isFinite(stakedReturn) && (
           <CardSummary  label={t<string>('returns')}>
             {stakedReturn.toFixed(1)}%
           </CardSummary>
         )}
-      </section>
+      </section> */}
       <section className='media--1000'>
         {avgStaked?.gtn(0) && lowStaked?.gtn(0) && (
           <CardSummary
