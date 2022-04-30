@@ -206,7 +206,7 @@ function Targets ({ className = '', isInElection, ownStashes, targets: { avgStak
     rankBondOther: t<string>('other stake'),
     rankBondOwn: t<string>('own stake'),
     rankBondTotal: t<string>('total stake'),
-    rankOverall: t<string>('return')
+    // rankOverall: t<string>('return')
   });
 
   const flags = useMemo(
