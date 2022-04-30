@@ -22,7 +22,7 @@ export function createProduction (t: TFunction, firstOnly: boolean, withSort: bo
       text: t('rpc.prod.axccanarynet', 'MainNet', { ns: 'apps-config' }),
       providers: {
         'Full Node': 'wss://wss.axiacoin.network',
-        'Archive Node': 'wss://archive.axiacoin.network'
+        'Archive Node': 'wss://1.archive.main.axiacoin.network'
       }
     }
 
