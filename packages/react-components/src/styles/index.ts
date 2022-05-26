@@ -24,7 +24,7 @@ const VERY_DARK = 16;
 const defaultHighlight = '#178fe1'; // '#178fe1'; // #999
 
 function getHighlight (uiHighlight: string | undefined): string {
-  return (uiHighlight || defaultHighlight);
+  return (defaultHighlight); 
 }
 
 function countBrightness (uiHighlight: string | undefined): number {

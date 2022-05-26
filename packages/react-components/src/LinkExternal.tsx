@@ -73,9 +73,9 @@ function LinkExternal ({ className = '', data, hash, isLogo, isSidebar, isSmall,
   }
 
   return (
-    <div className={`${className}${isLogo ? ' isLogo' : ''}${isSmall ? ' isSmall' : ''}${isSidebar ? ' isSidebar' : ''}`}>
-      {!(isLogo || isSmall) && <div>{t<string>('View this externally')}</div>}
-      <div className='links'>{links.map((link, index) => <span key={index}>{link}</span>)}</div>
+    <div className={`${className} ${isLogo ? 'isText' : 'isLogo'}${isSmall ? ' isSmall' : ''}${isSidebar ? ' isSidebar' : ''}`}>
+      {(isLogo && !isSmall) && <div>{t<string>('View this externally')}</div>}
+      {/* <div className='links'>{links.map((link, index) => <span key={index}>{link}</span>)}</div> */}
     </div>
   );
 }
